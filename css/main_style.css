@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
+/* 
+    ----------------
+     Global section
+    ----------------
+*/
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -24,6 +29,11 @@ body {
   height: 100%;
 }
 
+/* 
+    ----------------
+     Header section
+    ----------------
+*/
 .header-top {
   align-items: center;
   display: flex;
@@ -114,41 +124,6 @@ body {
   border-bottom: 0;
 }
 
-main {
-  flex: 1 0 auto;
-}
-
-.footer-wrapper {
-  background: var(--dark-gray);
-}
-
-footer {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 20px 30px;
-}
-
-.footer-pay,
-.footer-socialnet {
-  align-items: center;
-  display: flex;
-}
-.footer-pay-item,
-.footer-socialnet-item {
-  margin: 0px 15px 0px 0px;
-}
-.footer-pay-item:last-child,
-.footer-socialnet-item:last-child {
-  margin: 0px;
-}
-
-.footer__text {
-  color: var(--gray);
-}
-
 @media (max-width: 1200px) {
   .header-info__text {
     display: none;
@@ -224,12 +199,6 @@ footer {
   }
 }
 @media (max-width: 767px) {
-  .wrapper {
-    padding: 0px 10px;
-  }
-  .footer-wrapper {
-    padding: 20px 10px;
-  }
   .bottom-list,
   .header-bottom-list {
     flex-wrap: wrap;
@@ -244,5 +213,58 @@ footer {
   .bottom-list,
   .header-bottom-list {
     display: none;
+  }
+}
+/* 
+    --------------
+     Main section
+    --------------
+*/
+main {
+  flex: 1 0 auto;
+}
+
+/* 
+    ----------------
+     Footer section
+    ----------------
+*/
+.footer-wrapper {
+  background: var(--dark-gray);
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 20px 30px;
+}
+
+.footer-pay,
+.footer-socialnet {
+  align-items: center;
+  display: flex;
+}
+.footer-pay-item,
+.footer-socialnet-item {
+  margin: 0px 15px 0px 0px;
+}
+.footer-pay-item:last-child,
+.footer-socialnet-item:last-child {
+  margin: 0px;
+}
+
+.footer__text {
+  color: var(--gray);
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 0px 10px;
+  }
+  .footer-wrapper {
+    padding: 20px 10px;
   }
 }
