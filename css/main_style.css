@@ -1,35 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
-/* 
-    ----------------
-     Global section
-    ----------------
-*/
-:root {
-  --black: #000000;
-  --white: #ffffff;
-  --gray: #A7A7A7;
-  --light-gray: #DDDDDD;
-  --dark-gray: #464646;
-  --red: #EF314B;
-}
-
-body {
-  color: var(--black);
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 0px 30px;
-  height: 100%;
-}
-
-/* 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"); /* 
     ----------------
      Header section
     ----------------
@@ -87,22 +56,6 @@ body {
 
 .header-login {
   margin: 0px 50px 0px 0px;
-}
-
-.button {
-  align-items: center;
-  background: var(--red);
-  border-radius: 20px;
-  display: flex;
-  padding: 8px 15px;
-}
-.button__image {
-  margin: 0px 10px 0px 0px;
-}
-.button__text {
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 600;
 }
 
 .header-bottom-list,
@@ -175,7 +128,6 @@ body {
     bottom: 9px;
     transform: rotate(-45deg);
   }
-  .header-list,
   .header-info {
     display: none;
   }
@@ -215,15 +167,20 @@ body {
     display: none;
   }
 }
-/* 
-    --------------
-     Main section
-    --------------
-*/
-main {
-  flex: 1 0 auto;
+@media (max-width: 320px) {
+  .button {
+    padding: 10px;
+  }
+  .button__image {
+    margin: 0px;
+  }
+  .button__text {
+    display: none;
+  }
+  .header-login {
+    margin: 0px 10px 0px 0px;
+  }
 }
-
 /* 
     ----------------
      Footer section
@@ -236,6 +193,7 @@ main {
 footer {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
   max-width: 1280px;
@@ -258,13 +216,143 @@ footer {
 
 .footer__text {
   color: var(--gray);
+  margin: 15px 0px;
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  footer {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+    padding: 0px 0px 10px;
+  }
+}
+.slider {
+  overflow: hidden;
+  margin: 50px 0px;
+  width: 100%;
+}
+.slider-item {
+  align-items: center;
+  background: url("../img/background-images/banner-1.jpg") center center no-repeat;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  height: 416px;
+}
+.slider-item__title, .slider-item__subtitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0px 0px 30px;
+  text-transform: uppercase;
+}
+.slider-item__title {
+  color: var(--green);
+}
+.slider-item__subtitle {
+  color: var(--red);
+}
+.slider-item__text, .slider-item__button {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 400;
+}
+.slider-item__text {
+  margin: 0px 0px 60px;
+}
+.slider-item__button {
+  padding: 10px 30px;
+}
+
+.item_2 {
+  align-items: flex-end;
+  background: url("../img/background-images/banner-2.jpg") center center no-repeat;
+  text-align: right;
+}
+
+.item_3 {
+  align-items: flex-start;
+  background: url("../img/background-images/banner-3.jpg") center center no-repeat;
+  text-align: left;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .slider {
+    display: none;
+  }
+}
+/* 
+    ----------------
+     Global section
+    ----------------
+*/
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #A7A7A7;
+  --light-gray: #DDDDDD;
+  --dark-gray: #464646;
+  --red: #EF314B;
+  --green: #4AB838;
+}
+
+body {
+  color: var(--black);
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0px 30px;
+}
+
+.button {
+  align-items: center;
+  background: var(--red);
+  border-radius: 20px;
+  display: flex;
+  padding: 8px 15px;
+}
+.button__image {
+  margin: 0px 10px 0px 0px;
+}
+.button__text {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 @media (max-width: 767px) {
   .wrapper {
     padding: 0px 10px;
   }
-  .footer-wrapper {
-    padding: 20px 10px;
-  }
+}
+/* 
+    --------------
+     Main section
+    --------------
+*/
+main {
+  flex: 1 0 auto;
+  padding: 0px 35px;
 }
