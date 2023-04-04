@@ -68,4 +68,344 @@ body {
 main {
     flex: 1 0 auto;
     padding: 0px 35px;
+    position: relative;
+}
+
+// .catalog {
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin: 0px 0px 50px;
+//     justify-content: center;
+//     position: relative;
+
+//     &__column {
+//         display: flex;
+//         flex-direction: column;
+//         height: 430px;
+
+        // &-item {
+        //     display: flex;
+        //     box-shadow: 0px 0px 10px var(--black);
+        //     justify-content: flex-end;
+        //     margin: 0px 20px 0px 0px;
+        //     padding: 15px;
+        // }
+//     }
+// }
+
+// .item {
+//     &-fruits {
+//         background: url("../img/background-images/fruits-back.jpg") center center no-repeat;
+//         background-size: cover;
+//         border-radius: 20px 0px 0px 20px;
+//         // height: 100%;
+//     }
+
+//     &-bread {
+//         background: url("../img/background-images/bread-back.jpg") center center no-repeat;
+//         background-size: cover;
+//         margin: 0px 20px 20px 0px;
+//         // height: 50%;
+//     }
+
+//     &-sweets {
+//         background: url("../img/background-images/sweets-back.jpg") center center no-repeat;
+//         background-size: cover;
+//         // height: 50%;
+//     }
+
+//     &-pasta {
+//         background: url("../img/background-images/pasta-back.jpg") center center no-repeat;
+//         background-size: cover;
+//         // height: 100%;
+//     }
+
+//     &-cheese {
+//         background: url("../img/background-images/cheese-back.jpg") center center no-repeat;
+//         background-size: cover;
+//         border-radius: 0px 20px 0px 0px;
+//         margin: 0px 0px 20px 0px;
+//         // height: 37%;
+//     }
+
+//     &-milk {
+//         background: url("../img/background-images/milk-back.jpg") center center no-repeat;
+//         background-size: cover;
+//         border-radius: 0px 0px 20px 0px;
+//         margin: 0px;
+//         // height: 63%;
+//     }
+
+//     &__button {
+//         align-self: flex-end;
+//         box-shadow: 0px 0px 10px var(--black);
+//         border-radius: 10px;
+//         height: 40px;
+//         width: 130px;
+//     }
+// }
+
+// .column {
+
+//     &-first {
+//         width: 29%;
+//     }
+
+//     &-second {
+//         width: 28%;
+//     }
+
+//     &-third {
+//         width: 15%;
+//     }
+
+//     &-fourth {
+//         width: 28%;
+//     }
+// }
+
+// @media (max-width: 950px) {
+//     .catalog {
+//         margin: 50px 0px;
+
+//         &__column {
+//             flex: 0 0 50%;
+//             margin: 0px 0px 20px;    
+//         }
+//     }
+
+//     .column {
+
+//         &-third {
+//             flex: 0 0 30%;
+//         }
+
+//         &-fourth {
+//             flex: 0 0 70%;
+//         }
+//     }
+
+//     .item {
+
+//         &-fruits {
+//             border-radius: 20px 0px 0px 0px;
+//         }
+
+//         &-bread {
+//             border-radius: 0px 20px 0px 0px;
+//             margin: 0px 0px 20px 0px;
+//         }
+
+//         &-sweets {
+//             margin: 0px;
+//         }
+
+//         &-pasta {
+//             border-radius: 0px 0px 0px 20px;
+//         }
+
+//         &-cheese {
+//             border-radius: 0px;
+//             margin: 0px 0px 20px 0px;
+//         }
+
+//         &-milk {
+//             border-radius: 0px 0px 20px 0px;
+//             margin: 0px;
+//         }
+//     }
+// }
+
+// @media (max-width: 520px) {
+//     .catalog {
+//         margin: 10px 0px;
+
+//         &__column {
+//             height: 300px;
+
+//             &-item {
+//                 padding: 10px 5px;
+//             }
+//         }
+//     }
+
+//     .column {
+
+//         &-third {
+//             flex: 0 0 40%;
+//         }
+
+//         &-fourth {
+//             flex: 0 0 60%;
+//         }
+//     }
+
+//     .item__button {
+//         width: 110px;
+//     }
+// }
+
+// @media (max-width: 320px) {
+//     .catalog {
+//         display: none;
+//     }
+// }
+
+.catalog__title {
+    color: var(--red);
+    display: none;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0px 20px;
+    text-align: center;
+}
+
+.catalog {
+    display: grid;
+    gap: 20px;
+    grid-template: repeat(2, 205px) / 1fr 1fr 0.5fr 1fr;
+    grid-template-areas: 
+        "fruits bread pasta cheese"
+        "fruits sweets pasta milk";
+    margin: 0px 0px 50px;
+
+    &__column-item {
+            display: flex;
+            box-shadow: 0px 0px 10px var(--black);
+            justify-content: flex-end;
+            padding: 15px;
+        }
+}
+
+.item {
+
+    &-fruits {
+        background: url("../img/background-images/fruits-back.jpg") center center no-repeat;
+        background-size: cover;
+        border-radius: 20px 0px 0px 20px;
+        grid-area: fruits;
+    }
+
+    &-bread {
+        background: url("../img/background-images/bread-back.jpg") center center no-repeat;
+        background-size: cover;
+        grid-area: bread;
+    }
+
+    &-sweets {
+        background: url("../img/background-images/sweets-back.jpg") center center no-repeat;
+        background-size: cover;
+        grid-area: sweets;
+    }
+
+    &-pasta {
+        background: url("../img/background-images/pasta-back.jpg") center center no-repeat;
+        background-size: cover;
+        grid-area: pasta;
+    }
+
+    &-cheese {
+        background: url("../img/background-images/cheese-back.jpg") center center no-repeat;
+        background-size: cover;
+        border-radius: 0px 20px 0px 0px;
+        grid-area: cheese;
+    }
+
+    &-milk {
+        background: url("../img/background-images/milk-back.jpg") center center no-repeat;
+        background-size: cover;
+        border-radius: 0px 0px 20px 0px;
+        grid-area: milk;
+    }
+
+    &__button {
+        align-self: end;
+        box-shadow: 0px 0px 10px var(--black);
+        border-radius: 10px;
+        height: 40px;
+        width: 130px;
+    }
+}
+
+@media (max-width: 950px) {
+    .catalog {
+        display: none;
+    }  
+}
+
+@media (max-width: 520px) {
+    .catalog__title {
+        display: block;
+    }
+
+    .catalog {
+        display: grid;
+        grid-template: repeat(4, 40vmin) / repeat(6, 1fr);
+        grid-template-areas: 
+            "fruits fruits fruits bread bread bread"
+            "fruits fruits fruits sweets sweets sweets"
+            "pasta pasta cheese cheese cheese cheese"
+            "pasta pasta milk milk milk milk";
+        margin: 0px 0px 10px;
+
+        &__column-item {
+            padding: 10px 5px;
+        }
+    }
+
+    .item {
+
+        &-fruits {
+            border-radius: 20px 0px 0px 0px;
+        }
+
+        &-bread {
+            border-radius: 0px 20px 0px 0px;
+        }
+
+        &-pasta {
+            border-radius: 0px 0px 0px 20px;
+        }
+
+        &-cheese {
+            border-radius: 0px;
+        }
+
+        &-milk {
+            border-radius: 0px 0px 20px 0px;
+        }
+
+        &__button {
+            width: 110px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .catalog {
+        grid-template: repeat(6, 100px) / 1fr;
+        grid-template-areas:
+            "fruits"
+            "bread"
+            "sweets"
+            "pasta"
+            "cheese"
+            "milk";
+    }
+
+    .item {
+
+        &-fruits {
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        &-bread,
+        &-pasta {
+            border-radius: 0px;
+        }
+
+        &-milk {
+            border-radius: 0px 0px 20px 20px;
+        }
+    }
 }
