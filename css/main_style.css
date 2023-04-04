@@ -358,6 +358,11 @@ main {
   position: relative;
 }
 
+@media (max-width: 520px) {
+  main {
+    padding: 0px 5px;
+  }
+}
 .catalog__title {
   color: var(--red);
   display: none;
