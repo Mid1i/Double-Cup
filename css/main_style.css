@@ -329,8 +329,8 @@
   }
   .catalog {
     display: grid;
-    grid-template: repeat(4, 40vmin)/repeat(6, 1fr);
-    grid-template-areas: "fruits fruits fruits bread bread bread" "fruits fruits fruits sweets sweets sweets" "pasta pasta cheese cheese cheese cheese" "pasta pasta milk milk milk milk";
+    grid-template: repeat(4, 40vmin)/repeat(12, 1fr);
+    grid-template-areas: "fruits fruits fruits fruits fruits fruits bread bread bread bread bread bread" "fruits fruits fruits fruits fruits fruits sweets sweets sweets sweets sweets sweets" "pasta pasta pasta pasta pasta cheese cheese cheese cheese cheese cheese cheese" "pasta pasta pasta pasta pasta milk milk milk milk milk milk milk";
     margin: 0px 0px 10px;
   }
   .item-fruits {
