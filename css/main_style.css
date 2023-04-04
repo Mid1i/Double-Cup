@@ -267,11 +267,11 @@
   grid-template-areas: "fruits bread pasta cheese" "fruits sweets pasta milk";
   margin: 0px 0px 50px;
 }
-.catalog__column-item {
+.catalog-item {
   display: flex;
   box-shadow: 0px 0px 10px var(--black);
   justify-content: flex-end;
-  padding: 15px;
+  position: relative;
 }
 
 .item-fruits {
@@ -308,9 +308,12 @@
   grid-area: milk;
 }
 .item__button {
-  align-self: end;
+  background: var(--white);
   box-shadow: 0px 0px 10px var(--black);
   border-radius: 10px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   height: 40px;
   width: 130px;
 }
@@ -330,9 +333,6 @@
     grid-template-areas: "fruits fruits fruits bread bread bread" "fruits fruits fruits sweets sweets sweets" "pasta pasta cheese cheese cheese cheese" "pasta pasta milk milk milk milk";
     margin: 0px 0px 10px;
   }
-  .catalog__column-item {
-    padding: 10px 5px;
-  }
   .item-fruits {
     border-radius: 20px 0px 0px 0px;
   }
@@ -350,6 +350,8 @@
   }
   .item__button {
     width: 110px;
+    bottom: 10px;
+    right: 5px;
   }
 }
 @media (max-width: 350px) {
