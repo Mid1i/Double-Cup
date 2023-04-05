@@ -1,7 +1,9 @@
 .slider {
+    position: relative;
     overflow: hidden;
     margin: 50px 0px;
     width: 100%;
+    z-index: 0;
 
     &-item {
         align-items: center;

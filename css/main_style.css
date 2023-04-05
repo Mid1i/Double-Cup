@@ -70,6 +70,7 @@
 }
 .header-bottom-list li,
 .bottom-list li {
+  cursor: pointer;
   margin: 0px 10px;
 }
 
@@ -182,9 +183,11 @@
   }
 }
 .slider {
+  position: relative;
   overflow: hidden;
   margin: 50px 0px;
   width: 100%;
+  z-index: 0;
 }
 .slider-item {
   align-items: center;
@@ -252,10 +255,7 @@
     ---------------
 */
 .catalog__title {
-  color: var(--red);
   display: none;
-  font-size: 32px;
-  font-weight: 700;
   margin: 10px 0px 20px;
   text-align: center;
 }
@@ -268,6 +268,7 @@
   margin: 0px 0px 50px;
 }
 .catalog-item {
+  cursor: pointer;
   display: flex;
   box-shadow: 0px 0px 10px var(--black);
   justify-content: flex-end;
@@ -463,6 +464,12 @@ body {
   color: var(--white);
   font-size: 16px;
   font-weight: 600;
+}
+
+.title {
+  color: var(--red);
+  font-size: 32px;
+  font-weight: 700;
 }
 
 @media (max-width: 767px) {

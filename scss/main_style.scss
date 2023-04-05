@@ -54,6 +54,12 @@ body {
 	    }
 }
 
+.title {
+    color: var(--red);
+    font-size: 32px;
+    font-weight: 700;
+}
+
 @media (max-width: 767px) { 
     .wrapper {
         padding: 0px 10px; 
