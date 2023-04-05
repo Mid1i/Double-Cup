@@ -84,6 +84,18 @@
     border-bottom: 0
 }
 
+.header-list li:hover,
+.bottom-list li:hover,
+.header-bottom-list li:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.header-list li:first-child:hover {
+    color: var(--white);
+    text-decoration: none;
+}
+
 @media (max-width: 1200px) {
     .header-info__text {
         display: none;
