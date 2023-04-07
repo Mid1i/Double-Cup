@@ -1,0 +1,80 @@
+/* 
+    ----------------
+    Contacts section
+    ----------------
+*/
+
+.contacts {
+    align-items: center;
+    background: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 0px 50px;
+
+    &-left {
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px var(--black);
+        padding: 15px;
+        height: 280px;
+        width: 500px;
+        z-index: 0;
+
+        &__title {
+            margin: 0px 0px 30px;
+        }
+
+        &__section {
+            align-items: center;
+            display: flex;
+        }
+
+        &__icon {
+            margin: 0px 20px 0px 0px; 
+            height: 20px;
+            width: 20px;
+        }
+
+        &__text {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    &-right {
+        box-shadow: 0px 0px 10px var(--black);
+        margin-left: -50px;
+        height: 260px;
+        z-index: 1;
+    }
+}
+
+.email {
+    margin: 30px 0px;
+}
+
+@media (max-width: 1100px) {
+    .contacts-right {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .contacts {
+        margin: 0px 0px 30px;
+        width: 100%;
+
+        &-left {
+            height: 230px;
+            
+            &__title {
+                text-align: center;
+                margin: 0px 0px 10px;
+            }
+        }
+    }
+
+    .email {
+        margin: 20px 0px;
+    }
+}
