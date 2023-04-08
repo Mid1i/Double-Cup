@@ -7,6 +7,7 @@
 :root {
   --black: #000000;
   --white: #ffffff;
+  --transp-white: rgba(255, 255, 255, 0.93);
   --gray: #A7A7A7;
   --light-gray: #DDDDDD;
   --dark-gray: #464646;
@@ -26,6 +27,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
   margin: 0 auto;
   max-width: 1280px;
   padding: 0px 30px;
@@ -49,6 +51,8 @@ body {
 
 .button:hover {
   background: var(--light-red);
+  box-shadow: 0px 0px 10px var(--gray);
+  transform: scale(1.05);
 }
 
 .title {
@@ -78,6 +82,182 @@ main {
     padding: 0px 5px;
   }
 }
+.cart-icon {
+  align-items: center;
+  background: var(--red);
+  border-radius: 20px;
+  bottom: 130px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  position: fixed;
+  right: 100px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+.cart-icon img {
+  height: 20px;
+  width: 20px;
+}
+.cart-icon img:first-child {
+  margin: 0px 0px 10px;
+}
+
+.cart-icon:hover {
+  background: var(--light-red);
+  box-shadow: 0px 0px 10px var(--gray);
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .cart-icon {
+    right: 20px;
+    bottom: 140px;
+  }
+}
+/* 
+    ---------------
+    Profile section
+    ---------------
+*/
+.profile {
+  align-items: center;
+  background: var(--transp-white);
+  border: 3px solid var(--black);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 25px 10px;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s;
+  top: 50%;
+  left: 50%;
+  height: 440px;
+  width: 400px;
+}
+.profile__cross {
+  align-self: flex-end;
+  background: var(--red);
+  border-radius: 0px 17px 0px 20px;
+  cursor: pointer;
+  padding: 12px;
+  margin: -60px -25px 10px;
+  height: 50px;
+  width: 50px;
+}
+.profile__cross:hover {
+  background: var(--light-red);
+}
+.profile__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+.profile__form {
+  margin: 20px 0px;
+  width: 100%;
+}
+.profile__text {
+  flex: 1 0 auto;
+  text-align: center;
+}
+.profile__text span {
+  cursor: pointer;
+  font-weight: 600;
+}
+.profile__text span:hover {
+  text-decoration: underline;
+}
+
+.form-item {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  z-index: 1;
+}
+.form-item__input {
+  background: inherit;
+  border-bottom: 2px solid var(--black);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  width: 100%;
+}
+.form-item__icon {
+  position: absolute;
+  right: 10px;
+}
+.form-item__button {
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 73px;
+  height: 50px;
+  width: 350px;
+}
+
+.form-checkbox {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px;
+}
+.form-checkbox__text {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0px 0px 0px 10px;
+}
+
+.email {
+  margin: 0px 0px 45px;
+}
+
+.login__button {
+  padding: 15px 140px;
+  margin: 74px 0px 0px;
+}
+
+@media (max-width: 430px) {
+  .profile {
+    padding: 60px 10px 10px;
+    width: 300px;
+  }
+  .profile__cross {
+    margin: -60px -10px 10px;
+  }
+  .profile__title {
+    font-size: 28px;
+  }
+  .form-item__button {
+    padding: 15px 40px;
+    width: 100%;
+  }
+  .login__button {
+    padding: 15px 110px;
+    margin: 50px 0px 20px;
+  }
+}
+@media (max-width: 310px) {
+  .profile {
+    width: 250px;
+  }
+  .profile__title {
+    font-size: 24px;
+  }
+  .form-item__button {
+    padding: 15px 12px;
+  }
+  .login__button {
+    padding: 15px 80px;
+  }
+}
+.active_profile {
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .slick-list {
   overflow: hidden;
 }
@@ -212,7 +392,7 @@ main {
     position: relative;
     height: 20px;
     width: 30px;
-    z-index: 2;
+    z-index: 3;
   }
   .header-menu-burger span, .header-menu-burger::before, .header-menu-burger::after {
     background: var(--black);
@@ -259,7 +439,7 @@ main {
     position: fixed;
     top: -100%;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   .header-list li, .header-list li:last-child {
     margin: 20px 0px 0px;
@@ -379,7 +559,7 @@ main {
 .catalog-item {
   cursor: pointer;
   display: flex;
-  box-shadow: 0px 0px 10px var(--black);
+  box-shadow: 0px 0px 10px var(--gray);
   justify-content: flex-end;
   position: relative;
 }
@@ -426,6 +606,12 @@ main {
   right: 15px;
   height: 40px;
   width: 130px;
+}
+.item__button:hover {
+  background: var(--light-gray);
+  box-shadow: 0px 0px 10px var(--gray);
+  font-weight: 600;
+  transform: scale(1.05);
 }
 
 @media (max-width: 950px) {
@@ -499,7 +685,7 @@ main {
 }
 .products-item {
   align-items: center;
-  box-shadow: 0px 0px 10px var(--black);
+  box-shadow: 0px 0px 10px var(--gray);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -540,7 +726,7 @@ main {
 .item__main-button {
   border-radius: 10px;
   font-size: 18px;
-  padding: 8px 104px;
+  padding: 8px 62px;
   margin: 20px 10px 10px;
   width: 210px;
 }
@@ -576,7 +762,7 @@ main {
     width: 190px;
   }
   .item__main-button {
-    padding: 8px 84px;
+    padding: 8px 42px;
     width: 170px;
   }
   .item-buttons {
@@ -599,7 +785,7 @@ main {
     width: 230px;
   }
   .item__main-button {
-    padding: 8px 104px;
+    padding: 8px 62px;
     width: 210px;
   }
   .item-buttons {
@@ -642,7 +828,7 @@ main {
     width: 190px;
   }
   .item__main-button {
-    padding: 8px 84px;
+    padding: 8px 42px;
     width: 170px;
   }
   .item-buttons {

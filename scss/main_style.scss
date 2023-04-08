@@ -9,6 +9,7 @@
 :root {
     --black: #000000;
     --white: #ffffff;
+    --transp-white: rgba(255, 255, 255, 0.93);
     --gray: #A7A7A7;
     --light-gray: #DDDDDD;
     --dark-gray: #464646;
@@ -28,6 +29,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    position: relative;
     margin: 0 auto;
     max-width: 1280px;
     padding: 0px 30px;
@@ -53,6 +55,8 @@ body {
 
 .button:hover {
     background: var(--light-red);
+    box-shadow: 0px 0px 10px var(--gray);
+    transform: scale(1.05);
 }
 
 .title {
@@ -85,6 +89,46 @@ main {
     }
 }
 
+.cart-icon {
+    align-items: center;
+    background: var(--red);
+    border-radius: 20px;
+    bottom: 130px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    position: fixed;
+    right: 100px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+
+    & img {
+        height: 20px;
+        width: 20px;
+    }
+
+    & img:first-child {
+        margin: 0px 0px 10px;
+    }
+}
+
+.cart-icon:hover {
+    background: var(--light-red);
+    box-shadow: 0px 0px 10px var(--gray);
+    transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+    .cart-icon {
+        right: 20px;
+        bottom: 140px;
+    }
+}
+
+@import "./profile_style.scss";
 @import "./slick-slider_style.scss";
 @import "./header_style.scss";
 @import "./banner-slider_style.scss";

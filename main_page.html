@@ -50,15 +50,15 @@
                     </ul>
                 </nav>
                 <section class="header-buttons">
-                    <button class="header-login button">
-                        <div class="button__image">
-                            <img src="./img/header-icons/login-icon.svg" alt="">
+                    <button class="header-login button" id="login-item">
+                        <div class="button__image" id="login-item">
+                            <img src="./img/header-icons/login-icon.svg" alt="" id="login-item">
                         </div>
-                        <div class="button__text">Вход</div>
+                        <div class="button__text" id="login-item">Вход</div>
                     </button>
                     <button class="header-cart button">
                         <div class="button__image">
-                            <img src="./img/header-icons/cart-icon.svg" alt="">
+                            <img src="./img/header-icons/cart-icon.svg" alt="" id="header-cart-icon">
                         </div>
                         <div class="button__text">Пусто</div>
                     </button>
@@ -71,7 +71,7 @@
                     <li id="sweets">Сладости</li>
                     <li id="pasta">Макароны и крупы</li>
                     <li id="cheese">Сыры и колбасы</li>
-                    <li id="milk">Молочные продукты и яйца</li>
+                    <li id="milk-products">Молочные продукты и яйца</li>
                 </ul>
             </nav>
         </header>
@@ -104,7 +104,7 @@
             <h1 class="catalog__title title">Каталог</h1>
             <div class="catalog">
                 <section class="catalog-item item-fruits" id="fruits">
-                    <button class="item__button id="fruits"">Фрукты и овощи</button>
+                    <button class="item__button" id="fruits">Фрукты и овощи</button>
                 </section>
                 <section class="catalog-item item-bread" id="bread">
                     <button class="item__button" id="bread">Хлеб и выпечка</button>
@@ -118,8 +118,8 @@
                 <section class="catalog-item item-cheese" id="cheese">
                     <button class="item__button" id="cheese">Сыры и колбасы</button>
                 </section>
-                <section class="catalog-item item-milk" id="milk">
-                    <button class="item__button" id="milk">Молочные продукты и яйца</button>
+                <section class="catalog-item item-milk" id="milk-products">
+                    <button class="item__button" id="milk-products">Молочные продукты и яйца</button>
                 </section>
             </div>
             <h2 class="products__title title fruits_title">Фрукты и овощи</h2>
@@ -133,9 +133,9 @@
                         <div class="item__country">Италия</div>
                         <section class="item__cost">
                             <div class="item__price">115.00 ₽</div>
-                            <div class="item__weight">890 г</div>
+                            <div class="item__weight">890 гр.</div>
                         </section>
-                        <button class="item__main-button button apples-button" id="apples">+</button>
+                        <button class="item__main-button button apples-button" id="apples">В корзину</button>
                         <div class="item-buttons apples-buttons hide">
                             <button class="item__button-minus button apples-minus" id="apples">—</button>
                             <div class="item__counter apples-counter">0</div>
@@ -152,9 +152,9 @@
                         <div class="item__country">Мексика</div>
                         <section class="item__cost">
                             <div class="item__price">108.00 ₽</div>
-                            <div class="item__weight">1.1 кг</div>
+                            <div class="item__weight">1.1 кг.</div>
                         </section>
-                        <button class="item__main-button button bananas-button" id="bananas">+</button>
+                        <button class="item__main-button button bananas-button" id="bananas">В корзину</button>
                         <div class="item-buttons bananas-buttons hide">
                             <button class="item__button-minus button bananas-minus" id="bananas">—</button>
                             <div class="item__counter bananas-counter">0</div>
@@ -171,9 +171,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">179.00 ₽</div>
-                            <div class="item__weight">470 г</div>
+                            <div class="item__weight">470 гр.</div>
                         </section>
-                        <button class="item__main-button button cucumbers-button" id="cucumbers">+</button>
+                        <button class="item__main-button button cucumbers-button" id="cucumbers">В корзину</button>
                         <div class="item-buttons cucumbers-buttons hide">
                             <button class="item__button-minus button cucumbers-minus" id="cucumbers">—</button>
                             <div class="item__counter cucumbers-counter">0</div>
@@ -190,9 +190,9 @@
                         <div class="item__country">Азербайджан</div>
                         <section class="item__cost">
                             <div class="item__price">257.00 ₽</div>
-                            <div class="item__weight">520 г</div>
+                            <div class="item__weight">520 гр.</div>
                         </section>
-                        <button class="item__main-button button tomatoes-button" id="tomatoes">+</button>
+                        <button class="item__main-button button tomatoes-button" id="tomatoes">В корзину</button>
                         <div class="item-buttons tomatoes-buttons hide">
                             <button class="item__button-minus button tomatoes-minus" id="tomatoes">—</button>
                             <div class="item__counter tomatoes-counter">0</div>
@@ -212,9 +212,9 @@
                         <div class="item__country">Пекарня «Double Cup»</div>
                         <section class="item__cost">
                             <div class="item__price">39.00 ₽</div>
-                            <div class="item__weight">450 г</div>
+                            <div class="item__weight">450 гр.</div>
                         </section>
-                        <button class="item__main-button button white-bread-button" id="white-bread">+</button>
+                        <button class="item__main-button button white-bread-button" id="white-bread">В корзину</button>
                         <div class="item-buttons white-bread-buttons hide">
                             <button class="item__button-minus button white-bread-minus" id="white-bread">—</button>
                             <div class="item__counter white-bread-counter">0</div>
@@ -231,9 +231,9 @@
                         <div class="item__country">Пекарня «Double Cup»</div>
                         <section class="item__cost">
                             <div class="item__price">91.00 ₽</div>
-                            <div class="item__weight">180 г</div>
+                            <div class="item__weight">180 гр.</div>
                         </section>
-                        <button class="item__main-button button croissant-button" id="croissant">+</button>
+                        <button class="item__main-button button croissant-button" id="croissant">В корзину</button>
                         <div class="item-buttons croissant-buttons hide">
                             <button class="item__button-minus button croissant-minus" id="croissant">—</button>
                             <div class="item__counter croissant-counter">0</div>
@@ -250,9 +250,9 @@
                         <div class="item__country">Пекарня «Double Cup»</div>
                         <section class="item__cost">
                             <div class="item__price">92.00 ₽</div>
-                            <div class="item__weight">110 г</div>
+                            <div class="item__weight">110 гр.</div>
                         </section>
-                        <button class="item__main-button button chiabatta-button" id="chiabatta">+</button>
+                        <button class="item__main-button button chiabatta-button" id="chiabatta">В корзину</button>
                         <div class="item-buttons chiabatta-buttons hide">
                             <button class="item__button-minus button chiabatta-minus" id="chiabatta">—</button>
                             <div class="item__counter chiabatta-counter">0</div>
@@ -269,9 +269,9 @@
                         <div class="item__country">Пекарня «Double Cup»</div>
                         <section class="item__cost">
                             <div class="item__price">29.00 ₽</div>
-                            <div class="item__weight">350 г</div>
+                            <div class="item__weight">350 гр.</div>
                         </section>
-                        <button class="item__main-button button black-bread-button" id="black-bread">+</button>
+                        <button class="item__main-button button black-bread-button" id="black-bread">В корзину</button>
                         <div class="item-buttons black-bread-buttons hide">
                             <button class="item__button-minus button black-bread-minus" id="black-bread">—</button>
                             <div class="item__counter black-bread-counter">0</div>
@@ -291,9 +291,9 @@
                         <div class="item__country">Пекарня «Double Cup»</div>
                         <section class="item__cost">
                             <div class="item__price">232.00 ₽</div>
-                            <div class="item__weight">4 шт. 360 г</div>
+                            <div class="item__weight">4 шт. 360 гр.</div>
                         </section>
-                        <button class="item__main-button button donuts-button" id="donuts">+</button>
+                        <button class="item__main-button button donuts-button" id="donuts">В корзину</button>
                         <div class="item-buttons donuts-buttons hide">
                             <button class="item__button-minus button donuts-minus" id="donuts">—</button>
                             <div class="item__counter donuts-counter">0</div>
@@ -310,9 +310,9 @@
                         <div class="item__country">Пекарня «Double Cup»</div>
                         <section class="item__cost">
                             <div class="item__price">200.00 ₽</div>
-                            <div class="item__weight">8 шт. 100 г</div>
+                            <div class="item__weight">8 шт. 100 гр.</div>
                         </section>
-                        <button class="item__main-button button macarons-button" id="macarons">+</button>
+                        <button class="item__main-button button macarons-button" id="macarons">В корзину</button>
                         <div class="item-buttons macarons-buttons hide">
                             <button class="item__button-minus button macarons-minus" id="macarons">—</button>
                             <div class="item__counter macarons-counter">0</div>
@@ -329,9 +329,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">85.00 ₽</div>
-                            <div class="item__weight">100 г</div>
+                            <div class="item__weight">100 гр.</div>
                         </section>
-                        <button class="item__main-button button marmalade-button" id="marmalade">+</button>
+                        <button class="item__main-button button marmalade-button" id="marmalade">В корзину</button>
                         <div class="item-buttons marmalade-buttons hide">
                             <button class="item__button-minus button marmalade-minus" id="marmalade">—</button>
                             <div class="item__counter marmalade-counter">0</div>
@@ -348,9 +348,9 @@
                         <div class="item__country">Пекарня «Double Cup»</div>
                         <section class="item__cost">
                             <div class="item__price">76.00 ₽</div>
-                            <div class="item__weight">100 г</div>
+                            <div class="item__weight">100 гр.</div>
                         </section>
-                        <button class="item__main-button button cookies-button" id="cookies">+</button>
+                        <button class="item__main-button button cookies-button" id="cookies">В корзину</button>
                         <div class="item-buttons cookies-buttons hide">
                             <button class="item__button-minus button cookies-minus" id="cookies">—</button>
                             <div class="item__counter cookies-counter">0</div>
@@ -370,9 +370,9 @@
                         <div class="item__country">Италия</div>
                         <section class="item__cost">
                             <div class="item__price">75.00 ₽</div>
-                            <div class="item__weight">400 г</div>
+                            <div class="item__weight">400 гр.</div>
                         </section>
-                        <button class="item__main-button button pasta-spirals-button" id="pasta-spirals">+</button>
+                        <button class="item__main-button button pasta-spirals-button" id="pasta-spirals">В корзину</button>
                         <div class="item-buttons pasta-spirals-buttons hide">
                             <button class="item__button-minus button pasta-spirals-minus" id="pasta-spirals">—</button>
                             <div class="item__counter pasta-spirals-counter">0</div>
@@ -389,9 +389,9 @@
                         <div class="item__country">Италия</div>
                         <section class="item__cost">
                             <div class="item__price">65.00 ₽</div>
-                            <div class="item__weight">200 г</div>
+                            <div class="item__weight">200 гр.</div>
                         </section>
-                        <button class="item__main-button button pasta-feather-button" id="pasta-feather">+</button>
+                        <button class="item__main-button button pasta-feather-button" id="pasta-feather">В корзину</button>
                         <div class="item-buttons pasta-feather-buttons hide">
                             <button class="item__button-minus button pasta-feather-minus" id="pasta-feather">—</button>
                             <div class="item__counter pasta-feather-counter">0</div>
@@ -408,9 +408,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">75.00 ₽</div>
-                            <div class="item__weight">400 г</div>
+                            <div class="item__weight">400 гр.</div>
                         </section>
-                        <button class="item__main-button button buckwheat-button" id="buckwheat">+</button>
+                        <button class="item__main-button button buckwheat-button" id="buckwheat">В корзину</button>
                         <div class="item-buttons buckwheat-buttons hide">
                             <button class="item__button-minus button buckwheat-minus" id="buckwheat">—</button>
                             <div class="item__counter buckwheat-counter">0</div>
@@ -427,9 +427,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">90.00 ₽</div>
-                            <div class="item__weight">500 г</div>
+                            <div class="item__weight">500 гр.</div>
                         </section>
-                        <button class="item__main-button button rice-button" id="rice">+</button>
+                        <button class="item__main-button button rice-button" id="rice">В корзину</button>
                         <div class="item-buttons rice-buttons hide">
                             <button class="item__button-minus button rice-minus" id="rice">—</button>
                             <div class="item__counter rice-counter">0</div>
@@ -449,9 +449,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">162.00 ₽</div>
-                            <div class="item__weight">200 г</div>
+                            <div class="item__weight">200 гр.</div>
                         </section>
-                        <button class="item__main-button button rus-cheese-button" id="rus-cheese">+</button>
+                        <button class="item__main-button button rus-cheese-button" id="rus-cheese">В корзину</button>
                         <div class="item-buttons rus-cheese-buttons hide">
                             <button class="item__button-minus button rus-cheese-minus" id="rus-cheese">—</button>
                             <div class="item__counter rus-cheese-counter">0</div>
@@ -468,9 +468,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">194.00 ₽</div>
-                            <div class="item__weight">150 г</div>
+                            <div class="item__weight">150 гр.</div>
                         </section>
-                        <button class="item__main-button button hol-cheese-button" id="hol-cheese">+</button>
+                        <button class="item__main-button button hol-cheese-button" id="hol-cheese">В корзину</button>
                         <div class="item-buttons hol-cheese-buttons hide">
                             <button class="item__button-minus button hol-cheese-minus" id="hol-cheese">—</button>
                             <div class="item__counter hol-cheese-counter">0</div>
@@ -487,9 +487,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">349.00 ₽</div>
-                            <div class="item__weight">500 г</div>
+                            <div class="item__weight">500 гр.</div>
                         </section>
-                        <button class="item__main-button button boil-sausage-button" id="boil-sausage">+</button>
+                        <button class="item__main-button button boil-sausage-button" id="boil-sausage">В корзину</button>
                         <div class="item-buttons boil-sausage-buttons hide">
                             <button class="item__button-minus button boil-sausage-minus" id="boil-sausage">—</button>
                             <div class="item__counter boil-sausage-counter">0</div>
@@ -506,9 +506,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">225.00 ₽</div>
-                            <div class="item__weight">100 г</div>
+                            <div class="item__weight">100 гр.</div>
                         </section>
-                        <button class="item__main-button button rs-sausage-button" id="rs-sausage">+</button>
+                        <button class="item__main-button button rs-sausage-button" id="rs-sausage">В корзину</button>
                         <div class="item-buttons rs-sausage-buttons hide">
                             <button class="item__button-minus button rs-sausage-minus" id="rs-sausage">—</button>
                             <div class="item__counter rs-sausage-counter">0</div>
@@ -517,7 +517,7 @@
                     </section>
                 </section>
             </div>
-            <h2 class="products__title title milk_title">Молочные продукты и яйца</h2>
+            <h2 class="products__title title milk-products_title">Молочные продукты и яйца</h2>
             <div class="products">
                 <section class="products-slider-item">
                     <section class="products-item">
@@ -528,9 +528,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">79.00 ₽</div>
-                            <div class="item__weight">100 г</div>
+                            <div class="item__weight">100 гр.</div>
                         </section>
-                        <button class="item__main-button button milk-button" id="milk">+</button>
+                        <button class="item__main-button button milk-button" id="milk">В корзину</button>
                         <div class="item-buttons milk-buttons hide">
                             <button class="item__button-minus button milk-minus" id="milk">—</button>
                             <div class="item__counter milk-counter">0</div>
@@ -547,9 +547,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">165.00 ₽</div>
-                            <div class="item__weight">400 г</div>
+                            <div class="item__weight">400 гр.</div>
                         </section>
-                        <button class="item__main-button button curd-button" id="curd">+</button>
+                        <button class="item__main-button button curd-button" id="curd">В корзину</button>
                         <div class="item-buttons curd-buttons hide">
                             <button class="item__button-minus button curd-minus" id="curd">—</button>
                             <div class="item__counter curd-counter">0</div>
@@ -566,9 +566,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">125.00 ₽</div>
-                            <div class="item__weight">350 г</div>
+                            <div class="item__weight">350 гр.</div>
                         </section>
-                        <button class="item__main-button button sour-cream-button" id="sour-cream">+</button>
+                        <button class="item__main-button button sour-cream-button" id="sour-cream">В корзину</button>
                         <div class="item-buttons sour-cream-buttons hide">
                             <button class="item__button-minus button sour-cream-minus" id="sour-cream">—</button>
                             <div class="item__counter sour-cream-counter">0</div>
@@ -585,9 +585,9 @@
                         <div class="item__country">Россия</div>
                         <section class="item__cost">
                             <div class="item__price">112.00 ₽</div>
-                            <div class="item__weight">650 г</div>
+                            <div class="item__weight">650 гр.</div>
                         </section>
-                        <button class="item__main-button button eggs-button" id="eggs">+</button>
+                        <button class="item__main-button button eggs-button" id="eggs">В корзину</button>
                         <div class="item-buttons eggs-buttons hide">
                             <button class="item__button-minus button eggs-minus" id="eggs">—</button>
                             <div class="item__counter eggs-counter">0</div>
@@ -630,9 +630,14 @@
                 <li id="sweets">Сладости</li>
                 <li id="pasta">Макароны и крупы</li>
                 <li id="cheese">Сыры и колбасы</li>
-                <li id="milk">Молочные продукты и яйца</li>
+                <li id="milk-products">Молочные продукты и яйца</li>
             </ul>
         </nav>
+
+        <section class="cart-icon" id="cart">
+            <img src="./img/main-icons/top-arrow-icon.svg" alt="" id="cart">
+            <img src="./img/header-icons/cart-full-icon.svg" alt="" id="cart">
+        </section>
     </div>
     <footer>
         <div class="footer-wrapper">
@@ -667,6 +672,49 @@
             </section>
         </div>
     </footer>
+
+    <section class="profile register">
+        <div class="profile__cross" id="cross">
+            <img src="./img/profile-icons/cross-icon.svg" alt="quit" id="cross">
+        </div>
+        <h1 class="profile__title">Зарегистрироваться</h1>
+        <form action="" method="post" class="profile__form">
+            <div class="form-item email">
+                <input type="text" name="email" placeholder="Email"  class="form-item__input" required autofocus>
+                <img src="./img/profile-icons/email-icon.svg" alt="" class="form-item__icon">
+            </div>
+            <div class="form-item">
+                <input type="password" name="password" placeholder="Password" class="form-item__input" required>
+                <img src="./img/profile-icons/padlock-icon.svg" alt="" class="form-item__icon">
+            </div>
+            <div class="form-checkbox">
+                <input type="checkbox" name="agreement" class="form-checkbox__input" required>
+                <div class="form-checkbox__text">Я согласен с <span>правилами</span> и <span>условиями</span></div>
+            </div>
+            <button class="form-item__button button">Зарегистрироваться</button>
+        </form>
+        <div class="profile__text">Уже есть аккаунт? <span id="login">Войти</span></div>
+        <div class="profile__footer-text">©️ Double Cup</div>
+    </section>
+    <section class="profile login">
+        <div class="profile__cross" id="cross">
+            <img src="./img/profile-icons/cross-icon.svg" alt="quit" id="cross">
+        </div>
+        <h1 class="profile__title">Войти</h1>
+        <form action="" method="post" class="profile__form">
+            <div class="form-item email">
+                <input type="text" name="username" placeholder="Username"  class="form-item__input" required autofocus>
+                <img src="./img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
+            </div>
+            <div class="form-item">
+                <input type="password" name="password" placeholder="Password" class="form-item__input" required>
+                <img src="./img/profile-icons/padlock-icon.svg" alt="" class="form-item__icon">
+            </div>
+            <button class="form-item__button button login__button">Войти</button>
+        </form>
+        <div class="profile__text">Нет аккаунта? <span id="register">Зарегистрироваться</span></div>
+        <div class="profile__footer-text">©️ Double Cup</div>
+    </section>
 </body>
 <!-- Connecting Slick Slider -->
 <script type="text/javascript" src="./js/slick.min.js"></script>

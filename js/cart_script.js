@@ -1,3 +1,6 @@
+const cart_icon = document.querySelector(".cart-icon");
+const header_cart_icon = document.getElementById("header-cart-icon");
+
 let cart = {
     "apples": 0,
     "bananas": 0,
@@ -63,10 +66,26 @@ function minusFunction(id) {
     $(`.${id}-counter`).html(cart[id]);
 };
 
+cart_icon.onclick = () => {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 700);
+};
+
 function checkOrder(id) {
     let check = 0;
 
     for (var id in cart) {
-        if (cart[id] > 0) {check += 1;}
+        if (cart[id] > 0) {
+            check += 1;
+        }
+    }
+
+    if (check != 0) {
+        cart_icon.style.cssText = "opacity: 1; pointer-events: auto;";
+        header_cart_icon.src = "../img/header-icons/cart-full-icon.svg";
+    } else {
+        cart_icon.style.cssText = "opacity: 0; pointer-events: none;";
+        header_cart_icon.src = "../img/header-icons/cart-icon.svg";
     }
 };
