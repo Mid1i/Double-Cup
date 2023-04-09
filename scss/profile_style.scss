@@ -5,12 +5,13 @@
 */
 .profile {
     align-items: center;
-    background: var(--transp-white);
+    background: rgba(255, 255, 255, 0.316);
+    backdrop-filter: blur(10px);
     border: 3px solid var(--black);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    padding: 60px 25px 10px;
+    padding: 40px 25px 10px;
     position: fixed;
     transform: translate(-50%, -50%) scale(0);
     transition: all 0.3s;
@@ -25,7 +26,7 @@
         border-radius: 0px 17px 0px 20px;
         cursor: pointer;
         padding: 12px;
-        margin: -60px -25px 10px;
+        margin: -40px -25px 0px;
         height: 50px;
         width: 50px;
     }
@@ -74,9 +75,13 @@
         width: 100%;
     }
 
+    &__input::placeholder {
+        color: var(--black);
+    }
+
     &__icon {
         position: absolute;
-        right: 10px;
+        right: 10px;     
     }
 
     &__button {
@@ -112,7 +117,7 @@
 }
 
 .email {
-    margin: 0px 0px 45px;
+    margin: 25px 0px;
 }
 
 .login__button {
@@ -122,11 +127,11 @@
 
 @media (max-width: 430px) {
     .profile {
-        padding: 60px 10px 10px;
+        padding: 40px 10px 10px;
         width: 300px;
 
         &__cross {
-            margin: -60px -10px 10px;
+            margin: -40px -10px 0px;
         }
 
         &__title {
@@ -137,6 +142,10 @@
     .form-item__button {
         padding: 15px 40px;
         width: 100%;
+    }
+
+    .form-checkbox {
+        margin: 30px 0px 10px;
     }
 
     .login__button {

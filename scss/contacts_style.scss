@@ -14,7 +14,7 @@
 
     &-left {
         border-radius: 20px;
-        box-shadow: 0px 0px 10px var(--black);
+        box-shadow: 0px 0px 10px var(--gray);
         padding: 15px;
         height: 280px;
         width: 500px;
@@ -42,7 +42,7 @@
     }
 
     &-right {
-        box-shadow: 0px 0px 10px var(--black);
+        box-shadow: 0px 0px 10px var(--gray);
         margin-left: -50px;
         height: 260px;
         z-index: 1;

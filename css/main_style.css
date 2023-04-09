@@ -125,12 +125,13 @@ main {
 */
 .profile {
   align-items: center;
-  background: var(--transp-white);
+  background: rgba(255, 255, 255, 0.316);
+  backdrop-filter: blur(10px);
   border: 3px solid var(--black);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  padding: 60px 25px 10px;
+  padding: 40px 25px 10px;
   position: fixed;
   transform: translate(-50%, -50%) scale(0);
   transition: all 0.3s;
@@ -145,7 +146,7 @@ main {
   border-radius: 0px 17px 0px 20px;
   cursor: pointer;
   padding: 12px;
-  margin: -60px -25px 10px;
+  margin: -40px -25px 0px;
   height: 50px;
   width: 50px;
 }
@@ -186,6 +187,9 @@ main {
   padding: 10px;
   width: 100%;
 }
+.form-item__input::placeholder {
+  color: var(--black);
+}
 .form-item__icon {
   position: absolute;
   right: 10px;
@@ -219,7 +223,7 @@ main {
 }
 
 .email {
-  margin: 0px 0px 45px;
+  margin: 25px 0px;
 }
 
 .login__button {
@@ -229,11 +233,11 @@ main {
 
 @media (max-width: 430px) {
   .profile {
-    padding: 60px 10px 10px;
+    padding: 40px 10px 10px;
     width: 300px;
   }
   .profile__cross {
-    margin: -60px -10px 10px;
+    margin: -40px -10px 0px;
   }
   .profile__title {
     font-size: 28px;
@@ -241,6 +245,9 @@ main {
   .form-item__button {
     padding: 15px 40px;
     width: 100%;
+  }
+  .form-checkbox {
+    margin: 30px 0px 10px;
   }
   .login__button {
     padding: 15px 110px;
@@ -860,7 +867,7 @@ main {
 }
 .contacts-left {
   border-radius: 20px;
-  box-shadow: 0px 0px 10px var(--black);
+  box-shadow: 0px 0px 10px var(--gray);
   padding: 15px;
   height: 280px;
   width: 500px;
@@ -883,7 +890,7 @@ main {
   font-weight: 400;
 }
 .contacts-right {
-  box-shadow: 0px 0px 10px var(--black);
+  box-shadow: 0px 0px 10px var(--gray);
   margin-left: -50px;
   height: 260px;
   z-index: 1;
