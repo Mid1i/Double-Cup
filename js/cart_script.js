@@ -1,6 +1,9 @@
 const cart_icon = document.querySelector(".cart-icon");
 const header_cart_icon = document.getElementById("header-cart-icon");
+const cart_amount = document.getElementById("cart-amount");
 
+let amount = 0;
+ 
 let cart = {
     "apples": 0,
     "bananas": 0,
@@ -41,6 +44,7 @@ document.addEventListener("click", (event) => {
     }
 
     checkOrder(id);
+    updateCart();
 });
 
 function plusFunction(id) {
@@ -50,6 +54,8 @@ function plusFunction(id) {
     $(`.${id}-button`).addClass('hide');
 
     $(`.${id}-counter`).html(cart[id]);
+
+    amount++;
 };
 
 function minusFunction(id) {
@@ -64,6 +70,8 @@ function minusFunction(id) {
     }
 
     $(`.${id}-counter`).html(cart[id]);
+
+    amount--;
 };
 
 cart_icon.onclick = () => {
@@ -87,5 +95,18 @@ function checkOrder(id) {
     } else {
         cart_icon.style.cssText = "opacity: 0; pointer-events: none;";
         header_cart_icon.src = "../img/header-icons/cart-icon.svg";
+        amount = 0;
     }
 };
+
+function updateCart() {
+    if (amount == 0) {
+        cart_amount.innerHTML = "Пусто";
+    } else if (amount % 10 == 1 && amount != 11) {
+        cart_amount.innerHTML = `${amount} товар`;
+    } else if ([2, 3, 4].includes(amount % 10) && !([12, 13, 14].includes(amount))) {
+        cart_amount.innerHTML = `${amount} товара`;
+    } else {
+        cart_amount.innerHTML = `${amount} товаров`;
+    }
+}
