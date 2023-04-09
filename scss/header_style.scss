@@ -146,16 +146,16 @@
             bottom: 0px; 
         }
 
-        &.burger-menu::before { 
+        &.active::before { 
             transform: rotate(45deg); 
             top: 9px; 
         }
 
-        &.burger-menu span { 
+        &.active span { 
             transform: scale(0);
         }
 
-        &.burger-menu::after { 
+        &.active::after { 
             bottom: 9px; 
             transform: rotate(-45deg); 
         }

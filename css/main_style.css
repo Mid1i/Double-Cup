@@ -429,14 +429,14 @@ main {
   .header-menu-burger::after {
     bottom: 0px;
   }
-  .header-menu-burger.burger-menu::before {
+  .header-menu-burger.active::before {
     transform: rotate(45deg);
     top: 9px;
   }
-  .header-menu-burger.burger-menu span {
+  .header-menu-burger.active span {
     transform: scale(0);
   }
-  .header-menu-burger.burger-menu::after {
+  .header-menu-burger.active::after {
     bottom: 9px;
     transform: rotate(-45deg);
   }

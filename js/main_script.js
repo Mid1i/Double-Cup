@@ -11,8 +11,9 @@ document.addEventListener("click", (event) => {
     let id = arg.id;
 
     if (arg.classList.contains("header-menu-burger")) {
+        document.querySelector(".header-menu-burger").classList.toggle("active"); 
         header_list.classList.toggle("active"); 
-        body.classList.toggle("lock");   
+        body.classList.toggle("lock");  
     }
     
     if (sections.includes(id)) {
