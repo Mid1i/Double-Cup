@@ -3,6 +3,7 @@ const header_cart_icon = document.getElementById("header-cart-icon");
 const cart_amount = document.getElementById("cart-amount");
 
 let amount = 0;
+let path = "https://mid1i.github.io/Double-Cup";
  
 let cart = {
     "apples": 0,
@@ -91,10 +92,11 @@ function checkOrder(id) {
 
     if (check != 0) {
         cart_icon.style.cssText = "opacity: 1; pointer-events: auto;";
-        header_cart_icon.src = "../img/header-icons/cart-full-icon.svg";
+        header_cart_icon.src = `${path}/img/header-icons/cart-full-icon.svg`;
     } else {
         cart_icon.style.cssText = "opacity: 0; pointer-events: none;";
-        header_cart_icon.src = "../img/header-icons/cart-icon.svg";
+        header_cart_icon.src = `${path}/img/header-icons/cart-icon.svg`;
+        console.log(header_cart_icon.src);
         amount = 0;
     }
 };
