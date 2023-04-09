@@ -210,6 +210,13 @@ main {
   font-weight: 400;
   margin: 0px 0px 0px 10px;
 }
+.form-checkbox__text span {
+  cursor: pointer;
+  font-weight: 600;
+}
+.form-checkbox__text span:hover {
+  text-decoration: underline;
+}
 
 .email {
   margin: 0px 0px 45px;
