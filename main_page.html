@@ -12,17 +12,17 @@
     <link rel="stylesheet" href="./css/main_style.css">
     <!-- Connecting the site icon -->
     <link rel="icon" href="./img/favicon-icons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-icons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-icons/favicon-16x16.png">
     <!-- Connecting site icons on mobile phones and in modern browsers -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon-icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon-icons/apple-touch-icon.png">
     <link rel="manifest" href="./img/favicon-icons/site.webmanifest">
     <!-- Connecting site icon in web application -->
     <link rel="mask-icon" href="./img/favicon-icons/safari-pinned-tab.svg" color="#5bbad5">  
     <!-- Connecting jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
 </head>
-<body>
+<body class="lock">
     <div class="wrapper">
         <header>
             <section class="header-top">
@@ -56,12 +56,16 @@
                         </div>
                         <div class="button__text" id="login-item">Вход</div>
                     </button>
-                    <button class="header-cart button">
+                    <button class="header-cart button cart-item">
                         <div class="button__image">
-                            <img src="./img/header-icons/cart-icon.svg" alt="" id="header-cart-icon">
+                            <img src="./img/header-icons/cart-icon.svg" alt="" class="cart-item" id="header-cart-icon">
                         </div>
-                        <div class="button__text" id="cart-amount">Пусто</div>
+                        <div class="button__text cart-item" id="cart-amount">Пусто</div>
                     </button>
+                    <div class="cart-block hide">
+                        <h1 class="cart-block__title">Корзина</h1>
+                        <div class="cart-block-items"></div>    
+                    </div>
                 </section>
             </section>
             <nav>
@@ -257,12 +261,16 @@
         <div class="profile__text">Нет аккаунта? <span id="register">Зарегистрироваться</span></div>
         <div class="profile__footer-text">©️ Double Cup</div>
     </section>
+
+    <section class="loader">
+        <span class="loader__icon"></span>
+    </section>
 </body>
 <!-- Connecting Slick Slider -->
 <script type="text/javascript" src="./js/slick.min.js"></script>
 <!-- Connecting JavaScript -->
 <script src="./js/main_script.js"></script>
 <script src="./js/createElements_script.js" type="module"></script>
-<script src="./js/cart_script.js"></script>
+<script src="./js/cart_script.js" type="module"></script>
 <script src="./js/slider.js"></script>
 </html>

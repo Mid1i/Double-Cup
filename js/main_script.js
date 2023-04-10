@@ -4,6 +4,9 @@ const body = document.querySelector("body");
 const login = document.querySelector(".login");
 const register = document.querySelector(".register");
 
+const loader = document.querySelector(".loader");
+const loader_icon = document.querySelector(".loader__icon"); 
+
 const sections = ["fruits", "bread", "sweets", "pasta", "cheese", "milk-products"];
 
 document.addEventListener("click", (event) => {
@@ -40,4 +43,17 @@ document.addEventListener("click", (event) => {
         login.classList.add("active_profile"); 
         register.classList.remove("active_profile");
     }
+
 });
+
+window.onload = () => {
+    setTimeout(() => {
+        loader_icon.style.cssText = "opacity: 0;";
+        loader.style.cssText = "opacity: 0;";
+        body.classList.toggle("lock");
+    }, 1000);
+
+    setTimeout(() => {
+        loader.style.cssText = "z-index: -1;";
+    }, 2000);  
+};

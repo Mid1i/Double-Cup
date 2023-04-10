@@ -34,7 +34,7 @@ function createItem(i) {
 
     let price = document.createElement("div");
     price.classList.add("item__price");
-    price.innerHTML = data[i].price;
+    price.innerHTML = `${data[i].price}.00 ₽`;
 
     let weight = document.createElement("div");
     weight.classList.add("item__weight");

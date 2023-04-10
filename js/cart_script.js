@@ -1,36 +1,12 @@
-const cart_icon = document.querySelector(".cart-icon");
+import { cart, cart_block_items, getProduct, createCartItem } from "./createCart.js";
+
 const header_cart_icon = document.getElementById("header-cart-icon");
+const cart_icon = document.querySelector(".cart-icon");
+const cart_block = document.querySelector(".cart-block");
 const cart_amount = document.getElementById("cart-amount");
 
 let amount = 0;
 let path = "https://mid1i.github.io/Double-Cup";
- 
-let cart = {
-    "apples": 0,
-    "bananas": 0,
-    "cucumbers": 0,
-    "tomatoes": 0,
-    "white-bread": 0,
-    "croissant": 0,
-    "chiabatta": 0,
-    "black-bread": 0,
-    "donuts": 0,
-    "macarons": 0,
-    "marmalade": 0,
-    "cookies": 0,
-    "pasta-spirals": 0,
-    "pasta-feather": 0,
-    "buckwheat": 0,
-    "rice": 0,
-    "rus-cheese": 0,
-    "hol-cheese": 0,
-    "boil-sausage": 0,
-    "rs-sausage": 0,
-    "milk": 0,
-    "curd": 0,
-    "sour-cream": 0,
-    "eggs": 0
-};
 
 document.addEventListener("click", (event) => {
     let arg = event.target;
@@ -44,7 +20,15 @@ document.addEventListener("click", (event) => {
         minusFunction(id);
     }
 
-    checkOrder(id);
+    if ((arg.classList.contains("cart-item")) && (amount != 0)) {
+        cart_block.classList.remove("hide");
+    }
+
+    if (arg.classList.contains(`${id}-delete`)) {
+        zeroFunction(id);
+    }
+
+    checkOrder();
     updateCart();
 });
 
@@ -56,6 +40,11 @@ function plusFunction(id) {
 
     $(`.${id}-counter`).html(cart[id]);
 
+    if (cart[id] == 1) {
+        createCartItem(id);
+    }
+
+    updatePrice(id);
     amount++;
 };
 
@@ -67,24 +56,33 @@ function minusFunction(id) {
         $(`.${id}-button`).removeClass('hide');
         $(`.${id}-buttons`).addClass('hide');
 
+        deleteElement(id);
+
         cart[id] = 0;
     }
 
     $(`.${id}-counter`).html(cart[id]);
 
+    updatePrice(id);
     amount--;
 };
 
-cart_icon.onclick = () => {
-    $("html, body").animate({
-        scrollTop: 0
-    }, 700);
-};
+function zeroFunction(id) {
+    $(`.${id}-button`).removeClass('hide');
+    $(`.${id}-buttons`).addClass('hide');
 
-function checkOrder(id) {
+    $(`.${id}-counter`).html(cart[id]);
+
+    deleteElement(id);
+
+    amount -= cart[id];
+    cart[id] = 0;
+}
+
+function checkOrder() {
     let check = 0;
 
-    for (var id in cart) {
+    for (let id in cart) {
         if (cart[id] > 0) {
             check += 1;
         }
@@ -96,7 +94,7 @@ function checkOrder(id) {
     } else {
         cart_icon.style.cssText = "opacity: 0; pointer-events: none;";
         header_cart_icon.src = `${path}/img/header-icons/cart-icon.svg`;
-        console.log(header_cart_icon.src);
+        cart_block.classList.add("hide");
         amount = 0;
     }
 };
@@ -112,3 +110,19 @@ function updateCart() {
         cart_amount.innerHTML = `${amount} товаров`;
     }
 }
+
+function deleteElement(id) {
+    let cart_item = document.querySelector(`.${id}-cart-item`);
+    cart_block_items.removeChild(cart_item);
+}
+
+function updatePrice(id) {
+    let product = getProduct(id);
+    $(`.${id}-price`).html(`${cart[id] * product.price}.00 ₽`); 
+}
+
+cart_icon.onclick = () => {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 700);
+};

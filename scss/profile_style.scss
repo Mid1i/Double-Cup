@@ -36,8 +36,10 @@
     }
 
     &__title {
+        font-family: "Ubuntu", sans-serif;
         font-size: 32px;
         font-weight: 700;
+
     }
 
     &__form {
@@ -51,6 +53,7 @@
 
         & span {
             cursor: pointer;
+            color: var(--red);
             font-weight: 600;
         }
 

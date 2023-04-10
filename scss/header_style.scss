@@ -58,10 +58,18 @@
 .header-buttons {
     align-items: center;
     display: flex;
+    position: relative;
 }
 
 .header-login {
     margin: 0px 50px 0px 0px;    
+}
+
+.header-cart {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 150px;
 }
 
 .header-bottom-list,
@@ -107,10 +115,6 @@
 }
 
 @media (max-width: 950px) {
-    body.lock { 
-        overflow: hidden; 
-    }
-    
     .header-menu-burger {
         display: block;
         position: relative;
