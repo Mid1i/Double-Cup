@@ -227,6 +227,7 @@ main {
     &__button {
         background: var(--white);
         border: 2px solid var(--light-gray);
+        border-left: 1px solid var(--light-gray);
         font-size: 20px;
         height: 30px;
         width: 30px;    
