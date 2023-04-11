@@ -5,6 +5,7 @@ const cart_icon = document.querySelector(".cart-icon");
 const cart_block = document.querySelector(".cart-block");
 const cart_amount = document.getElementById("cart-amount");
 
+let result_price = 0;
 let amount = 0;
 let path = "https://mid1i.github.io/Double-Cup";
 
@@ -21,7 +22,7 @@ document.addEventListener("click", (event) => {
     }
 
     if ((arg.classList.contains("cart-item")) && (amount != 0)) {
-        cart_block.classList.remove("hide");
+        cart_block.classList.toggle("hide");
     }
 
     if (arg.classList.contains(`${id}-delete`)) {
@@ -45,6 +46,7 @@ function plusFunction(id) {
     }
 
     updatePrice(id);
+    updateResultPrice(id, "+");
     amount++;
 };
 
@@ -64,6 +66,7 @@ function minusFunction(id) {
     $(`.${id}-counter`).html(cart[id]);
 
     updatePrice(id);
+    updateResultPrice(id, "-");
     amount--;
 };
 
@@ -74,6 +77,7 @@ function zeroFunction(id) {
     $(`.${id}-counter`).html(cart[id]);
 
     deleteElement(id);
+    updateResultPrice(id, 0);
 
     amount -= cart[id];
     cart[id] = 0;
@@ -118,7 +122,28 @@ function deleteElement(id) {
 
 function updatePrice(id) {
     let product = getProduct(id);
-    $(`.${id}-price`).html(`${cart[id] * product.price}.00 ₽`); 
+
+    $(`.${id}-price`).html(`${cart[id] * product.price}.00 ₽`);
+}
+
+function updateResultPrice(id, step) {
+    let product = getProduct(id);
+
+    switch (step) {
+        case "+":
+            result_price += Number(product.price);
+            break;
+        case "-":
+            result_price -= Number(product.price);
+            break;
+        case 0:
+            result_price -= Number(product.price) * cart[id];
+            break;
+        default:
+            break;
+    }
+
+    $(".result__price").html(`${result_price}.00 ₽`);
 }
 
 cart_icon.onclick = () => {

@@ -50,12 +50,12 @@
                     </ul>
                 </nav>
                 <section class="header-buttons">
-                    <button class="header-login button" id="login-item">
+                    <!-- <button class="header-login button" id="login-item">
                         <div class="button__image" id="login-item">
                             <img src="./img/header-icons/login-icon.svg" alt="" id="login-item">
                         </div>
                         <div class="button__text" id="login-item">Вход</div>
-                    </button>
+                    </button> -->
                     <button class="header-cart button cart-item">
                         <div class="button__image">
                             <img src="./img/header-icons/cart-icon.svg" alt="" class="cart-item" id="header-cart-icon">
@@ -64,7 +64,19 @@
                     </button>
                     <div class="cart-block hide">
                         <h1 class="cart-block__title">Корзина</h1>
-                        <div class="cart-block-items"></div>    
+                        <div class="cart-block-items"></div> 
+                        <div class="cart-block__result">
+                            <h2 class="result__title">Итого:</h2>
+                            <div class="result__price">0 ₽</div>
+                        </div>
+                        <div class="cart-block__buttons">
+                            <a href="">
+                                <button class="button-order">Оформить заказ</button>
+                            </a>    
+                            <a href="">
+                                <button class="button-cart">В корзину</button>
+                            </a>
+                        </div>   
                     </div>
                 </section>
             </section>
@@ -222,22 +234,22 @@
         <h1 class="profile__title">Зарегистрироваться</h1>
         <form action="" method="post" class="profile__form">
             <div class="form-item">
-                <input type="text" name="username" placeholder="Username"  class="form-item__input" required autofocus>
+                <input type="text" name="username" placeholder="Username"  class="form-item__input name-input" required autofocus>
                 <img src="./img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
             </div>
             <div class="form-item email">
-                <input type="text" name="email" placeholder="Email"  class="form-item__input" required>
+                <input type="text" name="email" placeholder="Email"  class="form-item__input email-input" required>
                 <img src="./img/profile-icons/email-icon.svg" alt="" class="form-item__icon">
             </div>
             <div class="form-item">
-                <input type="password" name="password" placeholder="Password" class="form-item__input" required>
+                <input type="password" name="password" placeholder="Password" class="form-item__input pass-input" required>
                 <img src="./img/profile-icons/padlock-icon.svg" alt="" class="form-item__icon">
             </div>
             <div class="form-checkbox">
                 <input type="checkbox" name="agreement" class="form-checkbox__input" required>
                 <div class="form-checkbox__text">Я согласен с <span>правилами</span> и <span>условиями</span></div>
             </div>
-            <button class="form-item__button button">Зарегистрироваться</button>
+            <button class="form-item__button button" id="register-button">Зарегистрироваться</button>
         </form>
         <div class="profile__text">Уже есть аккаунт? <span id="login">Войти</span></div>
         <div class="profile__footer-text">©️ Double Cup</div>
@@ -269,7 +281,7 @@
 <!-- Connecting Slick Slider -->
 <script type="text/javascript" src="./js/slick.min.js"></script>
 <!-- Connecting JavaScript -->
-<script src="./js/main_script.js"></script>
+<script src="./js/main_script.js" type="module"></script>
 <script src="./js/createElements_script.js" type="module"></script>
 <script src="./js/cart_script.js" type="module"></script>
 <script src="./js/slider.js"></script>

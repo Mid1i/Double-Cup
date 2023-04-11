@@ -10,11 +10,12 @@
     justify-content: center;
     position: fixed;
     overflow: hidden;
-    transition: all 1s;
+    transition: opacity 1s;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
+    z-index: 4;
 
     &__icon {
         width: 48px;

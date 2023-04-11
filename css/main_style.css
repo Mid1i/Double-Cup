@@ -10,6 +10,7 @@
   --white: #ffffff;
   --transp-white: rgba(255, 255, 255, 0.93);
   --gray: #A7A7A7;
+  --very-light-gray: #f7f7f7;
   --light-gray: #DDDDDD;
   --dark-gray: #464646;
   --red: #EF314B;
@@ -86,42 +87,6 @@ main {
 @media (max-width: 520px) {
   main {
     padding: 0px 5px;
-  }
-}
-.cart-icon {
-  align-items: center;
-  background: var(--red);
-  border-radius: 20px;
-  bottom: 130px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 15px;
-  position: fixed;
-  right: 100px;
-  opacity: 0;
-  transition: opacity 0.5s;
-  z-index: 1;
-}
-.cart-icon img {
-  height: 20px;
-  width: 20px;
-}
-.cart-icon img:first-child {
-  margin: 0px 0px 10px;
-}
-
-.cart-icon:hover {
-  background: var(--light-red);
-  box-shadow: 0px 0px 10px var(--gray);
-  transform: scale(1.05);
-}
-
-@media (max-width: 767px) {
-  .cart-icon {
-    right: 20px;
-    bottom: 140px;
   }
 }
 .slick-list {
@@ -208,12 +173,14 @@ main {
 
 .header-login {
   margin: 0px 50px 0px 0px;
+  height: 40px;
 }
 
 .header-cart {
   align-items: center;
   display: flex;
   justify-content: center;
+  height: 40px;
   width: 150px;
 }
 
@@ -334,6 +301,9 @@ main {
   .bottom-list,
   .header-bottom-list {
     display: none;
+  }
+  .header-login {
+    margin: 0px 10px 0px 0px;
   }
 }
 @media (max-width: 320px) {
@@ -1002,11 +972,12 @@ footer {
   justify-content: center;
   position: fixed;
   overflow: hidden;
-  transition: all 1s;
+  transition: opacity 1s;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
+  z-index: 4;
 }
 .loader__icon {
   width: 48px;
@@ -1040,17 +1011,58 @@ footer {
     box-shadow: 0 -48px inset;
   }
 }
+/* 
+    ------------
+    Cart section
+    ------------
+*/
+.cart-icon {
+  align-items: center;
+  background: var(--red);
+  border-radius: 20px;
+  bottom: 130px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  position: fixed;
+  right: 100px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+.cart-icon img {
+  height: 20px;
+  width: 20px;
+}
+.cart-icon img:first-child {
+  margin: 0px 0px 10px;
+}
+
+.cart-icon:hover {
+  background: var(--light-red);
+  box-shadow: 0px 0px 10px var(--gray);
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .cart-icon {
+    right: 20px;
+    bottom: 140px;
+  }
+}
 .cart-block {
   background: var(--white);
   box-shadow: 0px 0px 10px var(--gray);
   border-radius: 10px;
-  bottom: -320px;
+  bottom: -410px;
   padding: 5px 5px 10px;
   position: absolute;
   right: 0px;
-  height: 300px;
+  height: 400px;
   width: 375px;
-  z-index: 1;
+  z-index: 2;
 }
 .cart-block__title {
   border-bottom: 2px solid var(--light-gray);
@@ -1071,6 +1083,18 @@ footer {
   grid-template-areas: "image title title price" "image buttons buttons delete";
   margin: 15px 0px 0px;
 }
+.cart-block__result {
+  border-top: 2px solid var(--light-gray);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 5px;
+}
+.cart-block__buttons {
+  display: flex;
+  float: right;
+  padding: 0px 20px;
+}
 
 .cart-item__image {
   grid-area: image;
@@ -1090,6 +1114,7 @@ footer {
 .cart-item__price {
   align-self: center;
   grid-area: price;
+  justify-self: center;
   font-weight: 600;
 }
 .cart-item__buttons {
@@ -1114,6 +1139,9 @@ footer {
   height: 30px;
   width: 30px;
 }
+.cart-item__button:hover {
+  background: var(--very-light-gray);
+}
 .cart-item__button-plus {
   border-radius: 0px 5px 0px 0px;
 }
@@ -1123,4 +1151,52 @@ footer {
   cursor: pointer;
   font-size: 14px;
   text-align: center;
+}
+.cart-item__delete:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.button-order,
+.button-cart {
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 10px;
+  height: 42px;
+}
+
+.button-order {
+  background: var(--white);
+  border: 2px solid var(--light-gray);
+  margin: 0px 20px 0px 0px;
+  width: 150px;
+}
+.button-order:hover {
+  background: #f7f7f7;
+}
+
+.button-cart {
+  background: var(--red);
+  color: var(--white);
+  font-weight: 600;
+  width: 110px;
+}
+.button-cart:hover {
+  background: var(--light-red);
+}
+
+.result__title,
+.result__price {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+@media (max-width: 400px) {
+  .cart-block {
+    width: 290px;
+  }
+  .cart-block__buttons {
+    padding: 0px;
+  }
 }

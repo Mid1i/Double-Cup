@@ -1,3 +1,5 @@
+import { createLoginButton, createProfileButton } from "./createProfile.js";
+
 const header_list = document.querySelector(".header-list"); 
 const body = document.querySelector("body"); 
 
@@ -8,6 +10,19 @@ const loader = document.querySelector(".loader");
 const loader_icon = document.querySelector(".loader__icon"); 
 
 const sections = ["fruits", "bread", "sweets", "pasta", "cheese", "milk-products"];
+
+const username = document.querySelector(".name-input");
+const email = document.querySelector(".email-input");
+const password = document.querySelector(".pass-input");
+const checkbox = document.querySelector(".form-checkbox__input");
+
+let UserName = localStorage.getItem("username");
+
+if (UserName) {
+    createProfileButton(UserName);
+} else {
+    createLoginButton();
+}
 
 document.addEventListener("click", (event) => {
     let arg = event.target;
@@ -44,6 +59,13 @@ document.addEventListener("click", (event) => {
         register.classList.remove("active_profile");
     }
 
+    if ((id == "register-button") && (![username.value.trim(), email.value.trim(), password.value.trim()].includes("")) && checkbox.checked) {
+        localStorage.setItem("username", username.value.trim());
+        localStorage.setItem("email", email.value.trim());
+        localStorage.setItem("password", password.value.trim());
+        window.reload();
+    }
+
 });
 
 window.onload = () => {
@@ -54,6 +76,6 @@ window.onload = () => {
     }, 1000);
 
     setTimeout(() => {
-        loader.style.cssText = "z-index: -1;";
+        loader.style.cssText = "display: none;";
     }, 2000);  
 };
