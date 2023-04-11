@@ -1,6 +1,6 @@
 const section = document.querySelector(".header-buttons");
 
-let path = "..";
+let path = "https://mid1i.github.io/Double-Cup";
 
 export function createLoginButton() {
     let image = document.createElement("img");

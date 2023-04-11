@@ -1,5 +1,5 @@
-// import data from "../data/data.json" assert { type: "json" };
 let data;
+
 $.getJSON("https://mid1i.github.io/Double-Cup/data/data.json", function(json) {
     data = json;
 });
