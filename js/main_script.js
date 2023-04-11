@@ -16,10 +16,10 @@ const email = document.querySelector(".email-input");
 const password = document.querySelector(".pass-input");
 const checkbox = document.querySelector(".form-checkbox__input");
 
-let UserName = localStorage.getItem("username");
+let userNameItem = localStorage.getItem("username");
 
-if (UserName) {
-    createProfileButton(UserName);
+if (userNameItem) {
+    createProfileButton(userNameItem);
 } else {
     createLoginButton();
 }
@@ -58,12 +58,11 @@ document.addEventListener("click", (event) => {
         login.classList.add("active_profile"); 
         register.classList.remove("active_profile");
     }
-
+    
     if ((id == "register-button") && (![username.value.trim(), email.value.trim(), password.value.trim()].includes("")) && checkbox.checked) {
         localStorage.setItem("username", username.value.trim());
         localStorage.setItem("email", email.value.trim());
         localStorage.setItem("password", password.value.trim());
-        window.reload();
     }
 
 });

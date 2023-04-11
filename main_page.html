@@ -50,12 +50,6 @@
                     </ul>
                 </nav>
                 <section class="header-buttons">
-                    <!-- <button class="header-login button" id="login-item">
-                        <div class="button__image" id="login-item">
-                            <img src="./img/header-icons/login-icon.svg" alt="" id="login-item">
-                        </div>
-                        <div class="button__text" id="login-item">Вход</div>
-                    </button> -->
                     <button class="header-cart button cart-item">
                         <div class="button__image">
                             <img src="./img/header-icons/cart-icon.svg" alt="" class="cart-item" id="header-cart-icon">
@@ -232,7 +226,7 @@
             <img src="./img/profile-icons/cross-icon.svg" alt="quit" id="cross">
         </div>
         <h1 class="profile__title">Зарегистрироваться</h1>
-        <form action="" method="post" class="profile__form">
+        <form action="" class="profile__form">
             <div class="form-item">
                 <input type="text" name="username" placeholder="Username"  class="form-item__input name-input" required autofocus>
                 <img src="./img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
@@ -249,7 +243,7 @@
                 <input type="checkbox" name="agreement" class="form-checkbox__input" required>
                 <div class="form-checkbox__text">Я согласен с <span>правилами</span> и <span>условиями</span></div>
             </div>
-            <button class="form-item__button button" id="register-button">Зарегистрироваться</button>
+            <button class="form-item__button button" id="register-button" type="submit">Зарегистрироваться</button>
         </form>
         <div class="profile__text">Уже есть аккаунт? <span id="login">Войти</span></div>
         <div class="profile__footer-text">©️ Double Cup</div>
@@ -259,7 +253,7 @@
             <img src="./img/profile-icons/cross-icon.svg" alt="quit" id="cross">
         </div>
         <h1 class="profile__title">Войти</h1>
-        <form action="" method="post" class="profile__form">
+        <form action="" class="profile__form">
             <div class="form-item email">
                 <input type="text" name="username" placeholder="Username"  class="form-item__input" required autofocus>
                 <img src="./img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
