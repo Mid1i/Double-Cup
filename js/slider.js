@@ -13,7 +13,7 @@ $(document).ready(() => {
     });
 });
 
-function ProductSlider() {
+export function ProductSlider() {
     if (window.matchMedia("(max-width: 520px)").matches) {
         $(".products").not('.slick-initialized').slick({
             responsive: [
