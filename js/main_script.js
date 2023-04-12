@@ -24,6 +24,8 @@ if (userNameItem) {
     createLoginButton();
 }
 
+ProductSlider();
+
 document.addEventListener("click", (event) => {
     let arg = event.target;
     let id = arg.id;
