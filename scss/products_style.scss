@@ -36,6 +36,8 @@
 
     &__image {
         margin: 20px 0px;
+        height: 130px;
+        width: 230px;
 
         & img {
             max-width: 100%;
@@ -107,6 +109,7 @@
 }
 
 @media (max-width: 1100px) {
+    .item__image,
     .products-item,
     .products-slider-item {
         width: 190px;
@@ -143,6 +146,10 @@
         &-slider-item {
             width: 230px;
         }
+    }
+
+    .item__image {
+        width: 230px;
     }
 
     .item {
@@ -195,6 +202,7 @@
 }
 
 @media (max-width: 340px) {
+    .item__image,
     .products-item,
     .products-slider-item {
         width: 190px;

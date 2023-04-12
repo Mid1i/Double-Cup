@@ -5,8 +5,7 @@
 */
 .profile {
     align-items: center;
-    background: rgba(255, 255, 255, 0.316);
-    backdrop-filter: blur(10px); 
+    background: var(--profile-color); 
     border: 3px solid var(--black);
     border-radius: 20px;
     display: flex;
@@ -86,7 +85,7 @@
 
     &__input:hover,
     &__input:focus {
-        background: rgba(255, 255, 255, 0.131);
+        background: var(--inputs-hover-color);
     }
 
     &__icon {

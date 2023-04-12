@@ -3,7 +3,6 @@
      Footer section
     ----------------
 */
-
 footer {
     background: var(--dark-gray);  
 }
@@ -22,14 +21,20 @@ footer {
 .footer-socialnet {
     align-items: center;
     display: flex;
+}
 
-        &-item {
-            margin: 0px 15px 0px 0px;
-        }
+.footer-pay-item {
+    margin: 0px 15px 0px 0px;
 
-        &-item:last-child {
-            margin: 0px;
-        }
+    &:last-child {
+        margin: 0px;
+    }
+}
+
+.footer-socialnet__text {
+    color: var(--red);
+    font-size: 18px;
+    margin: 0px 15px 0px 0px;
 }
 
 .footer__text {
@@ -39,14 +44,14 @@ footer {
 }
 
 @media (max-width: 950px) {
-    footer {
+    .footer-wrapper {
         padding: 20px 10px;
     }
 }
 
-@media (max-width: 767px) { 
-    footer {
+@media (max-width: 790px) { 
+    .footer-wrapper {
         flex-direction: column;
         padding: 0px 0px 10px;
-    } 
+    }
 }

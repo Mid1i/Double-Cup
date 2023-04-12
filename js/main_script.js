@@ -83,7 +83,6 @@ document.addEventListener("click", (event) => {
         localStorage.setItem("email", email.value.trim());
         localStorage.setItem("password", password.value.trim());
     }
-
 });
 
 // Tracks loading of the window for the loading screen display
