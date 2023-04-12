@@ -1,4 +1,5 @@
 import { createLoginButton, createProfileButton } from "./createProfile.js";
+import { ProductSlider } from "./slider.js";
 
 const header_list = document.querySelector(".header-list"); 
 const body = document.querySelector("body"); 
