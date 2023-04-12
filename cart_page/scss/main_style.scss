@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+/* 
+    ----------------
+     Global section
+    ----------------
+*/
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --transp-white: rgba(255, 255, 255, 0.93);
+    --profile-color: rgba(255, 255, 255, 0.886);
+    --inputs-hover-color: rgba(255, 255, 255, 0.131);
+    --gray: #A7A7A7;
+    --very-light-gray: #f7f7f7;
+    --light-gray: #DDDDDD;
+    --dark-gray: #464646;
+    --red: #EF314B;
+    --light-red: #e85266;
+    --green: #4AB838;
+}
+
+body {
+    background: var(--white);
+    color: var(--black);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    touch-action: none;
+}
+
+.lock { 
+    overflow: hidden; 
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 90.8%;
+    max-width: 1280px;
+    padding: 0px 30px;
+}
+
+.title {
+    color: var(--red);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+@media (max-width: 767px) { 
+    .wrapper {
+        padding: 0px 10px; 
+    }
+}
+
+/* 
+    --------------
+     Main section
+    --------------
+*/
+
+main {
+    flex: 1 0 auto;
+    padding: 0px 35px;
+    margin: 50px 0px;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-cart,
+.main-order {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--gray);
+    display: flex;
+    flex: 0 0 70%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.main-cart {
+    margin: 0px 0px 30px;
+}
+
+.main-order {
+    flex: 0 0 25%;
+    padding: 20px 10px 5px;
+    height: 150px;
+}
+
+.main-cart__item {
+    border-bottom: 2px solid var(--light-gray);
+    display: grid;
+    gap: 5px;
+    grid-template: repeat(3, 50px) / repeat(4, 1fr);
+    grid-template-areas:
+        "image title title country"
+        "image title title weight"
+        "image buttons delete price";
+    margin: 0px 0px 10px;
+    padding: 0px 0px 10px;
+
+    &:last-child {
+        border-bottom: none;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+.main__info {
+    display: flex;
+    margin: 0px 0px 30px;
+}
+
+.main__title {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px 20px 0px 0px;
+}
+
+.main__text {
+    color: var(--gray);
+}
+
+.item {
+
+    &__image {
+        grid-area: image;
+
+        & img {
+            border-radius: 10px;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+        grid-area: title;
+    }
+
+    &__country {
+        align-self: center;
+        color: var(--gray);
+        grid-area: country;
+        text-align: center;
+    }
+
+    &__weight {
+        align-self: center;
+        grid-area: weight;
+        text-align: center;
+    }
+
+    &__buttons {
+        display: flex;
+        grid-area: buttons;
+    }
+
+    &__counter,
+    &__button {
+        align-items: center;
+        background: var(--white);
+        border: 2px solid var(--light-gray);
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+
+        &:hover {
+            background: var(--very-light-gray);
+        }
+    }
+
+    &__counter {    
+        border-radius: 5px 0px 0px;
+    }
+
+    &__button {
+        font-size: 20px;
+    }
+
+    &__delete {
+        align-self: center;
+        cursor: pointer;
+        grid-area: delete;
+        text-align: center;
+
+        &:hover {
+            color: var(--red);
+        }
+    }
+
+    &__price {
+        align-self: center;
+        font-weight: 600;
+        font-size: 18px;
+        grid-area: price;
+        text-align: center;
+    }
+}
+
+.minus-button,
+.plus-button {
+    border-left: 1px solid var(--light-gray);
+}
+
+.plus-button {
+    border-radius: 0px 5px 0px 0px;
+}
+
+.order {
+
+    &__result {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 0px 20px;
+    }
+
+    &__title {
+        color: var(--dark-gray);
+        margin: 0px 0px 5px;
+    }
+
+    &__amount,
+    &__price {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    &__button {
+        background: var(--red);
+        border-radius: 10px;
+        color: var(--white);
+        font-size: 20px;
+        height: 50px;
+        width: 100%;
+
+        &:hover {
+            background: var(--light-red);
+            box-shadow: 0px 0px 10px var(--gray);
+            transform: scale(1.05);
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    main {
+        padding: 0px 15px;
+    }
+
+    .main-order {
+        flex: 0 0 29%;
+    }
+}
+
+@media (max-width: 850px) {
+    main {
+        margin: 20px 0px;
+    }
+
+    .main__info {
+        justify-content: center;
+    }
+
+    .main-cart,
+    .main-order {
+        flex: 0 1 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    main {
+        padding: 0px 5px; 
+        margin: 10px 0px;
+    }
+
+    .main__info {
+        margin: 0px 0px 10px;
+    }
+
+    .main-cart__item {
+        grid-template-rows: repeat(3, 40px);
+    }
+}
+
+@media (max-width: 450px) {
+    .main-cart__item {
+        grid-template: 100px 40px 30px 40px / repeat(3, 1fr);
+        grid-template-areas:
+            "image image image"
+            "title title title"
+            "country weight weight"
+            "buttons delete price";
+    }
+
+    .item__title {
+        text-align: center;
+    }
+    
+    .item__weight,
+    .item__price {
+        text-align: right;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-cart__item {
+        grid-template: 100px 40px 40px 30px / repeat(3, 1fr);
+        grid-template-areas:
+            "image image image"
+            "title title title"
+            "buttons delete delete"
+            "price price price";
+    }
+
+    .item__price {
+        text-align: center;
+    }
+    
+    .item__country,
+    .item__weight {
+        display: none;
+    }
+}
+
+@import "./header_style.scss";
+@import "./footer_style.scss";
+@import "./profile_style.scss";
+@import "./loader_style.scss";

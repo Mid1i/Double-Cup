@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Page encoding -->
+    <meta charset="UTF-8">
+    <!-- Page title -->
+    <title>Double Cup</title>
+    <!-- Adaptive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=0, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Connecting CSS styles -->
+    <link rel="stylesheet" href="./css/reset_style.css">
+    <link rel="stylesheet" href="./css/main_style.css">
+    <!-- Connecting the site icon -->
+    <link rel="icon" href="./img/favicon-icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-icons/favicon-16x16.png">
+    <!-- Connecting site icons on mobile phones and in modern browsers -->
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon-icons/apple-touch-icon.png">
+    <link rel="manifest" href="./img/favicon-icons/site.webmanifest">
+    <!-- Connecting site icon in web application -->
+    <link rel="mask-icon" href="./img/favicon-icons/safari-pinned-tab.svg" color="#5bbad5">  
+    <!-- Connecting jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
+</head> 
+<body class="lock">
+    <div class="wrapper">
+        <header>
+            <div class="header-menu-burger">
+                <span></span>
+            </div>
+            <section class="header-info">
+                <div class="header-info__image">
+                    <a href="https://mid1i.github.io/Double-Cup/main_page">
+                        <img src="./img/header-icons/logo.svg" alt="Логотип магазина «Double Cup»">
+                    </a>
+                </div>
+                <article class="header-info__text">
+                    <p>Доставка: с 8:00 до 21:30</p>
+                    <p><a href="tel:88315552525">8 (831) 555-25-25</a></p>
+                </article>
+            </section>
+            <nav>
+                <ul class="header-list">
+                    <li><a href="https://mid1i.github.io/Double-Cup/main_page">Главная</a></li>
+                    <li><a href="">Акции</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Как оплачивать</a></li>
+                    <li><a href="">О нас</a></li>
+                </ul>
+            </nav>
+            <section class="header-buttons"></section>
+        </header>
+        <main>
+            <div class="main__info">
+                <h1 class="main__title">Корзина</h1>
+                <div class="main__text">3 товара</div>
+            </div>
+            <div class="main-wrapper">
+                <section class="main-cart">
+                    <section class="main-cart__item">
+                        <div class="item__image">
+                            <img src="./img/products-images/bread/black-bread-item.jpg" alt="">
+                        </div>
+                        <h2  class="item__title">Хлеб Бородинский нарезка</h2>
+                        <div class="item__country">Россия</div>
+                        <section class="item__buttons">
+                            <div class="item__counter">2</div>
+                            <button class="item__button minus-button">—</button>
+                            <button class="item__button plus-button">+</button>
+                        </section>
+                        <div class="item__delete">Удалить</div>
+                        <div class="item__weight">300 гр.</div>
+                        <div class="item__price">1000 ₽</div>
+                    </section>
+                    <section class="main-cart__item">
+                        <div class="item__image">
+                            <img src="./img/products-images/fruits/apples-item.jpg" alt="">
+                        </div>
+                        <h2  class="item__title">Яблоки красные</h2>
+                        <div class="item__country">Пекарня  Double Cup </div>
+                        <section class="item__buttons">
+                            <div class="item__counter">99</div>
+                            <button class="item__button minus-button">—</button>
+                            <button class="item__button plus-button">+</button>
+                        </section>
+                        <div class="item__delete">Удалить</div>
+                        <div class="item__weight">20 кг. 100 гр.</div>
+                        <div class="item__price">10000 ₽</div>
+                    </section>
+                    <section class="main-cart__item">
+                        <div class="item__image">
+                            <img src="./img/products-images/cheese/boiled-sausages-item.jpg" alt="">
+                        </div>
+                        <h2  class="item__title">Колбаса варёная Докторская</h2>
+                        <div class="item__country">Россия</div>
+                        <section class="item__buttons">
+                            <div class="item__counter">3</div>
+                            <button class="item__button minus-button">—</button>
+                            <button class="item__button plus-button">+</button>
+                        </section>
+                        <div class="item__delete">Удалить</div>
+                        <div class="item__weight">500 гр.</div>
+                        <div class="item__price">1500 ₽</div>
+                    </section>
+                </section>
+                <section class="main-order">
+                    <h3 class="order__title">Итого: </h3>
+                    <div class="order__result">
+                        <div class="order__amount">3 товара</div>
+                        <div class="order__price">10000 ₽</div>
+                    </div>
+                    <button class="order__button">Перейти к оформлению</button>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-wrapper">
+            <section class="footer-pay">
+                <div class="footer-pay-item">
+                    <img src="./img/footer-icons/visa-icon.svg" alt="Visa">
+                </div>
+                <div class="footer-pay-item">
+                    <img src="./img/footer-icons/mastercard-icon.svg" alt="MasterCard">
+                </div>
+                <div class="footer-pay-item">
+                    <img src="./img/footer-icons/mir-icon.svg" alt="Мир">
+                </div>
+            </section>
+            <p class="footer__text">©️ 2023 Double Cup | Все права защищены</p>
+            <section class="footer-socialnet">
+                <div class="footer-socialnet__text">Тех. поддержка:</div>
+                <div class="footer-socialnet__image">
+                    <a href="">
+                        <img src="./img/footer-icons/tg-icon.svg" alt="Telegram">
+                    </a>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <section class="profile register">
+        <div class="profile__cross" id="cross">
+            <img src="./img/profile-icons/cross-icon.svg" alt="quit" id="cross">
+        </div>
+        <h1 class="profile__title">Зарегистрироваться</h1>
+        <form action="" class="profile__form">
+            <div class="form-item">
+                <input type="text" name="username" placeholder="Username"  class="form-item__input name-input" required autofocus>
+                <img src="./img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
+            </div>
+            <div class="form-item email">
+                <input type="text" name="email" placeholder="Email"  class="form-item__input email-input" required>
+                <img src="./img/profile-icons/email-icon.svg" alt="" class="form-item__icon">
+            </div>
+            <div class="form-item">
+                <input type="password" name="password" placeholder="Password" class="form-item__input pass-input" required>
+                <img src="./img/profile-icons/padlock-icon.svg" alt="" class="form-item__icon">
+            </div>
+            <div class="form-checkbox">
+                <input type="checkbox" name="agreement" class="form-checkbox__input" required>
+                <div class="form-checkbox__text">Я согласен с <span>правилами</span> и <span>условиями</span></div>
+            </div>
+            <button class="form-item__button button" id="register-button" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="profile__text">Уже есть аккаунт? <span id="login">Войти</span></div>
+        <div class="profile__footer-text">©️ Double Cup</div>
+    </section>
+    <section class="profile login">
+        <div class="profile__cross" id="cross">
+            <img src="./img/profile-icons/cross-icon.svg" alt="quit" id="cross">
+        </div>
+        <h1 class="profile__title">Войти</h1>
+        <form action="" class="profile__form">
+            <div class="form-item email">
+                <input type="text" name="username" placeholder="Username"  class="form-item__input" required autofocus>
+                <img src="./img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
+            </div>
+            <div class="form-item">
+                <input type="password" name="password" placeholder="Password" class="form-item__input" required>
+                <img src="./img/profile-icons/padlock-icon.svg" alt="" class="form-item__icon">
+            </div>
+            <button class="form-item__button button login__button">Войти</button>
+        </form>
+        <div class="profile__text">Нет аккаунта? <span id="register">Зарегистрироваться</span></div>
+        <div class="profile__footer-text">©️ Double Cup</div>
+    </section>
+
+    <section class="loader">
+        <span class="loader__icon"></span>
+    </section>
+</body>
+<!-- Connecting JavaScript -->
+<script src="./js/main_script.js" type="module"></script>
+</html>
