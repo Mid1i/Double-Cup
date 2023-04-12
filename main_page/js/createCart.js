@@ -30,7 +30,7 @@ export let cart = {
 let data;
 
 // Getting the JSON file of goods
-$.getJSON("https://mid1i.github.io/Double-Cup/data/data.json", function(json) {
+$.getJSON("https://mid1i.github.io/Double-Cup/main_page/data/data.json", function(json) {
     data = json;
 });
 

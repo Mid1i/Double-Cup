@@ -1,0 +1,145 @@
+/* 
+    ----------------
+     Header section
+    ----------------
+*/
+header {
+  align-items: center;
+  border-bottom: 2px solid var(--light-gray);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.header-menu-burger {
+  display: none;
+}
+
+.header-info {
+  align-items: center;
+  display: flex;
+}
+.header-info__image {
+  margin: 0px 10px 0px 0px;
+}
+.header-info__text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+}
+.header-info__text p:first-child {
+  color: var(--gray);
+}
+
+.header-list {
+  align-items: center;
+  display: flex;
+  transition: all 0.3s;
+}
+.header-list li {
+  margin: 0px 25px 0px 0px;
+}
+.header-list li:last-child {
+  margin: 0px;
+}
+
+.header-buttons {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.header-login {
+  align-items: center;
+  background: var(--red);
+  border-radius: 20px;
+  color: var(--white);
+  display: flex;
+  padding: 8px 15px;
+  height: 40px;
+}
+.header-login__image {
+  margin: 0px 10px 0px 0px;
+}
+.header-login__text {
+  font-size: 16px;
+  font-weight: 600;
+}
+.header-login:hover {
+  background: var(--light-red);
+  box-shadow: 0px 0px 10px var(--gray);
+  transform: scale(1.05);
+}
+
+.header-list li:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .header-info__text {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .header-menu-burger {
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 30px;
+    z-index: 3;
+  }
+  .header-menu-burger span, .header-menu-burger::before, .header-menu-burger::after {
+    background: var(--black);
+    height: 2px;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    width: 30px;
+  }
+  .header-menu-burger span {
+    left: 0;
+    top: 9px;
+  }
+  .header-menu-burger::before, .header-menu-burger::after {
+    content: "";
+    left: 0;
+  }
+  .header-menu-burger::before {
+    top: 0px;
+  }
+  .header-menu-burger::after {
+    bottom: 0px;
+  }
+  .header-menu-burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header-menu-burger.active span {
+    transform: scale(0);
+  }
+  .header-menu-burger.active::after {
+    bottom: 9px;
+    transform: rotate(-45deg);
+  }
+  .header-info {
+    display: none;
+  }
+  .header-list {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0px;
+    height: 100%;
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    z-index: 2;
+  }
+  .header-list li, .header-list li:last-child {
+    margin: 20px 0px 0px;
+  }
+  .header-list.active {
+    top: 0px;
+  }
+}
