@@ -2,37 +2,54 @@ import { cart, cart_block_items, getProduct, createCartItem } from "./createCart
 
 const header_cart_icon = document.getElementById("header-cart-icon");
 const cart_icon = document.querySelector(".cart-icon");
+
 const cart_block = document.querySelector(".cart-block");
 const cart_amount = document.getElementById("cart-amount");
 
+// The result price in the cart
 let result_price = 0;
+
+// Amount of goods in the cart
 let amount = 0;
+
 let path = "https://mid1i.github.io/Double-Cup";
 
 document.addEventListener("click", (event) => {
     let arg = event.target;
     let id = arg.id;
 
+    // Tracks clicking on the "Plus" and "Add to the cart" buttons when choosing a product
     if ((arg.classList.contains(`${id}-button`)) || (arg.classList.contains(`${id}-plus`))) {
         plusFunction(id);
     }
 
+    // Tracks clicking on the "Minus" button when choosing a product
     if (arg.classList.contains(`${id}-minus`)) {
         minusFunction(id);
     }
 
+    // Tracks clicking on the "Cart" button
     if ((arg.classList.contains("cart-item")) && (amount != 0)) {
         cart_block.classList.toggle("hide");
     }
 
+    // Tracks clicking on the "Delete" button in the cart
     if (arg.classList.contains(`${id}-delete`)) {
         zeroFunction(id);
+    }
+    
+    // Tracks clicking on the "Go to the Cart" button
+    if (arg == cart_icon) {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 700);
     }
 
     checkOrder();
     updateCart();
 });
 
+// Adding a product to the cart and changing its quantity
 function plusFunction(id) {
     cart[id]++;
 
@@ -50,6 +67,7 @@ function plusFunction(id) {
     amount++;
 };
 
+// Changing the quantity of the product
 function minusFunction(id) {
     cart[id]--;
 
@@ -70,6 +88,7 @@ function minusFunction(id) {
     amount--;
 };
 
+// Deleting the product from the cart
 function zeroFunction(id) {
     $(`.${id}-button`).removeClass('hide');
     $(`.${id}-buttons`).addClass('hide');
@@ -83,6 +102,7 @@ function zeroFunction(id) {
     cart[id] = 0;
 }
 
+// Checking amount of goods in the cart
 function checkOrder() {
     let check = 0;
 
@@ -103,6 +123,7 @@ function checkOrder() {
     }
 };
 
+// Updating cart sentence
 function updateCart() {
     if (amount == 0) {
         cart_amount.innerHTML = "Пусто";
@@ -120,12 +141,14 @@ function deleteElement(id) {
     cart_block_items.removeChild(cart_item);
 }
 
+// Updating the product price in the cart
 function updatePrice(id) {
     let product = getProduct(id);
 
     $(`.${id}-price`).html(`${cart[id] * product.price}.00 ₽`);
 }
 
+// Updating the result price in the cart 
 function updateResultPrice(id, step) {
     let product = getProduct(id);
 
@@ -145,9 +168,3 @@ function updateResultPrice(id, step) {
 
     $(".result__price").html(`${result_price}.00 ₽`);
 }
-
-cart_icon.onclick = () => {
-    $("html, body").animate({
-        scrollTop: 0
-    }, 700);
-};

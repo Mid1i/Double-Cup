@@ -1,4 +1,5 @@
-$(document).ready(() => {
+// Adding a Sales slider
+export function salesSlider() {
     $('.slider').slick({
         arrows: false,
         autoplay: true,
@@ -11,9 +12,10 @@ $(document).ready(() => {
         swipe: false,
         waitForAnimation: true
     });
-});
+};
 
-export function ProductSlider() {
+// Adding Products sliders for small screens (phones and some tablets)
+export function productSlider() {
     if (window.matchMedia("(max-width: 520px)").matches) {
         $(".products").not('.slick-initialized').slick({
             responsive: [
@@ -28,14 +30,11 @@ export function ProductSlider() {
                         dots: false,
                         easing: 'linear',
                         slidesToShow: 1,
-                        speed: 800,
+                        speed: 200,
                         swipe: true,
-                        waitForAnimation: true
                     }
                 }
             ]
         });
     };  
 };
-
-window.onresize = () => ProductSlider(); 

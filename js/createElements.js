@@ -1,6 +1,9 @@
-$.getJSON("https://mid1i.github.io/Double-Cup/data/data.json", function(json) {
-    let data = json;
+import { productSlider } from "./slider.js";
 
+// Getting the JSON file of goods
+$.getJSON("https://mid1i.github.io/Double-Cup/data/data.json", function(data) {
+
+    // Adding product blocks to the DOM
     for (let i = 0; i < data.length; i++) {
         let products_slider_item = document.createElement("section");
         products_slider_item.classList.add("products-slider-item");
@@ -15,8 +18,11 @@ $.getJSON("https://mid1i.github.io/Double-Cup/data/data.json", function(json) {
         
         document.querySelector(`.${data[i].section}-products`).appendChild(products_slider_item);
     };
+
+    // Adding a slider for small screens
+    productSlider();
     
-    
+    // Create a product item block
     function createItem(i) {
         let image = document.createElement("img");
         image.src = data[i].image;
@@ -75,5 +81,3 @@ $.getJSON("https://mid1i.github.io/Double-Cup/data/data.json", function(json) {
         return tree;
     }
 });
-
-

@@ -2,6 +2,7 @@ const section = document.querySelector(".header-buttons");
 
 let path = "https://mid1i.github.io/Double-Cup";
 
+// Creating the "Login" button 
 export function createLoginButton() {
     let image = document.createElement("img");
     image.id = "login-item";
@@ -25,6 +26,7 @@ export function createLoginButton() {
     section.prepend(button);
 }
 
+// Creating the "Profile" button
 export function createProfileButton(UserName) {
     let image = document.createElement("img");
     image.id = "profile-item";
