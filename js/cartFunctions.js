@@ -16,6 +16,7 @@ let path = "https://mid1i.github.io/Double-Cup";
 
 document.addEventListener("click", (event) => {
     let arg = event.target;
+    let id = arg.id;
 
     // Tracks clicking on the "Plus" and "Add to the cart" buttons when choosing a product
     if ((arg.classList.contains(`${id}-button`)) || (arg.classList.contains(`${id}-plus`))) {
@@ -38,7 +39,7 @@ document.addEventListener("click", (event) => {
     }
     
     // Tracks clicking on the "Go to the Cart" button
-    if (arg.id == "cart") {
+    if (id == "cart") {
         $("html, body").animate({
             scrollTop: 0
         }, 700);
