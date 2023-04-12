@@ -11,7 +11,6 @@ $(document).ready(() => {
         swipe: false,
         waitForAnimation: true
     });
-    ProductSlider();
 });
 
 function ProductSlider() {
@@ -39,4 +38,4 @@ function ProductSlider() {
     };  
 };
 
-window.onresize = () => ProductSlider();
+window.onresize = () => ProductSlider(); 
