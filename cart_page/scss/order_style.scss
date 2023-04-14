@@ -1,0 +1,41 @@
+/* 
+    -------------
+    Order section
+    -------------
+*/
+.order {
+
+    &__result {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 0px 20px;
+    }
+
+    &__title {
+        color: var(--dark-gray);
+        margin: 0px 0px 5px;
+    }
+
+    &__amount,
+    &__price {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    &__button {
+        background: var(--red);
+        border-radius: 10px;
+        color: var(--white);
+        font-size: 20px;
+        height: 50px;
+        width: 100%;
+
+        &:hover {
+            background: var(--light-red);
+            box-shadow: 0px 0px 10px var(--gray);
+            transform: scale(1.05);
+        }
+    }
+}

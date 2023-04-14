@@ -14,9 +14,6 @@ const email = document.querySelector(".email-input");
 const password = document.querySelector(".pass-input");
 const checkbox = document.querySelector(".form-checkbox__input");
 
-// Sections of products
-const sections = ["fruits", "bread", "sweets", "pasta", "cheese", "milk-products"];
-
 let userNameItem = localStorage.getItem("username");
 
 // Creating the "Login" or "Profile" button

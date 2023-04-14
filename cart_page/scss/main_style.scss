@@ -44,13 +44,6 @@ body {
     padding: 0px 30px;
 }
 
-.title {
-    color: var(--red);
-    font-family: "Ubuntu", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-}
-
 @media (max-width: 767px) { 
     .wrapper {
         padding: 0px 10px; 
@@ -76,7 +69,8 @@ main {
 }
 
 .main-cart,
-.main-order {
+.main-order,
+.main-cart__empty {
     border-radius: 10px;
     box-shadow: 0px 0px 10px var(--gray);
     display: flex;
@@ -95,25 +89,6 @@ main {
     height: 150px;
 }
 
-.main-cart__item {
-    border-bottom: 2px solid var(--light-gray);
-    display: grid;
-    gap: 5px;
-    grid-template: repeat(3, 50px) / repeat(4, 1fr);
-    grid-template-areas:
-        "image title title country"
-        "image title title weight"
-        "image buttons delete price";
-    margin: 0px 0px 10px;
-    padding: 0px 0px 10px;
-
-    &:last-child {
-        border-bottom: none;
-        margin: 0px;
-        padding: 0px;
-    }
-}
-
 .main__info {
     display: flex;
     margin: 0px 0px 30px;
@@ -128,133 +103,6 @@ main {
 
 .main__text {
     color: var(--gray);
-}
-
-.item {
-
-    &__image {
-        grid-area: image;
-
-        & img {
-            border-radius: 10px;
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
-    }
-
-    &__title {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 700;
-        font-size: 22px;
-        grid-area: title;
-    }
-
-    &__country {
-        align-self: center;
-        color: var(--gray);
-        grid-area: country;
-        text-align: center;
-    }
-
-    &__weight {
-        align-self: center;
-        grid-area: weight;
-        text-align: center;
-    }
-
-    &__buttons {
-        display: flex;
-        grid-area: buttons;
-    }
-
-    &__counter,
-    &__button {
-        align-items: center;
-        background: var(--white);
-        border: 2px solid var(--light-gray);
-        display: flex;
-        justify-content: center;
-        height: 40px;
-        width: 40px;
-
-        &:hover {
-            background: var(--very-light-gray);
-        }
-    }
-
-    &__counter {    
-        border-radius: 5px 0px 0px;
-    }
-
-    &__button {
-        font-size: 20px;
-    }
-
-    &__delete {
-        align-self: center;
-        cursor: pointer;
-        grid-area: delete;
-        text-align: center;
-
-        &:hover {
-            color: var(--red);
-        }
-    }
-
-    &__price {
-        align-self: center;
-        font-weight: 600;
-        font-size: 18px;
-        grid-area: price;
-        text-align: center;
-    }
-}
-
-.minus-button,
-.plus-button {
-    border-left: 1px solid var(--light-gray);
-}
-
-.plus-button {
-    border-radius: 0px 5px 0px 0px;
-}
-
-.order {
-
-    &__result {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        margin: 0px 0px 20px;
-    }
-
-    &__title {
-        color: var(--dark-gray);
-        margin: 0px 0px 5px;
-    }
-
-    &__amount,
-    &__price {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 700;
-        font-size: 22px;
-    }
-
-    &__button {
-        background: var(--red);
-        border-radius: 10px;
-        color: var(--white);
-        font-size: 20px;
-        height: 50px;
-        width: 100%;
-
-        &:hover {
-            background: var(--light-red);
-            box-shadow: 0px 0px 10px var(--gray);
-            transform: scale(1.05);
-        }
-    }
 }
 
 @media (max-width: 1100px) {
@@ -291,53 +139,80 @@ main {
     .main__info {
         margin: 0px 0px 10px;
     }
-
-    .main-cart__item {
-        grid-template-rows: repeat(3, 40px);
-    }
-}
-
-@media (max-width: 450px) {
-    .main-cart__item {
-        grid-template: 100px 40px 30px 40px / repeat(3, 1fr);
-        grid-template-areas:
-            "image image image"
-            "title title title"
-            "country weight weight"
-            "buttons delete price";
-    }
-
-    .item__title {
-        text-align: center;
-    }
-    
-    .item__weight,
-    .item__price {
-        text-align: right;
-    }
-}
-
-@media (max-width: 320px) {
-    .main-cart__item {
-        grid-template: 100px 40px 40px 30px / repeat(3, 1fr);
-        grid-template-areas:
-            "image image image"
-            "title title title"
-            "buttons delete delete"
-            "price price price";
-    }
-
-    .item__price {
-        text-align: center;
-    }
-    
-    .item__country,
-    .item__weight {
-        display: none;
-    }
 }
 
 @import "./header_style.scss";
+@import "./cart_style.scss";
+@import "./order_style.scss";
 @import "./footer_style.scss";
 @import "./profile_style.scss";
 @import "./loader_style.scss";
+
+.main-cart__empty {
+    align-items: center;
+    flex: 1 0 100%;
+    justify-content: center;
+    height: 50vh;
+}
+
+.empty {
+
+    &__image {
+        margin: 0px 0px 20px;
+        height: 60px;
+        width: 60px;
+
+        & img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        margin: 0px 0px 20px;
+    }
+
+    &__text {
+        margin: 0px 0px 20px;
+        max-width: 250px;
+        text-align: center;
+
+        & a {
+            color: var(--red);
+            text-decoration: underline;
+        }
+    }
+
+    &__button {
+        background: var(--red);
+        border-radius: 10px;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0px 0px 20px;
+        height: 50px;
+        width: 250px;
+
+        &:hover {
+            background: var(--light-red);
+            box-shadow: 0px 0px 10px var(--gray);
+            transform: scale(1.05);
+        }
+    }
+
+    &__return {
+        cursor: pointer;
+
+        &:hover {
+            color: var(--red);
+            text-decoration: underline;
+        }
+    }
+}
+
+.hide {
+    display: none;
+}

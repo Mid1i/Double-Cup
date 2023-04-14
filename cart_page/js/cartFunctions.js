@@ -1,18 +1,15 @@
-import { cart, cart_block_items, getProduct, createCartItem } from "./createCart.js";
+import { cart, cart_section, getProduct, gettingWeight, changeCart, createCartItem } from "./createCart.js";
 
-const header_cart_icon = document.getElementById("header-cart-icon");
-const cart_icon = document.querySelector(".cart-icon");
-
-const cart_block = document.querySelector(".cart-block");
-const cart_amount = document.getElementById("cart-amount");
+const goods_amount = document.querySelectorAll(".goods-counter");
+const order_section = document.querySelector(".main-order");
+const empty_section = document.querySelector(".main-cart__empty");
 
 // The result price in the cart
-let result_price = 0;
+let result_price = Number(localStorage.getItem("result_price"));
 
-// Amount of goods in the cart
 let amount = 0;
 
-let path = "https://mid1i.github.io/Double-Cup/main_page";
+window.setTimeout(startSettings, 1000);
 
 document.addEventListener("click", (event) => {
     let arg = event.target;
@@ -28,26 +25,13 @@ document.addEventListener("click", (event) => {
         minusFunction(id);
     }
 
-    // Tracks clicking on the "Cart" button
-    if ((arg.classList.contains("cart-item")) && (amount != 0)) {
-        cart_block.classList.toggle("hide");
-    }
-
     // Tracks clicking on the "Delete" button in the cart
     if (arg.classList.contains(`${id}-delete`)) {
         zeroFunction(id);
     }
-    
-    // Tracks clicking on the "Go to the Cart" button
-    if (id == "cart") {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 700);
-    }
 
-    // Tracks clicking on the "Go to the Cart page" and "Order" buttons
-    if ((id == "order") || (id == "go-to-cart")) {
-        localStorage.setItem("cart", JSON.stringify(cart));
+    if (arg.classList.contains("empty__return")) {
+        returnGoods();
     }
 
     checkOrder();
@@ -56,33 +40,26 @@ document.addEventListener("click", (event) => {
 
 // Adding a product to the cart and changing its quantity
 function plusFunction(id) {
-    cart[id]++;
+    let product = getProduct(id);
 
-    $(`.${id}-buttons`).removeClass('hide');
-    $(`.${id}-button`).addClass('hide');
+    cart[id]++;
 
     $(`.${id}-counter`).html(cart[id]);
 
-    if (cart[id] == 1) {
-        createCartItem(id);
-    }
-
     updatePrice(id);
     updateResultPrice(id, "+");
+
+    $(`.${id}-weight`).html(gettingWeight(product, cart[id]));
     amount++;
 };
 
 // Changing the quantity of the product
 function minusFunction(id) {
+    let product = getProduct(id);
     cart[id]--;
 
     if (cart[id] <= 0) {    
-
-        $(`.${id}-button`).removeClass('hide');
-        $(`.${id}-buttons`).addClass('hide');
-
         deleteElement(id);
-
         cart[id] = 0;
     }
 
@@ -90,14 +67,13 @@ function minusFunction(id) {
 
     updatePrice(id);
     updateResultPrice(id, "-");
+
+    $(`.${id}-weight`).html(gettingWeight(product, cart[id]));
     amount--;
 };
 
 // Deleting the product from the cart
 function zeroFunction(id) {
-    $(`.${id}-button`).removeClass('hide');
-    $(`.${id}-buttons`).addClass('hide');
-
     $(`.${id}-counter`).html(cart[id]);
 
     deleteElement(id);
@@ -117,41 +93,47 @@ function checkOrder() {
         }
     }
 
-    if (check != 0) {
-        cart_icon.style.cssText = "opacity: 1; pointer-events: auto;";
-        header_cart_icon.src = `${path}/img/header-icons/cart-full-icon.svg`;
-    } else {
-        cart_icon.style.cssText = "opacity: 0; pointer-events: none;";
-        header_cart_icon.src = `${path}/img/header-icons/cart-icon.svg`;
-        cart_block.classList.add("hide");
+    if (check == 0) {
         amount = 0;
+        cart_section.classList.toggle("hide");
+        order_section.classList.toggle("hide");
+        empty_section.classList.toggle("hide");
+        document.querySelector(".main__text").classList.toggle("hide");
     }
 };
 
 // Updating cart sentence
 function updateCart() {
     if (amount == 0) {
-        cart_amount.innerHTML = "Пусто";
+        goods_amount.forEach((item) => {
+            item.innerHTML = "0 товаров";
+        });
     } else if (amount % 10 == 1 && amount != 11) {
-        cart_amount.innerHTML = `${amount} товар`;
+        goods_amount.forEach((item) => {
+            item.innerHTML = `${amount} товар`;
+        });
     } else if ([2, 3, 4].includes(amount % 10) && !([12, 13, 14].includes(amount))) {
-        cart_amount.innerHTML = `${amount} товара`;
+        goods_amount.forEach((item) => {
+            item.innerHTML = `${amount} товара`;
+        });
     } else {
-        cart_amount.innerHTML = `${amount} товаров`;
+        goods_amount.forEach((item) => {
+            item.innerHTML = `${amount} товаров`;
+        });
     }
-}
+};
 
 function deleteElement(id) {
-    let cart_item = document.querySelector(`.${id}-cart-item`);
-    cart_block_items.removeChild(cart_item);
-}
+    let cart_item = document.querySelector(`.${id}-item`);
+    cart_section.removeChild(cart_item);
+};
 
 // Updating the product price in the cart
 function updatePrice(id) {
     let product = getProduct(id);
 
     $(`.${id}-price`).html(`${cart[id] * product.price}.00 ₽`);
-}
+};
 
 // Updating the result price in the cart 
 function updateResultPrice(id, step) {
@@ -171,5 +153,32 @@ function updateResultPrice(id, step) {
             break;
     }
 
-    $(".result__price").html(`${result_price}.00 ₽`);
+    $(".order__price").html(`${result_price}.00 ₽`);
+};
+
+function startSettings() {
+
+    for (let item in cart) {
+        amount += cart[item];
+
+        if (cart[item]) {
+            createCartItem(item);
+        }
+    }
+
+    $(".order__price").html(`${result_price}.00 ₽`);
+
+    updateCart();
+};
+
+function returnGoods() {
+    result_price = Number(localStorage.getItem("result_price"));
+
+    changeCart();
+    startSettings();
+
+    cart_section.classList.toggle("hide");
+    order_section.classList.toggle("hide");
+    empty_section.classList.toggle("hide");
+    document.querySelector(".main__text").classList.toggle("hide");
 }

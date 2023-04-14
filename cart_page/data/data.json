@@ -1,0 +1,218 @@
+[
+    {
+        "id": "apples",
+        "section": "fruits",
+        "name": "Яблоки красные",
+        "country": "Италия",
+        "price": "115",
+        "weight": "890 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/fruits/apples-item.jpg"
+    },
+    {
+        "id": "bananas",
+        "section": "fruits",
+        "name": "Бананы",
+        "country": "Мексика",
+        "price": "108",
+        "weight": "1.1 кг.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/fruits/bananas-item.jpg"
+    },
+    {
+        "id": "cucumbers",
+        "section": "fruits",
+        "name": "Огурцы короткоплодные",
+        "country": "Россия",
+        "price": "179",
+        "weight": "470 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/fruits/cucumbers-item.jpg"
+    },
+    {
+        "id": "tomatoes",
+        "section": "fruits",
+        "name": "Томаты розовые",
+        "country": "Азербайджан",
+        "price": "257",
+        "weight": "520 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/fruits/tomatoes-item.jpg"
+    },
+    {
+        "id": "white-bread",
+        "section": "bread",
+        "name": "Батон нарезной",
+        "country": "Пекарня «Double Cup»",
+        "price": "39",
+        "weight": "450 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/bread/white-bread-item.jpg"
+    },
+    {
+        "id": "croissant",
+        "section": "bread",
+        "name": "Круассан",
+        "country": "Пекарня «Double Cup»",
+        "price": "91",
+        "weight": "180 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/bread/croissant-item.jpg"
+    },
+    {
+        "id": "chiabatta",
+        "section": "bread",
+        "name": "Чиабатта",
+        "country": "Пекарня «Double Cup»",
+        "price": "92",
+        "weight": "110 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/bread/chiabatta-item.jpg"
+    },
+    {
+        "id": "black-bread",
+        "section": "bread",
+        "name": "Хлеб Бородинский нарезной",
+        "country": "Пекарня «Double Cup»",
+        "price": "29",
+        "weight": "350 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/bread/black-bread-item.jpg"
+    },
+    {
+        "id": "donuts",
+        "section": "sweets",
+        "name": "Фирменные пончики",
+        "country": "Пекарня «Double Cup»",
+        "price": "232",
+        "weight": "4 шт. 360 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/sweets/donuts-item.jpg"
+    },
+    {
+        "id": "macarons",
+        "section": "sweets",
+        "name": "Пирожные «Macarons»",
+        "country": "Пекарня «Double Cup»",
+        "price": "200",
+        "weight": "8 шт. 100 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/sweets/macarons-item.jpg"
+    },
+    {
+        "id": "marmalade",
+        "section": "sweets",
+        "name": "Мармелад жевательный",
+        "country": "Россия",
+        "price": "85",
+        "weight": "100 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/sweets/marmalade-item.jpg"
+    },
+    {
+        "id": "cookies",
+        "section": "sweets",
+        "name": "Печенье «Сердечки»",
+        "country": "Пекарня «Double Cup»",
+        "price": "76",
+        "weight": "100 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/sweets/cookies-item.jpg"
+    },
+    {
+        "id": "pasta-spirals",
+        "section": "pasta",
+        "name": "Макароны спирали",
+        "country": "Италия",
+        "price": "75",
+        "weight": "400 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/pasta/pasta-spirals-item.jpg"
+    },
+    {
+        "id": "pasta-feather",
+        "section": "pasta",
+        "name": "Макароны перья",
+        "country": "Италия",
+        "price": "65",
+        "weight": "200 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/pasta/pasta-feather-item.jpg"
+    },
+    {
+        "id": "buckwheat",
+        "section": "pasta",
+        "name": "Крупа гречневая",
+        "country": "Россия",
+        "price": "75",
+        "weight": "400 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/pasta/buckwheat-item.jpg"
+    },
+    {
+        "id": "rice",
+        "section": "pasta",
+        "name": "Рис круглозёрный",
+        "country": "Россия",
+        "price": "90",
+        "weight": "500 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/pasta/rice-item.jpg"
+    },
+    {
+        "id": "rus-cheese",
+        "section": "cheese",
+        "name": "Сыр «Российский»",
+        "country": "Россия",
+        "price": "162",
+        "weight": "200 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/cheese/cheese-russian-item.jpg"
+    },
+    {
+        "id": "hol-cheese",
+        "section": "cheese",
+        "name": "Сыр «Голландский» нарезка",
+        "country": "Россия",
+        "price": "194",
+        "weight": "150 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/cheese/cheese-holland-item.jpg"
+    },
+    {
+        "id": "boil-sausage",
+        "section": "cheese",
+        "name": "Колбаса варёная Докторская",
+        "country": "Россия",
+        "price": "349",
+        "weight": "500 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/cheese/boiled-sausages-item.jpg"
+    },
+    {
+        "id": "rs-sausage",
+        "section": "cheese",
+        "name": "Колбаса сырокопчёная",
+        "country": "Россия",
+        "price": "225",
+        "weight": "100 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/cheese/raw-smoked-sausages-item.jpg"
+    },
+    {
+        "id": "milk",
+        "section": "milk",
+        "name": "Молоко 2,5% в бутылке",
+        "country": "Россия",
+        "price": "79",
+        "weight": "100 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/milk/milk-item.jpg"
+    },
+    {
+        "id": "curd",
+        "section": "milk",
+        "name": "Творог 5%",
+        "country": "Россия",
+        "price": "165",
+        "weight": "400 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/milk/curd-item.jpg"
+    },
+    {
+        "id": "sour-cream",
+        "section": "milk",
+        "name": "Сметана 20%",
+        "country": "Россия",
+        "price": "125",
+        "weight": "350 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/milk/sour-cream-item.jpg"
+    },
+    {
+        "id": "eggs",
+        "section": "milk",
+        "name": "Яйцо куриное С0",
+        "country": "Россия",
+        "price": "112",
+        "weight": "650 гр.",
+        "image": "https://mid1i.github.io/Double-Cup/main_page/img/products-images/milk/eggs-item.jpg"
+    }
+]

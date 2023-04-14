@@ -42,13 +42,6 @@ body {
   padding: 0px 30px;
 }
 
-.title {
-  color: var(--red);
-  font-family: "Ubuntu", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-}
-
 @media (max-width: 767px) {
   .wrapper {
     padding: 0px 10px;
@@ -72,7 +65,8 @@ main {
 }
 
 .main-cart,
-.main-order {
+.main-order,
+.main-cart__empty {
   border-radius: 10px;
   box-shadow: 0px 0px 10px var(--gray);
   display: flex;
@@ -91,21 +85,6 @@ main {
   height: 150px;
 }
 
-.main-cart__item {
-  border-bottom: 2px solid var(--light-gray);
-  display: grid;
-  gap: 5px;
-  grid-template: repeat(3, 50px)/repeat(4, 1fr);
-  grid-template-areas: "image title title country" "image title title weight" "image buttons delete price";
-  margin: 0px 0px 10px;
-  padding: 0px 0px 10px;
-}
-.main-cart__item:last-child {
-  border-bottom: none;
-  margin: 0px;
-  padding: 0px;
-}
-
 .main__info {
   display: flex;
   margin: 0px 0px 30px;
@@ -120,109 +99,6 @@ main {
 
 .main__text {
   color: var(--gray);
-}
-
-.item__image {
-  grid-area: image;
-}
-.item__image img {
-  border-radius: 10px;
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-.item__title {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  grid-area: title;
-}
-.item__country {
-  align-self: center;
-  color: var(--gray);
-  grid-area: country;
-  text-align: center;
-}
-.item__weight {
-  align-self: center;
-  grid-area: weight;
-  text-align: center;
-}
-.item__buttons {
-  display: flex;
-  grid-area: buttons;
-}
-.item__counter, .item__button {
-  align-items: center;
-  background: var(--white);
-  border: 2px solid var(--light-gray);
-  display: flex;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-}
-.item__counter:hover, .item__button:hover {
-  background: var(--very-light-gray);
-}
-.item__counter {
-  border-radius: 5px 0px 0px;
-}
-.item__button {
-  font-size: 20px;
-}
-.item__delete {
-  align-self: center;
-  cursor: pointer;
-  grid-area: delete;
-  text-align: center;
-}
-.item__delete:hover {
-  color: var(--red);
-}
-.item__price {
-  align-self: center;
-  font-weight: 600;
-  font-size: 18px;
-  grid-area: price;
-  text-align: center;
-}
-
-.minus-button,
-.plus-button {
-  border-left: 1px solid var(--light-gray);
-}
-
-.plus-button {
-  border-radius: 0px 5px 0px 0px;
-}
-
-.order__result {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 0px 20px;
-}
-.order__title {
-  color: var(--dark-gray);
-  margin: 0px 0px 5px;
-}
-.order__amount, .order__price {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-}
-.order__button {
-  background: var(--red);
-  border-radius: 10px;
-  color: var(--white);
-  font-size: 20px;
-  height: 50px;
-  width: 100%;
-}
-.order__button:hover {
-  background: var(--light-red);
-  box-shadow: 0px 0px 10px var(--gray);
-  transform: scale(1.05);
 }
 
 @media (max-width: 1100px) {
@@ -252,35 +128,6 @@ main {
   }
   .main__info {
     margin: 0px 0px 10px;
-  }
-  .main-cart__item {
-    grid-template-rows: repeat(3, 40px);
-  }
-}
-@media (max-width: 450px) {
-  .main-cart__item {
-    grid-template: 100px 40px 30px 40px/repeat(3, 1fr);
-    grid-template-areas: "image image image" "title title title" "country weight weight" "buttons delete price";
-  }
-  .item__title {
-    text-align: center;
-  }
-  .item__weight,
-  .item__price {
-    text-align: right;
-  }
-}
-@media (max-width: 320px) {
-  .main-cart__item {
-    grid-template: 100px 40px 40px 30px/repeat(3, 1fr);
-    grid-template-areas: "image image image" "title title title" "buttons delete delete" "price price price";
-  }
-  .item__price {
-    text-align: center;
-  }
-  .item__country,
-  .item__weight {
-    display: none;
   }
 }
 /* 
@@ -428,6 +275,165 @@ header {
     top: 0px;
   }
 }
+/* 
+    ------------
+    Cart section
+    ------------
+*/
+.main-cart__item {
+  border-bottom: 2px solid var(--light-gray);
+  display: grid;
+  gap: 5px;
+  grid-template: repeat(3, 50px)/repeat(4, 1fr);
+  grid-template-areas: "image title title country" "image title title weight" "image buttons delete price";
+  margin: 0px 0px 10px;
+  padding: 0px 0px 10px;
+}
+.main-cart__item:last-child {
+  border-bottom: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.item__image {
+  grid-area: image;
+}
+.item__image img {
+  border-radius: 10px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.item__title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  grid-area: title;
+}
+.item__country {
+  align-self: center;
+  color: var(--gray);
+  grid-area: country;
+  text-align: center;
+}
+.item__weight {
+  align-self: center;
+  grid-area: weight;
+  text-align: center;
+}
+.item__buttons {
+  display: flex;
+  grid-area: buttons;
+}
+.item__counter, .item__button {
+  align-items: center;
+  background: var(--white);
+  border: 2px solid var(--light-gray);
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+.item__counter:hover, .item__button:hover {
+  background: var(--very-light-gray);
+}
+.item__counter {
+  border-radius: 5px 0px 0px;
+}
+.item__button {
+  font-size: 20px;
+}
+.item__delete {
+  align-self: center;
+  cursor: pointer;
+  grid-area: delete;
+  text-align: center;
+}
+.item__delete:hover {
+  color: var(--red);
+}
+.item__price {
+  align-self: center;
+  font-weight: 600;
+  font-size: 18px;
+  grid-area: price;
+  text-align: center;
+}
+
+.button-minus,
+.button-plus {
+  border-left: 1px solid var(--light-gray);
+}
+
+.plus-button {
+  border-radius: 0px 5px 0px 0px;
+}
+
+@media (max-width: 520px) {
+  .main-cart__item {
+    grid-template-rows: repeat(3, 40px);
+  }
+}
+@media (max-width: 450px) {
+  .main-cart__item {
+    grid-template: 100px 40px 30px 40px/repeat(3, 1fr);
+    grid-template-areas: "image image image" "title title title" "country weight weight" "buttons delete price";
+  }
+  .item__title {
+    text-align: center;
+  }
+  .item__weight,
+  .item__price {
+    text-align: right;
+  }
+}
+@media (max-width: 320px) {
+  .main-cart__item {
+    grid-template: 100px 40px 40px 30px/repeat(3, 1fr);
+    grid-template-areas: "image image image" "title title title" "buttons delete delete" "price price price";
+  }
+  .item__price {
+    text-align: center;
+  }
+  .item__country,
+  .item__weight {
+    display: none;
+  }
+}
+/* 
+    -------------
+    Order section
+    -------------
+*/
+.order__result {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 20px;
+}
+.order__title {
+  color: var(--dark-gray);
+  margin: 0px 0px 5px;
+}
+.order__amount, .order__price {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+.order__button {
+  background: var(--red);
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 20px;
+  height: 50px;
+  width: 100%;
+}
+.order__button:hover {
+  background: var(--light-red);
+  box-shadow: 0px 0px 10px var(--gray);
+  transform: scale(1.05);
+}
+
 /* 
     ----------------
      Footer section
@@ -691,4 +697,61 @@ footer {
   100% {
     box-shadow: 0 -48px inset;
   }
+}
+.main-cart__empty {
+  align-items: center;
+  flex: 1 0 100%;
+  justify-content: center;
+  height: 50vh;
+}
+
+.empty__image {
+  margin: 0px 0px 20px;
+  height: 60px;
+  width: 60px;
+}
+.empty__image img {
+  height: 100%;
+  width: 100%;
+}
+.empty__title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0px 0px 20px;
+}
+.empty__text {
+  margin: 0px 0px 20px;
+  max-width: 250px;
+  text-align: center;
+}
+.empty__text a {
+  color: var(--red);
+  text-decoration: underline;
+}
+.empty__button {
+  background: var(--red);
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px 0px 20px;
+  height: 50px;
+  width: 250px;
+}
+.empty__button:hover {
+  background: var(--light-red);
+  box-shadow: 0px 0px 10px var(--gray);
+  transform: scale(1.05);
+}
+.empty__return {
+  cursor: pointer;
+}
+.empty__return:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
 }

@@ -48,6 +48,7 @@ document.addEventListener("click", (event) => {
     // Tracks clicking on the "Go to the Cart page" and "Order" buttons
     if ((id == "order") || (id == "go-to-cart")) {
         localStorage.setItem("cart", JSON.stringify(cart));
+        localStorage.setItem("result_price", result_price);
     }
 
     checkOrder();
