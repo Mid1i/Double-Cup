@@ -1,4 +1,4 @@
-export const cart_section = document.querySelector(".main-cart");
+export const cart_section = document.querySelector(".main-content__cart");
 
 export let cart = JSON.parse(localStorage.getItem("cart"));
 
@@ -29,11 +29,14 @@ export function createCartItem(id) {
     if (product) {
         let tree = createStructure(product);
 
-        let cart_item = document.createElement("section");
-        cart_item.classList.add("main-cart__item", `${id}-item`);
-        cart_item.appendChild(tree);
+        let cart_item = document.createElement("article");
+        cart_item.classList.add("item", `${id}-item`);
+        cart_item.append(tree);
+
+        let cart_sep = document.createElement("hr");
+        cart_sep.classList.add("cart-sep", `${id}-sep`);
     
-        cart_section.appendChild(cart_item);
+        cart_section.append(cart_item, cart_sep);
     }
 };
 
@@ -47,42 +50,42 @@ function createStructure(product) {
     image_wrapper.appendChild(image);
 
     let title = document.createElement("h2");
-    title.classList.add("item__title");
+    title.classList.add("item__title", "title");
     title.innerHTML = product.name;
 
-    let country = document.createElement("div");
+    let country = document.createElement("p");
     country.classList.add("item__country");
     country.innerHTML = product.country;
 
-    let counter = document.createElement("div");
+    let counter = document.createElement("span");
     counter.classList.add("item__counter", `${product.id}-counter`);
     counter.id = product.id;
     counter.innerHTML = cart[product.id];
 
     let minus_button = document.createElement("button");
-    minus_button.classList.add("item__button", "minus-button", `${product.id}-minus`);
+    minus_button.classList.add("item__btn", "minus-btn", `${product.id}-minus`);
     minus_button.id = product.id;
     minus_button.innerHTML = "—";
 
     let plus_button = document.createElement("button");
-    plus_button.classList.add("item__button", "plus-button", `${product.id}-plus`);
+    plus_button.classList.add("item__btn", "plus-btn", `${product.id}-plus`);
     plus_button.id = product.id;
     plus_button.innerHTML = "+";
 
-    let buttons = document.createElement("div");
+    let buttons = document.createElement("section");
     buttons.classList.add("item__buttons");
     buttons.append(counter, minus_button, plus_button);
 
-    let delete_button = document.createElement("div");
+    let delete_button = document.createElement("p");
     delete_button.classList.add("item__delete", `${product.id}-delete`);
     delete_button.id = product.id;
     delete_button.innerHTML = "Удалить";
 
-    let weight = document.createElement("div");
+    let weight = document.createElement("p");
     weight.classList.add("item__weight", `${product.id}-weight`);
     weight.innerHTML = gettingWeight(product, cart[product.id]);
 
-    let price = document.createElement("div");
+    let price = document.createElement("p");
     price.classList.add("item__price", `${product.id}-price`);
     price.innerHTML = `${cart[product.id] * product.price}.00 ₽`;
 

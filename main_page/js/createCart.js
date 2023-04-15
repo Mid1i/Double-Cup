@@ -78,7 +78,7 @@ export function createStructure(product) {
     let counter = document.createElement("div");
     counter.classList.add("cart-item__counter", `${product.id}-counter`);
     counter.id = product.id;
-    counter.innerHTML = 1;
+    counter.innerHTML = cart[product.id];
 
     let minus_button = document.createElement("button");
     minus_button.classList.add("cart-item__button", "cart-item__button-minus", `${product.id}-minus`);
@@ -107,4 +107,14 @@ export function createStructure(product) {
     tree.append(image_wrapper, title, buttons, price, delete_button);
 
     return tree;
+}
+
+export function startSettings() {
+    cart = JSON.parse(localStorage.getItem("cart_update"));
+
+    for (let item in cart) {
+        if (cart[item] != 0) {
+            createCartItem(item);
+        }
+    }
 }

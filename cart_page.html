@@ -23,77 +23,103 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
 </head> 
 <body class="lock">
-    <div class="wrapper">
-        <header>
-            <div class="header-menu-burger">
+    <header class="main-header">
+        <div class="main-header__wrapper">
+            <!-- Burger menu for small screens -->
+            <section class="main-header__burger">
                 <span></span>
-            </div>
-            <section class="header-info">
-                <div class="header-info__image">
-                    <a href="https://mid1i.github.io/Double-Cup/main_page">
+            </section>
+            <!-- Logo and information about delivery -->
+            <section class="main-header__info info">
+                <div class="info__logo">
+                    <a href="./main_page.html">
                         <img src="./cart_page/img/header-icons/logo.svg" alt="Логотип магазина «Double Cup»">
                     </a>
                 </div>
-                <article class="header-info__text">
-                    <p>Доставка: с 8:00 до 21:30</p>
-                    <p><a href="tel:88315552525">8 (831) 555-25-25</a></p>
-                </article>
+                <section class="info__delivery">
+                    <p class="info__delivery_text">Доставка: с 8:00 до 21:30</p>
+                    <p class="info__delivery_tel">
+                        <a href="tel:88315552525">8 (831) 555-25-25</a>
+                    </p>
+                </section>
             </section>
-            <nav>
-                <ul class="header-list">
-                    <li><a href="./main_page.html">Главная</a></li>
-                    <li><a href="">Акции</a></li>
-                    <li><a href="">Доставка</a></li>
-                    <li><a href="">Как оплачивать</a></li>
-                    <li><a href="">О нас</a></li>
+            <!-- Main site navigation -->
+            <nav class="main-header__navigation">
+                <ul class="main-header__list">
+                    <li class="list__el">
+                        <a href="./main_page.html">Главная</a>
+                    </li>
+                    <li class="list__el">
+                        <a href="">Акции</a>
+                    </li>
+                    <li class="list__el">
+                        <a href="">Доставка</a>
+                    </li>
+                    <li class="list__el">
+                        <a href="">Как оплачивать</a>
+                    </li>
+                    <li class="list__el list__el_last">
+                        <a href="">О нас</a>
+                    </li>
                 </ul>
             </nav>
-            <section class="header-buttons"></section>
-        </header>
-        <main>
-            <div class="main__info">
-                <h1 class="main__title">Корзина</h1>
-                <div class="main__text goods-counter">3 товара</div>
-            </div>
-            <div class="main-wrapper">
-                <section class="main-cart"></section>
-                <section class="main-cart__empty hide">
-                    <div class="empty__image">
-                        <img src="./cart_page/img/main-icons/cart-icon.jpg" alt="">
-                    </div>
-                    <h2  class="empty__title">Корзина пуста</h2>
-                    <div class="empty__text">Можете посмотреть каталог товаров на <a href="./main_page.html">главной странице</a></div>
-                    <a href="./main_page.html"><button class="empty__button">На главную</button></a>
-                    <div class="empty__return">Вернуть удалённые товары</div>
+            <!-- Login button -->
+            <section class="main-header__login"></section>
+        </div>
+    </header>
+    <hr class="main-sep">
+    <main class="main-content">
+        <!-- Information about cart -->
+        <article class="main-content__info">
+            <h1 class="info__title title">Корзина</h1>
+            <p class="info__counter js-counter">3 товара</p>
+        </article>
+        <!-- Main blocks -->
+        <div class="main-content__sections">
+            <!-- Cart block -->
+            <section class="main-content__cart"></section>
+            <!-- Empty block -->
+            <article class="main-content__empty-block empty-block hide">
+                <div class="empty-block__image">
+                    <img src="./cart_page/img/main-icons/cart-icon.jpg" alt="">
+                </div>
+                <h2  class="empty-block__title title">Корзина пуста</h2>
+                <p class="empty-block__text">Можете посмотреть каталог товаров на <a href="./main_page.html">главной странице</a></p>
+                <a href="./main_page.html">
+                    <button class="empty-block__btn">На главную</button>
+                </a>
+                <p class="empty-block__return">Вернуть удалённые товары</p>
+            </article>
+            <!-- Order block -->
+            <article class="main-content__order order">
+                <h3 class="order__title">Итого: </h3>
+                <section class="order__result">
+                    <p class="order__counter js-counter title">3 товара</p>
+                    <p class="order__price title">10000 ₽</p>
                 </section>
-                <section class="main-order">
-                    <h3 class="order__title">Итого: </h3>
-                    <div class="order__result">
-                        <div class="order__amount goods-counter">3 товара</div>
-                        <div class="order__price">10000 ₽</div>
-                    </div>
-                    <button class="order__button">Перейти к оформлению</button>
-                </section>
-            </div>
-        </main>
-    </div>
-    <footer>
-        <div class="footer-wrapper">
-            <section class="footer-pay">
-                <div class="footer-pay-item">
+                <button class="order__btn">Перейти к оформлению</button>
+            </article>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__wrapper">
+            <!-- Payment systems supported by site -->
+            <section class="main-footer__pay pay">
+                <div class="pay__item">
                     <img src="./cart_page/img/footer-icons/visa-icon.svg" alt="Visa">
                 </div>
-                <div class="footer-pay-item">
+                <div class="pay__item">
                     <img src="./cart_page/img/footer-icons/mastercard-icon.svg" alt="MasterCard">
                 </div>
-                <div class="footer-pay-item">
+                <div class="pay__item pay__item_last">
                     <img src="./cart_page/img/footer-icons/mir-icon.svg" alt="Мир">
                 </div>
             </section>
-            <p class="footer__text">©️ 2023 Double Cup | Все права защищены</p>
-            <section class="footer-socialnet">
-                <div class="footer-socialnet__text">Тех. поддержка:</div>
-                <div class="footer-socialnet__image">
+            <p class="main-footer__text">©️ 2023 Double Cup | Все права защищены</p>
+            <!-- Technical support of yhe site -->
+            <section class="main-footer__sup sup">
+                <p class="sup__text">Тех. поддержка:</p>
+                <div class="sup__image">
                     <a href="">
                         <img src="./cart_page/img/footer-icons/tg-icon.svg" alt="Telegram">
                     </a>
@@ -102,53 +128,57 @@
         </div>
     </footer>
 
-    <section class="profile register">
-        <div class="profile__cross" id="cross">
-            <img src="./cart_page/img/profile-icons/cross-icon.svg" alt="quit" id="cross">
+    <!-- Login section -->
+    <article class="profile-block js-register__block">
+        <div class="profile-block__icon js-quit">
+            <img class="js-quit" src="./cart_page/img/profile-icons/cross-icon.svg">
         </div>
-        <h1 class="profile__title">Зарегистрироваться</h1>
-        <form action="" class="profile__form">
-            <div class="form-item">
-                <input type="text" name="username" placeholder="Username"  class="form-item__input name-input" required autofocus>
-                <img src="./cart_page/img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
+        <h1 class="profile-block__title title">Зарегистрироваться</h1>
+        <form action="" class="profile-block__form form">
+            <div class="form__item">
+                <input type="text" name="username" placeholder="Username"  class="form__input form__input_name" required autofocus>
+                <img src="./cart_page/img/profile-icons/username-icon.svg" alt="" class="form__icon">
             </div>
-            <div class="form-item email">
-                <input type="text" name="email" placeholder="Email"  class="form-item__input email-input" required>
-                <img src="./cart_page/img/profile-icons/email-icon.svg" alt="" class="form-item__icon">
+            <div class="form__item form__item_email">
+                <input type="text" name="email" placeholder="Email"  class="form__input form__input_email" required>
+                <img src="./cart_page/img/profile-icons/email-icon.svg" alt="" class="form__icon">
             </div>
-            <div class="form-item">
-                <input type="password" name="password" placeholder="Password" class="form-item__input pass-input" required>
-                <img src="./cart_page/img/profile-icons/padlock-icon.svg" alt="" class="form-item__icon">
+            <div class="form__item">
+                <input type="password" name="password" placeholder="Password" class="form__input form__input_pass" required>
+                <img src="./cart_page/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
             </div>
-            <div class="form-checkbox">
-                <input type="checkbox" name="agreement" class="form-checkbox__input" required>
-                <div class="form-checkbox__text">Я согласен с <span>правилами</span> и <span>условиями</span></div>
+            <div class="form__checkbox">
+                <input type="checkbox" name="Agreement" class="form__checkbox_input" required>
+                <p class="form__checkbox_text">Я согласен с <span>правилами</span> и <span>условиями</span></p>
             </div>
-            <button class="form-item__button button" id="register-button" type="submit">Зарегистрироваться</button>
+            <button class="form__btn" id="register-btn">Зарегистрироваться</button>
         </form>
-        <div class="profile__text">Уже есть аккаунт? <span id="login">Войти</span></div>
-        <div class="profile__footer-text">©️ Double Cup</div>
-    </section>
-    <section class="profile login">
-        <div class="profile__cross" id="cross">
-            <img src="./cart_page/img/profile-icons/cross-icon.svg" alt="quit" id="cross">
-        </div>
-        <h1 class="profile__title">Войти</h1>
-        <form action="" class="profile__form">
-            <div class="form-item email">
-                <input type="text" name="username" placeholder="Username"  class="form-item__input" required autofocus>
-                <img src="./cart_page/img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
-            </div>
-            <div class="form-item">
-                <input type="password" name="password" placeholder="Password" class="form-item__input" required>
-                <img src="./cart_page/img/profile-icons/padlock-icon.svg" alt="" class="form-item__icon">
-            </div>
-            <button class="form-item__button button login__button">Войти</button>
-        </form>
-        <div class="profile__text">Нет аккаунта? <span id="register">Зарегистрироваться</span></div>
-        <div class="profile__footer-text">©️ Double Cup</div>
-    </section>
+        <p class="profile-block__text">Уже есть аккаунт? <span class="js-login">Войти</span></p>
+        <p class="profile-block__footer-text">©️ Double Cup</p>
+    </article>
 
+    <!-- Register section -->
+    <article class="profile-block js-login__block">
+        <div class="profile-block__icon js-quit">
+            <img class="js-quit" src="./cart_page/img/profile-icons/cross-icon.svg" alt="quit">
+        </div>
+        <h1 class="profile-block__title title">Войти</h1>
+        <form action="" class="profile-block__form form">
+            <div class="form__item form__item_email">
+                <input type="text" name="username" placeholder="Username"  class="form__input" required autofocus>
+                <img src="./cart_page/img/profile-icons/username-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item">
+                <input type="password" name="password" placeholder="Password" class="form__input" required>
+                <img src="./cart_page/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
+            </div>
+            <button class="form__btn form__btn_login">Войти</button>
+        </form>
+        <div class="profile-block__text">Нет аккаунта? <span class="js-register">Зарегистрироваться</span></div>
+        <div class="profile-block__footer-text">©️ Double Cup</div>
+    </article>
+
+    <!-- Loading screen -->
     <section class="loader">
         <span class="loader__icon"></span>
     </section>

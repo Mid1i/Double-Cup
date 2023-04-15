@@ -1,0 +1,41 @@
+/*
+    ------------------
+    Empty cart section
+    ------------------
+*/
+.empty-block {
+    align-items: center;
+    flex: 1 0 100%;
+    justify-content: center;
+    height: 50vh;
+
+    &__image {
+        height: 60px;
+        width: 60px;
+    }
+
+    &__title {
+        font-size: 24px;
+        margin: 20px 0px;
+    }
+
+    &__text {
+        max-width: 250px;
+        text-align: center;
+    }
+
+    &__btn {
+        margin: 20px 0px;
+        width: 250px; 
+    }
+
+    &__return {
+        cursor: pointer;
+    }
+
+    &__text a,
+    &__return {
+        color: var(--red);
+        text-decoration: underline;
+    }
+}

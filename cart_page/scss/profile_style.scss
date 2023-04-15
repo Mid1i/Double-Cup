@@ -3,7 +3,7 @@
     Profile section
     ---------------
 */
-.profile {
+.profile-block {
     align-items: center;
     background: var(--profile-color); 
     border: 3px solid var(--black);
@@ -19,7 +19,7 @@
     height: 440px;
     width: 400px;
 
-    &__cross {
+    &__icon {
         align-self: flex-end;
         background: var(--red);
         border-radius: 0px 17px 0px 20px;
@@ -30,15 +30,12 @@
         width: 50px;
     }
 
-    &__cross:hover {
+    &__icon:hover {
         background: var(--light-red);
     }
 
     &__title {
-        font-family: "Ubuntu", sans-serif;
         font-size: 32px;
-        font-weight: 700;
-
     }
 
     &__form {
@@ -62,11 +59,18 @@
     }
 }
 
-.form-item {
-    position: relative;
-    height: 30px;
-    width: 100%;
-    z-index: 1;
+.form {
+    
+    &__item {
+        position: relative;
+        height: 30px;
+        width: 100%;
+        z-index: 1;
+
+        &_email {
+            margin: 25px 0px;
+        }
+    }
 
     &__input {
         background: inherit;
@@ -94,53 +98,45 @@
         right: 10px;     
     }
 
-    &__button {
-        border-radius: 10px;
-        font-size: 20px;
-        font-weight: 700;
+    &__checkbox {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px 10px;
+
+        &_text {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0px 0px 0px 10px;
+    
+            & span {
+                cursor: pointer;
+                font-weight: 600;
+            }
+    
+            & span:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__btn {
         padding: 15px 73px;
-        height: 50px;
         width: 350px;
-    }
-}
 
-.form-checkbox {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin: 30px 0px 10px;
-
-    &__text {
-        font-size: 16px;
-        font-weight: 400;
-        margin: 0px 0px 0px 10px;
-
-        & span {
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        & span:hover {
-            text-decoration: underline;
+        &_login {
+            padding: 15px 140px;
+            margin: 74px 0px 0px;
         }
     }
-}
-
-.email {
-    margin: 25px 0px;
-}
-
-.login__button {
-    padding: 15px 140px;
-    margin: 74px 0px 0px;
 }
 
 @media (max-width: 430px) {
-    .profile {
+    .profile-block {
         padding: 40px 10px 10px;
         width: 300px;
 
-        &__cross {
+        &__icon {
             margin: -40px -10px 0px;
         }
 
@@ -149,19 +145,19 @@
         }
     }
 
-    .form-item__button {
+    .form__btn {
         padding: 15px 40px;
         width: 100%;
-    }
-
-    .login__button {
-        padding: 15px 110px;
-        margin: 50px 0px 20px;
+        
+        &_login {
+            padding: 15px 110px;
+            margin: 50px 0px 20px;
+        }
     }
 }
 
 @media (max-width: 310px) {
-    .profile {
+    .profile-block {
         width: 250px;
 
         &__title {
@@ -169,12 +165,12 @@
         }
     }
 
-    .form-item__button {
+    .form__btn {
         padding: 15px 12px;
-    }
 
-    .login__button {
-        padding: 15px 80px;
+        &_login {
+            padding: 15px 80px;
+        }
     }
 }
 

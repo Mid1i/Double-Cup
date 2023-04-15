@@ -3,8 +3,8 @@
     Cart section
     ------------
 */
-.main-cart__item {
-    border-bottom: 2px solid var(--light-gray);
+
+.item {
     display: grid;
     gap: 5px;
     grid-template: repeat(3, 50px) / repeat(4, 1fr);
@@ -12,17 +12,6 @@
         "image title title country"
         "image title title weight"
         "image buttons delete price";
-    margin: 0px 0px 10px;
-    padding: 0px 0px 10px;
-
-    &:last-child {
-        border-bottom: none;
-        margin: 0px;
-        padding: 0px;
-    }
-}
-
-.item {
 
     &__image {
         grid-area: image;
@@ -30,29 +19,29 @@
         & img {
             border-radius: 10px;
             object-fit: cover;
-            height: 100%;
-            width: 100%;
         }
     }
 
     &__title {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 700;
         font-size: 22px;
         grid-area: title;
     }
 
-    &__country {
-        align-self: center;
-        color: var(--gray);
-        grid-area: country;
+    &__country,
+    &__weight,
+    &__delete,
+    &__price {
+        align-items: center;
         text-align: center;
     }
 
+    &__country {
+        color: var(--gray);
+        grid-area: country;
+    }
+
     &__weight {
-        align-self: center;
         grid-area: weight;
-        text-align: center;
     }
 
     &__buttons {
@@ -61,7 +50,7 @@
     }
 
     &__counter,
-    &__button {
+    &__btn {
         align-items: center;
         background: var(--white);
         border: 2px solid var(--light-gray);
@@ -69,10 +58,11 @@
         justify-content: center;
         height: 40px;
         width: 40px;
+    }
 
-        &:hover {
-            background: var(--very-light-gray);
-        }
+    &__counter:hover,
+    &__btn:hover {
+        background: var(--very-light-gray);
     }
 
     &__counter {    
@@ -84,76 +74,80 @@
     }
 
     &__delete {
-        align-self: center;
         cursor: pointer;
         grid-area: delete;
-        text-align: center;
+    }
 
-        &:hover {
-            color: var(--red);
-        }
+    &__delete:hover {
+        color: var(--red);
     }
 
     &__price {
-        align-self: center;
+        grid-area: price;
         font-weight: 600;
         font-size: 18px;
-        grid-area: price;
-        text-align: center;
     }
 }
 
-.button-minus,
-.button-plus {
+.cart-sep {
+    margin: 10px 0px;
+
+    &:last-child {
+        display: none;
+    }
+}
+
+.minus-btn {
     border-left: 1px solid var(--light-gray);
 }
 
-.plus-button {
+.plus-btn {
     border-radius: 0px 5px 0px 0px;
+    border-left: 1px solid var(--light-gray);
 }
 
 @media (max-width: 520px) {
-    .main-cart__item {
+    .item {
         grid-template-rows: repeat(3, 40px);
     }
 }
 
 @media (max-width: 450px) {
-    .main-cart__item {
+    .item {
         grid-template: 100px 40px 30px 40px / repeat(3, 1fr);
         grid-template-areas:
             "image image image"
             "title title title"
             "country weight weight"
             "buttons delete price";
-    }
 
-    .item__title {
-        text-align: center;
-    }
-    
-    .item__weight,
-    .item__price {
-        text-align: right;
+        &__title {
+            text-align: center;
+        }
+
+        &__weight,
+        &__price {
+            text-align: right;
+        }
     }
 }
 
-@media (max-width: 320px) {
-    .main-cart__item {
+@media (max-width: 345px) {
+    .item {
         grid-template: 100px 40px 40px 30px / repeat(3, 1fr);
         grid-template-areas:
             "image image image"
             "title title title"
             "buttons delete delete"
             "price price price";
-    }
 
-    .item__price {
-        text-align: center;
-    }
-    
-    .item__country,
-    .item__weight {
-        display: none;
+        &__price {
+            text-align: center;
+        }
+
+        &__country,
+        &__weight {
+            display: none;
+        }
     }
 }

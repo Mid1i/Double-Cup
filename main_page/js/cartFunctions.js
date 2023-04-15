@@ -1,4 +1,4 @@
-import { cart, cart_block_items, getProduct, createCartItem } from "./createCart.js";
+import { cart, cart_block_items, getProduct, createCartItem, startSettings } from "./createCart.js";
 
 const header_cart_icon = document.getElementById("header-cart-icon");
 const cart_icon = document.querySelector(".cart-icon");
@@ -13,6 +13,8 @@ let result_price = 0;
 let amount = 0;
 
 let path = "https://mid1i.github.io/Double-Cup/main_page";
+
+window.setTimeout(startCartSettings, 1000);
 
 document.addEventListener("click", (event) => {
     let arg = event.target;
@@ -173,4 +175,23 @@ function updateResultPrice(id, step) {
     }
 
     $(".result__price").html(`${result_price}.00 ₽`);
+}
+
+function startCartSettings() {
+    if (localStorage.getItem("cart_update")) {
+        startSettings();
+        result_price = Number(localStorage.getItem("result_price_update"));
+    
+        for (let item in cart) {
+            amount += cart[item];
+        }
+
+        updateCart();
+        $(".result__price").html(`${result_price}.00 ₽`);
+
+        localStorage.removeItem("cart");
+        localStorage.removeItem("cart_update");
+        localStorage.removeItem("result_price");
+        localStorage.removeItem("result_price_update");
+    }
 }

@@ -11,6 +11,7 @@ main_page/css/loader_style.css
 main_page/css/cart_style.css
 
 cart_page/.vscode
+cart_page/css/empty-block_style.css
 cart_page/css/footer_style.css
 cart_page/css/header_style.css
 cart_page/css/profile_style.css

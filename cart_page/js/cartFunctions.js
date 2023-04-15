@@ -1,8 +1,8 @@
 import { cart, cart_section, getProduct, gettingWeight, changeCart, createCartItem } from "./createCart.js";
 
-const goods_amount = document.querySelectorAll(".goods-counter");
-const order_section = document.querySelector(".main-order");
-const empty_section = document.querySelector(".main-cart__empty");
+const goods_amount = document.querySelectorAll(".js-counter");
+const order_section = document.querySelector(".order");
+const empty_section = document.querySelector(".empty-block");
 
 // The result price in the cart
 let result_price = Number(localStorage.getItem("result_price"));
@@ -16,7 +16,7 @@ document.addEventListener("click", (event) => {
     let id = arg.id;
 
     // Tracks clicking on the "Plus" and "Add to the cart" buttons when choosing a product
-    if ((arg.classList.contains(`${id}-button`)) || (arg.classList.contains(`${id}-plus`))) {
+    if (arg.classList.contains(`${id}-plus`)) {
         plusFunction(id);
     }
 
@@ -30,7 +30,7 @@ document.addEventListener("click", (event) => {
         zeroFunction(id);
     }
 
-    if (arg.classList.contains("empty__return")) {
+    if (arg.classList.contains("empty-block__return")) {
         returnGoods();
     }
 
@@ -98,7 +98,7 @@ function checkOrder() {
         cart_section.classList.toggle("hide");
         order_section.classList.toggle("hide");
         empty_section.classList.toggle("hide");
-        document.querySelector(".main__text").classList.toggle("hide");
+        document.querySelector(".js-counter").classList.toggle("hide");
     }
 };
 
@@ -121,11 +121,15 @@ function updateCart() {
             item.innerHTML = `${amount} товаров`;
         });
     }
+    localStorage.setItem("cart_update", JSON.stringify(cart));
+    localStorage.setItem("result_price_update", result_price);
 };
 
 function deleteElement(id) {
     let cart_item = document.querySelector(`.${id}-item`);
+    let cart_sep = document.querySelector(`.${id}-sep`)
     cart_section.removeChild(cart_item);
+    cart_section.removeChild(cart_sep);
 };
 
 // Updating the product price in the cart
@@ -158,6 +162,10 @@ function updateResultPrice(id, step) {
 
 function startSettings() {
 
+    if (localStorage.getItem("cart_update")) {
+        localStorage.removeItem("cart_update");
+    }
+
     for (let item in cart) {
         amount += cart[item];
 
@@ -180,5 +188,5 @@ function returnGoods() {
     cart_section.classList.toggle("hide");
     order_section.classList.toggle("hide");
     empty_section.classList.toggle("hide");
-    document.querySelector(".main__text").classList.toggle("hide");
+    document.querySelector(".js-counter").classList.toggle("hide");
 }
