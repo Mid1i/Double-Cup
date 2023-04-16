@@ -44,7 +44,7 @@
         grid-area: weight;
     }
 
-    &__buttons {
+    &__btns-block {
         display: flex;
         grid-area: buttons;
     }
@@ -67,10 +67,6 @@
 
     &__counter {    
         border-radius: 5px 0px 0px;
-    }
-
-    &__button {
-        font-size: 20px;
     }
 
     &__delete {
@@ -106,13 +102,13 @@
     border-left: 1px solid var(--light-gray);
 }
 
-@media (max-width: 520px) {
+@media(max-width: 520px) {
     .item {
         grid-template-rows: repeat(3, 40px);
     }
 }
 
-@media (max-width: 450px) {
+@media(max-width: 450px) {
     .item {
         grid-template: 100px 40px 30px 40px / repeat(3, 1fr);
         grid-template-areas:
@@ -132,7 +128,7 @@
     }
 }
 
-@media (max-width: 345px) {
+@media(max-width: 345px) {
     .item {
         grid-template: 100px 40px 40px 30px / repeat(3, 1fr);
         grid-template-areas:

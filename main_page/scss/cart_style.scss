@@ -3,67 +3,37 @@
     Cart section
     ------------
 */
-.cart-icon {
-    align-items: center;
-    background: var(--red);
-    border-radius: 20px;
-    bottom: 130px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 15px;
-    position: fixed;
-    right: 100px;
-    opacity: 0;
-    transition: opacity 0.5s;
-    z-index: 1;
 
-    & img {
-        height: 20px;
-        width: 20px;
-    }
-
-    & img:first-child {
-        margin: 0px 0px 10px;
-    }
-}
-
-.cart-icon:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--gray);
-    transform: scale(1.05);
-}
-
-@media (max-width: 767px) {
-    .cart-icon {
-        right: 20px;
-        bottom: 140px;
-    }
-}
-
-.cart-block {
-    background: var(--white);
-    box-shadow: 0px 0px 10px var(--gray);
-    border-radius: 10px;
+.main-header__cart-block {
     bottom: -410px;
-    padding: 5px 5px 10px;
     position: absolute;
     right: 0px;
     height: 400px;
     width: 375px;
     z-index: 2;
+}
 
+.item__btn,
+.item__counter,
+.item__btns-block,
+.cart-block__result {
+    align-items: center;
+    display: flex;
+}
+
+.cart-block {
     &__title {
-        border-bottom: 2px solid var(--light-gray);
-        font-family: "Ubuntu", sans-serif;
         font-size: 24px;
-        font-weight: 700;
         padding: 0px 0px 5px;
         text-align: center;
     }
 
-    &-items {
+    &__sep {
+        background: var(--light-gray);
+        height: 2px;
+    }
+
+    &__items {
         overflow-y: scroll;
         height: 260px;
     }
@@ -79,21 +49,18 @@
     }
 
     &__result {
-        border-top: 2px solid var(--light-gray);
-        align-items: center;
-        display: flex;
         justify-content: space-between;
         padding: 12px 5px;
     }
 
-    &__buttons {
+    &__btns-block {
         display: flex;
         float: right;
         padding: 0px 20px;
     }
 }
 
-.cart-item {
+.item {
 
     &__image {
         grid-area: image;
@@ -108,8 +75,6 @@
 
     &__title {
         grid-area: title;
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 700;
         padding: 10px 0px 0px;
     }
 
@@ -120,37 +85,26 @@
         font-weight: 600;
     }
 
-    &__buttons {
-        align-items: center;
-        display: flex;
+    &__btns-block {
         grid-area: buttons;
     }
 
-    &__counter {
-        align-items: center;
+    &__counter,
+    &__btn {
+        background: var(--white);
         border: 2px solid var(--light-gray);
-        border-radius: 5px 0px 0px;
-        display: flex;
         justify-content: center;
-        height: 30px;
+        height: 40px;
         width: 40px;
     }
 
-    &__button {
-        background: var(--white);
-        border: 2px solid var(--light-gray);
-        border-left: 1px solid var(--light-gray);
-        font-size: 20px;
-        height: 30px;
-        width: 30px; 
-        
-        &:hover {
-            background: var(--very-light-gray);
-        }
+    &__counter:hover,
+    &__btn:hover {
+        background: var(--very-light-gray);
     }
 
-    &__button-plus {
-        border-radius: 0px 5px 0px 0px;
+    &__counter {    
+        border-radius: 5px 0px 0px;
     }
 
     &__delete {
@@ -159,57 +113,60 @@
         cursor: pointer;
         font-size: 14px;
         text-align: center;
+    }
 
-        &:hover {
-            color: var(--red);
-            text-decoration: underline;
-        }
+    &__delete:hover {
+        color: var(--red);
+        text-decoration: underline;
     }
 }
 
-.button-order,
-.button-cart {
+.minus-btn {
+    border-left: 1px solid var(--light-gray);
+}
+
+.plus-btn {
+    border-radius: 0px 5px 0px 0px;
+    border-left: 1px solid var(--light-gray);
+}
+
+.btn__order,
+.btn__cart {
     border-radius: 10px;
     font-size: 16px;
     padding: 10px;
     height: 42px;
 }
 
-.button-order {
-    background: var(--white);
-    border: 2px solid var(--light-gray);
-    margin: 0px 20px 0px 0px;
-    width: 150px;
-
-    &:hover {
-        background: #f7f7f7;
-    }
-}
-
-.button-cart {
+.btn__cart {
     background: var(--red);
     color: var(--white);
     font-weight: 600;
     width: 110px;
+}
 
-    &:hover {
-        background: var(--light-red);
-    }
+.btn__order {
+    background: var(--white);
+    border: 2px solid var(--light-gray);
+    margin: 0px 20px 0px 0px;
+    width: 150px;
+}
+
+.btn__order:hover {
+    background: #f7f7f7;
 }
 
 .result__title,
 .result__price {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
     font-size: 24px;
 }
 
-@media (max-width: 400px) {
-    .cart-block {
+@media(max-width: 400px) {
+    .main-header__cart-block {
         width: 290px;
+    }
 
-        &__buttons {
-            padding: 0px;
-        }
+    .cart-block__btns-block {
+        padding: 0px;
     }
 }

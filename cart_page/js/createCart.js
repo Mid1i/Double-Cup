@@ -73,7 +73,7 @@ function createStructure(product) {
     plus_button.innerHTML = "+";
 
     let buttons = document.createElement("section");
-    buttons.classList.add("item__buttons");
+    buttons.classList.add("item__btns-block");
     buttons.append(counter, minus_button, plus_button);
 
     let delete_button = document.createElement("p");

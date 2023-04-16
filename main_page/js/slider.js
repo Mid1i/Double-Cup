@@ -17,7 +17,7 @@ export function salesSlider() {
 // Adding Products sliders for small screens (phones and some tablets)
 export function productSlider() {
     if (window.matchMedia("(max-width: 520px)").matches) {
-        $(".products").not('.slick-initialized').slick({
+        $(".product-block").not('.slick-initialized').slick({
             responsive: [
                 {
                     breakpoint: 9999,

@@ -23,242 +23,312 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
 </head> 
 <body class="lock">
-    <div class="wrapper">
-        <header>
-            <section class="header-top">
-                <div class="header-menu-burger">
-                    <span></span>
+    <!-- Site header -->
+    <header class="main-header">
+        <!-- Header logo, info, main navigation and buttons -->
+        <section class="main-header__top-block">
+            <!-- Burger menu for small screens -->
+            <section class="main-header__burger">
+                <span></span>
+            </section>
+            <!-- Logo and information about delivery -->
+            <section class="main-header__info info">
+                <div class="info__logo">
+                    <a href="./main_page.html">
+                        <img src="./cart_page/img/header-icons/logo.svg" alt="Логотип магазина «Double Cup»">
+                    </a>
                 </div>
-                <section class="header-info">
-                    <div class="header-info__image">
-                        <a href="">
-                            <img src="./main_page/img/header-icons/logo.svg" alt="Логотип магазина «Double Cup»">
-                        </a>
-                    </div>
-                    <article class="header-info__text">
-                        <p>Доставка: с 8:00 до 21:30</p>
-                        <p><a href="tel:88315552525">8 (831) 555-25-25</a></p>
-                    </article>
-                </section>
-                <nav>
-                    <ul class="header-list">
-                        <li class="active_page"><a href="">Главная</a></li>
-                        <li><a href="">Акции</a></li>
-                        <li><a href="">Доставка</a></li>
-                        <li><a href="">Как оплачивать</a></li>
-                        <li><a href="">О нас</a></li>
-                    </ul>
-                </nav>
-                <section class="header-buttons">
-                    <button class="header-cart button cart-item">
-                        <div class="button__image">
-                            <img src="./main_page/img/header-icons/cart-icon.svg" alt="" class="cart-item" id="header-cart-icon">
-                        </div>
-                        <div class="button__text cart-item" id="cart-amount">Пусто</div>
-                    </button>
-                    <div class="cart-block hide">
-                        <h1 class="cart-block__title">Корзина</h1>
-                        <div class="cart-block-items"></div> 
-                        <div class="cart-block__result">
-                            <h2 class="result__title">Итого:</h2>
-                            <div class="result__price">0 ₽</div>
-                        </div>
-                        <div class="cart-block__buttons">
-                            <a href="" id="order">
-                                <button class="button-order" id="order">Оформить заказ</button>
-                            </a>    
-                            <a href="./cart_page.html" id="go-to-cart">
-                                <button class="button-cart" id="go-to-cart">В корзину</button>
-                            </a>
-                        </div>   
-                    </div>
+                <section class="info__delivery">
+                    <p class="info__delivery_text">Доставка: с 8:00 до 21:30</p>
+                    <p class="info__delivery_tel">
+                        <a href="tel:88315552525">8 (831) 555-25-25</a>
+                    </p>
                 </section>
             </section>
-            <nav>
-                <ul class="header-bottom-list">
-                    <li id="fruits">Фрукты и овощи</li>
-                    <li id="bread">Хлеб и выпечка</li>
-                    <li id="sweets">Сладости</li>
-                    <li id="pasta">Макароны и крупы</li>
-                    <li id="cheese">Сыры и колбасы</li>
-                    <li id="milk-products">Молочные продукты и яйца</li>
+            <!-- Main site navigation -->
+            <nav class="main-header__navigation">
+                <ul class="main-header__list">
+                    <li class="list__el list__el_active">
+                        <a href="./main_page.html">Главная</a>
+                    </li>
+                    <li class="list__el">
+                        <a href="">Акции</a>
+                    </li>
+                    <li class="list__el">
+                        <a href="">Доставка</a>
+                    </li>
+                    <li class="list__el">
+                        <a href="">Как оплачивать</a>
+                    </li>
+                    <li class="list__el list__el_last">
+                        <a href="">О нас</a>
+                    </li>
                 </ul>
-            </nav> 
-        </header>
-        <main>
-            <div class="slider">
-                    <section class="slider-item">
-                        <h1  class="slider-item__title">Акция в честь открытия</h1>
-                        <h2  class="slider-item__subtitle">Скидка 10% на весь заказ</h2>
-                        <p   class="slider-item__text">Акция действует при заказе на сумму от 1000 рублей</p>
-                        <a href="">
-                            <button class="slider-item__button button">Все акции →</button>
-                        </a>
-                    </section>
-                    <section class="slider-item item_2">
-                        <h1  class="slider-item__title">Happy Birthday!</h1>
-                        <h2  class="slider-item__subtitle">Скидка 20% в день рождения</h2>
-                        <p   class="slider-item__text">Скидка действует в течение 3-х дней до и 3-х дней после дня Рождения</p>
-                        <a href="">
-                            <button class="slider-item__button button">Все акции →</button>
-                        </a>
-                    </section>
-                    <section class="slider-item item_3">
-                        <h1  class="slider-item__title">Бесплатная доставка</h1>
-                        <p   class="slider-item__text">Акция действует при заказе от 1000 рублей</p>
-                        <a href="">
-                            <button class="slider-item__button button">Все акции →</button>
-                        </a>
-                    </section>
-            </div>
-            <h1 class="catalog__title title">Каталог</h1>
-            <div class="catalog">
-                <section class="catalog-item item-fruits" id="fruits">
-                    <button class="item__button" id="fruits">Фрукты и овощи</button>
-                </section>
-                <section class="catalog-item item-bread" id="bread">
-                    <button class="item__button" id="bread">Хлеб и выпечка</button>
-                </section>
-                <section class="catalog-item item-sweets" id="sweets">
-                    <button class="item__button" id="sweets">Сладости</button>
-                </section>
-                <section class="catalog-item item-pasta" id="pasta">
-                    <button class="item__button" id="pasta">Макароны и крупы</button>
-                </section>
-                <section class="catalog-item item-cheese" id="cheese">
-                    <button class="item__button" id="cheese">Сыры и колбасы</button>
-                </section>
-                <section class="catalog-item item-milk" id="milk-products">
-                    <button class="item__button" id="milk-products">Молочные продукты и яйца</button>
-                </section>
-            </div>
-            <h2 class="products__title title fruits_title">Фрукты и овощи</h2>
-            <div class="products fruits-products"></div>
-            <h2 class="products__title title bread_title">Хлеб и выпечка</h2>
-            <div class="products bread-products"></div>
-            <h2 class="products__title title sweets_title">Сладости</h2>
-            <div class="products sweets-products"></div>
-            <h2 class="products__title title pasta_title">Макароны и крупы</h2>
-            <div class="products pasta-products"></div>
-            <h2 class="products__title title cheese_title">Сыры и колбасы</h2>
-            <div class="products cheese-products"></div>
-            <h2 class="products__title title milk-products_title">Молочные продукты и яйца</h2>
-            <div class="products milk-products"></div>
-            <section class="contacts">
-                <section class="contacts-left">
-                    <h2 class="contacts-left__title title">Контакты</h2>
-                    <div class="contacts-left__section geo">
-                        <div class="contacts-left__icon">
-                            <img src="./main_page/img/main-icons/geo-icon.svg" alt="">
-                        </div>
-                        <div class="contacts-left__text">г. Нижний Новгород, ул. Минина, 24к1</div>
+            </nav>
+            <!-- Buttons "Login" and "Cart" and Cart block -->
+            <section class="main-header__btns-block">
+                <button class="cart__btn btn js-cart-btn">
+                    <div class="btn__icon js-cart-btn">
+                        <img class="js-cart-icon js-cart-btn" src="./main_page/img/header-icons/cart-icon.svg" alt="">
                     </div>
-                    <div class="contacts-left__section email">
-                        <div class="contacts-left__icon">
-                            <img src="./main_page/img/main-icons/email-icon.svg" alt="">
-                        </div>
-                        <div class="contacts-left__text">doublecup@nn.ru</div>
-                    </div>
-                    <div class="contacts-left__section phone">
-                        <div class="contacts-left__icon">
-                            <img src="./main_page/img/main-icons/phone-icon.svg" alt="">
-                        </div>
-                        <div class="contacts-left__text">8 (831) 555-25-25</div>
-                    </div>
-                </section>
-                <section class="contacts-right">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae2756a6d06c3094da79ed89a0357ac2b950a453352e59389dd22585c9af80310&amp;width=500&amp;height=260&amp;lang=ru_RU&amp;scroll=true"></script>
-                </section>
+                    <p class="btn__text js-cart-text js-cart-btn">Пусто</p>
+                </button>
+                <!-- Cart block -->
+                <article class="main-header__cart-block hide">
+                    <h1 class="cart-block__title title">Корзина</h1>
+                    <hr class="cart-block__sep">
+                    <!-- Cart items -->
+                    <section class="cart-block__items"></section> 
+                    <hr class="cart-block__sep">
+                    <!-- Result price -->
+                    <section class="cart-block__result">
+                        <h2 class="result__title title">Итого:</h2>
+                        <p class="result__price title">0 ₽</p>
+                    </section>
+                    <!-- Buttons "Order" and "Go to the cart page" -->
+                    <section class="cart-block__btns-block">
+                        <a href="" class="js-order-btn">
+                            <button class="btn__order js-order-btn">Оформить заказ</button>
+                        </a>    
+                        <a href="./cart_page.html" class="js-go-cart">
+                            <button class="btn__cart js-go-cart-btn">В корзину</button>
+                        </a>
+                    </section>   
+                </article>
             </section>
-        </main>
-        <nav>
-            <ul class="bottom-list">
-                <li id="fruits">Фрукты и овощи</li>
-                <li id="bread">Хлеб и выпечка</li>
-                <li id="sweets">Сладости</li>
-                <li id="pasta">Макароны и крупы</li>
-                <li id="cheese">Сыры и колбасы</li>
-                <li id="milk-products">Молочные продукты и яйца</li>
-            </ul>
-        </nav>
-
-        <section class="cart-icon" id="cart">
-            <img src="./main_page/img/main-icons/top-arrow-icon.svg" alt="" id="cart">
-            <img src="./main_page/img/header-icons/cart-full-icon.svg" alt="" id="cart">
         </section>
-    </div>
-    <footer>
-        <div class="footer-wrapper">
-            <section class="footer-pay">
-                <div class="footer-pay-item">
-                    <img src="./main_page/img/footer-icons/visa-icon.svg" alt="Visa">
+        <hr class="main-header__sep">
+        <!-- Goods navigation -->
+        <nav class="main-header__goods-navigation">
+            <ul class="main-header__goods-list">
+                <li class="goods-list__el" id="js-fruits">Фрукты и овощи</li>
+                <li class="goods-list__el" id="js-bread">Хлеб и выпечка</li>
+                <li class="goods-list__el" id="js-sweets">Сладости</li>
+                <li class="goods-list__el" id="js-pasta">Макароны и крупы</li>
+                <li class="goods-list__el" id="js-cheese">Сыры и колбасы</li>
+                <li class="goods-list__el" id="js-milk-products">Молочные продукты и яйца</li>
+            </ul>
+        </nav> 
+        <hr class="main-header__sep">
+    </header>
+    <!-- Site main section -->
+    <main class="main-content">
+        <!-- Slider with actual sales -->
+        <section class="main-content__slider slider">
+            <!-- Store opening sales block -->
+            <article class="slider-item">
+                <h1 class="slider-item__title title">Акция в честь открытия</h1>
+                <h2 class="slider-item__subtitle title">Скидка 10% на весь заказ</h2>
+                <p class="slider-item__text">Акция действует при заказе на сумму от 1000 рублей</p>
+                <a href="">
+                    <button class="slider-item__btn btn">Все акции →</button>
+                </a>
+            </article>
+            <!-- Birthday sales block -->
+            <article class="slider-item slider-item_2">
+                <h1 class="slider-item__title title">Happy Birthday!</h1>
+                <h2 class="slider-item__subtitle title">Скидка 20% в день рождения</h2>
+                <p class="slider-item__text">Скидка действует в течение 3-х дней до и 3-х дней после дня Рождения</p>
+                <a href="">
+                    <button class="slider-item__btn btn">Все акции →</button>
+                </a>
+            </article>
+            <!-- Free delivery block -->
+            <article class="slider-item slider-item_3">
+                <h1 class="slider-item__title title">Бесплатная доставка</h1>
+                <p class="slider-item__text">Акция действует при заказе от 1000 рублей</p>
+                <a href="">
+                    <button class="slider-item__btn btn">Все акции →</button>
+                </a>
+            </article>
+        </section>
+        <!-- Product catalog -->
+        <article class="main-content__catalog catalog">
+            <h1 class="catalog__title title">Каталог</h1>
+            <section class="catalog-block">
+                <!-- Fruits and vegetables block -->
+                <section class="catalog-block__item catalog-block__item_fruits" id="js-fruits">
+                    <button class="catalog-block__item__btn" id="js-fruits">Фрукты и овощи</button>
+                </section>
+                <!-- Bread block -->
+                <section class="catalog-block__item catalog-block__item_bread" id="js-bread">
+                    <button class="catalog-block__item__btn" id="js-bread">Хлеб и выпечка</button>
+                </section>
+                <!-- Sweets block -->
+                <section class="catalog-block__item catalog-block__item_sweets" id="js-sweets">
+                    <button class="catalog-block__item__btn" id="js-sweets">Сладости</button>
+                </section>
+                <!-- Pasta block -->
+                <section class="catalog-block__item catalog-block__item_pasta" id="js-pasta">
+                    <button class="catalog-block__item__btn catalog-block__item__btn_pasta" id="js-pasta">Макароны и крупы</button>
+                </section>
+                <!-- Cheese and sausages block -->
+                <section class="catalog-block__item catalog-block__item_cheese" id="js-cheese">
+                    <button class="catalog-block__item__btn" id="js-cheese">Сыры и колбасы</button>
+                </section>
+                <!-- Milk products block -->
+                <section class="catalog-block__item catalog-block__item_milk" id="js-milk-products">
+                    <button class="catalog-block__item__btn" id="js-milk-products">Молочные продукты и яйца</button>
+                </section>
+            </section>
+        </article>
+        <!-- Product blocks -->
+        <section class="main-content__products">
+            <h2 class="product__title title product__title_fruits">Фрукты и овощи</h2>
+            <hr class="product__sep">
+            <!-- Fruits and vegetables product block -->
+            <section class="product-block product-block_fruits"></section>
+            <h2 class="product__title title product__title_bread">Хлеб и выпечка</h2>
+            <hr class="product__sep">
+            <!-- Bread product block -->
+            <section class="product-block product-block_bread"></section>
+            <h2 class="product__title title product__title_sweets">Сладости</h2>
+            <hr class="product__sep">
+            <!-- Sweets product block -->
+            <section class="product-block product-block_sweets"></section>
+            <h2 class="product__title title product__title_pasta">Макароны и крупы</h2>
+            <hr class="product__sep">
+            <!-- Pasta product block -->
+            <section class="product-block product-block_pasta"></section>
+            <h2 class="product__title title product__title_cheese">Сыры и колбасы</h2>
+            <hr class="product__sep">
+            <!-- Cheese and sausages product block -->
+            <section class="product-block product-block_cheese"></section>
+            <h2 class="product__title title product__title_milk">Молочные продукты и яйца</h2>
+            <hr class="product__sep">
+            <!-- Milk products block -->
+            <section class="product-block product-block_milk"></section>
+        </section>
+        <!-- Contacts block -->
+        <section class="main-content__contacts contacts">
+            <!-- Contacts block with text information -->
+            <section class="contacts__left-block">
+                <h2 class="left-block__title title">Контакты</h2>
+                <!-- Geoposition information -->
+                <section class="left-block__section left-block__section_geo">
+                    <div class="left-block__icon">
+                        <img src="./main_page/img/main-icons/geo-icon.svg" alt="">
+                    </div>
+                    <p class="left-block__text">г. Нижний Новгород, ул. Минина, 24к1</p>
+                </section>
+                <!-- Email information -->
+                <section class="left-block__section left-block__section_email">
+                    <div class="left-block__icon">
+                        <img src="./main_page/img/main-icons/email-icon.svg" alt="">
+                    </div>
+                    <p class="left-block__text">doublecup@nn.ru</p>
+                </section>
+                <!-- Mobile phone information -->
+                <section class="left-block__section left-block__section_phone">
+                    <div class="left-block__icon">
+                        <img src="./main_page/img/main-icons/phone-icon.svg" alt="">
+                    </div>
+                    <p class="left-block__text">8 (831) 555-25-25</p>
+                </section>
+            </section>
+            <!-- Contacts block with map for big screens -->
+            <section class="contacts__right-block">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae2756a6d06c3094da79ed89a0357ac2b950a453352e59389dd22585c9af80310&amp;width=500&amp;height=260&amp;lang=ru_RU&amp;scroll=true"></script>
+            </section>
+        </section>
+    </main>
+    <!-- Goods navigation -->
+    <nav class="main-header__goods-navigation">
+        <hr class="main-header__sep">
+        <ul class="main-header__goods-list">
+            <li class="goods-list__el" id="js-fruits">Фрукты и овощи</li>
+            <li class="goods-list__el" id="js-bread">Хлеб и выпечка</li>
+            <li class="goods-list__el" id="js-sweets">Сладости</li>
+            <li class="goods-list__el" id="js-pasta">Макароны и крупы</li>
+            <li class="goods-list__el" id="js-cheese">Сыры и колбасы</li>
+            <li class="goods-list__el" id="js-milk-products">Молочные продукты и яйца</li>
+        </ul>
+    </nav>
+    <!-- Site footer -->
+    <footer class="main-footer">
+        <div class="main-footer__wrapper">
+            <!-- Payment systems supported by site -->
+            <section class="main-footer__pay pay">
+                <div class="pay__item">
+                    <img src="./cart_page/img/footer-icons/visa-icon.svg" alt="Visa">
                 </div>
-                <div class="footer-pay-item">
-                    <img src="./main_page/img/footer-icons/mastercard-icon.svg" alt="MasterCard">
+                <div class="pay__item">
+                    <img src="./cart_page/img/footer-icons/mastercard-icon.svg" alt="MasterCard">
                 </div>
-                <div class="footer-pay-item">
-                    <img src="./main_page/img/footer-icons/mir-icon.svg" alt="Мир">
+                <div class="pay__item pay__item_last">
+                    <img src="./cart_page/img/footer-icons/mir-icon.svg" alt="Мир">
                 </div>
             </section>
-            <p class="footer__text">©️ 2023 Double Cup | Все права защищены</p>
-            <section class="footer-socialnet">
-                <div class="footer-socialnet__text">Тех. поддержка:</div>
-                <div class="footer-socialnet__image">
+            <p class="main-footer__text">©️ 2023 Double Cup | Все права защищены</p>
+            <!-- Technical support of the site -->
+            <section class="main-footer__sup sup">
+                <p class="sup__text">Тех. поддержка:</p>
+                <div class="sup__image">
                     <a href="">
-                        <img src="./main_page/img/footer-icons/tg-icon.svg" alt="Telegram">
+                        <img src="./cart_page/img/footer-icons/tg-icon.svg" alt="Telegram">
                     </a>
                 </div>
             </section>
         </div>
     </footer>
 
-    <section class="profile register">
-        <div class="profile__cross" id="cross">
-            <img src="./main_page/img/profile-icons/cross-icon.svg" alt="quit" id="cross">
-        </div>
-        <h1 class="profile__title">Зарегистрироваться</h1>
-        <form action="" class="profile__form">
-            <div class="form-item">
-                <input type="text" name="username" placeholder="Username"  class="form-item__input name-input" required autofocus>
-                <img src="./main_page/img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
-            </div>
-            <div class="form-item email">
-                <input type="text" name="email" placeholder="Email"  class="form-item__input email-input" required>
-                <img src="./main_page/img/profile-icons/email-icon.svg" alt="" class="form-item__icon">
-            </div>
-            <div class="form-item">
-                <input type="password" name="password" placeholder="Password" class="form-item__input pass-input" required>
-                <img src="./main_page/img/profile-icons/padlock-icon.svg" alt="" class="form-item__icon">
-            </div>
-            <div class="form-checkbox">
-                <input type="checkbox" name="agreement" class="form-checkbox__input" required>
-                <div class="form-checkbox__text">Я согласен с <span>правилами</span> и <span>условиями</span></div>
-            </div>
-            <button class="form-item__button button" id="register-button" type="submit">Зарегистрироваться</button>
-        </form>
-        <div class="profile__text">Уже есть аккаунт? <span id="login">Войти</span></div>
-        <div class="profile__footer-text">©️ Double Cup</div>
-    </section>
-    <section class="profile login">
-        <div class="profile__cross" id="cross">
-            <img src="./main_page/img/profile-icons/cross-icon.svg" alt="quit" id="cross">
-        </div>
-        <h1 class="profile__title">Войти</h1>
-        <form action="" class="profile__form">
-            <div class="form-item email">
-                <input type="text" name="username" placeholder="Username"  class="form-item__input" required autofocus>
-                <img src="./main_page/img/profile-icons/username-icon.svg" alt="" class="form-item__icon">
-            </div>
-            <div class="form-item">
-                <input type="password" name="password" placeholder="Password" class="form-item__input" required>
-                <img src="./main_page/img/profile-icons/padlock-icon.svg" alt="" class="form-item__icon">
-            </div>
-            <button class="form-item__button button login__button">Войти</button>
-        </form>
-        <div class="profile__text">Нет аккаунта? <span id="register">Зарегистрироваться</span></div>
-        <div class="profile__footer-text">©️ Double Cup</div>
+    <!-- Cart icon "Go to the Cart" -->
+    <section class="cart__icon js-icon">
+        <img class="js-icon" src="./main_page/img/main-icons/top-arrow-icon.svg" alt="Корзина">
+        <img class="js-icon" src="./main_page/img/header-icons/cart-full-icon.svg" alt="Корзина">
     </section>
 
+    <!-- Login section -->
+    <article class="profile-block js-register__block">
+        <div class="profile-block__icon js-quit">
+            <img class="js-quit" src="./cart_page/img/profile-icons/cross-icon.svg">
+        </div>
+        <h1 class="profile-block__title title">Зарегистрироваться</h1>
+        <form action="" class="profile-block__form form">
+            <div class="form__item">
+                <input type="text" name="username" placeholder="Username"  class="form__input form__input_name" required autofocus>
+                <img src="./cart_page/img/profile-icons/username-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item form__item_email">
+                <input type="text" name="email" placeholder="Email"  class="form__input form__input_email" required>
+                <img src="./cart_page/img/profile-icons/email-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item">
+                <input type="password" name="password" placeholder="Password" class="form__input form__input_pass" required>
+                <img src="./cart_page/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__checkbox">
+                <input type="checkbox" name="Agreement" class="form__checkbox_input" required>
+                <p class="form__checkbox_text">Я согласен с <span>правилами</span> и <span>условиями</span></p>
+            </div>
+            <button class="form__btn" id="register-btn">Зарегистрироваться</button>
+        </form>
+        <p class="profile-block__text">Уже есть аккаунт? <span class="js-login">Войти</span></p>
+        <p class="profile-block__footer-text">©️ Double Cup</p>
+    </article>
+
+    <!-- Register section -->
+    <article class="profile-block js-login__block">
+        <div class="profile-block__icon js-quit">
+            <img class="js-quit" src="./cart_page/img/profile-icons/cross-icon.svg" alt="quit">
+        </div>
+        <h1 class="profile-block__title title">Войти</h1>
+        <form action="" class="profile-block__form form">
+            <div class="form__item form__item_email">
+                <input type="text" name="username" placeholder="Username"  class="form__input" required autofocus>
+                <img src="./cart_page/img/profile-icons/username-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item">
+                <input type="password" name="password" placeholder="Password" class="form__input" required>
+                <img src="./cart_page/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
+            </div>
+            <button class="form__btn form__btn_login">Войти</button>
+        </form>
+        <div class="profile-block__text">Нет аккаунта? <span class="js-register">Зарегистрироваться</span></div>
+        <div class="profile-block__footer-text">©️ Double Cup</div>
+    </article>
+
+    <!-- Loading screen -->
     <section class="loader">
         <span class="loader__icon"></span>
     </section>

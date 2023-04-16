@@ -3,53 +3,50 @@
      Footer section
     ----------------
 */
-footer {
-    background: var(--dark-gray);  
-}
+.main-footer {
+    background: var(--dark-gray);
+    
+    &__pay,
+    &__sup,
+    &__wrapper {
+        align-items: center;
+        display: flex;
+    }
 
-.footer-wrapper {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
-    max-width: 1280px;
-    padding: 20px 30px;
-}
+    &__wrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px 30px;
+    }
 
-.footer-pay,
-.footer-socialnet {
-    align-items: center;
-    display: flex;
-}
-
-.footer-pay-item {
-    margin: 0px 15px 0px 0px;
-
-    &:last-child {
-        margin: 0px;
+    &__text {
+        color: var(--gray);
+        margin: 15px 0px;
+        text-align: center;
     }
 }
 
-.footer-socialnet__text {
-    color: var(--red);
-    font-size: 18px;
+.pay__item,
+.sup__text {
     margin: 0px 15px 0px 0px;
 }
 
-.footer__text {
-    color: var(--gray);
-    margin: 15px 0px;
-    text-align: center;
+.pay__item_last {
+    margin: 0px;
 }
 
-@media (max-width: 950px) {
+.sup__text {
+    color: var(--red);
+    font-size: 18px;
+}
+
+@media(max-width: 950px) {
     .footer-wrapper {
         padding: 20px 10px;
     }
 }
 
-@media (max-width: 790px) { 
+@media(max-width: 790px) { 
     .footer-wrapper {
         flex-direction: column;
         padding: 0px 0px 10px;

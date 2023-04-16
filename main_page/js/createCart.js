@@ -1,4 +1,4 @@
-export const cart_block_items = document.querySelector(".cart-block-items");
+export const cart_block_items = document.querySelector(".cart-block__items");
 
 export let cart = {
     "apples": 0,
@@ -68,38 +68,38 @@ export function createStructure(product) {
     image.src = `${product.image}`;
 
     let image_wrapper = document.createElement("div");
-    image_wrapper.classList.add("cart-item__image");
+    image_wrapper.classList.add("item__image");
     image_wrapper.appendChild(image);
 
     let title = document.createElement("h4");
-    title.classList.add("cart-item__title");
+    title.classList.add("item__title", "title");
     title.innerHTML = product.name;
 
     let counter = document.createElement("div");
-    counter.classList.add("cart-item__counter", `${product.id}-counter`);
+    counter.classList.add("item__counter", `js-${product.id}-counter`);
     counter.id = product.id;
     counter.innerHTML = cart[product.id];
 
     let minus_button = document.createElement("button");
-    minus_button.classList.add("cart-item__button", "cart-item__button-minus", `${product.id}-minus`);
+    minus_button.classList.add("item__btn", "minus-btn", `js-${product.id}-minus`);
     minus_button.id = product.id;
     minus_button.innerHTML = "—";
 
     let plus_button = document.createElement("button");
-    plus_button.classList.add("cart-item__button", "cart-item__button-plus", `${product.id}-plus`);
+    plus_button.classList.add("item__btn", "plus-btn", `js-${product.id}-plus`);
     plus_button.id = product.id;
     plus_button.innerHTML = "+";
 
     let buttons = document.createElement("div");
-    buttons.classList.add("cart-item__buttons");
+    buttons.classList.add("item__btns-block");
     buttons.append(counter, minus_button, plus_button);
 
     let price = document.createElement("div");
-    price.classList.add("cart-item__price", `${product.id}-price`);
+    price.classList.add("item__price", `js-${product.id}-price`);
     price.innerHTML = `${cart[product.id] * product.price}.00 ₽`;
 
     let delete_button = document.createElement("div");
-    delete_button.classList.add("cart-item__delete", `${product.id}-delete`);
+    delete_button.classList.add("item__delete", `js-${product.id}-delete`);
     delete_button.id = `${product.id}`;
     delete_button.innerHTML = "Удалить";
 

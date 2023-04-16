@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-.catalog {
+.catalog-block {
     display: grid;
     gap: 20px;
     grid-template: repeat(2, 205px) / 1fr 1fr 0.5fr 1fr;
@@ -19,89 +19,90 @@
         "fruits sweets pasta milk";
     margin: 0px 0px 50px;
 
-        &-item {
-            cursor: pointer;
-            display: flex;
-            box-shadow: 0px 0px 10px var(--gray);
-            justify-content: flex-end;
-            position: relative;
-        }
-}
-
-.item {
-
-    &-fruits {
-        background: url("../img/background-images/fruits-back.jpg") center center no-repeat;
-        background-size: cover;
-        border-radius: 20px 0px 0px 20px;
-        grid-area: fruits;
-    }
-
-    &-bread {
-        background: url("../img/background-images/bread-back.jpg") center center no-repeat;
-        background-size: cover;
-        grid-area: bread;
-    }
-
-    &-sweets {
-        background: url("../img/background-images/sweets-back.jpg") center center no-repeat;
-        background-size: cover;
-        grid-area: sweets;
-    }
-
-    &-pasta {
-        background: url("../img/background-images/pasta-back.jpg") center center no-repeat;
-        background-size: cover;
-        grid-area: pasta;
-    }
-
-    &-cheese {
-        background: url("../img/background-images/cheese-back.jpg") center center no-repeat;
-        background-size: cover;
-        border-radius: 0px 20px 0px 0px;
-        grid-area: cheese;
-    }
-
-    &-milk {
-        background: url("../img/background-images/milk-back.jpg") center center no-repeat;
-        background-size: cover;
-        border-radius: 0px 0px 20px 0px;
-        grid-area: milk;
-    }
-
-    &__button {
-        background: var(--white);
-        box-shadow: 0px 0px 10px var(--black);
-        border-radius: 10px;
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 400;
-        position: absolute;
-        bottom: 15px;
-        right: 15px;
-        height: 40px;
-        width: 130px;
-    }
-
-    &__button:hover {
-        background: var(--light-gray);
+    &__item {
+        cursor: pointer;
+        display: flex;
         box-shadow: 0px 0px 10px var(--gray);
-        font-weight: 600;
-        transform: scale(1.05);
+        justify-content: flex-end;
+        position: relative;
+
+        &_fruits {
+            background: url("../img/background-images/fruits-back.jpg") center center no-repeat;
+            background-size: cover;
+            border-radius: 20px 0px 0px 20px;
+            grid-area: fruits;
+        }
+
+        &_bread {
+            background: url("../img/background-images/bread-back.jpg") center center no-repeat;
+            background-size: cover;
+            grid-area: bread;
+        }
+
+        &_sweets {
+            background: url("../img/background-images/sweets-back.jpg") center center no-repeat;
+            background-size: cover;
+            grid-area: sweets;
+        }
+
+        &_pasta {
+            background: url("../img/background-images/pasta-back.jpg") center center no-repeat;
+            background-size: cover;
+            grid-area: pasta;
+        }
+
+        &_cheese {
+            background: url("../img/background-images/cheese-back.jpg") center center no-repeat;
+            background-size: cover;
+            border-radius: 0px 20px 0px 0px;
+            grid-area: cheese;
+        }
+
+        &_milk {
+            background: url("../img/background-images/milk-back.jpg") center center no-repeat;
+            background-size: cover;
+            border-radius: 0px 0px 20px 0px;
+            grid-area: milk;
+        }
+
+        &__btn {
+            background: var(--white);
+            box-shadow: 0px 0px 10px var(--black);
+            border-radius: 10px;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            height: 40px;
+            width: 130px;
+        }
+
+        &__btn:hover {
+            background: var(--light-gray);
+            box-shadow: 0px 0px 10px var(--gray);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
     }
 }
 
-@media (max-width: 950px) {
-    .catalog {
+@media(max-width: 1280px) {
+    .catalog-block__item__btn_pasta {
+        width: 85px;
+    }
+}
+
+@media(max-width: 950px) {
+    .catalog-block {
         display: none;
     }  
 }
 
-@media (max-width: 520px) {
+@media(max-width: 520px) {
     .catalog__title {
         display: block;
     }
 
-    .catalog {
+    .catalog-block {
         display: grid;
         grid-template: repeat(4, 40vmin) / repeat(12, 1fr);
         grid-template-areas: 
@@ -110,31 +111,28 @@
             "pasta pasta pasta pasta pasta cheese cheese cheese cheese cheese cheese cheese"
             "pasta pasta pasta pasta pasta milk milk milk milk milk milk milk";
         margin: 0px 0px 10px;
-    }
 
-    .item {
-
-        &-fruits {
+        &__item_fruits {
             border-radius: 20px 0px 0px 0px;
         }
 
-        &-bread {
+        &__item_bread {
             border-radius: 0px 20px 0px 0px;
         }
 
-        &-pasta {
+        &__item_pasta {
             border-radius: 0px 0px 0px 20px;
         }
 
-        &-cheese {
+        &__item_cheese {
             border-radius: 0px;
         }
 
-        &-milk {
+        &__item_milk {
             border-radius: 0px 0px 20px 0px;
         }
 
-        &__button {
+        &__item__btn {
             width: 110px;
             bottom: 10px;
             right: 5px;
@@ -142,8 +140,8 @@
     }
 }
 
-@media (max-width: 350px) {
-    .catalog {
+@media(max-width: 350px) {
+    .catalog-block {
         grid-template: repeat(6, 100px) / 1fr;
         grid-template-areas:
             "fruits"
@@ -152,20 +150,17 @@
             "pasta"
             "cheese"
             "milk";
-    }
 
-    .item {
-
-        &-fruits {
+        &__item_fruits {
             border-radius: 20px 20px 0px 0px;
         }
 
-        &-bread,
-        &-pasta {
+        &__item_bread,
+        &__item_pasta {
             border-radius: 0px;
         }
 
-        &-milk {
+        &__item_milk {
             border-radius: 0px 0px 20px 20px;
         }
     }

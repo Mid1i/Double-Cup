@@ -1,3 +1,9 @@
+/*
+    ---------------------
+    Slick-slider settings
+    ---------------------
+*/
+
 .slick {
     &-list {
         overflow: hidden; 
@@ -17,14 +23,14 @@
         width: 30px;
         z-index: 1; 
 
-            &.slick-prev {
-                left: 0px;
-                background: url("../img/main-icons/left-arrow-icon.svg") center center no-repeat;
-            }
-        
-            &.slick-next {
-                background: url("../img/main-icons/right-arrow-icon.svg") center center no-repeat;
-                right: 0px;
-            }
+        &.slick-prev {
+            left: 0px;
+            background: url("../img/main-icons/left-arrow-icon.svg") center center no-repeat;
+        }
+    
+        &.slick-next {
+            background: url("../img/main-icons/right-arrow-icon.svg") center center no-repeat;
+            right: 0px;
+        }
     }
 }

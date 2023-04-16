@@ -40,13 +40,13 @@
     font-size: 18px;
 }
 
-@media (max-width: 950px) {
+@media(max-width: 950px) {
     .footer-wrapper {
         padding: 20px 10px;
     }
 }
 
-@media (max-width: 790px) { 
+@media(max-width: 790px) { 
     .footer-wrapper {
         flex-direction: column;
         padding: 0px 0px 10px;

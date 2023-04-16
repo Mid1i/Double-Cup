@@ -1,10 +1,10 @@
 import { cart, cart_block_items, getProduct, createCartItem, startSettings } from "./createCart.js";
 
-const header_cart_icon = document.getElementById("header-cart-icon");
-const cart_icon = document.querySelector(".cart-icon");
+const header_cart_icon = document.querySelector(".js-cart-icon");
+const cart_icon = document.querySelector(".cart__icon");
 
-const cart_block = document.querySelector(".cart-block");
-const cart_amount = document.getElementById("cart-amount");
+const cart_block = document.querySelector(".main-header__cart-block");
+const cart_text = document.querySelector(".js-cart-text");
 
 // The result price in the cart
 let result_price = 0;
@@ -21,36 +21,30 @@ document.addEventListener("click", (event) => {
     let id = arg.id;
 
     // Tracks clicking on the "Plus" and "Add to the cart" buttons when choosing a product
-    if ((arg.classList.contains(`${id}-button`)) || (arg.classList.contains(`${id}-plus`))) {
+    if ((arg.classList.contains(`js-${id}-btn`)) || (arg.classList.contains(`js-${id}-plus`))) {
         plusFunction(id);
     }
 
     // Tracks clicking on the "Minus" button when choosing a product
-    if (arg.classList.contains(`${id}-minus`)) {
+    if (arg.classList.contains(`js-${id}-minus`)) {
         minusFunction(id);
     }
 
     // Tracks clicking on the "Cart" button
-    if ((arg.classList.contains("cart-item")) && (amount != 0)) {
+    if ((arg.classList.contains("js-cart-btn")) && (amount != 0)) {
         cart_block.classList.toggle("hide");
     }
 
     // Tracks clicking on the "Delete" button in the cart
-    if (arg.classList.contains(`${id}-delete`)) {
+    if (arg.classList.contains(`js-${id}-delete`)) {
         zeroFunction(id);
     }
     
     // Tracks clicking on the "Go to the Cart" button
-    if (id == "cart") {
+    if (arg.classList.contains("js-icon")) {
         $("html, body").animate({
             scrollTop: 0
         }, 700);
-    }
-
-    // Tracks clicking on the "Go to the Cart page" and "Order" buttons
-    if ((id == "order") || (id == "go-to-cart")) {
-        localStorage.setItem("cart", JSON.stringify(cart));
-        localStorage.setItem("result_price", result_price);
     }
 
     checkOrder();
@@ -61,10 +55,10 @@ document.addEventListener("click", (event) => {
 function plusFunction(id) {
     cart[id]++;
 
-    $(`.${id}-buttons`).removeClass('hide');
-    $(`.${id}-button`).addClass('hide');
+    $(`.js-${id}-btns`).removeClass('hide');
+    $(`.js-${id}-btn`).addClass('hide');
 
-    $(`.${id}-counter`).html(cart[id]);
+    $(`.js-${id}-counter`).html(cart[id]);
 
     if (cart[id] == 1) {
         createCartItem(id);
@@ -81,15 +75,15 @@ function minusFunction(id) {
 
     if (cart[id] <= 0) {    
 
-        $(`.${id}-button`).removeClass('hide');
-        $(`.${id}-buttons`).addClass('hide');
+        $(`.js-${id}-btn`).removeClass('hide');
+        $(`.js-${id}-btns`).addClass('hide');
 
         deleteElement(id);
 
         cart[id] = 0;
     }
 
-    $(`.${id}-counter`).html(cart[id]);
+    $(`.js-${id}-counter`).html(cart[id]);
 
     updatePrice(id);
     updateResultPrice(id, "-");
@@ -98,10 +92,10 @@ function minusFunction(id) {
 
 // Deleting the product from the cart
 function zeroFunction(id) {
-    $(`.${id}-button`).removeClass('hide');
-    $(`.${id}-buttons`).addClass('hide');
+    $(`.js-${id}-btn`).removeClass('hide');
+    $(`.js-${id}-btns`).addClass('hide');
 
-    $(`.${id}-counter`).html(cart[id]);
+    $(`.js-${id}-counter`).html(cart[id]);
 
     deleteElement(id);
     updateResultPrice(id, 0);
@@ -129,18 +123,21 @@ function checkOrder() {
         cart_block.classList.add("hide");
         amount = 0;
     }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("result_price", result_price);
 };
 
 // Updating cart sentence
 function updateCart() {
     if (amount == 0) {
-        cart_amount.innerHTML = "Пусто";
+        cart_text.innerHTML = "Пусто";
     } else if (amount % 10 == 1 && amount != 11) {
-        cart_amount.innerHTML = `${amount} товар`;
+        cart_text.innerHTML = `${amount} товар`;
     } else if ([2, 3, 4].includes(amount % 10) && !([12, 13, 14].includes(amount))) {
-        cart_amount.innerHTML = `${amount} товара`;
+        cart_text.innerHTML = `${amount} товара`;
     } else {
-        cart_amount.innerHTML = `${amount} товаров`;
+        cart_text.innerHTML = `${amount} товаров`;
     }
 }
 
@@ -153,7 +150,7 @@ function deleteElement(id) {
 function updatePrice(id) {
     let product = getProduct(id);
 
-    $(`.${id}-price`).html(`${cart[id] * product.price}.00 ₽`);
+    $(`.js-${id}-price`).html(`${cart[id] * product.price}.00 ₽`);
 }
 
 // Updating the result price in the cart 

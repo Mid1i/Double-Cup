@@ -31,7 +31,7 @@
 
 .info {
     &__logo {
-        margin: 0px 10px 0px 0px;
+        margin: 0px 10px 0px 0px; 
     }
 
     &__delivery {
@@ -127,7 +127,7 @@
                 transform: rotate(45deg); 
             }
 
-            &__after {
+            &::after {
                 bottom: 9px;
                 transform: rotate(-45deg); 
             }
@@ -161,5 +161,19 @@
 
     .list__el {
         margin: 20px 0px 0px;
+    }
+}
+
+@media(max-width: 320px) {
+    .login__btn {
+        padding: 10px;
+
+        &__icon {
+            margin: 0px;
+        }
+
+        &__text {
+            display: none;
+        }
     }
 }

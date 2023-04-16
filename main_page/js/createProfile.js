@@ -1,26 +1,23 @@
-const section = document.querySelector(".header-buttons");
+const section = document.querySelector(".main-header__btns-block");
 
 let path = "https://mid1i.github.io/Double-Cup/main_page";
 
 // Creating the "Login" button 
 export function createLoginButton() {
     let image = document.createElement("img");
-    image.id = "login-item";
+    image.classList.add("js-login__btn")
     image.src = `${path}/img/header-icons/login-icon.svg`;
 
     let image_wrapper = document.createElement("div");
-    image_wrapper.classList.add("button__image");
-    image_wrapper.id = "login-item";
+    image_wrapper.classList.add("btn__icon", "js-login__btn");
     image_wrapper.appendChild(image);
 
-    let text = document.createElement("div");
-    text.classList.add("button__text");
-    text.id = "login-item";
+    let text = document.createElement("p");
+    text.classList.add("btn__text", "js-login__btn");
     text.innerHTML = "Вход";
 
     let button = document.createElement("button");
-    button.classList.add("header-login", "button");
-    button.id = "login-item";
+    button.classList.add("login__btn", "btn", "js-login__btn");
     button.append(image_wrapper, text);
 
     section.prepend(button);
@@ -29,22 +26,19 @@ export function createLoginButton() {
 // Creating the "Profile" button
 export function createProfileButton(UserName) {
     let image = document.createElement("img");
-    image.id = "profile-item";
+    image.classList.add("js-profile");
     image.src = `${path}/img/header-icons/profile-icon.svg`;
 
     let image_wrapper = document.createElement("div");
-    image_wrapper.classList.add("button__image");
-    image_wrapper.id = "profile-item";
+    image_wrapper.classList.add("btn__icon", "js-profile");
     image_wrapper.appendChild(image);
 
-    let text = document.createElement("div");
-    text.classList.add("button__text");
-    text.id = "profile-item";
+    let text = document.createElement("p");
+    text.classList.add("btn__text", "js-profile");
     text.innerHTML = UserName;
 
     let button = document.createElement("button");
-    button.classList.add("header-login", "button");
-    button.id = "profile-item";
+    button.classList.add("login__btn", "btn", "js-profile");
     button.append(image_wrapper, text);
 
     section.prepend(button);
