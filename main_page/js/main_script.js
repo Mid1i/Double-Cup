@@ -16,7 +16,7 @@ const password = document.querySelector(".form__input_pass");
 const checkbox = document.querySelector(".form__checkbox_input");
 
 // Sections of products
-const sections = ["js-fruits", "js-bread", "js-sweets", "js-pasta", "js-cheese", "js-milk-products"];
+const sections = ["js-fruits", "js-bread", "js-sweets", "js-pasta", "js-cheese", "js-milk"];
 
 let userNameItem = localStorage.getItem("username");
 
