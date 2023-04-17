@@ -27,39 +27,39 @@
         position: relative;
 
         &_fruits {
-            background: url("../img/background-images/fruits-back.jpg") center center no-repeat;
+            background: url("../../img/background-images/fruits-back.jpg") center center no-repeat;
             background-size: cover;
             border-radius: 20px 0px 0px 20px;
             grid-area: fruits;
         }
 
         &_bread {
-            background: url("../img/background-images/bread-back.jpg") center center no-repeat;
+            background: url("../../img/background-images/bread-back.jpg") center center no-repeat;
             background-size: cover;
             grid-area: bread;
         }
 
         &_sweets {
-            background: url("../img/background-images/sweets-back.jpg") center center no-repeat;
+            background: url("../../img/background-images/sweets-back.jpg") center center no-repeat;
             background-size: cover;
             grid-area: sweets;
         }
 
         &_pasta {
-            background: url("../img/background-images/pasta-back.jpg") center center no-repeat;
+            background: url("../../img/background-images/pasta-back.jpg") center center no-repeat;
             background-size: cover;
             grid-area: pasta;
         }
 
         &_cheese {
-            background: url("../img/background-images/cheese-back.jpg") center center no-repeat;
+            background: url("../../img/background-images/cheese-back.jpg") center center no-repeat;
             background-size: cover;
             border-radius: 0px 20px 0px 0px;
             grid-area: cheese;
         }
 
         &_milk {
-            background: url("../img/background-images/milk-back.jpg") center center no-repeat;
+            background: url("../../img/background-images/milk-back.jpg") center center no-repeat;
             background-size: cover;
             border-radius: 0px 0px 20px 0px;
             grid-area: milk;
