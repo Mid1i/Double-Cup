@@ -40,6 +40,15 @@ body {
   max-width: 1280px;
 }
 
+.loader,
+.slider-item,
+.product__item__counter,
+.main-content__contacts {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .btn {
   background: var(--red);
   border-radius: 20px;
@@ -56,7 +65,9 @@ body {
 }
 
 .btn:hover,
-.btn__cart:hover {
+.form__btn:hover,
+.btn__cart:hover,
+.login__btn:hover {
   background: var(--light-red);
   box-shadow: 0px 0px 10px var(--gray);
   transform: scale(1.05);
@@ -374,12 +385,9 @@ body {
   z-index: 0;
 }
 .slider-item {
-  align-items: center;
   background: url("../img/background-images/banner-1.jpg") center center no-repeat;
   border-radius: 20px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   padding: 50px;
   height: 416px;
@@ -634,12 +642,9 @@ body {
   width: 50px;
 }
 .product__item__counter {
-  align-items: center;
   border: 1px solid var(--red);
   border-radius: 10px;
   background: var(--white);
-  display: flex;
-  justify-content: center;
   margin: 0px 10px;
   width: 90px;
 }
@@ -737,11 +742,8 @@ body {
     ----------------
 */
 .contacts {
-  align-items: center;
   background: var(--white);
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: 0px 0px 50px;
 }
 .contacts__left-block {
@@ -954,6 +956,12 @@ body {
   text-decoration: underline;
 }
 .form__btn {
+  background: var(--red);
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px;
   padding: 15px 73px;
   width: 350px;
 }
@@ -1006,10 +1014,7 @@ body {
     --------------
 */
 .loader {
-  align-items: center;
   background: var(--white);
-  display: flex;
-  justify-content: center;
   position: fixed;
   overflow: hidden;
   transition: opacity 1s;

@@ -95,12 +95,9 @@
     }
 
     &__counter {
-        align-items: center;
         border: 1px solid var(--red);
         border-radius: 10px;
         background: var(--white);
-        display: flex;
-        justify-content: center;
         margin: 0px 10px;
         width: 90px;
     }

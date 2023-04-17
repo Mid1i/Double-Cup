@@ -12,12 +12,9 @@
     z-index: 0;
 
     &-item {
-        align-items: center;
         background: url("../img/background-images/banner-1.jpg") center center no-repeat;
         border-radius: 20px;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
         text-align: center;
         padding: 50px;
         height: 416px;

@@ -5,11 +5,8 @@
 */
 
 .contacts {
-    align-items: center;
     background: var(--white);
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     margin: 0px 0px 50px;
 
     &__left-block {

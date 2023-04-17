@@ -122,6 +122,12 @@
     }
 
     &__btn {
+        background: var(--red);
+        border-radius: 10px;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 600;
+        height: 50px;
         padding: 15px 73px;
         width: 350px;
 
