@@ -65,7 +65,7 @@ export function createCartItem(id) {
 // Creating a product section in the Cart
 export function createStructure(product) {
     let image = document.createElement("img");
-    image.src = `${product.image}`;
+    image.src = product.image;
 
     let image_wrapper = document.createElement("div");
     image_wrapper.classList.add("item__image");
@@ -100,7 +100,7 @@ export function createStructure(product) {
 
     let delete_button = document.createElement("div");
     delete_button.classList.add("item__delete", `js-${product.id}-delete`);
-    delete_button.id = `${product.id}`;
+    delete_button.id = product.id;
     delete_button.innerHTML = "Удалить";
 
     let tree = document.createDocumentFragment();

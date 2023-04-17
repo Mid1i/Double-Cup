@@ -43,7 +43,7 @@ export function createCartItem(id) {
 // Creating a product section in the Cart
 function createStructure(product) {
     let image = document.createElement("img");
-    image.src = `${product.image}`;
+    image.src = product.image;
 
     let image_wrapper = document.createElement("div");
     image_wrapper.classList.add("item__image");
