@@ -1,7 +1,7 @@
 import { createLoginButton, createProfileButton } from "./createProfile.js";
 
 const header_list = document.querySelector(".main-header__list"); 
-const body = document.querySelector("body"); 
+const body = document.querySelector("body");
 
 const login = document.querySelector(".js-login__block");
 const register = document.querySelector(".js-register__block");
