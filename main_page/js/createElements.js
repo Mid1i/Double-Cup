@@ -1,7 +1,7 @@
 import { productSlider } from "./slider.js";
 
 // Getting the JSON file of goods
-$.getJSON("https://mid1i.github.io/Double-Cup/main_page/data/data.json", function(data) {
+$.getJSON("https://mid1i.github.io/Double-Cup/data/data.json", function(data) {
 
     // Adding product blocks to the DOM
     for (let i = 0; i < data.length; i++) {

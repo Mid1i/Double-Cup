@@ -23,7 +23,6 @@
 
 .cart-block {
     &__title {
-        font-size: 24px;
         padding: 0px 0px 5px;
         text-align: center;
     }
@@ -121,13 +120,13 @@
     }
 }
 
+.plus-btn,
 .minus-btn {
     border-left: 1px solid var(--light-gray);
 }
 
 .plus-btn {
     border-radius: 0px 5px 0px 0px;
-    border-left: 1px solid var(--light-gray);
 }
 
 .btn__order,
@@ -153,11 +152,12 @@
 }
 
 .btn__order:hover {
-    background: #f7f7f7;
+    background: var(--very-light-gray);
 }
 
 .result__title,
-.result__price {
+.result__price,
+.cart-block__title {
     font-size: 24px;
 }
 
