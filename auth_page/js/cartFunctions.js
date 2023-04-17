@@ -1,7 +1,6 @@
 import { cart, cart_block_items, getProduct, createCartItem, startSettings } from "./createCart.js";
 
 const header_cart_icon = document.querySelector(".js-cart-icon");
-const cart_icon = document.querySelector(".cart__icon");
 
 const cart_block = document.querySelector(".main-header__cart-block");
 const cart_text = document.querySelector(".js-cart-text");
@@ -115,10 +114,8 @@ function checkOrder() {
     }
 
     if (check != 0) {
-        cart_icon.style.cssText = "opacity: 1; pointer-events: auto;";
         header_cart_icon.src = `${path}/img/header-icons/cart-full-icon.svg`;
     } else {
-        cart_icon.style.cssText = "opacity: 0; pointer-events: none;";
         header_cart_icon.src = `${path}/img/header-icons/cart-icon.svg`;
         cart_block.classList.add("hide");
         amount = 0;
@@ -175,9 +172,14 @@ function updateResultPrice(id, step) {
 }
 
 function startCartSettings() {
-    if (localStorage.getItem("cart_update")) {
-        startSettings();
-        result_price = Number(localStorage.getItem("result_price_update"));
+    if ((localStorage.getItem("cart_update")) || (localStorage.getItem("cart"))) {
+        if (localStorage.getItem("cart_update")) {
+            startSettings("cart_update");
+            result_price = Number(localStorage.getItem("result_price_update"));
+        } else {
+            startSettings("cart");
+            result_price = Number(localStorage.getItem("result_price"));
+        }
     
         for (let item in cart) {
             amount += cart[item];

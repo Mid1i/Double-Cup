@@ -1116,6 +1116,7 @@ body {
 }
 .item__title {
   grid-area: title;
+  font-weight: 600;
   padding: 10px 0px 0px;
 }
 .item__price {

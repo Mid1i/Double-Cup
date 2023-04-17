@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+/* 
+    ----------------
+     Global section
+    ----------------
+*/
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --transp-white: rgba(255, 255, 255, 0.93);
+    --profile-color: rgba(255, 255, 255, 0.886);
+    --inputs-hover-color: rgba(255, 255, 255, 0.131);
+    --gray: #A7A7A7;
+    --very-light-gray: #f7f7f7;
+    --light-gray: #DDDDDD;
+    --dark-gray: #464646;
+    --red: #EF314B;
+    --light-red: #e85266;
+}
+
+body {
+    background: var(--white);
+    color: var(--black);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.lock { 
+    overflow: hidden; 
+}
+
+.title {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+.main-sep,
+.main-header,
+.main-content,
+.main-footer__wrapper {
+    margin: 0px auto;
+    max-width: 1280px;
+}
+
+.main-sep {
+    background: var(--light-gray);
+    height: 2px;
+}
+
+/* 
+    --------------
+     Main section
+    --------------
+*/
+
+.main-content {
+    align-items: center;
+    padding: 0px 35px;
+    display: flex;
+    justify-content: center;
+    min-height: 81.2%;
+}
+
+@media(max-width: 1100px) {
+    .main-content {
+        padding: 0px 25px;
+    }
+}
+
+@media(max-width: 850px) {
+    .main-content {
+        margin: 0px 0px 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .main-content {
+        padding: 0px 25px 
+    }
+}
+
+@media (max-width: 520px) {
+    .main-content {
+        padding: 0px 15px; 
+        
+        &__info {
+            margin: 10px 0px;
+        }
+    }
+}
+
+@import "./header_style.scss";
+@import "./cart_style.scss";
+@import "./footer_style.scss";
+@import "./profile_style.scss";
+@import "./loader_style.scss";
+
+.hide {
+    display: none;
+}

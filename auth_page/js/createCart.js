@@ -109,8 +109,8 @@ export function createStructure(product) {
     return tree;
 }
 
-export function startSettings() {
-    cart = JSON.parse(localStorage.getItem("cart_update"));
+export function startSettings(str) {
+    cart = JSON.parse(localStorage.getItem(str));
 
     for (let item in cart) {
         if (cart[item] != 0) {

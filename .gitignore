@@ -18,3 +18,12 @@ cart_page/css/profile_style.css
 cart_page/css/loader_style.css
 cart_page/css/cart_style.css
 cart_page/css/order_style.css
+
+register_page/.vscode
+register_page/css/cart_style.css
+register_page/css/footer_style.css
+register_page/css/header_style.css
+register_page/css/loader_style.css
+register_page/css/profile_style.css
+
+checkout_page.html
