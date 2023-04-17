@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Page encoding -->
+    <meta charset="UTF-8">
+    <!-- Page title -->
+    <title>Оформление заказа - Double Cup - интернет магазин еды по доступным ценам.</title>
+    <!-- Adaptive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=0, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Connecting CSS styles -->
+    <link rel="stylesheet" href="./checkout_page/css/reset_style.css">
+    <link rel="stylesheet" href="./checkout_page/css/main_style.css">
+    <!-- Connecting the site icon -->
+    <link rel="icon" href="./resourses/img/favicon-icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resourses/img/favicon-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./resourses/img/favicon-icons/favicon-16x16.png">
+    <!-- Connecting site icons on mobile phones and in modern browsers -->
+    <link rel="apple-touch-icon" sizes="152x152" href="./resourses/img/favicon-icons/apple-touch-icon.png">
+    <link rel="manifest" href="./resourses/img/favicon-icons/site.webmanifest">
+    <!-- Connecting site icon in web application -->
+    <link rel="mask-icon" href="./resourses/img/favicon-icons/safari-pinned-tab.svg" color="#5bbad5">    
+</head> 
+<body>
+    <!-- Site header -->
+    <header class="main-header">
+        <div class="main-header__logo">
+            <img src="./resourses/img/header-icons/logo.svg" alt="">
+        </div>
+        <p class="main-header__text">Оформляем <span>5 товаров</span> за <span>1200 ₽</span></p>
+    </header>
+    <hr class="main-sep">
+    <!-- Site main section -->
+    <main class="main-content">
+        <form action="" class="main-content__form form">
+            <!-- User information -->
+            <article class="form__user-data">
+                <h2 class="form__title form__title_user-data">Данные покупателя</h2>
+                <!-- Information block -->
+                <section class="form-block">
+                    <!-- User fullname -->
+                    <div class="form__item form__item_fullname">
+                        <label class="form__label" for="FullName">ФИО</label>
+                        <input class="form__input" type="text" name="FullName" required autofocus>
+                        <img class="form__icon" src="./resourses/img/input-icons/check-icon.svg" alt="">
+                    </div>
+                    <!-- Phone number and Email -->
+                    <section class="form__items">
+                        <!-- Phone number -->
+                        <div class="form__item form__item_phone">
+                            <label class="form__label" for="Phone">Телефон</label>
+                            <input class="form__input" type="tel" name="Phone" required>
+                            <img class="form__icon form__icon_cross" src="./resourses/img/input-icons/cross-icon.svg" alt="">
+                        </div>
+                        <!-- Email -->
+                        <div class="form__item">
+                            <label class="form__label" for="Email">Email (необязательно)</label>
+                            <input class="form__input" type="text" name="Email">
+                        </div>
+                    </section>
+                </section>
+            </article>
+            <!-- Delivery information -->
+            <article class="form__delivery-info">
+                <h2 class="form__title form__title_delivery">Выберите способ получения</h2>
+                <p class="form__text">в г. Нижний Новгород</p>
+                <!-- Information block -->
+                <section class="form-block form-block_delivery">
+                    <!-- Pickup -->
+                    <div class="form__item form__item_pickup">
+                        <input class="form__radio" type="radio" name="Delivery" required>
+                        <label class="form__label form__label_gray" for="Delivery">Самовывоз с нашего склада (ул. Минина, 24к1)</label>
+                    </div>
+                    <!-- Delivery -->
+                    <div class="form__item form__item_delivery">
+                        <section class="form__item_first-line">
+                            <input class="form__radio" type="radio" name="Delivery" required>
+                            <label class="form__label form__label_gray" for="Delivery">Доставка от 300 ₽</label>
+                        </section>
+                        <input class="form__input form__input_delivery" type="text" name="Delivery" required>
+                    </div>
+                </section>
+            </article>
+            <!-- Payment information -->
+            <article class="form__pay-info">
+                <h2 class="form__title form__title_pay">Выберите способ оплаты</h2>
+                <!-- Information block -->
+                <section class="form-block form-block_pay">
+                    <!-- Cash or credit card -->
+                    <div class="form__item form__item_pay form__item_pay_first">
+                        <input class="form__radio" type="radio" name="Payment" required>
+                        <label class="form__label" for="Payment">При получении наличными или картой</label>
+                    </div>
+                    <!-- Online payment -->
+                    <div class="form__item form__item_pay">
+                        <input class="form__radio" type="radio" name="Payment" required>
+                        <img class="form__icon_qiwi" src="./resourses/img/input-icons/qiwi-icon.svg" alt="">
+                        <label class="form__label" for="Payment">Онлайн (Qiwi)</label>
+                    </div>
+                </section>
+            </article>
+            <!-- Order information -->
+            <article class="form__order-info">
+                <h2 class="form__title form__title_order">Укажите комментарий к заказу</h2>
+                <section class="form-block">
+                    <div class="form__item">
+                        <label class="form__label" for="Order comment">Комментарий к заказу</label>
+                        <input class="form__input form__input_order" type="text" name="Order comment">
+                    </div>
+                </section>
+            </article>
+            <button class="form__btn">Подтвердить заказ</button>
+        </form>
+    </main>
+</body>
+<!-- Connecting JavaScript -->
+</html>
