@@ -1,0 +1,29 @@
+/*
+    --------------
+    Header section
+    --------------
+*/
+.main-header {
+    align-items: center;
+    display: flex;
+    padding: 10px;
+
+    &__logo {
+        margin: 0px 50px 0px 0px;
+    }
+
+    &__text {
+        line-height: 20px;
+        width: 180px;
+
+        & span {
+            font-weight: 600;
+        }
+    }
+}
+
+@media(max-width: 340px) {
+    .main-header__logo {
+        margin: 0px 20px 0px 0px;
+    }
+}

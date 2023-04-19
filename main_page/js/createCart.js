@@ -115,6 +115,9 @@ export function startSettings() {
     for (let item in cart) {
         if (cart[item] != 0) {
             createCartItem(item);
+            $(`.js-${item}-btns`).removeClass('hide');
+            $(`.js-${item}-btn`).addClass('hide');
+            $(`.js-${item}-counter`).html(cart[item]);
         }
     }
 }

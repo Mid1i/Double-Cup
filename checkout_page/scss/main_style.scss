@@ -10,8 +10,6 @@
 :root {
     --black: #000000;
     --white: #ffffff;
-    --transp-white: rgba(255, 255, 255, 0.93);
-    --profile-color: rgba(255, 255, 255, 0.886);
     --inputs-hover-color: rgba(255, 255, 255, 0.131);
     --gray: #A7A7A7;
     --very-light-gray: #f7f7f7;
@@ -30,24 +28,7 @@ body {
     font-size: 16px;
 }
 
-.main-header {
-    align-items: center;
-    display: flex;
-    padding: 10px;
 
-    &__logo {
-        margin: 0px 50px 0px 0px;
-    }
-
-    &__text {
-        line-height: 20px;
-        width: 180px;
-
-        & span {
-            font-weight: 600;
-        }
-    }
-}
 
 .main-sep {
     background: var(--light-gray);
@@ -78,212 +59,28 @@ body {
     padding: 0px 10px;
 }
 
-.form-block {
-    &__title {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 700;
-        font-size: 28px;
-        margin: 20px 0px;
-        position: relative;
-        text-align: center;
+@import "./header_style.scss";
+@import "./form_style.scss";
+@import "./loader_style.scss";
 
-        &_delivery {
-            margin: 20px 0px 5px;
-
-            &::before {
-                content: "2";
-            }
-        }
-
-        &::before {
-            box-shadow: 0px 0px 10px var(--gray);
-            border-radius: 100px;
-            font-family: "Roboto", sans-serif;
-            font-weight: 400;
-            font-size: 14px;
-            position: absolute;
-            top: 3px;
-            left: -100px;
-            height: 22px;
-            width: 22px;
-        }
-
-        &_user::before {
-            content: "1";
-        }
-
-        &_pay::before {
-            content: "3";
-        }
-
-        &_order::before {
-            content: "4";
-        }
-    }
-
-    &__subtitle {
-        font-weight: 600;
-        margin: 0px 0px 20px;
-    }
-
-    &__section {
-        position: relative;
-
-        &_pay {
-            display: flex;
-        }
-
-        &::before {
-            background: var(--light-gray);
-            content: "";
-            position: absolute;
-            left: -90px;
-            height: 100%;
-            width: 2px;
-        }
-    }
-
-    &__btn {
-        background: var(--red);
-        border-radius: 15px;
-        color: var(--white);
-        font-size: 18px;
-        margin: 30px auto;
-        padding: 8px 15px;
-        height: 40px;
-        width: 200px;
-    }
+.right-input {
+    border: 1px solid var(--green); 
 }
 
-.section__item {
+.wrong-input {
+    border: 1px solid var(--red);
+}
+
+.yandex-map {
     box-shadow: 0px 0px 10px var(--light-gray);
-    border-radius: 10px;
-    position: relative;
-    margin: 0px 0px 10px;
-    padding: 10px;
-    width: 300px;
-
-    &_name {
-        margin: 0px 0px 20px;
-    }
-
-    &_tel {
-        margin: 0px 10px 10px 0px;
-    }
-
-    &_pay,
-    &_pickup {
-        align-items: center;
-        display: flex;
-    }
-
-    &__radio,
-    &_pay-cash {
-        margin: 0px 10px 0px 0px;
-    }
-
-    &_pay {
-        height: 60px;
-    }
-
-    &__label {
-        color: var(--gray);
-        font-size: 16px; 
-    }
-
-    &__input {
-        background: inherit;
-        border-bottom: 1px solid var(--gray);
-        font-size: 18px;
-        margin: 10px 0px 0px;
-        width: 245px;
-
-        &_order,
-        &_delivery {
-            width: 100%;
-        }
-    }
-
-    &__check,
-    &__cross {
-        bottom: 16px;
-        position: absolute;
-        right: 20px;
-    }
-
-    &__check {
-        height: 14px;
-        width: 18px;
-    }
-
-    &__cross {
-        height: 15px;
-        width: 15px;
-    }
-
-    &__icon {
-        margin: 0px 10px 0px 0px;
-        height: 30px;
-        width: 30px;
-    }
+    height: 300px;
+    width: 100%;
 }
 
-.section__item:hover {
-    background: var(--very-light-gray);
-    box-shadow: 0px 0px 10px var(--gray);
+.hide {
+    display: none;
 }
 
-.section__items {
-    display: flex;
-}
-
-.label_darkness {
-    color: var(--dark-gray);
-}
-
-.form-block__btn:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--gray);
-    transform: scale(1.05);
-}
-
-@media(max-width: 840px) {
-    .section__items,
-    .form-block__section_pay {
-        flex-direction: column;
-    }
-
-    .main-content__form {
-        padding: 0px 380px;
-    }
-
-    .form-block__subtitle {
-        text-align: center;
-    }
-}
-
-@media(max-width: 525px) {
-    .form-block__title::before,
-    .form-block__section::before {
-        display: none;
-    }
-}
-
-@media(max-width: 340px) {
-    .main-header__logo {
-        margin: 0px 20px 0px 0px;
-    }
-
-    .form-block__title {
-        font-size: 24px;
-    }
-
-    .section__item {
-        width: 280px;
-
-        &__check,
-        &__cross {
-            right: 5px;
-        }
-    }
+.active_delivery {
+    width: 100%;
 }

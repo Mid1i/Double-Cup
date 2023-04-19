@@ -51,6 +51,7 @@ input::-ms-clear {
 }
 
 button {
+    color: inherit;
     cursor: pointer;
 }
 

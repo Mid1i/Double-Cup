@@ -18,15 +18,19 @@
     <link rel="apple-touch-icon" sizes="152x152" href="./resourses/img/favicon-icons/apple-touch-icon.png">
     <link rel="manifest" href="./resourses/img/favicon-icons/site.webmanifest">
     <!-- Connecting site icon in web application -->
-    <link rel="mask-icon" href="./resourses/img/favicon-icons/safari-pinned-tab.svg" color="#5bbad5">    
+    <link rel="mask-icon" href="./resourses/img/favicon-icons/safari-pinned-tab.svg" color="#5bbad5">
+    <!-- Connecting Yandex maps -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=12eab239-7be4-4538-8f84-4aed8a0e7ead" type="text/javascript"></script>
 </head> 
-<body>
+<body class="lock">
     <!-- Site header -->
     <header class="main-header">
         <div class="main-header__logo">
-            <img src="./resourses/img/header-icons/logo.svg" alt="">
+            <a href="./main_page.html">
+                <img src="./resourses/img/header-icons/logo.svg" alt="Логотип магазина «Double Cup»">
+            </a>
         </div>
-        <p class="main-header__text">Оформляем <span>5 товаров</span> за <span>1200 ₽</span></p>
+        <p class="main-header__text"></p>
     </header>
     <hr class="main-sep">
     <!-- Site main section -->
@@ -40,20 +44,19 @@
                     <!-- Fullname -->
                     <div class="section__item section__item_name">
                         <label class="section__item__label" for="Name">ФИО</label>
-                        <input class="section__item__input" type="text" name="Name" id="Name" required autofocus>
-                        <img class="section__item__check" src="./resourses/img/input-icons/check-icon.svg" alt="">
+                        <input class="section__item__input js-name-input" type="text" name="Name" id="Name" required autofocus>
                     </div>
                     <!-- Phone number and Email -->
                     <section class="section__items">
                         <!-- Phone number -->
                         <div class="section__item section__item_tel">
                             <label class="section__item__label" for="Phone">Телефон</label>
-                            <input class="section__item__input" type="tel" name="Phone" id="Phone" required>
+                            <input class="section__item__input js-tel-input" type="tel" name="Phone" id="Phone" required>
                         </div>
                         <!-- Email -->
-                        <div class="section__item">
+                        <div class="section__item section__item_email">
                             <label class="section__item__label" for="Email">Email (необязательно)</label>
-                            <input class="section__item__input" type="text" name="Email" id="Email">
+                            <input class="section__item__input js-email-input" type="text" name="Email" id="Email">
                         </div>
                     </section>
                 </section>
@@ -63,19 +66,21 @@
                 <h2 class="form-block__title form-block__title_delivery">Выберите способ получения</h2>
                 <p class="form-block__subtitle">в г. Нижний Новгород</p>
                 <!-- Information section -->
-                <section class="form-block__section">
+                <section class="form-block__section form-block__section_delivery">
                     <!-- Pickup -->
                     <div class="section__item section__item_pickup">
-                        <input class="section__item__radio" type="radio" name="Delivery" required>
-                        <label class="section__item__label label_darkness">Самовывоз с нашего склада (ул. Минина, 24к1)</label>
+                        <input class="section__item__radio js-radio-pickup" type="radio" name="Delivery" id="pickup" required>
+                        <label class="section__item__label label_darkness" for="pickup">Самовывоз с нашего склада (ул. Минина, 24к1)</label>
                     </div>
                     <!-- Delivery -->
-                    <div class="section__item section__item">
-                        <input class="section__item__radio" type="radio" name="Delivery" required>
-                        <label class="section__item__label label_darkness" for="Delivery">Доставка от 300 ₽</label>
-                        <input class="section__item__input section__item__input_delivery" type="text" name="Delivery" id="Delivery" required>
+                    <div class="section__item section__item_delivery">
+                        <input class="section__item__radio js-radio-delivery" type="radio" name="Delivery" id="delivery" required>
+                        <label class="section__item__label label_darkness" for="delivery">Доставка от 300 ₽</label>
+                        <input class="section__item__input section__item__input_delivery" type="text" name="Delivery" id="Delivery">
                     </div>
                 </section>
+                <!-- Yandex map for tracking delivery address -->
+                <section class="yandex-map hide" id="map"></section>
             </article>
             <!-- Information about payment -->
             <article class="form-block">
@@ -84,14 +89,14 @@
                 <section class="form-block__section form-block__section_pay">
                     <!-- Cash or credit card -->
                     <div class="section__item section__item_pay section__item_pay-cash">
-                        <input class="section__item__radio" type="radio" name="Payment" required>
-                        <label class="section__item__label">При получении наличными или картой</label>
+                        <input class="section__item__radio" type="radio" name="Payment" id="offline" required>
+                        <label class="section__item__label" for="offline">При получении наличными или картой</label>
                     </div>
                     <!-- Online payment -->
                     <div class="section__item section__item_pay">
-                        <input class="section__item__radio" type="radio" name="Payment" required>
-                        <img class="section__item__icon" src="./resourses/img/input-icons/qiwi-icon.svg" alt="">
-                        <label class="section__item__label">Онлайн (Qiwi)</label>
+                        <input class="section__item__radio js-radio-online" type="radio" name="Payment" id="online" required>
+                        <img class="section__item__icon js-icon-qiwi" src="./resourses/img/input-icons/qiwi-icon.svg" alt="">
+                        <label class="section__item__label" for="online">Онлайн (Qiwi)</label>
                     </div>
                 </section>
             </article>
@@ -110,6 +115,13 @@
             <button class="form-block__btn">Подтвердить заказ</button>
         </form>
     </main>
+    <!-- Loading screen -->
+    <section class="loader">
+        <span class="loader__icon"></span>
+    </section>
 </body>
 <!-- Connecting JavaScript -->
+<script src="./checkout_page/js/main_script.js"></script>
+<script src="./checkout_page/js/mapSettings.js"></script>
+<script src="./checkout_page/js/orderCheckers.js"></script>
 </html>

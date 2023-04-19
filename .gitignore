@@ -27,3 +27,6 @@ register_page/css/loader_style.css
 register_page/css/profile_style.css
 
 ckeckout_page/.vscode
+checkout_page/css/header_style.css
+checkout_page/css/form_style.css
+checkout_page/css/loader_style.css
