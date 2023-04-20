@@ -10,6 +10,7 @@ let amount = 0;
 
 startSettings();
 
+// Creating special text based on goods amount and price
 function startSettings() {
     if ((localStorage.getItem("cart")) || (localStorage.getItem("cart_update"))) {
         if (localStorage.getItem("cart_update")) {
@@ -26,6 +27,7 @@ function startSettings() {
     }
 }
 
+// Getting amount of goods
 function getAmount() {
     for (let item in cart) {
         if (cart[item] != 0) {
@@ -34,6 +36,7 @@ function getAmount() {
     }
 }
 
+// Getting "Cart" button text
 function getCartText() {
     if (amount % 10 == 1 && amount != 11) {
         return `${amount} товар`;

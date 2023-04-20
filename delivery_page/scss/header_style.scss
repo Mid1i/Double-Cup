@@ -4,22 +4,21 @@
     ----------------
 */
 
-.btn,
+.cart__btn,
+.login__btn,
 .main-header__info,
 .main-header__list,
-.main-header__top-block,
-.main-header__btns-block,
-.main-header__goods-list {
+.main-header__wrapper,
+.main-header__btns-block {
     align-items: center;
     display: flex;
 }
 
 .main-header {
-    padding: 10px 30px 0px;
+    padding: 10px 30px;
 
-    &__top-block {
+    &__wrapper {
         justify-content: space-between;
-        margin: 0px 0px 10px;
     }
 
     &__burger {
@@ -35,13 +34,6 @@
         box-shadow: 0px 0px 10px var(--gray);
         border-radius: 10px;
         padding: 5px;
-    }
-
-    &__goods-list {
-        justify-content: space-around;
-        padding: 10px 0px;
-        text-align: center;
-        transition: all 0.3s;
     }
 }
 
@@ -76,13 +68,7 @@
     }
 }
 
-.goods-list__el {
-    cursor: pointer;
-    margin: 5px 10px;
-}
-
-.list__el:hover,
-.goods-list__el:hover {
+.list__el:hover {
     color: var(--red);
     text-decoration: underline;
 }
@@ -92,13 +78,31 @@
     text-decoration: none;
 }
 
+.cart__btn,
 .login__btn {
-    margin: 0px 50px 0px 0px;  
+    background: var(--red);
+    border-radius: 20px;
+    color: var(--white);
+    padding: 8px 15px;
+    height: 40px; 
+
+    &__icon {
+        margin: 0px 10px 0px 0px;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 600;
+    } 
+}
+
+.login__btn {
+    padding: 8px 15px;
+    margin: 0px 20px 0px 0px;
 }
 
 .cart__btn {
     justify-content: center;
-    padding: 0px;
     width: 150px;
 }
 
@@ -106,13 +110,9 @@
     .info__delivery {
         display: none;
     }
-
-    .login__btn {
-        margin: 0px 30px 0px;
-    }
 }
 
-@media(max-width: 980px) {
+@media(max-width: 960px) {
     .main-header {
         padding: 10px;
 
@@ -195,39 +195,24 @@
     }
 }
 
-@media(max-width: 767px) { 
-    .main-header__goods-list {
-        flex-wrap: wrap;
-    }
-
-    .goods-list__el {
-        flex: 0 0 30%;
-        margin: 10px 0px 0px;
-    }
-}
-
 @media(max-width: 520px) {
-    .main-header__sep,
-    .main-header__goods-list {
-        display: none;
-    }
-
     .login__btn {
         margin: 0px 10px 0px 0px;
     }
 }
 
-@media(max-width: 340px) {
-    .btn {
+@media(max-width: 320px) {
+    .cart__btn,
+    .login__btn {
         padding: 10px;
         width: 44px;
 
-            &__icon {
-                margin: 0px;
-            }
+        &__icon {
+            margin: 0px;
+        }
 
-            &__text {
-                display: none;
-            }
+        &__text {
+            display: none;
+        }
     }
 }

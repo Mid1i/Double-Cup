@@ -1,5 +1,6 @@
 ymaps.ready(init);
 
+// Adding Yandex map for tracking delivery address
 function init() {
     let myPlacemark;
     let myMap = new ymaps.Map('map', {
@@ -9,7 +10,7 @@ function init() {
             searchControlProvider: 'yandex#search'
         });
 
-    // Tracking map click
+    // Tracking map clicks
     myMap.events.add("click", (event) => {
         let coords = event.get('coords');
 
@@ -53,6 +54,7 @@ function init() {
                     ].filter(Boolean).join(', '),
                     balloonContent: address
                 });
+                
             delivery_input.value = address;
         });
     }

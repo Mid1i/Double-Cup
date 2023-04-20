@@ -4,12 +4,12 @@
     <!-- Page encoding -->
     <meta charset="UTF-8">
     <!-- Page title -->
-    <title>Double Cup - интернет магазин еды по доступным ценам.</title>
+    <title> Информация о доставке | Double Cup - интернет магазин еды по доступным ценам.</title>
     <!-- Adaptive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=0, initial-scale=1.0, maximum-scale=1.0">
     <!-- Connecting CSS styles -->
-    <link rel="stylesheet" href="./auth_page/css/reset_style.css">
-    <link rel="stylesheet" href="./auth_page/css/main_style.css">
+    <link rel="stylesheet" href="./delivery_page/css/reset_style.css">
+    <link rel="stylesheet" href="./delivery_page/css/main_style.css">
     <!-- Connecting the site icon -->
     <link rel="icon" href="./resourses/img/favicon-icons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./resourses/img/favicon-icons/favicon-32x32.png">
@@ -54,7 +54,7 @@
                     <li class="list__el">
                         <a href="">Акции</a>
                     </li>
-                    <li class="list__el">
+                    <li class="list__el list__el_active">
                         <a href="./delivery_page.html">Доставка</a>
                     </li>
                     <li class="list__el">
@@ -65,7 +65,7 @@
                     </li>
                 </ul>
             </nav>
-            <!-- Cart button and cart block -->
+            <!-- Buttons "Login" "Cart" and cart block -->
             <section class="main-header__btns-block">
                 <button class="cart__btn js-cart-btn">
                     <div class="cart__btn__icon js-cart-btn">
@@ -100,50 +100,26 @@
     </header>
     <hr class="main-sep">
     <!-- Site main section -->
-    <main class="main-content">
-        <!-- Register block -->
-        <article class="profile-block js-register__block active_profile">
-            <h1 class="profile-block__title title">Зарегистрироваться</h1>
-            <form action="" class="profile-block__form form">
-                <div class="form__item">
-                    <input type="text" name="username" placeholder="Username"  class="form__input form__input_name" required autofocus>
-                    <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
-                </div>
-                <div class="form__item form__item_email">
-                    <input type="text" name="email" placeholder="Email"  class="form__input form__input_email" required>
-                    <img src="./resourses/img/profile-icons/email-icon.svg" alt="" class="form__icon">
-                </div>
-                <div class="form__item">
-                    <input type="password" name="password" placeholder="Password" class="form__input form__input_pass" required>
-                    <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
-                </div>
-                <div class="form__checkbox">
-                    <input type="checkbox" name="Agreement" class="form__checkbox_input" required>
-                    <p class="form__checkbox_text">Я согласен с <span>правилами</span> и <span>условиями</span></p>
-                </div>
-                <button class="form__btn" id="register-btn">Зарегистрироваться</button>
-            </form>
-            <p class="profile-block__text">Уже есть аккаунт? <span class="js-login">Войти</span></p>
-            <p class="profile-block__footer-text">©️ Double Cup</p>
-        </article>
-        <!-- Login section -->
-        <article class="profile-block js-login__block">
-            <h1 class="profile-block__title title">Войти</h1>
-            <form action="" class="profile-block__form form">
-                <div class="form__item form__item_email">
-                    <input type="text" name="username" placeholder="Username"  class="form__input" required autofocus>
-                    <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
-                </div>
-                <div class="form__item">
-                    <input type="password" name="password" placeholder="Password" class="form__input" required>
-                    <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
-                </div>
-                <button class="form__btn form__btn_login">Войти</button>
-            </form>
-            <div class="profile-block__text">Нет аккаунта? <span class="js-register">Зарегистрироваться</span></div>
-            <div class="profile-block__footer-text">©️ Double Cup</div>
-        </article>
-    </main>
+    <section class="main-content">
+        <div class="main-content__image">
+            <img src="./resourses/img/background-images/delivery-back.jpg" alt="">
+        </div>
+        <!-- Information about picking up -->
+        <section class="main-content__text-block">
+            <h2 class="main-content__title title">Самовывоз со склада интернет-магазина.</h2>
+            <p class="main-content__text">Минимальная сумма заказа отсутствует. Эта услуга бесплатна.</p>
+            <p class="main-content__text main-content__text_last">Свой заказ можно получить на складе с 8:00 до 21:30 по адресу: г. Нижний Новгород, ул. Минина, 24к1</p>
+        </section>
+        <!-- Information aboute delivery -->
+        <section class="main-content__text-block">
+            <h2 class="main-content__title title">Доставка курьерской службой.</h2>
+            <p class="main-content__text_second-block">Наш курьер доставит заказ по указанному адресу с 8:00 до 21:30.</p>
+            <p class="main-content__text_second-block">После предварительного звонка курьер свяжется с вами для предупреждения о выезде по адресу доставки (ориентировочно за 1 час).</p> 
+            <p class="main-content__text_second-block main-content__text_whitespace">Стоимость доставки 100 руб. при сумме заказа менее 1000 руб.</p>
+            <p class="main-content__text_second-block main-content__text_whitespace">При сумме заказа более 1000 руб. доставка осуществляется бесплатно.</p>
+            <p class="main-content__text main-content__text_second-block_last main-content__text_whitespace">Мы можем предложить доставку в день заказа или в любой последующий день с 8:00 до 21:30. В случае опоздания курьера - доставка за наш счёт!</p>
+        </section>
+    </section>
     <!-- Site footer -->
     <footer class="main-footer">
         <div class="main-footer__wrapper">
@@ -172,13 +148,63 @@
         </div>
     </footer>
 
+    <!-- Register section -->
+    <article class="profile-block js-register__block">
+        <div class="profile-block__icon js-quit">
+            <img class="js-quit" src="./resourses/img/profile-icons/cross-icon.svg">
+        </div>
+        <h1 class="profile-block__title title">Зарегистрироваться</h1>
+        <form action="" class="profile-block__form form">
+            <div class="form__item">
+                <input type="text" name="username" placeholder="Username"  class="form__input form__input_name" required autofocus>
+                <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item form__item_email">
+                <input type="text" name="email" placeholder="Email"  class="form__input form__input_email" required>
+                <img src="./resourses/img/profile-icons/email-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item">
+                <input type="password" name="password" placeholder="Password" class="form__input form__input_pass" required>
+                <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__checkbox">
+                <input type="checkbox" name="Agreement" class="form__checkbox_input" required>
+                <p class="form__checkbox_text">Я согласен с <span>правилами</span> и <span>условиями</span></p>
+            </div>
+            <button class="form__btn" id="register-btn">Зарегистрироваться</button>
+        </form>
+        <p class="profile-block__text">Уже есть аккаунт? <span class="js-login">Войти</span></p>
+        <p class="profile-block__footer-text">©️ Double Cup</p>
+    </article>
+
+    <!-- Login section -->
+    <article class="profile-block js-login__block">
+        <div class="profile-block__icon js-quit">
+            <img class="js-quit" src="./resourses/img/profile-icons/cross-icon.svg" alt="quit">
+        </div>
+        <h1 class="profile-block__title title">Войти</h1>
+        <form action="" class="profile-block__form form">
+            <div class="form__item form__item_email">
+                <input type="text" name="username" placeholder="Username"  class="form__input" required autofocus>
+                <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item">
+                <input type="password" name="password" placeholder="Password" class="form__input" required>
+                <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
+            </div>
+            <button class="form__btn form__btn_login">Войти</button>
+        </form>
+        <div class="profile-block__text">Нет аккаунта? <span class="js-register">Зарегистрироваться</span></div>
+        <div class="profile-block__footer-text">©️ Double Cup</div>
+    </article>
+
     <!-- Loading screen -->
     <section class="loader">
         <span class="loader__icon"></span>
     </section>
 </body>
 <!-- Connecting JavaScript -->
-<script src="./auth_page/js/createCart.js" type="module"></script>
-<script src="./auth_page/js/main_script.js" type="module"></script>
-<script src="./auth_page/js/cartFunctions.js" type="module"></script>
+<script src="./delivery_page/js/createCart.js" type="module"></script>
+<script src="./delivery_page/js/main_script.js" type="module"></script>
+<script src="./delivery_page/js/cartFunctions.js" type="module"></script>
 </html>

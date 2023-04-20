@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+/* 
+    ----------------
+     Global section
+    ----------------
+*/
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --profile-color: rgba(255, 255, 255, 0.886);
+    --inputs-hover-color: rgba(255, 255, 255, 0.131);
+    --gray: #A7A7A7;
+    --very-light-gray: #f7f7f7;
+    --light-gray: #DDDDDD;
+    --dark-gray: #464646;
+    --red: #EF314B;
+    --light-red: #e85266;
+}
+
+body {
+    background: var(--white);
+    color: var(--black);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.lock { 
+    overflow: hidden; 
+}
+
+.title {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+.main-sep,
+.main-header,
+.main-content,
+.main-footer__wrapper {
+    margin: 0px auto;
+    max-width: 1280px;
+}
+
+.main-sep {
+    background: var(--light-gray);
+    height: 2px;
+}
+
+.form__btn:hover,
+.cart__btn:hover,
+.btn__cart:hover,
+.login__btn:hover {
+    background: var(--light-red);
+    box-shadow: 0px 0px 10px var(--gray);
+    transform: scale(1.05);
+}
+
+/* 
+    --------------
+     Main section
+    --------------
+*/
+
+.main-content {
+    padding: 0px 35px;
+    min-height: 81.2%;
+
+    &__image {
+        margin: 30px 0px;
+        width: 100%;
+
+        & img {
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        line-height: 23px;
+        margin: 0px 0px 20px;
+    }
+
+    &__text {
+        max-width: 480px;
+
+        &_last {
+            margin: 0px 0px 20px;
+            max-width: 100%;
+        }
+
+        &_whitespace {
+            margin: 20px 0px 0px;
+        }
+
+        &_second-block {
+            max-width: 600px;
+
+            &_last {
+                margin: 20px 0px;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 1100px) {
+    .main-content {
+        padding: 0px 25px;
+    }
+}
+
+@media(max-width: 850px) {
+    .main-content {
+        margin: 0px 0px 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .main-content {
+        padding: 0px 25px 
+    }
+}
+
+@media (max-width: 520px) {
+    .main-content {
+        padding: 0px 15px; 
+        
+        &__info {
+            margin: 10px 0px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+    }
+}
+
+@import "./header_style.scss";
+@import "./cart_style.scss";
+@import "./footer_style.scss";
+@import "./profile_style.scss";
+@import "./loader_style.scss";
+
+.hide {
+    display: none;
+}

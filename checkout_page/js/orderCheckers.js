@@ -19,30 +19,37 @@ const delivery_map = document.querySelector(".yandex-map");
 
 let path = "https://mid1i.github.io/Double-Cup";
 
+
 document.addEventListener("click", (event) => {
     let arg = event.target;
     
+    // Tracks clicking on the "Delivery" radio button
     if (arg == delivery) {
         delivery_input.placeholder = "Укажите адрес доставки";
         delivery_section.classList.add("active_delivery");
         delivery_map.classList.remove("hide");
     }
 
+    // Tracks clicking on the "Pickup" radio button
     if (arg == pickup) {
         delivery_input.placeholder = "";
         delivery_section.classList.remove("active_delivery");
         delivery_map.classList.add("hide");
     }
 
+    // Tracks clicking on the Qiwi icon
     if (arg.classList.contains("js-icon-qiwi")) {
         online_pay.checked = true;
     }
 })
 
+// Tracks clicking on inputs
 document.addEventListener("input", (event) => checkElements(event.target));
 
+// Tracks bluring from inputs
 document.addEventListener("focus", (event) => checkElements(event.target));
 
+// Checking valid form inputs
 function checkElements(arg) {
     if (arg == fullName) {
         validName();
@@ -57,21 +64,25 @@ function checkElements(arg) {
     }
 }
 
+// Tracks bluring "Full Name" input
 fullName.onblur = () => {
     name_section.classList.remove("wrong-input");
     name_section.classList.remove("right-input");
 }
 
+// Tracks bluring "Phone number" input
 phone.onblur = () => {
     phone_section.classList.remove("wrong-input");
     phone_section.classList.remove("right-input");
 }
 
+// Tracks bluring "Email" input
 email.onblur = () => {
     email_section.classList.remove("wrong-input");
     email_section.classList.remove("right-input");
 }
 
+// Checking if users fullname input is valid
 function validName() {
     let checker = /^[а-яА-Я ]+$/;
 
@@ -92,6 +103,7 @@ function validName() {
     }
 }
 
+// Checking if users phone input is valid
 function validPhone() {
     let checker = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
 
@@ -112,6 +124,7 @@ function validPhone() {
     }
 } 
 
+// Checking if users email input is valid
 function validEmail() {
     let checker = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
     
@@ -132,10 +145,7 @@ function validEmail() {
     }
 }
 
-function validAddress() {
-    let checker = /^/;
-}
-
+// Creating check icon when input is right
 function createIcon(section, icon_name) {
     if (!document.querySelector(`.${icon_name}`)) {
         let icon = document.createElement("img");
@@ -147,6 +157,7 @@ function createIcon(section, icon_name) {
     }
 }
 
+// Removing check icon when input is wrong
 function removeIcon(section, icon_name) {
     let icon = document.querySelector(`.${icon_name}`);
 
