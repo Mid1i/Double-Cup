@@ -15,15 +15,15 @@ document.addEventListener("click", (event) => {
     let arg = event.target;
     let id = arg.id;
 
-    event.preventDefault();
-
     // Tracks clicking on the "Plus" and "Add to the cart" buttons when choosing a product
     if (arg.classList.contains(`${id}-plus`)) {
+        event.preventDefault();
         plusFunction(id);
     }
 
     // Tracks clicking on the "Minus" button when choosing a product
     if (arg.classList.contains(`${id}-minus`)) {
+        event.preventDefault();
         minusFunction(id);
     }
 
