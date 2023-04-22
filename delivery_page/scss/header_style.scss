@@ -121,7 +121,7 @@
             position: relative;
             height: 20px;
             width: 30px;
-            z-index: 3;
+            z-index: 4;
         }
 
         &__burger::after,
@@ -182,7 +182,7 @@
             transition: all 0.3s;
             top: -100%;
             width: 100%;
-            z-index: 2;
+            z-index: 3;
 
             &.active {
                 top: 0px;

@@ -19,6 +19,8 @@ document.addEventListener("click", (event) => {
     let arg = event.target;
     let id = arg.id;
 
+    event.preventDefault();
+
     // Tracks clicking on the "Plus" and "Add to the cart" buttons when choosing a product
     if ((arg.classList.contains(`js-${id}-btn`)) || (arg.classList.contains(`js-${id}-plus`))) {
         plusFunction(id);

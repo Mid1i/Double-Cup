@@ -40,7 +40,7 @@
     &__item {
         display: grid;
         gap: 5px;
-        grid-template: repeat(2, 50px) / 1fr 1fr 0.8fr 1.2fr;
+        grid-template: repeat(2, 50px) / 0.8fr 1fr 0.9fr 1.3fr;
         grid-template-areas:
             "image title title price"
             "image buttons buttons delete";

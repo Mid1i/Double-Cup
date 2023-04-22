@@ -39,7 +39,7 @@ window.addEventListener("resize", () => {
 document.addEventListener("click", (event) => {
     let arg = event.target;
     let id = arg.id;
-
+    
     // Tracks clicking on the "Menu" button
     if (arg.classList.contains("main-header__burger")) {
         document.querySelector(".main-header__burger").classList.toggle("active"); 

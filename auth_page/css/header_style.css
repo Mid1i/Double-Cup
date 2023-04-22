@@ -98,7 +98,7 @@
     position: relative;
     height: 20px;
     width: 30px;
-    z-index: 3;
+    z-index: 4;
   }
   .main-header__burger::after, .main-header__burger::before, .main-header__burger span {
     background: var(--black);
@@ -144,7 +144,7 @@
     transition: all 0.3s;
     top: -100%;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
   }
   .main-header__list.active {
     top: 0px;
