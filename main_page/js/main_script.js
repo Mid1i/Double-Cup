@@ -36,6 +36,11 @@ window.addEventListener("resize", () => {
     productSlider();
 });
 
+$(".no-zoom").bind("touchend", (event) => {
+    event.preventDefault();
+    $(this).click();
+})
+
 document.addEventListener("click", (event) => {
     let arg = event.target;
     let id = arg.id;
