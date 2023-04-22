@@ -175,9 +175,14 @@ function updateResultPrice(id, step) {
 }
 
 function startCartSettings() {
-    if (localStorage.getItem("cart_update")) {
-        startSettings();
-        result_price = Number(localStorage.getItem("result_price_update"));
+    if ((localStorage.getItem("cart_update")) || (localStorage.getItem("cart"))) {
+        if (localStorage.getItem("cart_update")) {
+            startSettings("cart_update");
+            result_price = Number(localStorage.getItem("result_price_update"));
+        } else {
+            startSettings("cart");
+            result_price = Number(localStorage.getItem("result_price"));
+        }
     
         for (let item in cart) {
             amount += cart[item];
@@ -186,5 +191,8 @@ function startCartSettings() {
         updateCart();
         checkOrder();
         $(".result__price").html(`${result_price}.00 ₽`);
+
+        localStorage.removeItem("cart_update");
+        localStorage.removeItem("result_price_update");
     }
 }
