@@ -6,6 +6,8 @@ const cart_icon = document.querySelector(".cart__icon");
 const cart_block = document.querySelector(".main-header__cart-block");
 const cart_text = document.querySelector(".js-cart-text");
 
+const cart_alert = document.querySelector(".max-amount-block");
+
 // The result price in the cart
 let result_price = 0;
 
@@ -49,47 +51,58 @@ document.addEventListener("click", (event) => {
         }, 700);
     }
 
+    if (arg.classList.contains("max-amount-block__btn")) {
+        cart_alert.classList.add("hide");
+    }
+
     checkOrder();
     updateCart();
 });
 
 // Adding a product to the cart and changing its quantity
 function plusFunction(id) {
-    cart[id]++;
+    if (amount >= 25) {
+        cart_alert.classList.remove("hide");
+    } else {
+        cart[id]++;
 
-    $(`.js-${id}-btns`).removeClass('hide');
-    $(`.js-${id}-btn`).addClass('hide');
+        $(`.js-${id}-btns`).removeClass('hide');
+        $(`.js-${id}-btn`).addClass('hide');
 
-    $(`.js-${id}-counter`).html(cart[id]);
+        $(`.js-${id}-counter`).html(cart[id]);
 
-    if (cart[id] == 1) {
-        createCartItem(id);
+        if (cart[id] == 1) {
+            createCartItem(id);
+        }
+
+        updatePrice(id);
+        updateResultPrice(id, "+");
+        amount++;
     }
-
-    updatePrice(id);
-    updateResultPrice(id, "+");
-    amount++;
 };
 
 // Changing the quantity of the product
 function minusFunction(id) {
-    cart[id]--;
+    if (amount <= 25) {
+        cart_alert.classList.add("hide");
+        cart[id]--;
 
-    if (cart[id] <= 0) {    
+        if (cart[id] <= 0) {    
 
-        $(`.js-${id}-btn`).removeClass('hide');
-        $(`.js-${id}-btns`).addClass('hide');
+            $(`.js-${id}-btn`).removeClass('hide');
+            $(`.js-${id}-btns`).addClass('hide');
 
-        deleteElement(id);
+            deleteElement(id);
 
-        cart[id] = 0;
+            cart[id] = 0;
+        }
+
+        $(`.js-${id}-counter`).html(cart[id]);
+
+        updatePrice(id);
+        updateResultPrice(id, "-");
+        amount--;
     }
-
-    $(`.js-${id}-counter`).html(cart[id]);
-
-    updatePrice(id);
-    updateResultPrice(id, "-");
-    amount--;
 };
 
 // Deleting the product from the cart

@@ -4,6 +4,8 @@ const goods_amount = document.querySelectorAll(".js-counter");
 const order_section = document.querySelector(".order");
 const empty_section = document.querySelector(".empty-block");
 
+const cart_alert = document.querySelector(".max-amount-block");
+
 // The result price in the cart
 let result_price = Number(localStorage.getItem("result_price"));
 
@@ -36,6 +38,10 @@ document.addEventListener("click", (event) => {
         returnGoods();
     }
 
+    if (arg.classList.contains("max-amount-block__btn")) {
+        cart_alert.classList.add("hide");
+    }
+
     checkOrder();
     updateCart();
 });
@@ -44,34 +50,42 @@ document.addEventListener("click", (event) => {
 function plusFunction(id) {
     let product = getProduct(id);
 
-    cart[id]++;
+    if (amount >= 25) {
+        cart_alert.classList.remove("hide");
+    } else {
+        cart[id]++;
 
-    $(`.${id}-counter`).html(cart[id]);
+        $(`.${id}-counter`).html(cart[id]);
 
-    updatePrice(id);
-    updateResultPrice(id, "+");
+        updatePrice(id);
+        updateResultPrice(id, "+");
 
-    $(`.${id}-weight`).html(gettingWeight(product, cart[id]));
-    amount++;
+        $(`.${id}-weight`).html(gettingWeight(product, cart[id]));
+        amount++;
+    }   
 };
 
 // Changing the quantity of the product
 function minusFunction(id) {
     let product = getProduct(id);
-    cart[id]--;
 
-    if (cart[id] <= 0) {    
-        deleteElement(id);
-        cart[id] = 0;
+    if (amount <= 25) {
+        cart_alert.classList.add("hide");
+        cart[id]--;
+
+        if (cart[id] <= 0) {    
+            deleteElement(id);
+            cart[id] = 0;
+        }
+
+        $(`.${id}-counter`).html(cart[id]);
+
+        updatePrice(id);
+        updateResultPrice(id, "-");
+
+        $(`.${id}-weight`).html(gettingWeight(product, cart[id]));
+        amount--;
     }
-
-    $(`.${id}-counter`).html(cart[id]);
-
-    updatePrice(id);
-    updateResultPrice(id, "-");
-
-    $(`.${id}-weight`).html(gettingWeight(product, cart[id]));
-    amount--;
 };
 
 // Deleting the product from the cart

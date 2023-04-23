@@ -64,7 +64,6 @@ body {
 */
 .main-content {
   padding: 0px 35px;
-  min-height: 81.2%;
 }
 .main-content__image {
   margin: 30px 0px;
@@ -98,6 +97,36 @@ body {
   max-width: 100%;
 }
 
+.max-amount-block {
+  align-items: center;
+  background: var(--dark-gray);
+  box-shadow: 0px 0px 10px var(--gray);
+  border-radius: 20px;
+  color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 15px;
+  position: fixed;
+  height: 150px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  z-index: 2;
+}
+.max-amount-block__text {
+  text-align: center;
+  margin: 0px 0px 20px;
+}
+.max-amount-block__btn {
+  background: var(--red);
+  border-radius: 10px;
+  color: var(--light-gray);
+  padding: 10px 0px;
+  width: 100px;
+}
+
 @media (max-width: 1100px) {
   .main-content {
     padding: 0px 25px;
@@ -117,11 +146,15 @@ body {
   .main-content {
     padding: 0px 15px;
   }
-  .main-content__info {
-    margin: 10px 0px;
+  .main-content__image {
+    margin: 20px 0px 10px;
   }
   .main-content__title {
+    margin: 0px 0px 10px;
     text-align: center;
+  }
+  .main-content__text_last {
+    margin: 0px 0px 10px;
   }
 }
 /* 
@@ -347,7 +380,7 @@ body {
 .cart-block__item {
   display: grid;
   gap: 5px;
-  grid-template: repeat(2, 50px)/1fr 1fr 0.8fr 1.2fr;
+  grid-template: repeat(2, 50px)/0.8fr 1fr 0.9fr 1.3fr;
   grid-template-areas: "image title title price" "image buttons buttons delete";
   margin: 15px 0px 0px;
 }

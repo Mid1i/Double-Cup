@@ -71,7 +71,8 @@ body {
 .btn:hover,
 .form__btn:hover,
 .btn__cart:hover,
-.login__btn:hover {
+.login__btn:hover,
+.max-amount-block__btn:hover {
     background: var(--light-red);
     box-shadow: 0px 0px 10px var(--gray);
     transform: scale(1.05);
@@ -136,6 +137,38 @@ body {
     background: var(--light-red);
     box-shadow: 0px 0px 10px var(--gray);
     transform: scale(1.05);
+}
+
+.max-amount-block {
+    align-items: center;
+    background: var(--dark-gray);
+    box-shadow: 0px 0px 10px var(--gray);
+    border-radius: 20px;
+    color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 15px;
+    position: fixed;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    z-index: 2;
+
+    &__text {
+        text-align: center;
+        margin: 0px 0px 20px;
+    }
+
+    &__btn {
+        background: var(--red);
+        border-radius: 10px;
+        color: var(--light-gray);
+        padding: 10px 0px;
+        width: 100px;
+    }
 }
 
 @media(max-width: 767px) {

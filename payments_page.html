@@ -4,12 +4,12 @@
     <!-- Page encoding -->
     <meta charset="UTF-8">
     <!-- Page title -->
-    <title>Double Cup - интернет магазин еды по доступным ценам.</title>
+    <title> Информация о доставке | Double Cup - интернет магазин еды по доступным ценам.</title>
     <!-- Adaptive -->
     <meta name="viewport" content="width=device-width, viewport-fit=cover">
     <!-- Connecting CSS styles -->
-    <link rel="stylesheet" href="./auth_page/css/reset_style.css">
-    <link rel="stylesheet" href="./auth_page/css/main_style.css">
+    <link rel="stylesheet" href="./payments_page/css/reset_style.css">
+    <link rel="stylesheet" href="./payments_page/css/main_style.css">
     <!-- Connecting the site icon -->
     <link rel="icon" href="./resourses/img/favicon-icons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./resourses/img/favicon-icons/favicon-32x32.png">
@@ -57,15 +57,15 @@
                     <li class="list__el">
                         <a href="./delivery_page.html">Доставка</a>
                     </li>
-                    <li class="list__el">
-                        <a href="./payments_page.html">Как оплачивать</a>
+                    <li class="list__el list__el_active">
+                        <a href="">Как оплачивать</a>
                     </li>
                     <li class="list__el list__el_last">
                         <a href="">О нас</a>
                     </li>
                 </ul>
             </nav>
-            <!-- Cart button and cart block -->
+            <!-- Buttons "Login" "Cart" and cart block -->
             <section class="main-header__btns-block">
                 <button class="cart__btn js-cart-btn">
                     <div class="cart__btn__icon js-cart-btn">
@@ -100,50 +100,33 @@
     </header>
     <hr class="main-sep">
     <!-- Site main section -->
-    <main class="main-content">
-        <!-- Register block -->
-        <article class="profile-block js-register__block active_profile">
-            <h1 class="profile-block__title title">Зарегистрироваться</h1>
-            <form action="" class="profile-block__form form">
-                <div class="form__item">
-                    <input type="text" name="username" placeholder="Username"  class="form__input form__input_name" required autofocus>
-                    <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
-                </div>
-                <div class="form__item form__item_email">
-                    <input type="text" name="email" placeholder="Email"  class="form__input form__input_email" required>
-                    <img src="./resourses/img/profile-icons/email-icon.svg" alt="" class="form__icon">
-                </div>
-                <div class="form__item">
-                    <input type="password" name="password" placeholder="Password" class="form__input form__input_pass" required>
-                    <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
-                </div>
-                <div class="form__checkbox">
-                    <input type="checkbox" name="Agreement" class="form__checkbox_input" required>
-                    <p class="form__checkbox_text">Я согласен с <span>правилами</span> и <span>условиями</span></p>
-                </div>
-                <button class="form__btn" id="register-btn">Зарегистрироваться</button>
-            </form>
-            <p class="profile-block__text">Уже есть аккаунт? <span class="js-login">Войти</span></p>
-            <p class="profile-block__footer-text">©️ Double Cup</p>
+    <section class="main-content">
+        <div class="main-content__image">
+            <img src="./resourses/img/background-images/payment-back.jpg" alt="">
+        </div>
+        <h2 class="main-content__title title">Вы можете выбрать один из следующих способов оплаты заказа:</h2>
+        <!-- Information about online payments -->
+        <article class="main-content__text-block">
+            <h2 class="main-content__subtitle title">При доставке курьером:</h2>
+            <ul class="main-content__list">
+                <li class="main-content__list-item">Оплата кредитной картой</li>
+                <li class="main-content__list-item">Оплата наличными при получении</li>
+            </ul>
         </article>
-        <!-- Login section -->
-        <article class="profile-block js-login__block">
-            <h1 class="profile-block__title title">Войти</h1>
-            <form action="" class="profile-block__form form">
-                <div class="form__item form__item_email">
-                    <input type="text" name="username" placeholder="Username"  class="form__input" required autofocus>
-                    <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
-                </div>
-                <div class="form__item">
-                    <input type="password" name="password" placeholder="Password" class="form__input" required>
-                    <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
-                </div>
-                <button class="form__btn form__btn_login">Войти</button>
-            </form>
-            <div class="profile-block__text">Нет аккаунта? <span class="js-register">Зарегистрироваться</span></div>
-            <div class="profile-block__footer-text">©️ Double Cup</div>
+        <!-- Information about offline payments -->
+        <article class="main-content__text-block">
+            <h2 class="main-content__subtitle title">При самовывозе со склада интернет-магазина:</h2>
+            <ul class="main-content__list">
+                <li class="main-content__list-item">Оплата кредитной картой</li>
+                <li class="main-content__list-item">Оплата наличными</li>
+            </ul>
         </article>
-    </main>
+        <!-- Information about security system -->
+        <section class="main-content__text-block">
+            <p class="main-content__text">Для защиты от несанционного доступа на этапе передачи от клиента на сервер системы ASSIST используется протокол SSL 3.0.</p>
+            <p class="main-content__text main-content__text_last">При аннулировании позиций из оплаченного заказа (или при аннулировании заказа целиком) Вы можете вернуть сумму на карту, позвонив в наш сервисный центр: 8 (831) 555-25-25</p>
+        </section>
+    </section>
     <!-- Site footer -->
     <footer class="main-footer">
         <div class="main-footer__wrapper">
@@ -172,6 +155,56 @@
         </div>
     </footer>
 
+    <!-- Register section -->
+    <article class="profile-block js-register__block">
+        <div class="profile-block__icon js-quit">
+            <img class="js-quit" src="./resourses/img/profile-icons/cross-icon.svg">
+        </div>
+        <h1 class="profile-block__title title">Зарегистрироваться</h1>
+        <form action="" class="profile-block__form form">
+            <div class="form__item">
+                <input type="text" name="username" placeholder="Username"  class="form__input form__input_name" required autofocus>
+                <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item form__item_email">
+                <input type="text" name="email" placeholder="Email"  class="form__input form__input_email" required>
+                <img src="./resourses/img/profile-icons/email-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item">
+                <input type="password" name="password" placeholder="Password" class="form__input form__input_pass" required>
+                <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__checkbox">
+                <input type="checkbox" name="Agreement" class="form__checkbox_input" required>
+                <p class="form__checkbox_text">Я согласен с <span>правилами</span> и <span>условиями</span></p>
+            </div>
+            <button class="form__btn" id="register-btn">Зарегистрироваться</button>
+        </form>
+        <p class="profile-block__text">Уже есть аккаунт? <span class="js-login">Войти</span></p>
+        <p class="profile-block__footer-text">©️ Double Cup</p>
+    </article>
+
+    <!-- Login section -->
+    <article class="profile-block js-login__block">
+        <div class="profile-block__icon js-quit">
+            <img class="js-quit" src="./resourses/img/profile-icons/cross-icon.svg" alt="quit">
+        </div>
+        <h1 class="profile-block__title title">Войти</h1>
+        <form action="" class="profile-block__form form">
+            <div class="form__item form__item_email">
+                <input type="text" name="username" placeholder="Username"  class="form__input" required autofocus>
+                <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
+            </div>
+            <div class="form__item">
+                <input type="password" name="password" placeholder="Password" class="form__input" required>
+                <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
+            </div>
+            <button class="form__btn form__btn_login">Войти</button>
+        </form>
+        <div class="profile-block__text">Нет аккаунта? <span class="js-register">Зарегистрироваться</span></div>
+        <div class="profile-block__footer-text">©️ Double Cup</div>
+    </article>
+
     <!-- Max amount of goods section -->
     <section class="max-amount-block hide">
         <p class="max-amount-block__text">Количество товаров в заказе не может превышать 25!</p>
@@ -184,7 +217,7 @@
     </section>
 </body>
 <!-- Connecting JavaScript -->
-<script src="./auth_page/js/createCart.js" type="module"></script>
-<script src="./auth_page/js/main_script.js" type="module"></script>
-<script src="./auth_page/js/cartFunctions.js" type="module"></script>
+<script src="./payments_page/js/main_script.js" type="module"></script>
+<script src="./payments_page/js/createCart.js" type="module"></script>
+<script src="./payments_page/js/cartFunctions.js" type="module"></script>
 </html>
