@@ -228,13 +228,6 @@ body {
   .form-block__section_pay {
     flex-direction: column;
   }
-  .main-content__form {
-    padding: 0px 380px;
-  }
-  .form-block__title,
-  .form-block__subtitle {
-    text-align: center;
-  }
 }
 @media (max-width: 525px) {
   .form-block__title::before,
