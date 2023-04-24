@@ -50,8 +50,9 @@ document.addEventListener("click", (event) => {
         }, 700);
     }
 
+    // Tracks clicking on the "OK" button when its max amount
     if (arg.classList.contains("max-amount-block__btn")) {
-        cart_alert.classList.add("hide");
+        cart_alert.classList.add("hide-element");
     }
 
     checkOrder();
@@ -60,8 +61,8 @@ document.addEventListener("click", (event) => {
 
 // Adding a product to the cart and changing its quantity
 function plusFunction(id) {
-    if (amount >= 25) {
-        cart_alert.classList.remove("hide");
+    if (cart[id] >= 25) {
+        cart_alert.classList.remove("hide-element");
     } else {
         cart[id]++;
 
@@ -82,8 +83,8 @@ function plusFunction(id) {
 
 // Changing the quantity of the product
 function minusFunction(id) {
-    if (amount <= 25) {
-        cart_alert.classList.add("hide");
+    if (cart[id] <= 25) {
+        cart_alert.classList.add("hide-element");
         cart[id]--;
 
         if (cart[id] <= 0) {    
@@ -106,6 +107,8 @@ function minusFunction(id) {
 
 // Deleting the product from the cart
 function zeroFunction(id) {
+    cart_alert.classList.add("hide-element");
+    
     $(`.js-${id}-btn`).removeClass('hide');
     $(`.js-${id}-btns`).addClass('hide');
 

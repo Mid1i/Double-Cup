@@ -34,12 +34,14 @@ document.addEventListener("click", (event) => {
         zeroFunction(id);
     }
 
+    // Tracks clicking on the "Return goods" button in the cart
     if (arg.classList.contains("empty-block__return")) {
         returnGoods();
     }
 
+    // Tracks clicking on the "OK" button when its max amount
     if (arg.classList.contains("max-amount-block__btn")) {
-        cart_alert.classList.add("hide");
+        cart_alert.classList.add("hide-element");
     }
 
     checkOrder();
@@ -50,8 +52,8 @@ document.addEventListener("click", (event) => {
 function plusFunction(id) {
     let product = getProduct(id);
 
-    if (amount >= 25) {
-        cart_alert.classList.remove("hide");
+    if (cart[id] >= 25) {
+        cart_alert.classList.remove("hide-element");
     } else {
         cart[id]++;
 
@@ -69,8 +71,8 @@ function plusFunction(id) {
 function minusFunction(id) {
     let product = getProduct(id);
 
-    if (amount <= 25) {
-        cart_alert.classList.add("hide");
+    if (cart[id] <= 25) {
+        cart_alert.classList.add("hide-element");
         cart[id]--;
 
         if (cart[id] <= 0) {    
@@ -90,6 +92,8 @@ function minusFunction(id) {
 
 // Deleting the product from the cart
 function zeroFunction(id) {
+    cart_alert.classList.add("hide-element");
+
     $(`.${id}-counter`).html(cart[id]);
 
     deleteElement(id);

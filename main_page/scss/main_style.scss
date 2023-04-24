@@ -17,6 +17,7 @@
     --very-light-gray: #f7f7f7;
     --light-gray: #DDDDDD;
     --dark-gray: #464646;
+    --btn-hover-color: #2a2a2a;
     --red: #EF314B;
     --light-red: #e85266;
     --green: #4AB838;
@@ -43,7 +44,9 @@ body {
 }
 
 .loader,
+.cart__icon,
 .slider-item,
+.max-amount-block,
 .product__item__counter,
 .main-content__contacts {
     align-items: center;
@@ -72,7 +75,7 @@ body {
 .form__btn:hover,
 .btn__cart:hover,
 .login__btn:hover,
-.max-amount-block__btn:hover {
+.cart__icon:hover {
     background: var(--light-red);
     box-shadow: 0px 0px 10px var(--gray);
     transform: scale(1.05);
@@ -108,19 +111,12 @@ body {
 }
 
 .cart__icon {
-    align-items: center;
     background: var(--red);
     border-radius: 20px;
     bottom: 130px;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 15px;
-    position: fixed;
     right: 100px;
-    opacity: 0;
-    transition: opacity 0.5s;
     z-index: 1;
 
     & img {
@@ -133,42 +129,46 @@ body {
     }
 }
 
-.cart__icon:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--gray);
-    transform: scale(1.05);
+.cart__icon,
+.max-amount-block {
+    flex-direction: column;
+    opacity: 1;
+    position: fixed;
+    transition: opacity 0.3s;
 }
 
 .max-amount-block {
-    align-items: center;
     background: var(--dark-gray);
-    box-shadow: 0px 0px 10px var(--gray);
-    border-radius: 20px;
+    box-shadow: 0px 0px 10px var(--dark-gray);
+    border-radius: 15px;
     color: var(--light-gray);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px 15px;
-    position: fixed;
-    height: 150px;
+    padding: 20px 15px 10px;
+    height: 110px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
-    z-index: 2;
+    width: 205px;
+    z-index: 3;
 
     &__text {
         text-align: center;
-        margin: 0px 0px 20px;
+        margin: 0px 0px 10px;
     }
 
     &__btn {
         background: var(--red);
-        border-radius: 10px;
+        border-radius: 15px;
         color: var(--light-gray);
+        font-weight: 600;
         padding: 10px 0px;
         width: 100px;
     }
+}
+
+.max-amount-block__btn:hover {
+    background: var(--light-red);
+    box-shadow: 0px 0px 10px var(--btn-hover-color);
+    transform: scale(1.05);
 }
 
 @media(max-width: 767px) {
@@ -201,4 +201,9 @@ body {
 
 .hide {
     display: none;
+}
+
+.hide-element {
+    opacity: 0;
+    pointer-events: none;
 }
