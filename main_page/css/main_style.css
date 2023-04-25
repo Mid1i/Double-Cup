@@ -1146,7 +1146,6 @@ body {
   grid-area: title;
   font-weight: 600;
   padding: 10px 0px 0px;
-  overflow-wrap: break-word;
 }
 .item__price {
   align-self: center;

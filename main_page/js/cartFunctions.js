@@ -145,7 +145,7 @@ function checkOrder() {
     }
 
     if (check != 0) {
-        cart_icon.classList.remove("hide-element");
+        iconAppearing();
         header_cart_icon.src = `${path}/img/header-icons/cart-full-icon.svg`;
     } else {
         cart_icon.classList.add("hide-element");
