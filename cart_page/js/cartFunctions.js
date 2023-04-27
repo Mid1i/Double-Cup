@@ -115,10 +115,10 @@ function checkOrder() {
 
     if (check == 0) {
         amount = 0;
-        cart_section.classList.toggle("hide");
-        order_section.classList.toggle("hide");
-        empty_section.classList.toggle("hide");
-        document.querySelector(".js-counter").classList.toggle("hide");
+        cart_section.classList.add("hide");
+        order_section.classList.add("hide");
+        empty_section.classList.remove("hide");
+        document.querySelector(".js-counter").classList.add("hide");
     }
 };
 
@@ -205,8 +205,8 @@ function returnGoods() {
     changeCart();
     startSettings();
 
-    cart_section.classList.toggle("hide");
-    order_section.classList.toggle("hide");
-    empty_section.classList.toggle("hide");
-    document.querySelector(".js-counter").classList.toggle("hide");
+    cart_section.classList.remove("hide");
+    order_section.classList.remove("hide");
+    empty_section.classList.add("hide");
+    document.querySelector(".js-counter").classList.remove("hide");
 }

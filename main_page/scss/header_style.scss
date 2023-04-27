@@ -102,13 +102,21 @@
     width: 150px;
 }
 
-@media(max-width: 1200px) {
+@media(max-width: 1255px) {
     .info__delivery {
         display: none;
     }
 
     .login__btn {
-        margin: 0px 30px 0px;
+        margin: 0px 20px 0px;
+    }
+
+    .list__el {
+        margin: 0px 15px 0px 0px;
+
+        &_last {
+            margin: 0px;
+        }
     }
 }
 

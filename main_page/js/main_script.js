@@ -23,7 +23,6 @@ let userNameItem = localStorage.getItem("username");
 // Creating the "Login" or "Profile" button
 if (userNameItem) {
     createProfileButton(userNameItem);
-    localStorage.clear();
 } else {
     createLoginButton();
 }

@@ -258,7 +258,7 @@ body {
     display: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 815px) {
   .main-header {
     padding: 10px;
   }
@@ -325,11 +325,12 @@ body {
 @media (max-width: 320px) {
   .login__btn {
     padding: 10px;
+    width: 40px;
   }
-  .login__btn__icon {
+  .login__btn_icon {
     margin: 0px;
   }
-  .login__btn__text {
+  .login__btn_text {
     display: none;
   }
 }

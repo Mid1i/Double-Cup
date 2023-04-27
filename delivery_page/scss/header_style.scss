@@ -98,7 +98,7 @@
 
 .login__btn {
     padding: 8px 15px;
-    margin: 0px 20px 0px 0px;
+    margin: 0px 50px 0px 0px;
 }
 
 .cart__btn {
@@ -106,13 +106,25 @@
     width: 150px;
 }
 
-@media(max-width: 1200px) {
+@media(max-width: 1255px) {
     .info__delivery {
         display: none;
     }
+
+    .login__btn {
+        margin: 0px 20px 0px;
+    }
+
+    .list__el {
+        margin: 0px 15px 0px 0px;
+
+        &_last {
+            margin: 0px;
+        }
+    }
 }
 
-@media(max-width: 960px) {
+@media(max-width: 980px) {
     .main-header {
         padding: 10px;
 
@@ -201,11 +213,11 @@
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 370px) {
     .cart__btn,
     .login__btn {
         padding: 10px;
-        width: 44px;
+        width: 40px;
 
         &__icon {
             margin: 0px;
