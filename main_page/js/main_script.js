@@ -79,8 +79,6 @@ document.addEventListener("click", (event) => {
     // Tracks clicking on the "Register" button
     if ((id == "register-btn") && (![username.value.trim(), email.value.trim(), password.value.trim()].includes("")) && checkbox.checked) {
         localStorage.setItem("username", username.value.trim());
-        localStorage.setItem("email", email.value.trim());
-        localStorage.setItem("password", password.value.trim());
     }
 });
 

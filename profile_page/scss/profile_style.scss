@@ -1,0 +1,186 @@
+/* 
+    ---------------
+    Profile section
+    ---------------
+*/
+
+.profile-block {
+    align-items: center;
+    background: var(--profile-color); 
+    border: 3px solid var(--black);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 25px 10px;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    top: 50%;
+    left: 50%;
+    height: 440px;
+    width: 400px;
+
+    &__icon {
+        align-self: flex-end;
+        background: var(--red);
+        border-radius: 0px 17px 0px 20px;
+        cursor: pointer;
+        padding: 12px;
+        margin: -40px -25px 0px;
+        height: 50px;
+        width: 50px;
+    }
+
+    &__icon:hover {
+        background: var(--light-red);
+    }
+
+    &__title {
+        font-size: 32px;
+    }
+
+    &__form {
+        margin: 20px 0px;
+        width: 100%;
+    }
+    
+    &__text {
+        flex: 1 0 auto;
+        text-align: center;
+
+        & span {
+            cursor: pointer;
+            color: var(--red);
+            font-weight: 600;
+        }
+
+        & span:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.form {
+    
+    &__item {
+        position: relative;
+        height: 30px;
+        width: 100%;
+        z-index: 1;
+
+        &_email {
+            margin: 25px 0px;
+        }
+    }
+
+    &__input {
+        background: inherit;
+        border-bottom: 2px solid var(--black);
+        border-radius: 10px 10px 0px 0px;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 10px 30px 10px 10px;
+        transition: background 0.5s;
+        width: 100%;
+    }
+
+    &__input::placeholder {
+        color: var(--black);
+    }
+
+    &__input:hover,
+    &__input:focus {
+        background: var(--inputs-hover-color);
+    }
+
+    &__icon {
+        bottom: 0px;
+        position: absolute;
+        right: 10px;     
+    }
+
+    &__checkbox {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px 10px;
+
+        &_text {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0px 0px 0px 10px;
+    
+            & span {
+                cursor: pointer;
+                font-weight: 600;
+            }
+    
+            & span:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__btn {
+        background: var(--red);
+        border-radius: 10px;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 600;
+        height: 50px;
+        padding: 15px 73px;
+        width: 350px;
+
+        &_login {
+            padding: 15px 140px;
+            margin: 74px 0px 0px;
+        }
+    }
+}
+
+@media(max-width: 430px) {
+    .profile-block {
+        padding: 40px 10px 10px;
+        width: 300px;
+
+        &__icon {
+            margin: -40px -10px 0px;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+    }
+
+    .form__btn {
+        padding: 15px 40px;
+        width: 100%;
+        
+        &_login {
+            padding: 15px 110px;
+            margin: 50px 0px 20px;
+        }
+    }
+}
+
+@media(max-width: 310px) {
+    .profile-block {
+        width: 250px;
+
+        &__title {
+            font-size: 24px;
+        }
+    }
+
+    .form__btn {
+        padding: 15px 12px;
+
+        &_login {
+            padding: 15px 80px;
+        }
+    }
+}
+
+.active_profile {
+    transform: translate(-50%, -50%) scale(1);
+}
