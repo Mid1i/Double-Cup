@@ -17,7 +17,7 @@ const online_pay = document.querySelector(".js-radio-online");
 
 const delivery_map = document.querySelector(".yandex-map");
 
-let path = "https://mid1i.github.io/Double-Cup";
+let path = "https://mid1i.github.io/Double-Cup/resourses";
 
 
 document.addEventListener("click", (event) => {
@@ -150,7 +150,7 @@ function createIcon(section, icon_name) {
     if (!document.querySelector(`.${icon_name}`)) {
         let icon = document.createElement("img");
         
-        icon.src = `${path}/resourses/img/input-icons/check-icon.svg`;
+        icon.src = `${path}/img/input-icons/check-icon.svg`;
         icon.classList.add("section__item__check", `${icon_name}`);
 
         section.appendChild(icon);
