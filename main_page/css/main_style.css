@@ -397,7 +397,7 @@ body {
 @media (max-width: 340px) {
   .btn {
     padding: 10px;
-    width: 44px;
+    width: 40px;
   }
   .btn__icon {
     margin: 0px;

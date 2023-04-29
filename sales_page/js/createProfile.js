@@ -41,5 +41,10 @@ export function createProfileButton(UserName) {
     button.classList.add("login__btn", "js-profile");
     button.append(image_wrapper, text);
 
-    section.prepend(button);
+    let link = document.createElement("a");
+    link.classList.add("profile__btn");
+    link.href = "./profile_page.html";
+    link.append(button);
+
+    section.prepend(link);
 }
