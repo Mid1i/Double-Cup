@@ -43,7 +43,7 @@ export function createProfileButton(UserName) {
 
     let link = document.createElement("a");
     link.classList.add("profile__btn");
-    link.href = "./profile_page.html";
+    link.href = `./profile_page.html?username=${UserName}`;
     link.append(button);
 
     section.prepend(link);
