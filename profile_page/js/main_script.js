@@ -30,6 +30,10 @@ document.addEventListener("click", (event) => {
     if ((arg.classList.contains("js-save")) && (![username.value.trim(), email.value.trim()].includes(""))) {
         localStorage.setItem("username", username.value.trim());
     }
+
+    if (arg.classList.contains("form-block__btn-exit")) {
+        localStorage.clear();
+    }
 });
 
 // Tracks clicking on inputs

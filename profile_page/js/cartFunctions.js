@@ -79,6 +79,9 @@ function plusFunction(id) {
         updateResultPrice(id, "+");
         amount++;
     }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("result_price", result_price);
 };
 
 // Changing the quantity of the product
@@ -102,6 +105,9 @@ function minusFunction(id) {
         updatePrice(id);
         updateResultPrice(id, "-");
         amount--;
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        localStorage.setItem("result_price", result_price);
     }
 };
 
@@ -119,6 +125,9 @@ function zeroFunction(id) {
 
     amount -= cart[id];
     cart[id] = 0;
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("result_price", result_price);
 }
 
 // Checking amount of goods in the cart
@@ -138,9 +147,6 @@ function checkOrder() {
         cart_block.classList.add("hide");
         amount = 0;
     }
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-    localStorage.setItem("result_price", result_price);
 };
 
 // Updating cart sentence
