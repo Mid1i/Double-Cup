@@ -23,137 +23,139 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
 </head> 
 <body class="lock">
-    <!-- Site header -->
-    <header class="main-header">
-        <div class="main-header__wrapper">
-            <!-- Burger menu for small screens -->
-            <section class="main-header__burger">
-                <span></span>
-            </section>
-            <!-- Logo and information about delivery -->
-            <section class="main-header__info info">
-                <div class="info__logo">
-                    <a href="./main_page.html">
-                        <img src="./resourses/img/header-icons/logo.svg" alt="Логотип магазина «Double Cup»">
-                    </a>
-                </div>
-                <!-- Information about delivery -->
-                <section class="info__delivery">
-                    <p class="info__delivery_text">Доставка: с 8:00 до 21:30</p>
-                    <p class="info__delivery_tel">
-                        <a href="tel:88315552525">8 (831) 555-25-25</a>
-                    </p>
+    <div class="wrapper">
+        <!-- Site header -->
+        <header class="main-header">
+            <div class="main-header__wrapper">
+                <!-- Burger menu for small screens -->
+                <section class="main-header__burger">
+                    <span></span>
                 </section>
-            </section>
-            <!-- Main site navigation -->
-            <nav class="main-header__navigation">
-                <ul class="main-header__list">
-                    <li class="list__el">
-                        <a href="./main_page.html">Главная</a>
-                    </li>
-                    <li class="list__el">
-                        <a href="./sales_page.html">Акции</a>
-                    </li>
-                    <li class="list__el">
-                        <a href="./delivery_page.html">Доставка</a>
-                    </li>
-                    <li class="list__el list__el_active">
-                        <a href="./payments_page.html">Как оплачивать</a>
-                    </li>
-                    <li class="list__el list__el_last">
-                        <a href="">О нас</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- Buttons "Login" "Cart" and cart block -->
-            <section class="main-header__btns-block">
-                <button class="cart__btn js-cart-btn">
-                    <div class="cart__btn__icon js-cart-btn">
-                        <img class="js-cart-icon js-cart-btn" src="./resourses/img/header-icons/cart-icon.svg" alt="">
-                    </div>
-                    <p class="cart__btn__text js-cart-text js-cart-btn">Пусто</p>
-                </button>
-                <!-- Cart block -->
-                <article class="main-header__cart-block hide">
-                    <h1 class="cart-block__title title">Корзина</h1>
-                    <hr class="cart-block__sep">
-                    <!-- Cart items -->
-                    <section class="cart-block__items"></section> 
-                    <hr class="cart-block__sep">
-                    <!-- Result price -->
-                    <section class="cart-block__result">
-                        <h2 class="result__title title">Итого:</h2>
-                        <p class="result__price title">0 ₽</p>
-                    </section>
-                    <!-- Buttons "Order" and "Go to the cart page" -->
-                    <section class="cart-block__btns-block">
-                        <a href="./checkout_page.html" class="js-order-btn">
-                            <button class="btn__order js-order-btn">Оформить заказ</button>
-                        </a>    
-                        <a href="./cart_page.html" class="js-go-cart">
-                            <button class="btn__cart js-go-cart-btn">В корзину</button>
+                <!-- Logo and information about delivery -->
+                <section class="main-header__info info">
+                    <div class="info__logo">
+                        <a href="./main_page.html">
+                            <img src="./resourses/img/header-icons/logo.svg" alt="Логотип магазина «Double Cup»">
                         </a>
-                    </section>   
-                </article>
+                    </div>
+                    <!-- Information about delivery -->
+                    <section class="info__delivery">
+                        <p class="info__delivery_text">Доставка: с 8:00 до 21:30</p>
+                        <p class="info__delivery_tel">
+                            <a href="tel:88315552525">8 (831) 555-25-25</a>
+                        </p>
+                    </section>
+                </section>
+                <!-- Main site navigation -->
+                <nav class="main-header__navigation">
+                    <ul class="main-header__list">
+                        <li class="list__el">
+                            <a href="./main_page.html">Главная</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="./sales_page.html">Акции</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="./delivery_page.html">Доставка</a>
+                        </li>
+                        <li class="list__el list__el_active">
+                            <a href="./payments_page.html">Как оплачивать</a>
+                        </li>
+                        <li class="list__el list__el_last">
+                            <a href="">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Buttons "Login" "Cart" and cart block -->
+                <section class="main-header__btns-block">
+                    <button class="cart__btn js-cart-btn">
+                        <div class="cart__btn__icon js-cart-btn">
+                            <img class="js-cart-icon js-cart-btn" src="./resourses/img/header-icons/cart-icon.svg" alt="">
+                        </div>
+                        <p class="cart__btn__text js-cart-text js-cart-btn">Пусто</p>
+                    </button>
+                    <!-- Cart block -->
+                    <article class="main-header__cart-block hide">
+                        <h1 class="cart-block__title title">Корзина</h1>
+                        <hr class="cart-block__sep">
+                        <!-- Cart items -->
+                        <section class="cart-block__items"></section> 
+                        <hr class="cart-block__sep">
+                        <!-- Result price -->
+                        <section class="cart-block__result">
+                            <h2 class="result__title title">Итого:</h2>
+                            <p class="result__price title">0 ₽</p>
+                        </section>
+                        <!-- Buttons "Order" and "Go to the cart page" -->
+                        <section class="cart-block__btns-block">
+                            <a href="./checkout_page.html" class="js-order-btn">
+                                <button class="btn__order js-order-btn">Оформить заказ</button>
+                            </a>    
+                            <a href="./cart_page.html" class="js-go-cart">
+                                <button class="btn__cart js-go-cart-btn">В корзину</button>
+                            </a>
+                        </section>   
+                    </article>
+                </section>
+            </div>
+        </header>
+        <hr class="main-sep">
+        <!-- Site main section -->
+        <section class="main-content">
+            <div class="main-content__image">
+                <img src="./resourses/img/background-images/payment-back.jpg" alt="">
+            </div>
+            <h2 class="main-content__title title">Вы можете выбрать один из следующих способов оплаты заказа:</h2>
+            <!-- Information about online payments -->
+            <article class="main-content__text-block">
+                <h2 class="main-content__subtitle title">При доставке курьером:</h2>
+                <ul class="main-content__list">
+                    <li class="main-content__list-item">Оплата кредитной картой</li>
+                    <li class="main-content__list-item">Оплата наличными при получении</li>
+                </ul>
+            </article>
+            <!-- Information about offline payments -->
+            <article class="main-content__text-block">
+                <h2 class="main-content__subtitle title">При самовывозе со склада интернет-магазина:</h2>
+                <ul class="main-content__list">
+                    <li class="main-content__list-item">Оплата кредитной картой</li>
+                    <li class="main-content__list-item">Оплата наличными</li>
+                </ul>
+            </article>
+            <!-- Information about security system -->
+            <section class="main-content__text-block">
+                <p class="main-content__text">Для защиты от несанционного доступа на этапе передачи от клиента на сервер системы ASSIST используется протокол SSL 3.0.</p>
+                <p class="main-content__text main-content__text_last">При аннулировании позиций из оплаченного заказа (или при аннулировании заказа целиком) Вы можете вернуть сумму на карту, позвонив в наш сервисный центр: 8 (831) 555-25-25</p>
             </section>
-        </div>
-    </header>
-    <hr class="main-sep">
-    <!-- Site main section -->
-    <section class="main-content">
-        <div class="main-content__image">
-            <img src="./resourses/img/background-images/payment-back.jpg" alt="">
-        </div>
-        <h2 class="main-content__title title">Вы можете выбрать один из следующих способов оплаты заказа:</h2>
-        <!-- Information about online payments -->
-        <article class="main-content__text-block">
-            <h2 class="main-content__subtitle title">При доставке курьером:</h2>
-            <ul class="main-content__list">
-                <li class="main-content__list-item">Оплата кредитной картой</li>
-                <li class="main-content__list-item">Оплата наличными при получении</li>
-            </ul>
-        </article>
-        <!-- Information about offline payments -->
-        <article class="main-content__text-block">
-            <h2 class="main-content__subtitle title">При самовывозе со склада интернет-магазина:</h2>
-            <ul class="main-content__list">
-                <li class="main-content__list-item">Оплата кредитной картой</li>
-                <li class="main-content__list-item">Оплата наличными</li>
-            </ul>
-        </article>
-        <!-- Information about security system -->
-        <section class="main-content__text-block">
-            <p class="main-content__text">Для защиты от несанционного доступа на этапе передачи от клиента на сервер системы ASSIST используется протокол SSL 3.0.</p>
-            <p class="main-content__text main-content__text_last">При аннулировании позиций из оплаченного заказа (или при аннулировании заказа целиком) Вы можете вернуть сумму на карту, позвонив в наш сервисный центр: 8 (831) 555-25-25</p>
         </section>
-    </section>
-    <!-- Site footer -->
-    <footer class="main-footer">
-        <div class="main-footer__wrapper">
-            <!-- Payment systems supported by site -->
-            <section class="main-footer__pay pay">
-                <div class="pay__item">
-                    <img src="./resourses/img/footer-icons/visa-icon.svg" alt="Visa">
-                </div>
-                <div class="pay__item">
-                    <img src="./resourses/img/footer-icons/mastercard-icon.svg" alt="MasterCard">
-                </div>
-                <div class="pay__item pay__item_last">
-                    <img src="./resourses/img/footer-icons/mir-icon.svg" alt="Мир">
-                </div>
-            </section>
-            <p class="main-footer__text">©️ 2023 Double Cup | Все права защищены</p>
-            <!-- Technical support of the site -->
-            <section class="main-footer__sup sup">
-                <p class="sup__text">Тех. поддержка:</p>
-                <div class="sup__image">
-                    <a href="">
-                        <img src="./resourses/img/footer-icons/tg-icon.svg" alt="Telegram">
-                    </a>
-                </div>
-            </section>
-        </div>
-    </footer>
+        <!-- Site footer -->
+        <footer class="main-footer">
+            <div class="main-footer__wrapper">
+                <!-- Payment systems supported by site -->
+                <section class="main-footer__pay pay">
+                    <div class="pay__item">
+                        <img src="./resourses/img/footer-icons/visa-icon.svg" alt="Visa">
+                    </div>
+                    <div class="pay__item">
+                        <img src="./resourses/img/footer-icons/mastercard-icon.svg" alt="MasterCard">
+                    </div>
+                    <div class="pay__item pay__item_last">
+                        <img src="./resourses/img/footer-icons/mir-icon.svg" alt="Мир">
+                    </div>
+                </section>
+                <p class="main-footer__text">©️ 2023 Double Cup | Все права защищены</p>
+                <!-- Technical support of the site -->
+                <section class="main-footer__sup sup">
+                    <p class="sup__text">Тех. поддержка:</p>
+                    <div class="sup__image">
+                        <a href="">
+                            <img src="./resourses/img/footer-icons/tg-icon.svg" alt="Telegram">
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </footer>
+    </div>
 
     <!-- Register section -->
     <article class="profile-block js-register__block">

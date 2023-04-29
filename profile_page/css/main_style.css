@@ -25,6 +25,13 @@ body {
   font-size: 16px;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 .lock {
   overflow: hidden;
 }
@@ -40,6 +47,7 @@ body {
 .main-footer__wrapper {
   margin: 0px auto;
   max-width: 1280px;
+  width: 100%;
 }
 
 .main-sep {
@@ -64,10 +72,10 @@ body {
 .main-content {
   align-items: center;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
   justify-content: center;
   padding: 0px 35px;
-  min-height: 81.2%;
 }
 .main-content__title {
   font-size: 28px;
@@ -118,17 +126,12 @@ body {
   height: 14px;
   width: 17px;
 }
-.form-block__btns-block {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px 0px 0px;
-}
 .form-block__btn {
   background: var(--white);
   border: 2px solid var(--light-gray);
   border-radius: 10px;
   font-size: 16px;
-  margin: 0px 20px 0px 0px;
+  margin: 20px auto 0px;
   padding: 10px;
   height: 42px;
   width: 150px;
@@ -140,8 +143,9 @@ body {
   font-weight: 600;
   font-size: 16px;
   padding: 10px;
+  margin: 0px 0px 20px;
   height: 42px;
-  width: 110px;
+  width: 150px;
 }
 
 .form-block__btn:hover {
@@ -457,6 +461,9 @@ body {
   grid-template: repeat(2, 50px)/0.8fr 1fr 0.9fr 1.3fr;
   grid-template-areas: "image title title price" "image buttons buttons delete";
   margin: 15px 0px 0px;
+}
+.cart-block__item:last-child {
+  margin: 15px 0px;
 }
 .cart-block__result {
   justify-content: space-between;

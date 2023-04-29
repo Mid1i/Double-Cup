@@ -23,156 +23,158 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
 </head> 
 <body class="lock">
-    <!-- Site header -->
-    <header class="main-header">
-        <div class="main-header__wrapper">
-            <!-- Burger menu for small screens -->
-            <section class="main-header__burger">
-                <span></span>
-            </section>
-            <!-- Logo and information about delivery -->
-            <section class="main-header__info info">
-                <div class="info__logo">
-                    <a href="./main_page.html">
-                        <img src="./resourses/img/header-icons/logo.svg" alt="Логотип магазина «Double Cup»">
-                    </a>
-                </div>
-                <!-- Information about delivery -->
-                <section class="info__delivery">
-                    <p class="info__delivery_text">Доставка: с 8:00 до 21:30</p>
-                    <p class="info__delivery_tel">
-                        <a href="tel:88315552525">8 (831) 555-25-25</a>
-                    </p>
+    <div class="wrapper">
+        <!-- Site header -->
+        <header class="main-header">
+            <div class="main-header__wrapper">
+                <!-- Burger menu for small screens -->
+                <section class="main-header__burger">
+                    <span></span>
                 </section>
-            </section>
-            <!-- Main site navigation -->
-            <nav class="main-header__navigation">
-                <ul class="main-header__list">
-                    <li class="list__el">
-                        <a href="./main_page.html">Главная</a>
-                    </li>
-                    <li class="list__el list__el_active">
-                        <a href="./sales_page.html">Акции</a>
-                    </li>
-                    <li class="list__el">
-                        <a href="./delivery_page.html">Доставка</a>
-                    </li>
-                    <li class="list__el">
-                        <a href="./payments_page.html">Как оплачивать</a>
-                    </li>
-                    <li class="list__el list__el_last">
-                        <a href="">О нас</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- Buttons "Login" "Cart" and cart block -->
-            <section class="main-header__btns-block">
-                <button class="cart__btn js-cart-btn">
-                    <div class="cart__btn__icon js-cart-btn">
-                        <img class="js-cart-icon js-cart-btn" src="./resourses/img/header-icons/cart-icon.svg" alt="">
-                    </div>
-                    <p class="cart__btn__text js-cart-text js-cart-btn">Пусто</p>
-                </button>
-                <!-- Cart block -->
-                <article class="main-header__cart-block hide">
-                    <h1 class="cart-block__title title">Корзина</h1>
-                    <hr class="cart-block__sep">
-                    <!-- Cart items -->
-                    <section class="cart-block__items"></section> 
-                    <hr class="cart-block__sep">
-                    <!-- Result price -->
-                    <section class="cart-block__result">
-                        <h2 class="result__title title">Итого:</h2>
-                        <p class="result__price title">0 ₽</p>
-                    </section>
-                    <!-- Buttons "Order" and "Go to the cart page" -->
-                    <section class="cart-block__btns-block">
-                        <a href="./checkout_page.html" class="js-order-btn">
-                            <button class="btn__order js-order-btn">Оформить заказ</button>
-                        </a>    
-                        <a href="./cart_page.html" class="js-go-cart">
-                            <button class="btn__cart js-go-cart-btn">В корзину</button>
+                <!-- Logo and information about delivery -->
+                <section class="main-header__info info">
+                    <div class="info__logo">
+                        <a href="./main_page.html">
+                            <img src="./resourses/img/header-icons/logo.svg" alt="Логотип магазина «Double Cup»">
                         </a>
-                    </section>   
-                </article>
-            </section>
-        </div>
-    </header>
-    <hr class="main-sep">
-    <!-- Site main section -->
-    <section class="main-content">
-        <div class="main-content__image">
-            <img src="./resourses/img/background-images/banner-1.jpg" alt="">
-        </div>
-        <!-- Information about opening shop sales -->
-        <article class="main-content__text-block">
-            <!-- Title block with promo -->
-            <section class="main-content__title-block">
-                <h2 class="main-content__title title">Скидка 10% на весь заказ</h2>
-                <p class="main-content__promo">DOUBLE-CUP-2023</p>
-            </section>
-            <h3 class="main-content__subtitle title">Double Cup дарит Покупателям акцию «10% скидки в честь открытия»</h3>
-            <p class="main-content__text">Акция действует на всё меню до 30.06.2023 г. включительно при покупке на сумму от 1000 рублей.</p>
-            <p class="main-content__text">Воспользоваться данной акцией можно не более одного раза в день.</p>
-            <p class="main-content__ps-text">* Скидка не суммируется с другими скидками, акциями и спец. предложениями.</p>
-        </article>
-        <div class="main-content__image">
-            <img src="./resourses/img/background-images/banner-2.jpg" alt="">
-        </div>
-        <!-- Information about birthday sales -->
-        <article class="main-content__text-block">
-            <!-- Title block with promo -->
-            <section class="main-content__title-block">
-                <h2 class="main-content__title title">Скидка 20% ко дню рождения</h2>
-                <p class="main-content__promo">HAPPY-BIRTHDAY!</p>
-            </section>
-            <h3 class="main-content__subtitle title">Double Cup дарит Покупателям акцию «20% скидки в День Рождения»</h3>
-            <p class="main-content__text">Акция действует на весь заказ, за 3 дня до и за 3 дня после Дня Рождения, при предъявлении документа, удостоверяющего личность.</p>
-            <p class="main-content__text">Воспользоваться данной акцией можно не более одного раза в день.</p>
-            <p class="main-content__ps-text">* Скидка не суммируется с другими скидками, акциями и спец. предложениями.</p>
-        </article>
-        <div class="main-content__image">
-            <img src="./resourses/img/background-images/banner-3.jpg" alt="">
-        </div>
-        <!-- Information about delivery sales -->
-        <article class="main-content__text-block">
-            <!-- Title block with promo -->
-            <section class="main-content__title-block">
-                <h2 class="main-content__title title">Бесплатная доставка</h2>
-                <p class="main-content__promo">FREE-DOUBLE-2023</p>
-            </section>
-            <h3 class="main-content__subtitle title">Double Cup дарит Покупателям акцию «Бесплатная доставка при заказе на сумму от 1000 рублей»</h3>
-            <p class="main-content__text">Акция действует на всё меню до 30.06.2023 г. включительно при покупке на сумму от 1000 рублей.</p>
-            <p class="main-content__text">Воспользоваться данной акцией можно не более одного раза в день.</p>
-        </article>
-    </section>
-    <!-- Site footer -->
-    <footer class="main-footer">
-        <div class="main-footer__wrapper">
-            <!-- Payment systems supported by site -->
-            <section class="main-footer__pay pay">
-                <div class="pay__item">
-                    <img src="./resourses/img/footer-icons/visa-icon.svg" alt="Visa">
-                </div>
-                <div class="pay__item">
-                    <img src="./resourses/img/footer-icons/mastercard-icon.svg" alt="MasterCard">
-                </div>
-                <div class="pay__item pay__item_last">
-                    <img src="./resourses/img/footer-icons/mir-icon.svg" alt="Мир">
-                </div>
-            </section>
-            <p class="main-footer__text">©️ 2023 Double Cup | Все права защищены</p>
-            <!-- Technical support of the site -->
-            <section class="main-footer__sup sup">
-                <p class="sup__text">Тех. поддержка:</p>
-                <div class="sup__image">
-                    <a href="">
-                        <img src="./resourses/img/footer-icons/tg-icon.svg" alt="Telegram">
-                    </a>
-                </div>
-            </section>
-        </div>
-    </footer>
+                    </div>
+                    <!-- Information about delivery -->
+                    <section class="info__delivery">
+                        <p class="info__delivery_text">Доставка: с 8:00 до 21:30</p>
+                        <p class="info__delivery_tel">
+                            <a href="tel:88315552525">8 (831) 555-25-25</a>
+                        </p>
+                    </section>
+                </section>
+                <!-- Main site navigation -->
+                <nav class="main-header__navigation">
+                    <ul class="main-header__list">
+                        <li class="list__el">
+                            <a href="./main_page.html">Главная</a>
+                        </li>
+                        <li class="list__el list__el_active">
+                            <a href="./sales_page.html">Акции</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="./delivery_page.html">Доставка</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="./payments_page.html">Как оплачивать</a>
+                        </li>
+                        <li class="list__el list__el_last">
+                            <a href="">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Buttons "Login" "Cart" and cart block -->
+                <section class="main-header__btns-block">
+                    <button class="cart__btn js-cart-btn">
+                        <div class="cart__btn__icon js-cart-btn">
+                            <img class="js-cart-icon js-cart-btn" src="./resourses/img/header-icons/cart-icon.svg" alt="">
+                        </div>
+                        <p class="cart__btn__text js-cart-text js-cart-btn">Пусто</p>
+                    </button>
+                    <!-- Cart block -->
+                    <article class="main-header__cart-block hide">
+                        <h1 class="cart-block__title title">Корзина</h1>
+                        <hr class="cart-block__sep">
+                        <!-- Cart items -->
+                        <section class="cart-block__items"></section> 
+                        <hr class="cart-block__sep">
+                        <!-- Result price -->
+                        <section class="cart-block__result">
+                            <h2 class="result__title title">Итого:</h2>
+                            <p class="result__price title">0 ₽</p>
+                        </section>
+                        <!-- Buttons "Order" and "Go to the cart page" -->
+                        <section class="cart-block__btns-block">
+                            <a href="./checkout_page.html" class="js-order-btn">
+                                <button class="btn__order js-order-btn">Оформить заказ</button>
+                            </a>    
+                            <a href="./cart_page.html" class="js-go-cart">
+                                <button class="btn__cart js-go-cart-btn">В корзину</button>
+                            </a>
+                        </section>   
+                    </article>
+                </section>
+            </div>
+        </header>
+        <hr class="main-sep">
+        <!-- Site main section -->
+        <section class="main-content">
+            <div class="main-content__image">
+                <img src="./resourses/img/background-images/banner-1.jpg" alt="">
+            </div>
+            <!-- Information about opening shop sales -->
+            <article class="main-content__text-block">
+                <!-- Title block with promo -->
+                <section class="main-content__title-block">
+                    <h2 class="main-content__title title">Скидка 10% на весь заказ</h2>
+                    <p class="main-content__promo">DOUBLE-CUP-2023</p>
+                </section>
+                <h3 class="main-content__subtitle title">Double Cup дарит Покупателям акцию «10% скидки в честь открытия»</h3>
+                <p class="main-content__text">Акция действует на всё меню до 30.06.2023 г. включительно при покупке на сумму от 1000 рублей.</p>
+                <p class="main-content__text">Воспользоваться данной акцией можно не более одного раза в день.</p>
+                <p class="main-content__ps-text">* Скидка не суммируется с другими скидками, акциями и спец. предложениями.</p>
+            </article>
+            <div class="main-content__image">
+                <img src="./resourses/img/background-images/banner-2.jpg" alt="">
+            </div>
+            <!-- Information about birthday sales -->
+            <article class="main-content__text-block">
+                <!-- Title block with promo -->
+                <section class="main-content__title-block">
+                    <h2 class="main-content__title title">Скидка 20% ко дню рождения</h2>
+                    <p class="main-content__promo">HAPPY-BIRTHDAY!</p>
+                </section>
+                <h3 class="main-content__subtitle title">Double Cup дарит Покупателям акцию «20% скидки в День Рождения»</h3>
+                <p class="main-content__text">Акция действует на весь заказ, за 3 дня до и за 3 дня после Дня Рождения, при предъявлении документа, удостоверяющего личность.</p>
+                <p class="main-content__text">Воспользоваться данной акцией можно не более одного раза в день.</p>
+                <p class="main-content__ps-text">* Скидка не суммируется с другими скидками, акциями и спец. предложениями.</p>
+            </article>
+            <div class="main-content__image">
+                <img src="./resourses/img/background-images/banner-3.jpg" alt="">
+            </div>
+            <!-- Information about delivery sales -->
+            <article class="main-content__text-block">
+                <!-- Title block with promo -->
+                <section class="main-content__title-block">
+                    <h2 class="main-content__title title">Бесплатная доставка</h2>
+                    <p class="main-content__promo">FREE-DOUBLE-2023</p>
+                </section>
+                <h3 class="main-content__subtitle title">Double Cup дарит Покупателям акцию «Бесплатная доставка при заказе на сумму от 1000 рублей»</h3>
+                <p class="main-content__text">Акция действует на всё меню до 30.06.2023 г. включительно при покупке на сумму от 1000 рублей.</p>
+                <p class="main-content__text">Воспользоваться данной акцией можно не более одного раза в день.</p>
+            </article>
+        </section>
+        <!-- Site footer -->
+        <footer class="main-footer">
+            <div class="main-footer__wrapper">
+                <!-- Payment systems supported by site -->
+                <section class="main-footer__pay pay">
+                    <div class="pay__item">
+                        <img src="./resourses/img/footer-icons/visa-icon.svg" alt="Visa">
+                    </div>
+                    <div class="pay__item">
+                        <img src="./resourses/img/footer-icons/mastercard-icon.svg" alt="MasterCard">
+                    </div>
+                    <div class="pay__item pay__item_last">
+                        <img src="./resourses/img/footer-icons/mir-icon.svg" alt="Мир">
+                    </div>
+                </section>
+                <p class="main-footer__text">©️ 2023 Double Cup | Все права защищены</p>
+                <!-- Technical support of the site -->
+                <section class="main-footer__sup sup">
+                    <p class="sup__text">Тех. поддержка:</p>
+                    <div class="sup__image">
+                        <a href="">
+                            <img src="./resourses/img/footer-icons/tg-icon.svg" alt="Telegram">
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </footer>
+    </div>
 
     <!-- Register section -->
     <article class="profile-block js-register__block">

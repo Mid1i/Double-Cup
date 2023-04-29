@@ -10,7 +10,6 @@
 :root {
     --black: #000000;
     --white: #ffffff;
-    --transp-white: rgba(255, 255, 255, 0.93);
     --profile-color: rgba(255, 255, 255, 0.886);
     --inputs-hover-color: rgba(255, 255, 255, 0.131);
     --gray: #A7A7A7;
@@ -60,7 +59,9 @@ body {
     height: 2px;
 }
 
-.max-amount-block__btn:hover {
+.cart__btn:hover,
+.btn__cart:hover,
+.login__btn:hover {
     background: var(--light-red);
     box-shadow: 0px 0px 10px var(--gray);
     transform: scale(1.05);
@@ -75,21 +76,44 @@ body {
 .main-content {
     flex: 1 0 auto;
     padding: 0px 35px;
+
+    &__image {
+        height: 400px;
+        width: 600px;
+        margin: 30px auto 50px;
+
+        & img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        margin: 0px 0px 20px;
+        text-align: center;
+    }
+
+    &__text {
+        margin: 0px 0px 10px;
+        text-align: center;
+
+        & a {
+            color: var(--red);
+            text-decoration: underline;
+        }
+    }
 }
 
-.main-content,
 .max-amount-block {
     align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.max-amount-block {
     background: var(--dark-gray);
     box-shadow: 0px 0px 10px var(--dark-gray);
     border-radius: 15px;
     color: var(--light-gray);
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     opacity: 1;
     position: fixed;
     padding: 20px 15px 10px;
@@ -125,6 +149,11 @@ body {
 @media(max-width: 1100px) {
     .main-content {
         padding: 0px 25px;
+
+        &__image {
+            height: 200px;
+            width: 300px;
+        }
     }
 }
 
@@ -142,7 +171,7 @@ body {
 
 @media (max-width: 520px) {
     .main-content {
-        padding: 0px 15px; 
+        padding: 0px 15px;
     }
 }
 

@@ -31,6 +31,13 @@ body {
     font-size: 16px;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
 .lock { 
     overflow: hidden; 
 }
@@ -72,6 +79,7 @@ body {
 .main-footer__wrapper {
     margin: 0px auto;
     max-width: 1280px;
+    width: 100%;
 }
 
 .main-sep,
@@ -80,6 +88,7 @@ body {
     height: 2px;
     margin: 0px auto;
     max-width: 1250px;
+    width: 100%;
 }
 
 /* 
@@ -89,8 +98,8 @@ body {
 */
 
 .main-content {
+    flex: 1 0 auto;
     padding: 0px 35px;
-    min-height: 78.1%;
 
     &__info {
         display: flex;

@@ -28,6 +28,13 @@ body {
   font-size: 16px;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 .lock {
   overflow: hidden;
 }
@@ -43,10 +50,12 @@ body {
 .main-footer__wrapper {
   margin: 0px auto;
   max-width: 1280px;
+  width: 100%;
 }
 
 .main-sep {
   background: var(--light-gray);
+  flex: 1 0 auto;
   height: 2px;
 }
 
@@ -65,6 +74,7 @@ body {
     --------------
 */
 .main-content {
+  flex: 1 0 auto;
   padding: 0px 35px;
 }
 .main-content__image {
@@ -431,6 +441,9 @@ body {
   grid-template: repeat(2, 50px)/0.8fr 1fr 0.9fr 1.3fr;
   grid-template-areas: "image title title price" "image buttons buttons delete";
   margin: 15px 0px 0px;
+}
+.cart-block__item:last-child {
+  margin: 15px 0px;
 }
 .cart-block__result {
   justify-content: space-between;

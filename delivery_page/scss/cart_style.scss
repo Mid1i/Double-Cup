@@ -45,6 +45,10 @@
             "image title title price"
             "image buttons buttons delete";
         margin: 15px 0px 0px;
+
+        &:last-child {
+            margin: 15px 0px;
+        }
     }
 
     &__result {
