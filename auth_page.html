@@ -106,22 +106,25 @@
             <article class="profile-block js-register__block active_profile">
                 <h1 class="profile-block__title title">Зарегистрироваться</h1>
                 <form action="" class="profile-block__form form">
-                    <div class="form__item">
+                    <p class="profile-block__error"></p>
+                    <section class="form__item">
                         <input type="text" name="username" placeholder="Username"  class="form__input form__input_name" required autofocus>
                         <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
-                    </div>
-                    <div class="form__item form__item_email">
+                    </section>
+                    <p class="profile-block__error"></p>
+                    <section class="form__item form__item_email">
                         <input type="text" name="email" placeholder="Email"  class="form__input form__input_email" required>
                         <img src="./resourses/img/profile-icons/email-icon.svg" alt="" class="form__icon">
-                    </div>
-                    <div class="form__item">
+                    </section>
+                    <p class="profile-block__error"></p>
+                    <section class="form__item">
                         <input type="password" name="password" placeholder="Password" class="form__input form__input_pass" required>
                         <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
-                    </div>
-                    <div class="form__checkbox">
+                    </section>
+                    <section class="form__checkbox">
                         <input type="checkbox" name="Agreement" class="form__checkbox_input" required>
                         <p class="form__checkbox_text">Я согласен с <span>правилами</span> и <span>условиями</span></p>
-                    </div>
+                    </section>
                     <button class="form__btn" id="register-btn">Зарегистрироваться</button>
                 </form>
                 <p class="profile-block__text">Уже есть аккаунт? <span class="js-login">Войти</span></p>
@@ -131,18 +134,19 @@
             <article class="profile-block js-login__block">
                 <h1 class="profile-block__title title">Войти</h1>
                 <form action="" class="profile-block__form form">
-                    <div class="form__item form__item_email">
+                    <p class="profile-block__error"></p>
+                    <section class="form__item form__item_email">
                         <input type="text" name="username" placeholder="Username"  class="form__input js-name-login" required autofocus>
                         <img src="./resourses/img/profile-icons/username-icon.svg" alt="" class="form__icon">
-                    </div>
-                    <div class="form__item">
+                    </section>
+                    <section class="form__item">
                         <input type="password" name="password" placeholder="Password" class="form__input js-password-login" required>
                         <img src="./resourses/img/profile-icons/padlock-icon.svg" alt="" class="form__icon">
-                    </div>
+                    </section>
                     <button class="form__btn form__btn_login">Войти</button>
                 </form>
-                <div class="profile-block__text">Нет аккаунта? <span class="js-register">Зарегистрироваться</span></div>
-                <div class="profile-block__footer-text">©️ Double Cup</div>
+                <p class="profile-block__text">Нет аккаунта? <span class="js-register">Зарегистрироваться</span></p>
+                <p class="profile-block__footer-text">©️ Double Cup</p>
             </article>
         </main>
         <!-- Site footer -->
