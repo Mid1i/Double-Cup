@@ -35,6 +35,19 @@
     &__items {
         overflow-y: scroll;
         height: 260px;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+    
+            &-track {
+                background: var(--light-gray);
+            }
+    
+            &-thumb {
+                background-color: var(--red);
+                border-radius: 5px;
+            }
+        }
     }
 
     &__item {

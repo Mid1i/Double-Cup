@@ -29,7 +29,19 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    padding: 0px 20px;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+
+        &-track {
+            background: var(--light-gray);
+        }
+
+        &-thumb {
+            background-color: var(--red);
+            border-radius: 5px;
+        }
+    }
 }
 
 .wrapper {

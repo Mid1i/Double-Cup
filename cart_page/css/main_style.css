@@ -28,6 +28,16 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 5px;
+}
 
 .wrapper {
   display: flex;
