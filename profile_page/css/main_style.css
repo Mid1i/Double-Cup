@@ -99,6 +99,13 @@ body::-webkit-scrollbar-thumb {
   width: 300px;
 }
 
+.main-content__error {
+  color: var(--red);
+  margin: 10px 0px 0px;
+  text-align: center;
+  height: 34px;
+}
+
 .form-block__section {
   align-items: center;
   box-shadow: 0px 0px 10px var(--light-gray);

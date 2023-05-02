@@ -70,6 +70,7 @@ body {
 
 .main-sep {
     background: var(--light-gray);
+    flex: 0 0 2px;
     height: 2px;
 }
 
@@ -87,7 +88,7 @@ body {
 
 .main-content {
     flex: 1 0 auto;
-    padding: 0px 35px;
+    padding: 20px 35px;
 }
 
 .main-content,
@@ -137,32 +138,26 @@ body {
 
 @media(max-width: 1100px) {
     .main-content {
-        padding: 0px 25px;
-    }
-}
-
-@media(max-width: 850px) {
-    .main-content {
-        margin: 0px 0px 20px;
+        padding: 20px 25px;
     }
 }
 
 @media(max-width: 767px) {
     .main-content {
-        padding: 0px 25px 
+        padding: 20px 25px 
     }
 }
 
 @media (max-width: 520px) {
     .main-content {
-        padding: 0px 15px; 
+        padding: 20px 15px; 
     }
 }
 
 @import "./header_style.scss";
 @import "./cart_style.scss";
 @import "./footer_style.scss";
-// @import "./profile_style.scss";
+@import "./profile_style.scss";
 @import "./loader_style.scss";
 
 .hide {
@@ -172,176 +167,4 @@ body {
 .hide-element {
     opacity: 0;
     pointer-events: none;
-}
-
-
-
-.profile-block {
-    align-items: center;
-    background: var(--profile-color); 
-    border: 3px solid var(--black);
-    border-radius: 20px;
-    display: none;
-    flex-direction: column;
-    padding: 40px 25px 10px;
-    height: 600px;
-    width: 400px;
-
-    &__title {
-        font-size: 32px;
-    }
-
-    &__form {
-        flex: 1 0 auto;
-        margin: 20px 0px;
-        width: 100%;
-    }
-
-    &__error {
-        color: var(--red);
-        margin: 10px 0px 10px;
-        text-align: center;
-        height: 34px;
-    }
-    
-    &__text {
-        margin: 0px 0px 10px;
-        text-align: center;
-
-        & span {
-            cursor: pointer;
-            color: var(--red);
-            font-weight: 600;
-        }
-
-        & span:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-.form {
-    
-    &__item {
-        position: relative;
-        width: 100%;
-        z-index: 1;
-
-        &_email {
-            margin: 15px 0px;
-        }
-    }
-
-    &__input {
-        background: inherit;
-        border-bottom: 2px solid var(--black);
-        border-radius: 10px 10px 0px 0px;
-        font-size: inherit;
-        font-weight: inherit;
-        margin: 0px 0px 5px;
-        padding: 10px 30px 10px 10px;
-        transition: background 0.5s;
-        width: 100%;
-    }
-
-    &__input::placeholder {
-        color: var(--black);
-    }
-
-    &__input:hover,
-    &__input:focus {
-        background: var(--inputs-hover-color);
-    }
-
-    &__icon {
-        bottom: 15px;
-        position: absolute;
-        right: 10px;     
-    }
-
-    &__checkbox {
-        align-items: center;
-        display: flex;
-        cursor: pointer;
-        justify-content: center;
-        margin: 30px 0px 10px;
-
-        &_text {
-            font-size: 16px;
-            font-weight: 400;
-            margin: 0px 0px 0px 10px;
-    
-            & span {
-                cursor: pointer;
-                font-weight: 600;
-            }
-    
-            & span:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &__btn {
-        background: var(--red);
-        border-radius: 10px;
-        color: var(--white);
-        font-size: 18px;
-        font-weight: 600;
-        height: 50px;
-        padding: 15px 73px;
-        width: 100%;
-
-        &_login {
-            padding: 15px 140px;
-            margin: 74px 0px 0px;
-        }
-    }
-}
-
-@media(max-width: 430px) {
-    .profile-block {
-        padding: 40px 10px 10px;
-        width: 300px;
-
-        &__icon {
-            margin: -40px -10px 0px;
-        }
-
-        &__title {
-            font-size: 28px;
-        }
-    }
-
-    .form__btn {
-        padding: 15px 40px;
-        width: 100%;
-        
-        &_login {
-            padding: 15px 110px;
-            margin: 50px 0px 20px;
-        }
-    }
-}
-
-@media(max-width: 310px) {
-    .profile-block {
-        width: 250px;
-
-        &__title {
-            font-size: 24px;
-        }
-    }
-
-    .form__btn {
-        padding: 15px 12px;
-
-        &_login {
-            padding: 15px 80px;
-        }
-    }
-}
-
-.active_profile {
-    display: flex;
 }
