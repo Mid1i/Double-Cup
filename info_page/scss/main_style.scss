@@ -194,6 +194,10 @@ body {
     .main-content__image {
         display: none;
     }
+
+    .main-content__title {
+        margin: 10px 0px 0px;
+    }
 }
 
 @import "./header_style.scss";
