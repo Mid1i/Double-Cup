@@ -37,7 +37,7 @@ body {
 }
 
 .lock { 
-    overflow: hidden; 
+    pointer-events: none;
 }
 
 .title {
@@ -112,7 +112,7 @@ body {
         margin: 20px 0px;
 
         &_last {
-            margin: 0px 0px 20px;
+            margin: 0px 0px 100px;
             max-width: 720px;
         }
     }
@@ -183,22 +183,35 @@ body {
         
         &__image {
             margin: 20px 0px 10px;
+
+            & img {
+                border-radius: 5px;
+                height: 150px;
+            }
         }
 
         &__title {
             font-size: 20px;
+            line-height: 20px;
+            margin: 10px 0px 20px;
         }
 
         &__subtitle {
-            font-size: 18px;
-            margin: 10px 0px;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            margin: 10px 0px 20px;
+        }
+
+        &__list-item {
+            font-size: 14px;
         }
 
         &__text {
-            margin: 10px 0px;
+            font-size: 14px;
+            margin: 15px 0px;
 
             &_last {
-                margin: 0px 0px 10px;
+                margin: 0px 0px 15px;
             }
         }
     }

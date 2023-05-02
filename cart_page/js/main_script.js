@@ -28,7 +28,7 @@ document.addEventListener("click", (event) => {
     let id = arg.id;
 
     // Tracks clicking on the "Menu" button
-    if (arg.classList.contains("main-header__burger")) {
+    if ((arg.classList.contains("main-header__burger")) || (arg.classList.contains("main-header__burger-span"))) {
         document.querySelector(".main-header__burger").classList.toggle("active"); 
         header_list.classList.toggle("active"); 
         body.classList.toggle("lock");  
@@ -60,6 +60,7 @@ document.addEventListener("click", (event) => {
     // Tracks clicking on the "Register" button
     if ((id == "register-btn") && (![username.value.trim(), email.value.trim(), password.value.trim()].includes("")) && checkbox.checked) {
         localStorage.setItem("username", username.value.trim());
+        localStorage.setItem("email", email.value.trim());
     }
 });
 

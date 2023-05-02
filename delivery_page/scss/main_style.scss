@@ -37,7 +37,7 @@ body {
 }
 
 .lock { 
-    overflow: hidden; 
+    pointer-events: none;
 }
 
 .title {
@@ -112,7 +112,7 @@ body {
             max-width: 600px;
 
             &_last {
-                margin: 20px 0px;
+                margin: 20px 0px 100px;
                 max-width: 100%;
             }
         }
@@ -184,15 +184,23 @@ body {
         
         &__image {
             margin: 20px 0px 10px;
+
+            & img {
+                border-radius: 5px;
+                height: 140px;
+            }
         }
 
         &__title {
+            font-size: 18px;
             margin: 0px 0px 10px;
             text-align: center;
         }
 
-        &__text_last {
-            margin: 0px 0px 10px;
+        &__text,
+        &__text_second-block {
+            font-size: 14px;
+            margin: 10px 0px;
         }
     }
 }

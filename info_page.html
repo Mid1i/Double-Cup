@@ -4,12 +4,12 @@
     <!-- Page encoding -->
     <meta charset="UTF-8">
     <!-- Page title -->
-    <title>Double Cup - интернет магазин еды по доступным ценам.</title>
+    <title> Информация о нас | Double Cup - интернет магазин еды по доступным ценам.</title>
     <!-- Adaptive -->
     <meta name="viewport" content="width=device-width, viewport-fit=cover">
     <!-- Connecting CSS styles -->
-    <link rel="stylesheet" href="./cart_page/css/reset_style.css">
-    <link rel="stylesheet" href="./cart_page/css/main_style.css">
+    <link rel="stylesheet" href="./info_page/css/reset_style.css">
+    <link rel="stylesheet" href="./info_page/css/main_style.css">
     <!-- Connecting the site icon -->
     <link rel="icon" href="./resourses/img/favicon-icons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./resourses/img/favicon-icons/favicon-32x32.png">
@@ -62,52 +62,93 @@
                         <li class="list__el">
                             <a href="./payments_page.html">Как оплачивать</a>
                         </li>
-                        <li class="list__el list__el_last">
+                        <li class="list__el list__el_last list__el_active">
                             <a href="./info_page.html">О нас</a>
                         </li>
                     </ul>
                 </nav>
-                <!-- Login button -->
-                <section class="main-header__login"></section>
+                <!-- Buttons "Login" "Cart" and cart block -->
+                <section class="main-header__btns-block">
+                    <button class="cart__btn js-cart-btn">
+                        <div class="cart__btn__icon js-cart-btn">
+                            <img class="js-cart-icon js-cart-btn" src="./resourses/img/header-icons/cart-icon.svg" alt="">
+                        </div>
+                        <p class="cart__btn__text js-cart-text js-cart-btn">Пусто</p>
+                    </button>
+                    <!-- Cart block -->
+                    <article class="main-header__cart-block hide">
+                        <h1 class="cart-block__title title">Корзина</h1>
+                        <hr class="cart-block__sep">
+                        <!-- Cart items -->
+                        <section class="cart-block__items"></section> 
+                        <hr class="cart-block__sep">
+                        <!-- Result price -->
+                        <section class="cart-block__result">
+                            <h2 class="result__title title">Итого:</h2>
+                            <p class="result__price title">0 ₽</p>
+                        </section>
+                        <!-- Buttons "Order" and "Go to the cart page" -->
+                        <section class="cart-block__btns-block">
+                            <a href="./checkout_page.html" class="js-order-btn">
+                                <button class="btn__order js-order-btn">Оформить заказ</button>
+                            </a>    
+                            <a href="./cart_page.html" class="js-go-cart">
+                                <button class="btn__cart js-go-cart-btn">В корзину</button>
+                            </a>
+                        </section>   
+                    </article>
+                </section>
             </div>
         </header>
         <hr class="main-sep">
         <!-- Site main section -->
-        <main class="main-content">
-            <!-- Information about cart -->
-            <article class="main-content__info">
-                <h1 class="info__title title">Корзина</h1>
-                <p class="info__counter js-counter">3 товара</p>
+        <section class="main-content">
+            <div class="main-content__image">
+                <img src="./resourses/img/background-images/info-back.jpg" alt="Привет, мой друг! Рад видеть тебя здесь!">
+            </div>
+            <!-- Information block -->
+            <article class="main-content__info-block">
+                <h2 class="main-content__title title">Интернет-магазин по продаже еды «Double Cup».</h2>
+                <p class="main-content__text">Данный сайт не является настоящим, данная компания вымышленная, созданная в рамках учебного проекта по разработке веб-приложения.</p>
             </article>
-            <!-- Main blocks -->
-            <section class="main-content__sections">
-                <!-- Cart block -->
-                <section class="main-content__cart"></section>
-                <!-- Empty block -->
-                <article class="main-content__empty-block empty-block hide">
-                    <div class="empty-block__image">
-                        <img src="./resourses/img/main-icons/cart-icon.jpg" alt="">
-                    </div>
-                    <h2  class="empty-block__title title">Корзина пуста</h2>
-                    <p class="empty-block__text">Можете посмотреть каталог товаров на <a href="./main_page.html">главной странице</a></p>
-                    <a href="./main_page.html">
-                        <button class="empty-block__btn">На главную</button>
-                    </a>
-                    <p class="empty-block__return">Вернуть удалённые товары</p>
-                </article>
-                <!-- Order block -->
-                <article class="main-content__order order">
-                    <h3 class="order__title">Итого: </h3>
-                    <section class="order__result">
-                        <p class="order__counter js-counter title">3 товара</p>
-                        <p class="order__price title">10000 ₽</p>
+            <!-- Developers block -->
+            <ul class="main-content__list">
+                <li class="main-content__list-el">FrontEnd developer: <span>Mikhail Ch.</span></li>
+                <li class="main-content__list-el">BackEnd developer: <span>Rustam H.</span></li>    
+            </ul>
+            <!-- Contacts block -->
+            <section class="main-content__contacts contacts">
+                <!-- Contacts block with text information -->
+                <section class="contacts__left-block">
+                    <h2 class="left-block__title title">Контакты</h2>
+                    <!-- Geoposition information -->
+                    <section class="left-block__section left-block__section_geo">
+                        <div class="left-block__icon">
+                            <img src="./resourses/img/main-icons/geo-icon.svg" alt="">
+                        </div>
+                        <p class="left-block__text">г. Нижний Новгород, ул. Минина, 24к1</p>
                     </section>
-                    <a href="./checkout_page.html">
-                        <button class="order__btn">Перейти к оформлению</button>
-                    </a>
-                </article>
+                    <!-- Email information -->
+                    <section class="left-block__section left-block__section_email">
+                        <div class="left-block__icon">
+                            <img src="./resourses/img/main-icons/email-icon.svg" alt="">
+                        </div>
+                        <p class="left-block__text">doublecup@nn.ru</p>
+                    </section>
+                    <!-- Mobile phone information -->
+                    <section class="left-block__section left-block__section_phone">
+                        <div class="left-block__icon">
+                            <img src="./resourses/img/main-icons/phone-icon.svg" alt="">
+                        </div>
+                        <p class="left-block__text">8 (831) 555-25-25</p>
+                    </section>
+                </section>
+                <!-- Contacts block with map for big screens -->
+                <section class="contacts__right-block">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae2756a6d06c3094da79ed89a0357ac2b950a453352e59389dd22585c9af80310&amp;width=500&amp;height=260&amp;lang=ru_RU&amp;scroll=true"></script>
+                </section>
             </section>
-        </main>
+        </section>
         <!-- Site footer -->
         <footer class="main-footer">
             <div class="main-footer__wrapper">
@@ -137,7 +178,7 @@
         </footer>
     </div>
 
-    <!-- Login section -->
+    <!-- Register section -->
     <article class="profile-block js-register__block">
         <div class="profile-block__icon js-quit">
             <img class="js-quit" src="./resourses/img/profile-icons/cross-icon.svg">
@@ -166,7 +207,7 @@
         <p class="profile-block__footer-text">©️ Double Cup</p>
     </article>
 
-    <!-- Register section -->
+    <!-- Login section -->
     <article class="profile-block js-login__block">
         <div class="profile-block__icon js-quit">
             <img class="js-quit" src="./resourses/img/profile-icons/cross-icon.svg" alt="quit">
@@ -199,7 +240,7 @@
     </section>
 </body>
 <!-- Connecting JavaScript -->
-<script src="./cart_page/js/main_script.js" type="module"></script>
-<script src="./cart_page/js/createCart.js" type="module"></script>
-<script src="./cart_page/js/cartFunctions.js" type="module"></script>
+<script src="./info_page/js/main_script.js" type="module"></script>
+<script src="./info_page/js/createCart.js" type="module"></script>
+<script src="./info_page/js/cartFunctions.js" type="module"></script>
 </html>

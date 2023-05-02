@@ -1,5 +1,7 @@
 import { cart, cart_section, getProduct, gettingWeight, changeCart, createCartItem } from "./createCart.js";
 
+const body = document.querySelector("body");
+
 const goods_amount = document.querySelectorAll(".js-counter");
 const order_section = document.querySelector(".order");
 const empty_section = document.querySelector(".empty-block");
@@ -42,6 +44,7 @@ document.addEventListener("click", (event) => {
     // Tracks clicking on the "OK" button when its max amount
     if (arg.classList.contains("max-amount-block__btn")) {
         cart_alert.classList.add("hide-element");
+        body.classList.remove("lock");
     }
 
     checkOrder();
@@ -54,6 +57,7 @@ function plusFunction(id) {
 
     if (cart[id] >= 25) {
         cart_alert.classList.remove("hide-element");
+        body.classList.add("lock");
     } else {
         cart[id]++;
 
@@ -64,7 +68,10 @@ function plusFunction(id) {
 
         $(`.${id}-weight`).html(gettingWeight(product, cart[id]));
         amount++;
-    }   
+    } 
+    
+    localStorage.setItem("cart_update", JSON.stringify(cart));
+    localStorage.setItem("result_price_update", result_price);
 };
 
 // Changing the quantity of the product
@@ -87,6 +94,9 @@ function minusFunction(id) {
 
         $(`.${id}-weight`).html(gettingWeight(product, cart[id]));
         amount--;
+
+        localStorage.setItem("cart_update", JSON.stringify(cart));
+        localStorage.setItem("result_price_update", result_price);
     }
 };
 
@@ -101,6 +111,9 @@ function zeroFunction(id) {
 
     amount -= cart[id];
     cart[id] = 0;
+
+    localStorage.setItem("cart_update", JSON.stringify(cart));
+    localStorage.setItem("result_price_update", result_price);
 }
 
 // Checking amount of goods in the cart
@@ -141,8 +154,6 @@ function updateCart() {
             item.innerHTML = `${amount} товаров`;
         });
     }
-    localStorage.setItem("cart_update", JSON.stringify(cart));
-    localStorage.setItem("result_price_update", result_price);
 };
 
 function deleteElement(id) {

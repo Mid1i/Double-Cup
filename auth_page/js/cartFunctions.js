@@ -1,5 +1,7 @@
 import { cart, cart_block_items, getProduct, createCartItem, startSettings } from "./createCart.js";
 
+const body = document.querySelector("body");
+
 const header_cart_icon = document.querySelector(".js-cart-icon");
 
 const cart_block = document.querySelector(".main-header__cart-block");
@@ -42,17 +44,11 @@ document.addEventListener("click", (event) => {
     if (arg.classList.contains(`js-${id}-delete`)) {
         zeroFunction(id);
     }
-    
-    // Tracks clicking on the "Go to the Cart" button
-    if (arg.classList.contains("js-icon")) {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 700);
-    }
 
     // Tracks clicking on the "OK" button when its max amount
     if (arg.classList.contains("max-amount-block__btn")) {
         cart_alert.classList.add("hide-element");
+        body.classList.remove("lock");
     }
 
     checkOrder();
@@ -63,6 +59,7 @@ document.addEventListener("click", (event) => {
 function plusFunction(id) {
     if (cart[id] >= 25) {
         cart_alert.classList.remove("hide-element");
+        body.classList.add("lock");
     } else {
         cart[id]++;
 
@@ -79,6 +76,9 @@ function plusFunction(id) {
         updateResultPrice(id, "+");
         amount++;
     }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("result_price", result_price);
 };
 
 // Changing the quantity of the product
@@ -102,6 +102,9 @@ function minusFunction(id) {
         updatePrice(id);
         updateResultPrice(id, "-");
         amount--;
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        localStorage.setItem("result_price", result_price);
     }
 };
 
@@ -119,6 +122,9 @@ function zeroFunction(id) {
 
     amount -= cart[id];
     cart[id] = 0;
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("result_price", result_price);
 }
 
 // Checking amount of goods in the cart
@@ -138,9 +144,6 @@ function checkOrder() {
         cart_block.classList.add("hide");
         amount = 0;
     }
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-    localStorage.setItem("result_price", result_price);
 };
 
 // Updating cart sentence

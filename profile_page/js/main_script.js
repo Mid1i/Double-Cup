@@ -12,6 +12,7 @@ const name_section = document.querySelector(".js-username-section");
 const email_section = document.querySelector(".js-email-section");
 
 let userNameItem = localStorage.getItem("username");
+let emailItem = localStorage.getItem("email");
 
 let path = "https://mid1i.github.io/Double-Cup/resourses";
 
@@ -21,7 +22,7 @@ document.addEventListener("click", (event) => {
     let arg = event.target;
 
     // Tracks clicking on the "Menu" button
-    if (arg.classList.contains("main-header__burger")) {
+    if ((arg.classList.contains("main-header__burger")) || (arg.classList.contains("main-header__burger-span"))) {
         document.querySelector(".main-header__burger").classList.toggle("active"); 
         header_list.classList.toggle("active"); 
         body.classList.toggle("lock");  
@@ -29,6 +30,7 @@ document.addEventListener("click", (event) => {
 
     if ((arg.classList.contains("js-save")) && (![username.value.trim(), email.value.trim()].includes(""))) {
         localStorage.setItem("username", username.value.trim());
+        localStorage.setItem("email", email.value.trim());
     }
 
     if (arg.classList.contains("form-block__btn-exit")) {
@@ -128,6 +130,7 @@ function removeIcon(section, icon_name) {
 
 function startSettings() {
     username.value = userNameItem;
+    email.value = emailItem;
 
     createIcon(name_section, "js-name-icon");
     createIcon(email_section, "js-email-icon");

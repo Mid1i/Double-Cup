@@ -37,7 +37,7 @@ body {
 }
 
 .lock { 
-    overflow: hidden; 
+    pointer-events: none; 
 }
 
 .title {
@@ -219,10 +219,26 @@ body {
         
         &__image {
             margin: 20px 0px 10px;
+
+            & img {
+                border-radius: 5px;
+                height: 140px;
+            }
+        }
+
+        &__title {
+            font-size: 18px;
+            margin: 5px 0px;
+
+            &-block {
+                justify-content: center;
+            }
         }
 
         &__subtitle {
+            font-family: "Roboto", sans-serif;
             font-size: 16px;
+            margin: 15px 0px;
         }
 
         &__text,

@@ -1,5 +1,7 @@
 import { cart, cart_block_items, getProduct, createCartItem, startSettings } from "./createCart.js";
 
+const body = document.querySelector("body");
+
 const header_cart_icon = document.querySelector(".js-cart-icon");
 
 const cart_block = document.querySelector(".main-header__cart-block");
@@ -53,6 +55,7 @@ document.addEventListener("click", (event) => {
     // Tracks clicking on the "OK" button when its max amount
     if (arg.classList.contains("max-amount-block__btn")) {
         cart_alert.classList.add("hide-element");
+        body.classList.remove("lock");
     }
 
     checkOrder();
@@ -63,6 +66,7 @@ document.addEventListener("click", (event) => {
 function plusFunction(id) {
     if (cart[id] >= 25) {
         cart_alert.classList.remove("hide-element");
+        body.classList.add("lock");
     } else {
         cart[id]++;
 
