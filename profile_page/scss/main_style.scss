@@ -51,6 +51,10 @@ body {
     pointer-events: none;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .title {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
@@ -67,6 +71,7 @@ body {
 
 .main-sep {
     background: var(--light-gray);
+    flex: 0 0 2px;
     height: 2px;
 }
 
@@ -112,86 +117,6 @@ body {
     margin: 10px 0px 0px;
     text-align: center;
     height: 34px;
-}
-
-.form-block {
-
-    &__section {
-        align-items: center;
-        box-shadow: 0px 0px 10px var(--light-gray);
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        margin: 20px 0px;
-        padding: 10px 5px;
-
-        flex-direction: column;
-    }
-
-    &__label {
-        color: var(--gray);
-        font-size: 17px;
-        margin: 0px 0px 10px;
-    }
-
-    &__input {
-        background: inherit;
-        border-bottom: 1px solid var(--gray);
-        border-radius: 10px 10px 0px 0px;
-        font-size: 16px;
-        font-weight: 600;
-        margin-left: -10px;
-        height: 30px;
-        width: 260px;
-    }
-
-    &__section:hover {
-        background: var(--very-light-gray);
-        box-shadow: 0px 0px 10px var(--gray);
-    }
-
-    &__icon {
-        bottom: 15px;
-        position: absolute;
-        right: 5px;
-        height: 14px;
-        width: 17px;
-    }
-
-    &__btn {
-        background: var(--white);
-        border: 2px solid var(--light-gray);
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 20px auto 0px;
-        padding: 10px;
-        height: 42px;
-        width: 150px;
-    }
-
-    &__btn-exit {
-        background: var(--red);
-        border-radius: 10px;
-        color: var(--white);
-        font-weight: 600;
-        font-size: 16px;
-        padding: 10px;
-        margin: 0px 0px 20px;
-        height: 42px;
-        width: 150px;
-    }
-}
-
-.form-block__btn:hover {
-    background: var(--very-light-gray);
-    transform: scale(1.05);
-}
-
-.form-block__btn-exit:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--gray);
-    transform: scale(1.05);
 }
 
 .max-amount-block {
@@ -256,16 +181,6 @@ body {
 @media(max-width: 520px) {
     .main-content {
         padding: 0px 15px;
-    }
-}
-
-@media(max-width: 320px) {
-    .main-content__form {
-        width: 250px;
-    }
-
-    .form-block__input {
-        width: 210px;
     }
 }
 

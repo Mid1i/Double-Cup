@@ -52,7 +52,7 @@ window.onload = () => {
     setTimeout(() => {
         loader_icon.style.cssText = "opacity: 0;";
         loader.style.cssText = "opacity: 0;";
-        body.classList.toggle("lock");
+        body.classList.toggle("no-scroll");
     }, 1000);
 
     setTimeout(() => {

@@ -10,16 +10,16 @@
 :root {
     --black: #000000;
     --white: #ffffff;
+    --very-light-gray: #f7f7f7;
+    --light-gray: #DDDDDD;
+    --gray: #A7A7A7;
     --transp-white: rgba(255, 255, 255, 0.93);
     --profile-color: rgba(255, 255, 255, 0.886);
     --inputs-hover-color: rgba(255, 255, 255, 0.131);
-    --gray: #A7A7A7;
-    --very-light-gray: #f7f7f7;
-    --light-gray: #DDDDDD;
     --dark-gray: #464646;
     --btn-hover-color: #2a2a2a;
-    --red: #EF314B;
     --light-red: #e85266;
+    --red: #EF314B;
     --green: #4AB838;
 }
 
@@ -53,6 +53,10 @@ body {
 
 .lock {
     pointer-events: none; 
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .main-header,

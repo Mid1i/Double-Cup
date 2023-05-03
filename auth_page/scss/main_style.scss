@@ -10,16 +10,16 @@
 :root {
     --black: #000000;
     --white: #ffffff;
+    --very-light-gray: #f7f7f7;
+    --light-gray: #DDDDDD;
+    --gray: #A7A7A7;
     --transp-white: rgba(255, 255, 255, 0.93);
     --profile-color: rgba(255, 255, 255, 0.886);
     --inputs-hover-color: rgba(255, 255, 255, 0.131);
-    --gray: #A7A7A7;
-    --very-light-gray: #f7f7f7;
-    --light-gray: #DDDDDD;
     --dark-gray: #464646;
     --btn-hover-color: #2a2a2a;
-    --red: #EF314B;
     --light-red: #e85266;
+    --red: #EF314B;
 }
 
 body {
@@ -54,9 +54,23 @@ body {
     pointer-events: none;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .title {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
+}
+
+.item__btn,
+.main-content,
+.item__counter,
+.max-amount-block,
+.item__btns-block,
+.cart-block__result {
+    align-items: center;
+    display: flex;
 }
 
 .main-sep,
@@ -71,7 +85,6 @@ body {
 .main-sep {
     background: var(--light-gray);
     flex: 0 0 2px;
-    height: 2px;
 }
 
 .max-amount-block__btn:hover {
@@ -88,14 +101,8 @@ body {
 
 .main-content {
     flex: 1 0 auto;
-    padding: 20px 35px;
-}
-
-.main-content,
-.max-amount-block {
-    align-items: center;
-    display: flex;
     justify-content: center;
+    padding: 20px 35px;
 }
 
 .max-amount-block {
@@ -104,6 +111,7 @@ body {
     border-radius: 15px;
     color: var(--light-gray);
     flex-direction: column;
+    justify-content: center;
     opacity: 1;
     position: fixed;
     padding: 20px 15px 10px;

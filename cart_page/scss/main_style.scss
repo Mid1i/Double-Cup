@@ -55,6 +55,10 @@ body {
     pointer-events: none;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .title {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;

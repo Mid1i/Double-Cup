@@ -43,7 +43,7 @@ document.addEventListener("click", (event) => {
     if ((arg.classList.contains("main-header__burger")) || (arg.classList.contains("main-header__burger-span"))) {
         document.querySelector(".main-header__burger").classList.toggle("active"); 
         header_list.classList.toggle("active"); 
-        body.classList.toggle("lock");  
+        body.classList.toggle("no-scroll");  
     }
     
     // Tracks clicking on the Products navigate item
@@ -88,7 +88,7 @@ window.onload = () => {
     setTimeout(() => {
         loader_icon.style.cssText = "opacity: 0;";
         loader.style.cssText = "opacity: 0;";
-        body.classList.toggle("lock");
+        body.classList.toggle("no-scroll");
     }, 1000);
 
     setTimeout(() => {

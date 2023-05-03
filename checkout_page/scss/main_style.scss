@@ -49,6 +49,10 @@ body {
     width: 100%;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .main-sep {
     background: var(--light-gray);
     height: 2px;
