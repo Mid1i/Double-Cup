@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb {
 
 .main-sep {
   background: var(--light-gray);
-  height: 2px;
+  flex: 0 0 2px;
 }
 
 .main-sep,

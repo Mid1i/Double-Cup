@@ -99,6 +99,10 @@ body {
     width: 100%;
 }
 
+.main-sep {
+    flex: 0 0 2px;
+}
+
 .main-sep,
 .cart-sep {
     background: var(--light-gray);
