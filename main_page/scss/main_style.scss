@@ -88,7 +88,7 @@ body::-webkit-scrollbar,
     height: 40px;
 
     &__icon {
-        margin: 0px 10px 0px 0px;
+        margin-right: 10px;
     }
 
     &__text {
@@ -133,7 +133,7 @@ body::-webkit-scrollbar,
 
 .main-content {
     flex: 1 0 auto;
-    padding: 0px 65px;
+    padding-inline: 65px;
     position: relative;
 }
 
@@ -152,7 +152,7 @@ body::-webkit-scrollbar,
     }
 
     & img:first-child {
-        margin: 0px 0px 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -179,7 +179,7 @@ body::-webkit-scrollbar,
 
     &__text {
         text-align: center;
-        margin: 0px 0px 10px;
+        margin-bottom: 10px;
     }
 
     &__btn {
@@ -187,7 +187,7 @@ body::-webkit-scrollbar,
         border-radius: 15px;
         color: var(--light-gray);
         font-weight: 600;
-        padding: 10px 0px;
+        padding-block: 10px;
         pointer-events: auto;
         width: 100px;
     }
@@ -201,7 +201,7 @@ body::-webkit-scrollbar,
 
 @media(max-width: 767px) {
     .main-content {
-        padding: 0px 35px;
+        padding-inline: 35px;
     }
 
     .cart__icon {
@@ -212,7 +212,7 @@ body::-webkit-scrollbar,
 
 @media(max-width: 520px) {
     .main-content {
-        padding: 0px 15px; 
+        padding-inline: 15px; 
     }
 }
 

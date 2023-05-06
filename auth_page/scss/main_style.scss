@@ -64,6 +64,7 @@ body::-webkit-scrollbar,
     font-weight: 700;
 }
 
+.loader,
 .item__btn,
 .main-content,
 .item__counter,
@@ -126,7 +127,7 @@ body::-webkit-scrollbar,
 
     &__text {
         text-align: center;
-        margin: 0px 0px 10px;
+        margin-bottom: 10px;
     }
 
     &__btn {
@@ -134,7 +135,7 @@ body::-webkit-scrollbar,
         border-radius: 15px;
         color: var(--light-gray);
         font-weight: 600;
-        padding: 10px 0px;
+        padding-block: 10px;
         width: 100px;
     }
 }

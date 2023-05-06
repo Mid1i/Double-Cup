@@ -120,11 +120,11 @@ body {
 
 .main-content {
     flex: 1 0 auto;
-    padding: 0px 35px;
+    padding-inline: 35px;
 
     &__info {
         display: flex;
-        margin: 30px 0px;
+        margin-block: 30px;
     }
 
     &__sections {
@@ -146,14 +146,14 @@ body {
 
     &__cart,
     &__empty-block {
-        margin: 0px 0px 30px; 
+        margin-bottom: 30px; 
     }
 }
 
 .info {
     &__title {
         font-size: 30px;
-        margin: 0px 20px 0px 0px;
+        margin-right: 20px;
     }
 
     &__counter {
@@ -183,7 +183,7 @@ body {
 
     &__text {
         text-align: center;
-        margin: 0px 0px 10px;
+        margin-bottom: 10px;
     }
 
     &__btn {
@@ -204,17 +204,17 @@ body {
 
 @media(max-width: 1100px) {
     .main-content {
-        padding: 0px 25px;
+        padding-inline: 25px;
     }
 }
 
 @media(max-width: 850px) {
     .main-content {
-        margin: 0px 0px 20px;
+        margin-bottom: 20px;
     
         &__info {
             justify-content: center;
-            margin: 20px 0px;
+            margin-block: 20px;
         }
 
         &__cart {
@@ -225,16 +225,16 @@ body {
 
 @media(max-width: 767px) {
     .main-content {
-        padding: 0px 25px 
+        padding-inline: 25px; 
     }
 }
 
 @media (max-width: 520px) {
     .main-content {
-        padding: 0px 15px; 
+        padding-inline: 15px; 
         
         &__info {
-            margin: 10px 0px;
+            margin-block: 10px;
         }
     }
 }

@@ -39,7 +39,7 @@
     }
 
     &__form {
-        margin: 20px 0px;
+        margin-block: 20px;
         width: 100%;
     }
     
@@ -68,7 +68,7 @@
         z-index: 1;
 
         &_email {
-            margin: 25px 0px;
+            margin-block: 25px;
         }
     }
 
@@ -107,7 +107,7 @@
         &_text {
             font-size: 16px;
             font-weight: 400;
-            margin: 0px 0px 0px 10px;
+            margin-bottom: 10px;
     
             & span {
                 cursor: pointer;
@@ -126,7 +126,7 @@
 
         &_login {
             padding: 15px 140px;
-            margin: 74px 0px 0px;
+            margin-top: 74px;
         }
     }
 }

@@ -17,7 +17,7 @@
     grid-template-areas: 
         "fruits bread pasta cheese"
         "fruits sweets pasta milk";
-    margin: 0px 0px 50px;
+    margin-bottom: 50px;
 
     &__item {
         cursor: pointer;
@@ -110,7 +110,7 @@
             "fruits fruits fruits fruits fruits fruits sweets sweets sweets sweets sweets sweets"
             "pasta pasta pasta pasta pasta cheese cheese cheese cheese cheese cheese cheese"
             "pasta pasta pasta pasta pasta milk milk milk milk milk milk milk";
-        margin: 0px 0px 10px;
+        margin-bottom: 10px;
 
         &__item_fruits {
             border-radius: 20px 0px 0px 0px;
@@ -133,9 +133,9 @@
         }
 
         &__item__btn {
-            width: 110px;
             bottom: 10px;
             right: 5px;
+            width: 110px;
         }
     }
 }

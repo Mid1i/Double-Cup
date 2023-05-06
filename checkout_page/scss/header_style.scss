@@ -9,7 +9,7 @@
     padding: 10px;
 
     &__logo {
-        margin: 0px 50px 0px 0px;
+        margin-right: 50px;
     }
 
     &__text {
@@ -24,6 +24,6 @@
 
 @media(max-width: 340px) {
     .main-header__logo {
-        margin: 0px 20px 0px 0px;
+        margin-right: 20px;
     }
 }

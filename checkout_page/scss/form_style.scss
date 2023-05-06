@@ -8,7 +8,7 @@
         font-family: "Ubuntu", sans-serif;
         font-weight: 700;
         font-size: 28px;
-        margin: 20px 0px;
+        margin-block: 20px;
         position: relative;
 
         &_delivery {
@@ -47,7 +47,7 @@
 
     &__subtitle {
         font-weight: 600;
-        margin: 0px 0px 20px;
+        margin-bottom: 20px;
     }
 
     &__section {
@@ -84,13 +84,9 @@
     border: 1px solid var(--white);
     border-radius: 10px;
     position: relative;
-    margin: 0px 0px 10px;
+    margin-bottom: 10px;
     padding: 10px;
     width: 300px;
-
-    &_tel {
-        margin: 0px 10px 10px 0px;
-    }
 
     &_pay,
     &_pickup {
@@ -98,6 +94,7 @@
         display: flex;
     }
 
+    &_tel,
     &__radio,
     &_pay-cash {
         margin: 0px 10px 10px 0px;
@@ -116,7 +113,7 @@
         background: inherit;
         border-bottom: 1px solid var(--gray);
         font-size: 18px;
-        margin: 10px 0px 0px;
+        margin-top: 10px;
         width: 245px;
 
         &_order,
@@ -143,7 +140,7 @@
     }
 
     &__icon {
-        margin: 0px 10px 0px 0px;
+        margin-right: 10px;
         height: 30px;
         width: 30px;
     }

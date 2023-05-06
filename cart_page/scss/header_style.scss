@@ -31,7 +31,7 @@
 
 .info {
     &__logo {
-        margin: 0px 10px 0px 0px; 
+        margin-right: 10px; 
     }
 
     &__delivery {
@@ -46,7 +46,7 @@
 }
 
 .list__el {
-    margin: 0px 25px 0px 0px;
+    margin-right: 25px;
     pointer-events: auto;
 
     &_last {
@@ -67,7 +67,7 @@
     height: 40px; 
 
     &_icon {
-        margin: 0px 10px 0px 0px;
+        margin-right: 10px;
     }
 
     &_text {
@@ -162,7 +162,7 @@
     }
 
     .list__el {
-        margin: 20px 0px 0px;
+        margin-top: 20px;
     }
 }
 

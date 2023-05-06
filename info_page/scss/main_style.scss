@@ -96,7 +96,7 @@ body::-webkit-scrollbar,
     padding: 0px 35px;
 
     &__image {
-        margin: 30px 0px;
+        margin-block: 30px;
         
         & img {
             height: 100%;
@@ -113,7 +113,7 @@ body::-webkit-scrollbar,
     }
 
     &__list {
-        margin: 0px 0px 30px;
+        margin-bottom: 30px;
 
         &-el span {
             font-weight: 600;
@@ -143,7 +143,7 @@ body::-webkit-scrollbar,
 
     &__text {
         text-align: center;
-        margin: 0px 0px 10px;
+        margin-bottom: 10px;
     }
 
     &__btn {
@@ -151,7 +151,7 @@ body::-webkit-scrollbar,
         border-radius: 15px;
         color: var(--light-gray);
         font-weight: 600;
-        padding: 10px 0px;
+        padding-block: 10px;
         width: 100px;
     }
 }
@@ -164,25 +164,25 @@ body::-webkit-scrollbar,
 
 @media(max-width: 1100px) {
     .main-content {
-        padding: 0px 25px;
+        padding-inline: 25px;
     }
 }
 
 @media(max-width: 850px) {
     .main-content {
-        margin: 0px 0px 20px;
+        margin-bottom: 20px;
     }
 }
 
 @media(max-width: 767px) {
     .main-content {
-        padding: 0px 25px 
+        padding-inline: 25px; 
     }
 }
 
 @media(max-width: 520px) {
     .main-content {
-        padding: 0px 15px;
+        padding-inline: 15px;
 
         &__title {
             font-size: 20px;
@@ -200,7 +200,7 @@ body::-webkit-scrollbar,
     }
 
     .main-content__title {
-        margin: 10px 0px 0px;
+        margin-top: 10px;
     }
 }
 

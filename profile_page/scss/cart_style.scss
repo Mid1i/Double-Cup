@@ -23,7 +23,7 @@
 
 .cart-block {
     &__title {
-        padding: 0px 0px 5px;
+        padding-bottom: 5px;
         text-align: center;
     }
 
@@ -44,10 +44,10 @@
         grid-template-areas:
             "image title title price"
             "image buttons buttons delete";
-        margin: 15px 0px 0px;
+        margin-top: 15px;
 
         &:last-child {
-            margin: 15px 0px;
+            margin-block: 15px;
         }
     }
 
@@ -59,7 +59,7 @@
     &__btns-block {
         display: flex;
         float: right;
-        padding: 0px 20px;
+        padding-inline: 20px;
     }
 }
 
@@ -79,7 +79,7 @@
     &__title {
         grid-area: title;
         font-weight: 600;
-        padding: 10px 0px 0px;
+        padding-top: 10px;
     }
 
     &__price {
@@ -152,7 +152,7 @@
 .btn__order {
     background: var(--white);
     border: 2px solid var(--light-gray);
-    margin: 0px 20px 0px 0px;
+    margin-right: 20px;
     width: 150px;
 }
 

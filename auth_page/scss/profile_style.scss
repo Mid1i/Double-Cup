@@ -21,19 +21,19 @@
 
     &__form {
         flex: 1 0 auto;
-        margin: 20px 0px;
+        margin-block: 20px;
         width: 100%;
     }
 
     &__error {
         color: var(--red);
-        margin: 10px 0px 10px;
+        margin-block: 10px;
         text-align: center;
         height: 34px;
     }
     
     &__text {
-        margin: 0px 0px 10px;
+        margin-bottom: 10px;
         text-align: center;
 
         & span {
@@ -56,7 +56,7 @@
         z-index: 1;
 
         &_email {
-            margin: 15px 0px;
+            margin-block: 15px;
         }
     }
 
@@ -66,7 +66,7 @@
         border-radius: 10px 10px 0px 0px;
         font-size: inherit;
         font-weight: inherit;
-        margin: 0px 0px 5px;
+        margin-bottom: 5px;
         padding: 10px 30px 10px 10px;
         transition: background 0.5s;
         width: 100%;
@@ -97,7 +97,7 @@
         &_text {
             font-size: 16px;
             font-weight: 400;
-            margin: 0px 0px 0px 10px;
+            margin-left: 10px;
     
             & span {
                 cursor: pointer;
@@ -122,7 +122,7 @@
 
         &_login {
             padding: 15px 140px;
-            margin: 74px 0px 0px;
+            margin-top: 74px;
         }
     }
 }

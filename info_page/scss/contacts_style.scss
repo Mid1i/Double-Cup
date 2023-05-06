@@ -10,7 +10,7 @@
     justify-content: center;
     background: var(--white);
     flex-wrap: wrap;
-    margin: 0px 0px 50px;
+    margin-bottom: 50px;
 
     &__left-block {
         border-radius: 20px;
@@ -33,7 +33,7 @@
     &__title {
         color: var(--red);
         font-size: 26px;
-        margin: 0px 0px 30px;
+        margin-bottom: 30px;
     }
 
     &__section {
@@ -41,12 +41,12 @@
         display: flex;
 
         &_email {
-            margin: 30px 0px;
+            margin-block: 30px;
         }
     }
 
     &__icon {
-        margin: 0px 20px 0px 0px; 
+        margin-right: 20px; 
         height: 20px;
         width: 20px;
     }
@@ -62,7 +62,7 @@
         flex-wrap: wrap;
 
         &__right-block {
-            margin: 20px 0px 0px;
+            margin-top: 20px;
         }
     }
 }
@@ -85,11 +85,11 @@
 
     .left-block__title {
         text-align: center;
-        margin: 0px 0px 10px;
+        margin-bottom: 10px;
     }
 
     .left-block__section_email {
-        margin: 20px 0px;
+        margin-block: 20px;
     }
 
     .left-block__text {

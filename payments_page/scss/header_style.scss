@@ -39,7 +39,7 @@
 
 .info {
     &__logo {
-        margin: 0px 10px 0px 0px;
+        margin-right: 10px;
     }
 
     &__delivery {
@@ -54,7 +54,7 @@
 }
 
 .list__el {
-    margin: 0px 25px 0px 0px;
+    margin-right: 25px;
     pointer-events: auto;
 
     &_active {
@@ -88,7 +88,7 @@
     height: 40px; 
 
     &__icon {
-        margin: 0px 10px 0px 0px;
+        margin-right: 10px;
     }
 
     &__text {
@@ -99,7 +99,7 @@
 
 .login__btn {
     padding: 8px 15px;
-    margin: 0px 50px 0px 0px;
+    margin-right: 50px;
 }
 
 .cart__btn {
@@ -113,11 +113,11 @@
     }
 
     .login__btn {
-        margin: 0px 20px 0px;
+        margin-inline: 20px;
     }
 
     .list__el {
-        margin: 0px 15px 0px 0px;
+        margin-right: 15px;
 
         &_last {
             margin: 0px;
@@ -205,13 +205,13 @@
     }
 
     .list__el {
-        margin: 20px 0px 0px;
+        margin-top: 20px;
     }
 }
 
 @media(max-width: 520px) {
     .login__btn {
-        margin: 0px 10px 0px 0px;
+        margin-right: 10px;
     }
 }
 
