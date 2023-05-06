@@ -25,18 +25,19 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
+}
 
-    &::-webkit-scrollbar {
-        width: 10px;
+body::-webkit-scrollbar,
+.cart-block__items::-webkit-scrollbar {
+    width: 10px;
 
-        &-track {
-            background: var(--light-gray);
-        }
+    &-track {
+        background: var(--light-gray);
+    }
 
-        &-thumb {
-            background-color: var(--red);
-            border-radius: 5px;
-        }
+    &-thumb {
+        background: var(--red);
+        border-radius: 5px;
     }
 }
 

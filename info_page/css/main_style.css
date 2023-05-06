@@ -26,14 +26,18 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
-body::-webkit-scrollbar {
+
+body::-webkit-scrollbar,
+.cart-block__items::-webkit-scrollbar {
   width: 10px;
 }
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+.cart-block__items::-webkit-scrollbar-track {
   background: var(--light-gray);
 }
-body::-webkit-scrollbar-thumb {
-  background-color: var(--red);
+body::-webkit-scrollbar-thumb,
+.cart-block__items::-webkit-scrollbar-thumb {
+  background: var(--red);
   border-radius: 5px;
 }
 
@@ -411,16 +415,6 @@ body::-webkit-scrollbar-thumb {
 .cart-block__items {
   overflow-y: scroll;
   height: 260px;
-}
-.cart-block__items::-webkit-scrollbar {
-  width: 10px;
-}
-.cart-block__items::-webkit-scrollbar-track {
-  background: var(--light-gray);
-}
-.cart-block__items::-webkit-scrollbar-thumb {
-  background-color: var(--red);
-  border-radius: 5px;
 }
 .cart-block__item {
   display: grid;
