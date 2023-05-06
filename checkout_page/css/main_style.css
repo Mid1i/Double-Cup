@@ -283,7 +283,7 @@ body::-webkit-scrollbar-thumb {
   top: 0px;
   height: 100%;
   width: 100%;
-  z-index: 4;
+  z-index: 5;
 }
 .loader__icon {
   animation: fill 1.3s linear infinite alternate;

@@ -65,8 +65,7 @@ body::-webkit-scrollbar,
 
 .main-sep,
 .main-header,
-.main-content,
-.main-footer__wrapper {
+.main-content {
     margin: 0px auto;
     max-width: 1280px;
     width: 100%;
@@ -77,9 +76,7 @@ body::-webkit-scrollbar,
     flex: 0 0 2px;
 }
 
-.cart__btn:hover,
-.btn__cart:hover,
-.login__btn:hover {
+.cart__btn:hover {
     background: var(--light-red);
     box-shadow: 0px 0px 10px var(--gray);
     transform: scale(1.05);
@@ -194,10 +191,10 @@ body::-webkit-scrollbar,
 }
 
 @import "./header_style.scss";
-@import "./cart_style.scss";
-@import "./footer_style.scss";
-@import "./profile_style.scss";
-@import "./loader_style.scss";
+@import "../../resourses/scss/cart_style.scss";
+@import "../../resourses/scss/profile_style.scss";
+@import "../../resourses/scss/footer_style.scss";
+@import "../../resourses/scss/loader_style.scss";
 
 .hide {
     display: none;

@@ -86,7 +86,7 @@ body {
 
 @import "./header_style.scss";
 @import "./form_style.scss";
-@import "./loader_style.scss";
+@import "../../resourses/scss/loader_style.scss";
 
 .right-input {
     border: 1px solid var(--green); 

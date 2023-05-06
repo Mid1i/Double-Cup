@@ -64,21 +64,16 @@ body::-webkit-scrollbar,
     font-weight: 700;
 }
 
-.loader,
 .item__btn,
 .main-content,
-.item__counter,
-.max-amount-block,
-.item__btns-block,
-.cart-block__result {
+.max-amount-block {
     align-items: center;
     display: flex;
 }
 
 .main-sep,
 .main-header,
-.main-content,
-.main-footer__wrapper {
+.main-content {
     margin: 0px auto;
     max-width: 1280px;
     width: 100%;
@@ -165,10 +160,10 @@ body::-webkit-scrollbar,
 }
 
 @import "./header_style.scss";
-@import "./cart_style.scss";
-@import "./footer_style.scss";
 @import "./profile_style.scss";
-@import "./loader_style.scss";
+@import "../../resourses/scss/cart_style.scss";
+@import "../../resourses/scss/footer_style.scss";
+@import "../../resourses/scss/loader_style.scss";
 
 .hide {
     display: none;

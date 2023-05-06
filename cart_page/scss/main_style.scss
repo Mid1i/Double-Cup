@@ -64,9 +64,7 @@ body {
     font-weight: 700;
 }
 
-.login__btn:hover,
 .order__btn:hover,
-.form__btn:hover,
 .empty-block__btn:hover,
 .max-amount-block__btn:hover {
     background: var(--light-red);
@@ -81,7 +79,6 @@ body {
 }
 
 .order__btn,
-.form__btn,
 .empty-block__btn {
     background: var(--red);
     border-radius: 10px;
@@ -92,8 +89,7 @@ body {
 }
 
 .main-header,
-.main-content,
-.main-footer__wrapper {
+.main-content {
     margin: 0px auto;
     max-width: 1280px;
     width: 100%;
@@ -243,9 +239,9 @@ body {
 @import "./cart_style.scss";
 @import "./order_style.scss";
 @import "./empty-block_style.scss";
-@import "./footer_style.scss";
-@import "./profile_style.scss";
-@import "./loader_style.scss";
+@import "../../resourses/scss/profile_style.scss";
+@import "../../resourses/scss/footer_style.scss";
+@import "../../resourses/scss/loader_style.scss";
 
 .hide {
     display: none;

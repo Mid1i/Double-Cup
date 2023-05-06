@@ -59,9 +59,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
 }
 
-.login__btn:hover,
 .order__btn:hover,
-.form__btn:hover,
 .empty-block__btn:hover,
 .max-amount-block__btn:hover {
   background: var(--light-red);
@@ -76,7 +74,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .order__btn,
-.form__btn,
 .empty-block__btn {
   background: var(--red);
   border-radius: 10px;
@@ -87,8 +84,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main-header,
-.main-content,
-.main-footer__wrapper {
+.main-content {
   margin: 0px auto;
   max-width: 1280px;
   width: 100%;
@@ -546,54 +542,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* 
-    ----------------
-     Footer section
-    ----------------
-*/
-.main-footer {
-  background: var(--dark-gray);
-}
-.main-footer__pay, .main-footer__sup, .main-footer__wrapper {
-  align-items: center;
-  display: flex;
-}
-.main-footer__wrapper {
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px 30px;
-}
-.main-footer__text {
-  color: var(--gray);
-  margin-block: 15px;
-  text-align: center;
-}
-
-.pay__item,
-.sup__text {
-  margin-right: 15px;
-}
-
-.pay__item_last {
-  margin: 0px;
-}
-
-.sup__text {
-  color: var(--red);
-  font-size: 18px;
-}
-
-@media (max-width: 950px) {
-  .footer-wrapper {
-    padding: 20px 10px;
-  }
-}
-@media (max-width: 790px) {
-  .footer-wrapper {
-    flex-direction: column;
-    padding-bottom: 10px;
-  }
-}
-/* 
     ---------------
     Profile section
     ---------------
@@ -686,7 +634,7 @@ body::-webkit-scrollbar-thumb {
 .form__checkbox_text {
   font-size: 16px;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-left: 10px;
 }
 .form__checkbox_text span {
   cursor: pointer;
@@ -696,12 +644,23 @@ body::-webkit-scrollbar-thumb {
   text-decoration: underline;
 }
 .form__btn {
+  background: var(--red);
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px;
   padding: 15px 73px;
   width: 350px;
 }
 .form__btn_login {
   padding: 15px 140px;
   margin-top: 74px;
+}
+.form__btn:hover {
+  background: var(--light-red);
+  box-shadow: 0px 0px 10px var(--gray);
+  transform: scale(1.05);
 }
 
 @media (max-width: 430px) {
@@ -742,6 +701,57 @@ body::-webkit-scrollbar-thumb {
   transform: translate(-50%, -50%) scale(1);
 }
 
+/* 
+    ----------------
+     Footer section
+    ----------------
+*/
+.main-footer {
+  background: var(--dark-gray);
+}
+.main-footer__pay, .main-footer__sup, .main-footer__wrapper {
+  align-items: center;
+  display: flex;
+}
+.main-footer__wrapper {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 30px;
+  margin: 0px auto;
+  max-width: 1280px;
+  width: 100%;
+}
+.main-footer__text {
+  color: var(--gray);
+  margin-block: 15px;
+  text-align: center;
+}
+
+.pay__item,
+.sup__text {
+  margin-right: 15px;
+}
+
+.pay__item_last {
+  margin: 0px;
+}
+
+.sup__text {
+  color: var(--red);
+  font-size: 18px;
+}
+
+@media (max-width: 950px) {
+  .footer-wrapper {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 790px) {
+  .footer-wrapper {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+}
 /* 
     --------------
     Loader section

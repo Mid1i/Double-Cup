@@ -40,7 +40,7 @@
     }
 
     &__form {
-        margin: 20px 0px;
+        margin-block: 20px;
         width: 100%;
     }
     
@@ -108,7 +108,7 @@
         &_text {
             font-size: 16px;
             font-weight: 400;
-            margin-bottom: 10px;
+            margin-left: 10px;
     
             & span {
                 cursor: pointer;
@@ -134,6 +134,12 @@
         &_login {
             padding: 15px 140px;
             margin-top: 74px;
+        }
+
+        &:hover {
+            background: var(--light-red);
+            box-shadow: 0px 0px 10px var(--gray);
+            transform: scale(1.05);  
         }
     }
 }
