@@ -35,12 +35,6 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.main-sep {
-  background: #DDDDDD;
-  flex: 0 0 2px;
-}
-
-.main-sep,
 .main-header,
 .main-content {
   margin: 0px auto;
@@ -86,15 +80,14 @@ body::-webkit-scrollbar-thumb {
     Main section
     ------------
 */
+.main-content {
+  flex: 1 0 auto;
+  padding: 0px 10px;
+}
 .main-content__form {
   display: flex;
   flex-direction: column;
   margin: 20px 0px 0px;
-}
-
-.main-content {
-  flex: 1 0 auto;
-  padding: 0px 10px;
 }
 
 /*

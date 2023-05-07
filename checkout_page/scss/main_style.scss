@@ -43,12 +43,6 @@ body {
     overflow: hidden;
 }
 
-.main-sep {
-    background: $line-color;
-    flex: 0 0 2px;
-}
-
-.main-sep,
 .main-header,
 .main-content {
     margin: 0px auto;
@@ -72,15 +66,15 @@ body {
     ------------
 */
 
-.main-content__form {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0px 0px;
-}
-
 .main-content {
     flex: 1 0 auto;
     padding: 0px 10px;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px 0px;
+    }
 }
 
 // Import form style
