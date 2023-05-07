@@ -36,7 +36,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main-sep {
-  background: var(--light-gray);
+  background: #DDDDDD;
   flex: 0 0 2px;
 }
 
@@ -89,6 +89,7 @@ body::-webkit-scrollbar-thumb {
 .main-content__form {
   display: flex;
   flex-direction: column;
+  margin: 20px 0px 0px;
 }
 
 .main-content {
@@ -105,7 +106,7 @@ body::-webkit-scrollbar-thumb {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-size: 28px;
-  margin: 20px 0px 0px;
+  margin: 20px 0px 10px;
   position: relative;
 }
 .form-block__title_delivery {

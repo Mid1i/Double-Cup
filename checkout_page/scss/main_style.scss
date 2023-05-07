@@ -44,7 +44,7 @@ body {
 }
 
 .main-sep {
-    background: var(--light-gray);
+    background: $line-color;
     flex: 0 0 2px;
 }
 
@@ -75,6 +75,7 @@ body {
 .main-content__form {
     display: flex;
     flex-direction: column;
+    margin: 20px 0px 0px;
 }
 
 .main-content {
