@@ -81,6 +81,11 @@ document.addEventListener("click", (event) => {
         localStorage.setItem("username", username.value.trim());
         localStorage.setItem("email", email.value.trim());
     }
+
+    // Tracks clicking on the "Arrow" button in slider
+    if (arg.classList.contains("slick-arrow")) {
+        event.preventDefault();
+    }
 });
 
 // Tracks loading of the window for the loading screen display
