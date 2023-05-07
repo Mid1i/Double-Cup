@@ -1,0 +1,47 @@
+/*
+    ----------------
+    Max amount block
+    ----------------
+*/
+
+.max-amount-block {
+    align-items: center;
+    background: $dark-gray;
+    box-shadow: 0px 0px 10px $dark-gray;
+    border-radius: 15px;
+    color: $line-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    position: fixed;
+    pointer-events: auto;
+    padding: 20px 15px 10px;
+    height: 110px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+    width: 205px;
+    z-index: 3;
+
+    &__text {
+        text-align: center;
+        margin: 0px 0px 10px;
+    }
+
+    &__btn {
+        background: $red;
+        border-radius: 15px;
+        color: $line-color;
+        font-weight: 600;
+        padding: 10px 0px;
+        width: 100px;
+    }
+}
+
+.max-amount-block__btn:hover {
+    background: $hover-red;
+    box-shadow: 0px 0px 10px $max-amount-color;
+    transform: scale(1.05);
+}

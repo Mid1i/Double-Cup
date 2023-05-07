@@ -6,8 +6,8 @@
 
 .profile-block {
     align-items: center;
-    background: var(--profile-color); 
-    border: 3px solid var(--black);
+    background: $back-gray; 
+    border: 3px solid $black;
     border-radius: 20px;
     display: none;
     flex-direction: column;
@@ -21,24 +21,24 @@
 
     &__form {
         flex: 1 0 auto;
-        margin-block: 20px;
+        margin: 20px 0px;
         width: 100%;
     }
 
     &__error {
-        color: var(--red);
-        margin-block: 10px;
+        color: $red;
+        margin: 10px 0px;
         text-align: center;
         height: 34px;
     }
     
     &__text {
-        margin-bottom: 10px;
+        margin: 0px 0px 10px;
         text-align: center;
 
         & span {
             cursor: pointer;
-            color: var(--red);
+            color: $red;
             font-weight: 600;
         }
 
@@ -56,29 +56,29 @@
         z-index: 1;
 
         &_email {
-            margin-block: 15px;
+            margin: 15px 0px;
         }
     }
 
     &__input {
         background: inherit;
-        border-bottom: 2px solid var(--black);
+        border-bottom: 2px solid $black;
         border-radius: 10px 10px 0px 0px;
         font-size: inherit;
         font-weight: inherit;
-        margin-bottom: 5px;
+        margin: 0px 0px 5px;
         padding: 10px 30px 10px 10px;
         transition: background 0.5s;
         width: 100%;
     }
 
     &__input::placeholder {
-        color: var(--black);
+        color: inherit;
     }
 
     &__input:hover,
     &__input:focus {
-        background: var(--inputs-hover-color);
+        background: $hover-gray;
     }
 
     &__icon {
@@ -97,7 +97,7 @@
         &_text {
             font-size: 16px;
             font-weight: 400;
-            margin-left: 10px;
+            margin: 0px 0px 0px 10px;
     
             & span {
                 cursor: pointer;
@@ -111,9 +111,9 @@
     }
 
     &__btn {
-        background: var(--red);
+        background: $red;
         border-radius: 10px;
-        color: var(--white);
+        color: $white;
         font-size: 18px;
         font-weight: 600;
         height: 50px;
@@ -122,7 +122,13 @@
 
         &_login {
             padding: 15px 140px;
-            margin-top: 74px;
+            margin: 74px 0px 0px;
+        }
+
+        &:hover {
+            background: $hover-red;
+            box-shadow: 0px 0px 10px $gray;
+            transform: scale(1.05);  
         }
     }
 }

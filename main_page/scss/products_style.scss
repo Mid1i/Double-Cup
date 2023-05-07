@@ -1,14 +1,17 @@
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /*
     ----------------
     Products section
     ----------------
 */
 .product__title {
-    margin-bottom: 20px;
+    margin: 0px 0px 20px;
 }
 
 .product__sep {
-    margin-bottom: 25px;
+    margin: 0px 0px 25px;
 }
 
 .product-block {
@@ -16,11 +19,11 @@
     gap: auto;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    margin-bottom: 50px;
+    margin: 0px 0px 50px;
  
     &__item {
         align-items: center;
-        box-shadow: 0px 0px 10px var(--gray);
+        box-shadow: 0px 0px 10px $gray;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -29,7 +32,7 @@
     }
 
     &__slider-item {
-        background: var(--white);
+        background: $white;
         
     }
 }
@@ -37,7 +40,7 @@
 .product__item {
 
     &__image {
-        margin-block: 20px;
+        margin: 20px 0px;
         height: 130px;
         width: 230px;
 
@@ -48,19 +51,19 @@
 
     &__title {
         font-weight: 600;
-        margin-bottom: 20px;
+        margin: 0px 0px 20px;
         text-align: center;
     }
 
     &__country {
-        color: var(--gray);
+        color: $gray;
         flex: 1 0 auto;
     }
 
     &__cost {
         display: flex;
         justify-content: space-between;
-        padding-inline: 10px;
+        padding: 0px 10px;
         width: 100%;
     }
 
@@ -69,7 +72,7 @@
     }
 
     &__weight {
-        color: var(--gray);
+        color: $gray;
     }
 
     &__main-btn {
@@ -95,10 +98,10 @@
     }
 
     &__counter {
-        border: 1px solid var(--red);
+        border: 1px solid $red;
         border-radius: 10px;
-        background: var(--white);
-        margin-inline: 10px;
+        background: $white;
+        margin: 0px 10px;
         width: 90px;
     }
 }
@@ -166,7 +169,7 @@
 
 @media(max-width: 767px) {
     .product__title {
-        margin-block: 20px ;
+        margin: 20px 0px;
     }
 }
 

@@ -1,31 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ----------------
      Global section
     ----------------
 */
 
-:root {
-    --black: #000000;
-    --white: #ffffff;
-    --transp-white: rgba(255, 255, 255, 0.93);
-    --profile-color: rgba(255, 255, 255, 0.886);
-    --inputs-hover-color: rgba(255, 255, 255, 0.131);
-    --gray: #A7A7A7;
-    --very-light-gray: #f7f7f7;
-    --light-gray: #DDDDDD;
-    --dark-gray: #464646;
-    --btn-hover-color: #2a2a2a;
-    --red: #EF314B;
-    --light-red: #e85266;
-    --green: #4AB838;
-}
-
 body {
-    background: var(--white);
-    color: var(--black);
+    background: $white;
+    color: $black;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -34,11 +21,11 @@ body {
         width: 10px;
 
         &-track {
-            background: var(--light-gray);
+            background: $line-color;
         }
 
         &-thumb {
-            background-color: var(--red);
+            background-color: $red;
             border-radius: 5px;
         }
     }
@@ -67,8 +54,8 @@ body {
 .order__btn:hover,
 .empty-block__btn:hover,
 .max-amount-block__btn:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--gray);
+    background: $hover-red;
+    box-shadow: 0px 0px 10px $gray;
     transform: scale(1.05);
 }
 
@@ -80,9 +67,9 @@ body {
 
 .order__btn,
 .empty-block__btn {
-    background: var(--red);
+    background: $red;
     border-radius: 10px;
-    color: var(--white);
+    color: $white;
     font-size: 18px;
     font-weight: 600;
     height: 50px;
@@ -101,12 +88,15 @@ body {
 
 .main-sep,
 .cart-sep {
-    background: var(--light-gray);
+    background: $line-color;
     height: 2px;
     margin: 0px auto;
     max-width: 1250px;
     width: 100%;
 }
+
+//import header section
+@import "./header_style.scss";
 
 /* 
     --------------
@@ -116,11 +106,11 @@ body {
 
 .main-content {
     flex: 1 0 auto;
-    padding-inline: 35px;
+    padding: 0px 35px;
 
     &__info {
         display: flex;
-        margin-block: 30px;
+        margin: 30px 0px;
     }
 
     &__sections {
@@ -133,7 +123,7 @@ body {
     &__order,
     &__empty-block {
         border-radius: 10px;
-        box-shadow: 0px 0px 10px var(--gray);
+        box-shadow: 0px 0px 10px $gray;
         display: flex;
         flex: 0 0 70%;
         flex-direction: column;
@@ -142,75 +132,34 @@ body {
 
     &__cart,
     &__empty-block {
-        margin-bottom: 30px; 
+        margin: 0px 0px 30px;
     }
 }
 
 .info {
     &__title {
         font-size: 30px;
-        margin-right: 20px;
+        margin: 0px 20px 0px 0px;
     }
 
     &__counter {
-        color: var(--gray);
+        color: $gray;
     }
-}
-
-.max-amount-block {
-    align-items: center;
-    background: var(--dark-gray);
-    box-shadow: 0px 0px 10px var(--dark-gray);
-    border-radius: 15px;
-    color: var(--light-gray);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    opacity: 1;
-    position: fixed;
-    padding: 20px 15px 10px;
-    height: 110px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s;
-    width: 205px;
-    z-index: 3;
-
-    &__text {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    &__btn {
-        background: var(--red);
-        border-radius: 15px;
-        color: var(--light-gray);
-        font-weight: 600;
-        padding: 10px 0px;
-        width: 100px;
-    }
-}
-
-.max-amount-block__btn:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--btn-hover-color);
-    transform: scale(1.05);
 }
 
 @media(max-width: 1100px) {
     .main-content {
-        padding-inline: 25px;
+        padding: 0px 25px;
     }
 }
 
 @media(max-width: 850px) {
     .main-content {
-        margin-bottom: 20px;
+        margin: 0px 0px 20px;
     
         &__info {
             justify-content: center;
-            margin-block: 20px;
+            margin: 20px 0px;
         }
 
         &__cart {
@@ -221,24 +170,27 @@ body {
 
 @media(max-width: 767px) {
     .main-content {
-        padding-inline: 25px; 
+        padding: 0px 25px;
     }
 }
 
 @media (max-width: 520px) {
     .main-content {
-        padding-inline: 15px; 
+        padding: 0px 15px;
         
         &__info {
-            margin-block: 10px;
+            margin: 10px 0px;
         }
     }
 }
 
-@import "./header_style.scss";
+// Import different sections
 @import "./cart_style.scss";
 @import "./order_style.scss";
 @import "./empty-block_style.scss";
+
+// Import other files
+@import "../../resourses/scss/max-block_style.scss";
 @import "../../resourses/scss/profile_style.scss";
 @import "../../resourses/scss/footer_style.scss";
 @import "../../resourses/scss/loader_style.scss";

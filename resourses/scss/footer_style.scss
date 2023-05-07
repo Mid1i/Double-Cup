@@ -4,7 +4,7 @@
     ----------------
 */
 .main-footer {
-    background: var(--dark-gray);
+    background: $dark-gray;
     
     &__pay,
     &__sup,
@@ -23,15 +23,15 @@
     }
 
     &__text {
-        color: var(--gray);
-        margin-block: 15px;
+        color: $gray;
+        margin: 15px 0px;
         text-align: center;
     }
 }
 
 .pay__item,
 .sup__text {
-    margin-right: 15px;
+    margin: 0px 15px 0px 0px;
 }
 
 .pay__item_last {
@@ -39,7 +39,7 @@
 }
 
 .sup__text {
-    color: var(--red);
+    color: $red;
     font-size: 18px;
 }
 
@@ -52,6 +52,6 @@
 @media(max-width: 790px) { 
     .footer-wrapper {
         flex-direction: column;
-        padding-bottom: 10px;
+        padding: 0px 0px 10px;
     }
 }

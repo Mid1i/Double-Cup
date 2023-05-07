@@ -1,3 +1,6 @@
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     -------------
     Order section
@@ -12,12 +15,12 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin: 0px 0px 20px;
     }
 
     &__title {
-        color: var(--dark-gray);
-        margin-bottom: 5px;
+        color: $dark-gray;
+        margin: 0px 0px 5px;
     }
 
     &__counter,

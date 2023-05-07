@@ -1,31 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ----------------
      Global section
     ----------------
 */
 
-:root {
-    --black: #000000;
-    --white: #ffffff;
-    --very-light-gray: #f7f7f7;
-    --light-gray: #DDDDDD;
-    --gray: #A7A7A7;
-    --transp-white: rgba(255, 255, 255, 0.93);
-    --profile-color: rgba(255, 255, 255, 0.886);
-    --inputs-hover-color: rgba(255, 255, 255, 0.131);
-    --dark-gray: #464646;
-    --btn-hover-color: #2a2a2a;
-    --light-red: #e85266;
-    --red: #EF314B;
-    --green: #4AB838;
-}
-
 body {
-    background: var(--white);
-    color: var(--black);
+    background: $white;
+    color: $black;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -36,11 +23,11 @@ body::-webkit-scrollbar,
     width: 10px;
 
     &-track {
-        background: var(--light-gray);
+        background: $line-color;
     }
 
     &-thumb {
-        background: var(--red);
+        background: $red;
         border-radius: 5px;
     }
 }
@@ -70,7 +57,6 @@ body::-webkit-scrollbar,
 
 .cart__icon,
 .slider-item,
-.max-amount-block,
 .product__item__counter,
 .main-content__contacts {
     align-items: center;
@@ -79,14 +65,14 @@ body::-webkit-scrollbar,
 }
 
 .btn {
-    background: var(--red);
+    background: $red;
     border-radius: 20px;
-    color: var(--white);
+    color: $white;
     padding: 8px 15px;
     height: 40px;
 
     &__icon {
-        margin-right: 10px;
+        margin: 0px 10px 0px 0px;
     }
 
     &__text {
@@ -97,8 +83,8 @@ body::-webkit-scrollbar,
 
 .btn:hover,
 .cart__icon:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--gray);
+    background: $hover-red;
+    box-shadow: 0px 0px 10px $gray;
     transform: scale(1.05);
 }
 
@@ -110,15 +96,28 @@ body::-webkit-scrollbar,
 .catalog__title,
 .product__title,
 .left-block__title {
-    color: var(--red);
+    color: $red;
     font-size: 32px;
 }
 
 .product__sep,
 .main-header__sep {
-    background: var(--light-gray);
+    background: $line-color;
     height: 2px;
 }
+
+// Import header section
+@import "./header_style.scss";
+
+// Import sales slider and slider settings
+@import "./banner-slider_style.scss";
+@import "./slick-slider_style.scss";
+
+// Import catalog section
+@import "./catalog_style.scss";
+
+// Import products section
+@import "./products_style.scss";
 
 /* 
     --------------
@@ -128,12 +127,12 @@ body::-webkit-scrollbar,
 
 .main-content {
     flex: 1 0 auto;
-    padding-inline: 65px;
+    padding: 0px 65px;
     position: relative;
 }
 
 .cart__icon {
-    background: var(--red);
+    background: $red;
     border-radius: 20px;
     bottom: 130px;
     cursor: pointer;
@@ -147,7 +146,7 @@ body::-webkit-scrollbar,
     }
 
     & img:first-child {
-        margin-bottom: 10px;
+        margin: 0px 0px 10px;
     }
 }
 
@@ -159,44 +158,9 @@ body::-webkit-scrollbar,
     transition: opacity 0.3s;
 }
 
-.max-amount-block {
-    background: var(--dark-gray);
-    box-shadow: 0px 0px 10px var(--dark-gray);
-    border-radius: 15px;
-    color: var(--light-gray);
-    padding: 20px 15px 10px;
-    height: 110px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 205px;
-    z-index: 3;
-
-    &__text {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    &__btn {
-        background: var(--red);
-        border-radius: 15px;
-        color: var(--light-gray);
-        font-weight: 600;
-        padding-block: 10px;
-        pointer-events: auto;
-        width: 100px;
-    }
-}
-
-.max-amount-block__btn:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--btn-hover-color);
-    transform: scale(1.05);
-}
-
 @media(max-width: 767px) {
     .main-content {
-        padding-inline: 35px;
+        padding: 0px 35px;
     }
 
     .cart__icon {
@@ -207,18 +171,17 @@ body::-webkit-scrollbar,
 
 @media(max-width: 520px) {
     .main-content {
-        padding-inline: 15px; 
+        padding: 0px 15px; 
     }
 }
 
-@import "./slick-slider_style.scss";
-@import "./header_style.scss";
-@import "./banner-slider_style.scss";
-@import "./catalog_style.scss";
-@import "./products_style.scss";
+// Import contacts section
 @import "./contacts_style.scss";
+
+// Import other files
 @import "../../resourses/scss/cart_style.scss";
 @import "../../resourses/scss/profile_style.scss";
+@import "../../resourses/scss/max-block_style.scss";
 @import "../../resourses/scss/footer_style.scss";
 @import "../../resourses/scss/loader_style.scss";
 

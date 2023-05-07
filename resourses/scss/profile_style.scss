@@ -6,8 +6,8 @@
 
 .profile-block {
     align-items: center;
-    background: var(--profile-color); 
-    border: 3px solid var(--black);
+    background: $back-gray; 
+    border: 3px solid $black;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
 
     &__icon {
         align-self: flex-end;
-        background: var(--red);
+        background: $red;
         border-radius: 0px 17px 0px 20px;
         cursor: pointer;
         padding: 12px;
@@ -32,7 +32,7 @@
     }
 
     &__icon:hover {
-        background: var(--light-red);
+        background: $hover-red;
     }
 
     &__title {
@@ -40,7 +40,7 @@
     }
 
     &__form {
-        margin-block: 20px;
+        margin: 20px 0px;
         width: 100%;
     }
     
@@ -50,7 +50,7 @@
 
         & span {
             cursor: pointer;
-            color: var(--red);
+            color: $red;
             font-weight: 600;
         }
 
@@ -69,13 +69,13 @@
         z-index: 1;
 
         &_email {
-            margin-block: 25px;
+            margin: 25px 0px;
         }
     }
 
     &__input {
         background: inherit;
-        border-bottom: 2px solid var(--black);
+        border-bottom: 2px solid $black;
         border-radius: 10px 10px 0px 0px;
         font-size: 16px;
         font-weight: 400;
@@ -85,12 +85,12 @@
     }
 
     &__input::placeholder {
-        color: var(--black);
+        color: inherit;
     }
 
     &__input:hover,
     &__input:focus {
-        background: var(--inputs-hover-color);
+        background: $hover-gray;
     }
 
     &__icon {
@@ -108,7 +108,7 @@
         &_text {
             font-size: 16px;
             font-weight: 400;
-            margin-left: 10px;
+            margin: 0px 0px 0px 10px;
     
             & span {
                 cursor: pointer;
@@ -122,9 +122,9 @@
     }
 
     &__btn {
-        background: var(--red);
+        background: $red;
         border-radius: 10px;
-        color: var(--white);
+        color: $white;
         font-size: 18px;
         font-weight: 600;
         height: 50px;
@@ -133,12 +133,12 @@
 
         &_login {
             padding: 15px 140px;
-            margin-top: 74px;
+            margin: 74px 0px 0px;
         }
 
         &:hover {
-            background: var(--light-red);
-            box-shadow: 0px 0px 10px var(--gray);
+            background: $hover-red;
+            box-shadow: 0px 0px 10px $gray;
             transform: scale(1.05);  
         }
     }

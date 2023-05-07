@@ -1,3 +1,6 @@
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ------------
     Cart section
@@ -36,7 +39,7 @@
     }
 
     &__country {
-        color: var(--gray);
+        color: $gray;
         grid-area: country;
     }
 
@@ -52,8 +55,8 @@
     &__counter,
     &__btn {
         align-items: center;
-        background: var(--white);
-        border: 2px solid var(--light-gray);
+        background: inherit;
+        border: 2px solid $line-color;
         display: flex;
         justify-content: center;
         height: 40px;
@@ -62,7 +65,7 @@
 
     &__counter:hover,
     &__btn:hover {
-        background: var(--very-light-gray);
+        background: $frame-color;
     }
 
     &__counter {    
@@ -75,7 +78,7 @@
     }
 
     &__delete:hover {
-        color: var(--red);
+        color: $red;
     }
 
     &__price {
@@ -86,7 +89,7 @@
 }
 
 .cart-sep {
-    margin-block: 10px;
+    margin: 10px 0px;
 
     &:last-child {
         display: none;
@@ -94,12 +97,12 @@
 }
 
 .minus-btn {
-    border-left: 1px solid var(--light-gray);
+    border-left: 1px solid $line-color;
 }
 
 .plus-btn {
     border-radius: 0px 5px 0px 0px;
-    border-left: 1px solid var(--light-gray);
+    border-left: 1px solid $line-color;
 }
 
 @media(max-width: 520px) {

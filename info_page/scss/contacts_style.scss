@@ -1,3 +1,6 @@
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ----------------
     Contacts section
@@ -8,13 +11,13 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background: var(--white);
+    background: $white;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin: 0px 0px 50px;
 
     &__left-block {
         border-radius: 20px;
-        box-shadow: 0px 0px 10px var(--gray);
+        box-shadow: 0px 0px 10px $gray;
         padding: 15px;
         height: 280px;
         width: 500px;
@@ -22,7 +25,7 @@
     }
 
     &__right-block {
-        box-shadow: 0px 0px 10px var(--gray);
+        box-shadow: 0px 0px 10px $gray;
         margin-left: -50px;
         height: 260px;
         z-index: 1;
@@ -31,9 +34,9 @@
 
 .left-block {
     &__title {
-        color: var(--red);
+        color: $red;
         font-size: 26px;
-        margin-bottom: 30px;
+        margin: 0px 0px 30px;
     }
 
     &__section {
@@ -41,12 +44,12 @@
         display: flex;
 
         &_email {
-            margin-block: 30px;
+            margin: 30px 0px;
         }
     }
 
     &__icon {
-        margin-right: 20px; 
+        margin: 0px 20px 0px 0px; 
         height: 20px;
         width: 20px;
     }
@@ -62,7 +65,7 @@
         flex-wrap: wrap;
 
         &__right-block {
-            margin-top: 20px;
+            margin: 20px 0px 0px;
         }
     }
 }
@@ -85,11 +88,11 @@
 
     .left-block__title {
         text-align: center;
-        margin-bottom: 10px;
+        margin: 0px 0px 10px;
     }
 
     .left-block__section_email {
-        margin-block: 20px;
+        margin: 20px 0px;
     }
 
     .left-block__text {

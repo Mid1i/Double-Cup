@@ -1,3 +1,6 @@
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ----------------
      Header section
@@ -31,7 +34,7 @@
 
 .info {
     &__logo {
-        margin-right: 10px; 
+        margin: 0px 10px 0px 0px;
     }
 
     &__delivery {
@@ -40,13 +43,13 @@
         line-height: 23px;
         
         &_text {
-            color: var(--gray);
+            color: $gray;
         }
     }
 }
 
 .list__el {
-    margin-right: 25px;
+    margin: 0px 25px 0px 0px;
     pointer-events: auto;
 
     &_last {
@@ -55,19 +58,19 @@
 }
 
 .list__el:hover {
-    color: var(--red);
+    color: $red;
     text-decoration: underline;
 }
 
 .login__btn {
-    background: var(--red);
+    background: $red;
     border-radius: 20px;
-    color: var(--white);
+    color: $white;
     padding: 8px 15px;
     height: 40px; 
 
     &_icon {
-        margin-right: 10px;
+        margin: 0px 10px 0px 0px;
     }
 
     &_text {
@@ -98,7 +101,7 @@
         &__burger::after,
         &__burger::before,
         &__burger span {
-            background: var(--black);
+            background: $black;
             height: 2px;
             left: 0px;
             position: absolute;
@@ -144,7 +147,7 @@
         }
 
         &__list {
-            background: var(--white);
+            background: $white;
             flex-direction: column;
             justify-content: center;
             left: 0px;
@@ -162,7 +165,7 @@
     }
 
     .list__el {
-        margin-top: 20px;
+        margin: 20px 0px 0px;
     }
 }
 

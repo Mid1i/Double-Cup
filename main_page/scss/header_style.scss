@@ -1,3 +1,6 @@
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ----------------
      Header section
@@ -19,7 +22,7 @@
 
     &__top-block {
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin: 0px 0px 10px;
     }
 
     &__burger {
@@ -31,15 +34,15 @@
     }
 
     &__cart-block {
-        background: var(--white);
-        box-shadow: 0px 0px 10px var(--gray);
+        background: $white;
+        box-shadow: 0px 0px 10px $gray;
         border-radius: 10px;
         padding: 5px;
     }
 
     &__goods-list {
         justify-content: space-around;
-        padding-block: 10px;
+        padding: 10px 0px;
         text-align: center;
         transition: all 0.3s;
     }
@@ -47,7 +50,7 @@
 
 .info {
     &__logo {
-        margin-right: 10px;
+        margin: 0px 10px 0px 0px;
     }
 
     &__delivery {
@@ -56,19 +59,19 @@
         line-height: 23px;
         
         &_text {
-            color: var(--gray);
+            color: $gray;
         }
     }
 }
 
 .list__el {
-    margin-right: 25px;
+    margin: 0px 25px 0px 0px;
     pointer-events: auto;
 
     &_active {
         border-radius: 10px;
-        background: var(--red);
-        color: var(--white);
+        background: $red;
+        color: $white;
         padding: 10px;
     }
 
@@ -84,17 +87,17 @@
 
 .list__el:hover,
 .goods-list__el:hover {
-    color: var(--red);
+    color: $red;
     text-decoration: underline;
 }
 
 .list__el_active:hover {
-    color: var(--white);
+    color: $white;
     text-decoration: none;
 }
 
 .login__btn {
-    margin-right: 50px;  
+    margin: 0px 50px 0px 0px;  
 }
 
 .cart__btn {
@@ -109,11 +112,11 @@
     }
 
     .login__btn {
-        margin-inline: 20px;
+        margin: 0px 20px;
     }
 
     .list__el {
-        margin-right: 15px;
+        margin: 0px 15px 0px 0px;
 
         &_last {
             margin: 0px;
@@ -137,7 +140,7 @@
         &__burger::after,
         &__burger::before,
         &__burger span {
-            background: var(--black);
+            background: $black;
             height: 2px;
             left: 0px;
             position: absolute;
@@ -183,7 +186,7 @@
         }
 
         &__list {
-            background: var(--white);
+            background: $white;
             flex-direction: column;
             justify-content: center;
             left: 0px;
@@ -201,7 +204,7 @@
     }
 
     .list__el {
-        margin-top: 20px;
+        margin: 20px 0px 0px;
     }
 }
 
@@ -212,7 +215,7 @@
 
     .goods-list__el {
         flex: 0 0 30%;
-        margin-top: 10px;
+        margin: 10px 0px 0px;
     }
 }
 
@@ -223,7 +226,7 @@
     }
 
     .login__btn {
-        margin-right: 10px;
+        margin: 0px 10px 0px 0px;
     }
 }
 

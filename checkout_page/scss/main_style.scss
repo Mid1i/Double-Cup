@@ -1,28 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ----------------
      Global section
     ----------------
 */
 
-:root {
-    --black: #000000;
-    --white: #ffffff;
-    --inputs-hover-color: rgba(255, 255, 255, 0.131);
-    --gray: #A7A7A7;
-    --very-light-gray: #f7f7f7;
-    --light-gray: #DDDDDD;
-    --dark-gray: #464646;
-    --red: #EF314B;
-    --light-red: #e85266;
-    --green: #4AB838;
-}
-
 body {
-    background: var(--white);
-    color: var(--black);
+    background: $white;
+    color: $black;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -73,6 +63,14 @@ body {
     justify-content: center;
 }
 
+//import header section
+@import "./header_style.scss";
+
+/*
+    ------------
+    Main section
+    ------------
+*/
 
 .main-content__form {
     display: flex;
@@ -84,20 +82,22 @@ body {
     padding: 0px 10px;
 }
 
-@import "./header_style.scss";
+// Import form style
 @import "./form_style.scss";
+
+// Import other files
 @import "../../resourses/scss/loader_style.scss";
 
 .right-input {
-    border: 1px solid var(--green); 
+    border: 1px solid $green; 
 }
 
 .wrong-input {
-    border: 1px solid var(--red);
+    border: 1px solid $red;
 }
 
 .yandex-map {
-    box-shadow: 0px 0px 10px var(--light-gray);
+    box-shadow: 0px 0px 10px $hover-red;
     height: 300px;
     width: 100%;
 }

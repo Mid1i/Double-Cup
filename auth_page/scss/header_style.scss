@@ -1,3 +1,6 @@
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ----------------
      Header section
@@ -29,8 +32,8 @@
     }
 
     &__cart-block {
-        background: var(--white);
-        box-shadow: 0px 0px 10px var(--gray);
+        background: $white;
+        box-shadow: 0px 0px 10px $gray;
         border-radius: 10px;
         padding: 5px;
     }
@@ -38,7 +41,7 @@
 
 .info {
     &__logo {
-        margin-right: 10px;
+        margin: 0px 10px 0px 0px;
     }
 
     &__delivery {
@@ -47,19 +50,19 @@
         line-height: 23px;
         
         &_text {
-            color: var(--gray);
+            color: $gray;
         }
     }
 }
 
 .list__el {
-    margin-right: 25px;
+    margin: 0px 25px 0px 0px;
     pointer-events: auto;
 
     &_active {
         border-radius: 10px;
-        background: var(--red);
-        color: var(--white);
+        background: $red;
+        color: $white;
         padding: 10px;
     }
 
@@ -69,20 +72,20 @@
 }
 
 .list__el:hover {
-    color: var(--red);
+    color: $red;
     text-decoration: underline;
 }
 
 .cart__btn {
-    background: var(--red);
+    background: $red;
     border-radius: 20px;
-    color: var(--white);
+    color: $white;
     justify-content: center;
     height: 40px;
     width: 150px;
 
     &__icon {
-        margin-right: 10px;
+        margin: 0px 10px 0px 0px;
     }
 
     &__text {
@@ -93,8 +96,8 @@
 
 .cart__btn:hover,
 .btn__cart:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--gray);
+    background: $hover-red;
+    box-shadow: 0px 0px 10px $gray;
     transform: scale(1.05);
 }
 
@@ -120,7 +123,7 @@
         &__burger::after,
         &__burger::before,
         &__burger span {
-            background: var(--black);
+            background: $black;
             height: 2px;
             left: 0px;
             position: absolute;
@@ -166,7 +169,7 @@
         }
 
         &__list {
-            background: var(--white);
+            background: $white;
             flex-direction: column;
             justify-content: center;
             left: 0px;
@@ -184,7 +187,7 @@
     }
 
     .list__el {
-        margin-top: 20px;
+        margin: 20px 0px 0px;
     }
 }
 

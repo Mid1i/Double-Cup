@@ -1,3 +1,6 @@
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /*
     ------------------
     Empty cart section
@@ -16,7 +19,7 @@
 
     &__title {
         font-size: 24px;
-        margin-block: 20px;
+        margin: 20px 0px;
     }
 
     &__text {
@@ -25,7 +28,7 @@
     }
 
     &__btn {
-        margin-block: 20px;
+        margin: 20px 0px;
         width: 250px; 
     }
 
@@ -35,7 +38,7 @@
 
     &__text a,
     &__return {
-        color: var(--red);
+        color: $red;
         text-decoration: underline;
     }
 }

@@ -1,27 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ----------------
      Global section
     ----------------
 */
 
-:root {
-    --black: #000000;
-    --white: #ffffff;
-    --gray: #A7A7A7;
-    --very-light-gray: #f7f7f7;
-    --light-gray: #DDDDDD;
-    --dark-gray: #464646;
-    --green: #4AB838;
-    --red: #EF314B;
-    --light-red: #e85266;
-}
-
 body {
-    background: var(--white);
-    color: var(--black);
+    background: $white;
+    color: $black;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -32,11 +23,11 @@ body::-webkit-scrollbar,
     width: 10px;
 
     &-track {
-        background: var(--light-gray);
+        background: $line-color;
     }
 
     &-thumb {
-        background: var(--red);
+        background: $red;
         border-radius: 5px;
     }
 }
@@ -70,15 +61,18 @@ body::-webkit-scrollbar,
 }
 
 .main-sep {
-    background: var(--light-gray);
+    background: $line-color;
     flex: 0 0 2px;
 }
 
 .cart__btn:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--gray);
+    background: $hover-red;
+    box-shadow: 0px 0px 10px $gray;
     transform: scale(1.05);
 }
+
+// Improt header section
+@import "./header_style.scss";
 
 /* 
     --------------
@@ -92,11 +86,11 @@ body::-webkit-scrollbar,
     flex: 1 0 auto;
     flex-direction: column;
     justify-content: center;
-    padding-inline: 35px;
+    padding: 0px 35px;
 
     &__title {
         font-size: 28px;
-        margin-top: 20px;
+        margin: 20px 0px 0px;
         text-align: center;
     }
 
@@ -109,79 +103,41 @@ body::-webkit-scrollbar,
 }
 
 .main-content__error {
-    color: var(--red);
-    margin-top: 10px;
+    color: $red;
+    margin: 10px 0px 0px;
     text-align: center;
     height: 34px;
 }
 
-.max-amount-block {
-    align-items: center;
-    background: var(--dark-gray);
-    box-shadow: 0px 0px 10px var(--dark-gray);
-    border-radius: 15px;
-    color: var(--light-gray);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    opacity: 1;
-    position: fixed;
-    padding: 20px 15px 10px;
-    height: 110px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s;
-    width: 205px;
-    z-index: 3;
-
-    &__text {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    &__btn {
-        background: var(--red);
-        border-radius: 15px;
-        color: var(--light-gray);
-        font-weight: 600;
-        padding-block: 10px;
-        width: 100px;
-    }
-}
-
-.max-amount-block__btn:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--btn-hover-color);
-    transform: scale(1.05);
-}
-
 @media(max-width: 1100px) {
     .main-content {
-        padding-inline: 25px;
+        padding: 0px 25px;
     }
 }
 
 @media(max-width: 850px) {
     .main-content {
-        margin-bottom: 20px;
+        margin: 0px 0px 20px;
     }
 }
 
 @media(max-width: 767px) {
     .main-content {
-        padding-inline: 25px; 
+        padding: 0px 25px; 
     }
 }
 
 @media(max-width: 520px) {
     .main-content {
-        padding-inline: 15px;
+        padding: 0px 15px;
     }
 }
 
-@import "./header_style.scss";
+// Import prfile section
 @import "./profile_style.scss";
+
+// Import other files
+@import "../../resourses/scss/max-block_style.scss";
 @import "../../resourses/scss/cart_style.scss";
 @import "../../resourses/scss/footer_style.scss";
 @import "../../resourses/scss/loader_style.scss";

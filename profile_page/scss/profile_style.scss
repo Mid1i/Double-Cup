@@ -1,3 +1,6 @@
+// Import different variables
+@import "../../resourses/scss/variables.scss";
+
 /* 
     ---------------
     Profile section
@@ -8,25 +11,25 @@
 
     &__section {
         align-items: center;
-        box-shadow: 0px 0px 10px var(--light-gray);
+        box-shadow: 0px 0px 10px $line-color;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
-        margin-block: 20px;
+        margin: 20px 0px;
         padding: 10px 5px;
     }
 
     &__label {
-        color: var(--gray);
+        color: $gray;
         font-size: 17px;
         margin: 0px 0px 10px;
     }
 
     &__input {
         background: inherit;
-        border-bottom: 1px solid var(--gray);
+        border-bottom: 1px solid $gray;
         border-radius: 10px 10px 0px 0px;
         font-size: 16px;
         font-weight: 600;
@@ -36,8 +39,8 @@
     }
 
     &__section:hover {
-        background: var(--very-light-gray);
-        box-shadow: 0px 0px 10px var(--gray);
+        background: $frame-color;
+        box-shadow: 0px 0px 10px $gray;
     }
 
     &__icon {
@@ -49,8 +52,8 @@
     }
 
     &__btn {
-        background: var(--white);
-        border: 2px solid var(--light-gray);
+        background: $white;
+        border: 2px solid $line-color;
         border-radius: 10px;
         font-size: 16px;
         margin: 20px auto 0px;
@@ -60,26 +63,26 @@
     }
 
     &__btn-exit {
-        background: var(--red);
+        background: $red;
         border-radius: 10px;
-        color: var(--white);
+        color: $white;
         font-weight: 600;
         font-size: 16px;
         padding: 10px;
-        margin-bottom: 20px;
+        margin: 0px 0px 20px;
         height: 42px;
         width: 150px;
     }
 }
 
 .form-block__btn:hover {
-    background: var(--very-light-gray);
+    background: $frame-color;
     transform: scale(1.05);
 }
 
 .form-block__btn-exit:hover {
-    background: var(--light-red);
-    box-shadow: 0px 0px 10px var(--gray);
+    background: $hover-red;
+    box-shadow: 0px 0px 10px $gray;
     transform: scale(1.05);
 }
 
