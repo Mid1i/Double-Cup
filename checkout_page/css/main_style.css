@@ -157,7 +157,7 @@ body::-webkit-scrollbar-thumb {
 .form-block__btn {
   background: #EF314B;
   border-radius: 15px;
-  color: var(--white);
+  color: #FFFFFF;
   font-size: 18px;
   margin: 30px auto;
   padding: 8px 15px;
@@ -317,7 +317,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .yandex-map {
-  box-shadow: 0px 0px 10px #E85266;
+  box-shadow: 0px 0px 10px #DDDDDD;
   height: 300px;
   width: 100%;
 }
