@@ -44,13 +44,6 @@ document.addEventListener("click", (event) => {
     if (arg.classList.contains(`js-${id}-delete`)) {
         zeroFunction(id);
     }
-    
-    // Tracks clicking on the "Go to the Cart" button
-    if (arg.classList.contains("js-icon")) {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 700);
-    }
 
     // Tracks clicking on the "OK" button when its max amount
     if (arg.classList.contains("max-amount-block__btn")) {
@@ -70,14 +63,7 @@ function plusFunction(id) {
     } else {
         cart[id]++;
 
-        $(`.js-${id}-btns`).removeClass('hide');
-        $(`.js-${id}-btn`).addClass('hide');
-
         $(`.js-${id}-counter`).html(cart[id]);
-
-        if (cart[id] == 1) {
-            createCartItem(id);
-        }
 
         updatePrice(id);
         updateResultPrice(id, "+");
@@ -95,12 +81,7 @@ function minusFunction(id) {
         cart[id]--;
 
         if (cart[id] <= 0) {    
-
-            $(`.js-${id}-btn`).removeClass('hide');
-            $(`.js-${id}-btns`).addClass('hide');
-
             deleteElement(id);
-
             cart[id] = 0;
         }
 
@@ -118,9 +99,6 @@ function minusFunction(id) {
 // Deleting the product from the cart
 function zeroFunction(id) {
     cart_alert.classList.add("hide-element");
-
-    $(`.js-${id}-btn`).removeClass('hide');
-    $(`.js-${id}-btns`).addClass('hide');
 
     $(`.js-${id}-counter`).html(cart[id]);
 
@@ -174,7 +152,6 @@ function deleteElement(id) {
 // Updating the product price in the cart
 function updatePrice(id) {
     let product = getProduct(id);
-
     $(`.js-${id}-price`).html(`${cart[id] * product.price}.00 ₽`);
 }
 

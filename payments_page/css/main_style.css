@@ -101,7 +101,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 .info__logo {
-  margin-right: 10px;
+  margin: 0px 10px 0px 0px;
 }
 .info__delivery {
   font-size: 20px;
@@ -113,7 +113,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 .list__el {
-  margin-right: 25px;
+  margin: 0px 25px 0px 0px;
   pointer-events: auto;
 }
 .list__el_active {
@@ -146,7 +146,7 @@ body::-webkit-scrollbar-thumb,
 }
 .cart__btn__icon,
 .login__btn__icon {
-  margin-right: 10px;
+  margin: 0px 10px 0px;
 }
 .cart__btn__text,
 .login__btn__text {
@@ -156,7 +156,7 @@ body::-webkit-scrollbar-thumb,
 
 .login__btn {
   padding: 8px 15px;
-  margin-right: 50px;
+  margin: 0px 50px 0px 0px;
 }
 
 .cart__btn {
@@ -169,10 +169,10 @@ body::-webkit-scrollbar-thumb,
     display: none;
   }
   .login__btn {
-    margin-inline: 20px;
+    margin: 0px 20px;
   }
   .list__el {
-    margin-right: 15px;
+    margin: 0px 15px 0px 0px;
   }
   .list__el_last {
     margin: 0px;
@@ -240,12 +240,12 @@ body::-webkit-scrollbar-thumb,
     top: 0px;
   }
   .list__el {
-    margin-top: 20px;
+    margin: 20px 0px 0px;
   }
 }
 @media (max-width: 520px) {
   .login__btn {
-    margin-right: 10px;
+    margin: 0px 10px 0px 0px;
   }
 }
 @media (max-width: 370px) {
