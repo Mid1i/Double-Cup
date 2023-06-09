@@ -15,7 +15,7 @@ let result_price = 0;
 // Amount of goods in the cart
 let amount = 0;
 
-let path = "https://mid1i.github.io/Double-Cup/resourses";
+let path = "https://mid1i.github.io/Double-Cup/resources";
 
 window.setTimeout(startCartSettings, 1000);
 
@@ -24,7 +24,7 @@ document.addEventListener("click", (event) => {
     let id = arg.id;
 
     // Tracks clicking on the "Plus" and "Add to the cart" buttons when choosing a product
-    if ((arg.classList.contains(`js-${id}-btn`)) || (arg.classList.contains(`js-${id}-plus`))) {
+    if (arg.classList.contains(`js-${id}-plus`)) {
         event.preventDefault();
         plusFunction(id);
     }

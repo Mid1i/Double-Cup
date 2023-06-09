@@ -314,7 +314,7 @@ body::-webkit-scrollbar-thumb,
   z-index: 0;
 }
 .slider-item {
-  background: url("../../resourses/img/background-images/banner-1.jpg") center center no-repeat;
+  background: url("../../resources/img/background-images/banner-1.jpg") center center no-repeat;
   border-radius: 20px;
   flex-direction: column;
   text-align: center;
@@ -345,12 +345,12 @@ body::-webkit-scrollbar-thumb,
 }
 .slider-item_2 {
   align-items: flex-end;
-  background: url("../../resourses/img/background-images/banner-2.jpg") center center no-repeat;
+  background: url("../../resources/img/background-images/banner-2.jpg") center center no-repeat;
   text-align: right;
 }
 .slider-item_3 {
   align-items: flex-start;
-  background: url("../../resourses/img/background-images/banner-3.jpg") center center no-repeat;
+  background: url("../../resources/img/background-images/banner-3.jpg") center center no-repeat;
   text-align: left;
 }
 
@@ -382,10 +382,10 @@ body::-webkit-scrollbar-thumb,
 }
 .slick-arrow.slick-prev {
   left: 0px;
-  background: url("../../resourses/img/main-icons/left-arrow-icon.svg") center center no-repeat;
+  background: url("../../resources/img/main-icons/left-arrow-icon.svg") center center no-repeat;
 }
 .slick-arrow.slick-next {
-  background: url("../../resourses/img/main-icons/right-arrow-icon.svg") center center no-repeat;
+  background: url("../../resources/img/main-icons/right-arrow-icon.svg") center center no-repeat;
   right: 0px;
 }
 
@@ -415,34 +415,34 @@ body::-webkit-scrollbar-thumb,
   position: relative;
 }
 .catalog-block__item_fruits {
-  background: url("../../resourses/img/background-images/fruits-back.jpg") center center no-repeat;
+  background: url("../../resources/img/background-images/fruits-back.jpg") center center no-repeat;
   background-size: cover;
   border-radius: 20px 0px 0px 20px;
   grid-area: fruits;
 }
 .catalog-block__item_bread {
-  background: url("../../resourses/img/background-images/bread-back.jpg") center center no-repeat;
+  background: url("../../resources/img/background-images/bread-back.jpg") center center no-repeat;
   background-size: cover;
   grid-area: bread;
 }
 .catalog-block__item_sweets {
-  background: url("../../resourses/img/background-images/sweets-back.jpg") center center no-repeat;
+  background: url("../../resources/img/background-images/sweets-back.jpg") center center no-repeat;
   background-size: cover;
   grid-area: sweets;
 }
 .catalog-block__item_pasta {
-  background: url("../../resourses/img/background-images/pasta-back.jpg") center center no-repeat;
+  background: url("../../resources/img/background-images/pasta-back.jpg") center center no-repeat;
   background-size: cover;
   grid-area: pasta;
 }
 .catalog-block__item_cheese {
-  background: url("../../resourses/img/background-images/cheese-back.jpg") center center no-repeat;
+  background: url("../../resources/img/background-images/cheese-back.jpg") center center no-repeat;
   background-size: cover;
   border-radius: 0px 20px 0px 0px;
   grid-area: cheese;
 }
 .catalog-block__item_milk {
-  background: url("../../resourses/img/background-images/milk-back.jpg") center center no-repeat;
+  background: url("../../resources/img/background-images/milk-back.jpg") center center no-repeat;
   background-size: cover;
   border-radius: 0px 0px 20px 0px;
   grid-area: milk;

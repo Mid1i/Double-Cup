@@ -1,5 +1,5 @@
 // Import different variables
-@import "../../resourses/scss/variables.scss";
+@import "../../resources/scss/variables.scss";
 
 /* 
     ---------------
@@ -30,39 +30,39 @@
         position: relative;
 
         &_fruits {
-            background: url("../../resourses/img/background-images/fruits-back.jpg") center center no-repeat;
+            background: url("../../resources/img/background-images/fruits-back.jpg") center center no-repeat;
             background-size: cover;
             border-radius: 20px 0px 0px 20px;
             grid-area: fruits;
         }
 
         &_bread {
-            background: url("../../resourses/img/background-images/bread-back.jpg") center center no-repeat;
+            background: url("../../resources/img/background-images/bread-back.jpg") center center no-repeat;
             background-size: cover;
             grid-area: bread;
         }
 
         &_sweets {
-            background: url("../../resourses/img/background-images/sweets-back.jpg") center center no-repeat;
+            background: url("../../resources/img/background-images/sweets-back.jpg") center center no-repeat;
             background-size: cover;
             grid-area: sweets;
         }
 
         &_pasta {
-            background: url("../../resourses/img/background-images/pasta-back.jpg") center center no-repeat;
+            background: url("../../resources/img/background-images/pasta-back.jpg") center center no-repeat;
             background-size: cover;
             grid-area: pasta;
         }
 
         &_cheese {
-            background: url("../../resourses/img/background-images/cheese-back.jpg") center center no-repeat;
+            background: url("../../resources/img/background-images/cheese-back.jpg") center center no-repeat;
             background-size: cover;
             border-radius: 0px 20px 0px 0px;
             grid-area: cheese;
         }
 
         &_milk {
-            background: url("../../resourses/img/background-images/milk-back.jpg") center center no-repeat;
+            background: url("../../resources/img/background-images/milk-back.jpg") center center no-repeat;
             background-size: cover;
             border-radius: 0px 0px 20px 0px;
             grid-area: milk;

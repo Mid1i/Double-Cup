@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
 // Import different variables
-@import "../../resourses/scss/variables.scss";
+@import "../../resources/scss/variables.scss";
 
 /* 
     ----------------
@@ -77,11 +77,19 @@ body {
     }
 }
 
+.error_name {
+    color: $red;
+    font-size: 18px;
+    height: 18px;
+    margin: 10px 0px 0px;
+    text-align: center;
+}
+
 // Import form style
 @import "./form_style.scss";
 
 // Import other files
-@import "../../resourses/scss/loader_style.scss";
+@import "../../resources/scss/loader_style.scss";
 
 .right-input {
     border: 1px solid $green; 

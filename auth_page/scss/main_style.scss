@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
 // Import different variables
-@import "../../resourses/scss/variables.scss";
+@import "../../resources/scss/variables.scss";
 
 /* 
     ----------------
@@ -106,10 +106,10 @@ body::-webkit-scrollbar,
 @import "./profile_style.scss";
 
 // Import other files
-@import "../../resourses/scss/cart_style.scss";
-@import "../../resourses/scss/footer_style.scss";
-@import "../../resourses/scss/max-block_style.scss";
-@import "../../resourses/scss/loader_style.scss";
+@import "../../resources/scss/cart_style.scss";
+@import "../../resources/scss/footer_style.scss";
+@import "../../resources/scss/max-block_style.scss";
+@import "../../resources/scss/loader_style.scss";
 
 .hide {
     display: none;

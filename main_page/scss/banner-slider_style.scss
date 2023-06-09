@@ -1,5 +1,5 @@
 // Import different variables
-@import "../../resourses/scss/variables.scss";
+@import "../../resources/scss/variables.scss";
 
 /*
     ------------
@@ -15,7 +15,7 @@
     z-index: 0;
 
     &-item {
-        background: url("../../resourses/img/background-images/banner-1.jpg") center center no-repeat;
+        background: url("../../resources/img/background-images/banner-1.jpg") center center no-repeat;
         border-radius: 20px;
         flex-direction: column;
         text-align: center;
@@ -54,13 +54,13 @@
 
         &_2 {
             align-items: flex-end;
-            background: url("../../resourses/img/background-images/banner-2.jpg") center center no-repeat;
+            background: url("../../resources/img/background-images/banner-2.jpg") center center no-repeat;
             text-align: right; 
         }
 
         &_3 {
             align-items: flex-start;
-            background: url("../../resourses/img/background-images/banner-3.jpg") center center no-repeat;
+            background: url("../../resources/img/background-images/banner-3.jpg") center center no-repeat;
             text-align: left;
         }
     }

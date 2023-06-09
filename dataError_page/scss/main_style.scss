@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+// Import different variables
+@import "../../resources/scss/variables.scss";
+
+/* 
+    ----------------
+     Global section
+    ----------------
+*/
+
+body {
+    background: $white;
+    color: $black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+body::-webkit-scrollbar,
+.cart-block__items::-webkit-scrollbar {
+    width: 10px;
+
+    &-track {
+        background: $line-color;
+    }
+
+    &-thumb {
+        background: $red;
+        border-radius: 5px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.lock { 
+    pointer-events: none; 
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.title {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+.main-sep,
+.main-header,
+.main-content {
+    margin: 0px auto;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.main-sep {
+    background: $line-color;
+    flex: 0 0 2px;
+}
+
+.cart__btn:hover,
+.main-content__btn:hover {
+    background: $hover-red;
+    box-shadow: 0px 0px 10px $gray;
+    transform: scale(1.05);
+}
+
+// Import header section
+@import "./header_style.scss";
+
+/* 
+    --------------
+     Main section
+    --------------
+*/
+
+.main-content {
+    flex: 1 0 auto;
+    padding: 0px 35px;
+
+    &__image {
+        height: 400px;
+        width: 600px;
+        margin: 30px auto 50px;
+
+        & img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin: 0px 0px 10px;
+        text-align: center;
+
+        & span {
+            color: $red;
+            text-decoration: underline;
+        }
+    }
+
+    &__form {
+        text-align: center;
+        width: 100%;
+    }
+
+    &__btn {
+        background: $red;
+        border-radius: 10px;
+        color: $white;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 20px 0px 100px;
+        height: 40px;
+        width: 100px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .main-content {
+        padding: 0px 25px;
+
+        &__image {
+            height: 200px;
+            width: 300px;
+        }
+    }
+}
+
+@media(max-width: 850px) {
+    .main-content {
+        margin: 0px 0px 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .main-content {
+        padding: 0px 25px; 
+    }
+}
+
+@media (max-width: 520px) {
+    .main-content {
+        padding: 0px 15px;
+    }
+}
+
+// Import other files
+@import "../../resources/scss/max-block_style.scss";
+@import "../../resources/scss/cart_style.scss";
+@import "../../resources/scss/profile_style.scss";
+@import "../../resources/scss/footer_style.scss";
+@import "../../resources/scss/loader_style.scss";
+
+.hide {
+    display: none;
+}
+
+.hide-element {
+    opacity: 0;
+    pointer-events: none;
+}

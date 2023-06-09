@@ -90,6 +90,14 @@ body::-webkit-scrollbar-thumb {
   margin: 20px 0px 0px;
 }
 
+.error_name {
+  color: #EF314B;
+  font-size: 18px;
+  height: 18px;
+  margin: 10px 0px 0px;
+  text-align: center;
+}
+
 /*
     ------------
     Form section
@@ -136,7 +144,7 @@ body::-webkit-scrollbar-thumb {
 .form-block__section {
   position: relative;
 }
-.form-block__section_pay {
+.form-block__section_pay, .form-block__section_comment {
   display: flex;
 }
 .form-block__section::before {
@@ -171,7 +179,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   display: flex;
 }
-.section__item_tel, .section__item__radio, .section__item_pay-cash {
+.section__item_tel, .section__item__radio, .section__item_comment, .section__item_pay-cash {
   margin: 0px 10px 10px 0px;
 }
 .section__item_pay {
@@ -231,7 +239,8 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 840px) {
   .section__items,
-  .form-block__section_pay {
+  .form-block__section_pay,
+  .form-block__section_comment {
     flex-direction: column;
   }
 }

@@ -627,6 +627,7 @@ body::-webkit-scrollbar-thumb,
   justify-content: center;
   opacity: 1;
   position: fixed;
+  pointer-events: auto;
   padding: 20px 15px 10px;
   height: 110px;
   left: 50%;

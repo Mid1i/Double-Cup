@@ -1,6 +1,6 @@
 const section = document.querySelector(".main-header__login");
 
-let path = "https://mid1i.github.io/Double-Cup/resourses";
+let path = "https://mid1i.github.io/Double-Cup/resources";
 
 // Creating the "Login" button 
 export function createLoginButton() {

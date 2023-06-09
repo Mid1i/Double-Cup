@@ -1,5 +1,5 @@
 // Import different variables
-@import "../../resourses/scss/variables.scss";
+@import "../../resources/scss/variables.scss";
 
 /*
     ------------
@@ -57,7 +57,8 @@
     &__section {
         position: relative;
 
-        &_pay {
+        &_pay,
+        &_comment {
             display: flex;
         }
 
@@ -100,6 +101,7 @@
 
     &_tel,
     &__radio,
+    &_comment,
     &_pay-cash {
         margin: 0px 10px 10px 0px;
     }
@@ -171,7 +173,8 @@
 
 @media(max-width: 840px) {
     .section__items,
-    .form-block__section_pay {
+    .form-block__section_pay,
+    .form-block__section_comment {
         flex-direction: column;
     }
 }

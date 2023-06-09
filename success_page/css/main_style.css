@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"); /* 
+    --------------
+    Loader section
+    --------------
+*/
+.loader {
+  align-items: center;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  overflow: hidden;
+  transition: opacity 1s;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+.loader__icon {
+  animation: fill 1.3s linear infinite alternate;
+  border: 4px solid #000000;
+  border-radius: 0px 0px 4px 4px;
+  color: #EF314B;
+  display: inline-block;
+  position: relative;
+  height: 48px;
+  width: 48px;
+}
+.loader__icon::after {
+  border: 4px solid #000000;
+  border-radius: 0px 4px 4px 0px;
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 20px;
+}
+
+@keyframes fill {
+  0% {
+    box-shadow: 0px 0px inset;
+  }
+  100% {
+    box-shadow: 0px -48px inset;
+  }
+}
+/* 
+    ----------------
+     Global section
+    ----------------
+*/
+body {
+  background: #FFFFFF;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+body::-webkit-scrollbar,
+.cart-block__items::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track,
+.cart-block__items::-webkit-scrollbar-track {
+  background: #DDDDDD;
+}
+body::-webkit-scrollbar-thumb,
+.cart-block__items::-webkit-scrollbar-thumb {
+  background: #EF314B;
+  border-radius: 5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.lock {
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.main-sep,
+.main-header,
+.main-content {
+  display: flex;
+  margin: 0px auto;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.main-sep {
+  background: #DDDDDD;
+  flex: 0 0 2px;
+}
+
+.main-header {
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.main-header__info {
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+}
+.main-header__text {
+  margin: 0px 0px 10px;
+}
+.main-header__link {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.main-content {
+  align-items: center;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 10px;
+}
+.main-content__image {
+  margin: 0px 0px 20px;
+}
+.main-content__text {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px 0px 10px;
+  line-height: 24px;
+  text-align: center;
+}
+.main-content__text a {
+  color: #EF314B;
+  text-decoration: underline;
+}
+.main-content__btns-block {
+  display: flex;
+  margin: 10px 0px 0px;
+}
+.main-content__btn {
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px;
+  padding: 15px 0px;
+  text-align: center;
+}
+.main-content__btn:hover {
+  box-shadow: 0px 0px 10px #A7A7A7;
+  transform: scale(1.05);
+}
+.main-content__profile {
+  background: #A7A7A7;
+  margin: 0px 50px 0px 0px;
+  width: 150px;
+}
+.main-content__profile:hover {
+  background: #DDDDDD;
+}
+.main-content__main {
+  background: #EF314B;
+  color: #FFFFFF;
+  width: 200px;
+}
+.main-content__main:hover {
+  background: #E85266;
+}
+
+@media (max-width: 600px) {
+  .main-content__text {
+    max-width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .main-content__btns-block {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-content__profile {
+    margin: 0px 0px 20px 0px;
+  }
+}
+@media (max-width: 320px) {
+  .main-header__link {
+    font-size: 14px;
+  }
+}
+/* 
+    ----------------
+     Footer section
+    ----------------
+*/
+.main-footer {
+  background: #464646;
+}
+.main-footer__pay, .main-footer__sup, .main-footer__wrapper {
+  align-items: center;
+  display: flex;
+}
+.main-footer__wrapper {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 30px;
+  margin: 0px auto;
+  max-width: 1280px;
+  width: 100%;
+}
+.main-footer__text {
+  color: #A7A7A7;
+  margin: 15px 0px;
+  text-align: center;
+}
+
+.pay__item,
+.sup__text {
+  margin: 0px 15px 0px 0px;
+}
+
+.pay__item_last {
+  margin: 0px;
+}
+
+.sup__text {
+  color: #EF314B;
+  font-size: 18px;
+}
+
+@media (max-width: 950px) {
+  .footer-wrapper {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 790px) {
+  .footer-wrapper {
+    flex-direction: column;
+    padding: 0px 0px 10px;
+  }
+}

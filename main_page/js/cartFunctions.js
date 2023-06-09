@@ -16,7 +16,7 @@ let result_price = 0;
 // Amount of goods in the cart
 let amount = 0;
 
-let path = "https://mid1i.github.io/Double-Cup/resourses";
+let path = "https://mid1i.github.io/Double-Cup/resources";
 
 window.setTimeout(startCartSettings, 1000);
 

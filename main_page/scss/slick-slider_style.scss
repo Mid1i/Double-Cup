@@ -1,5 +1,5 @@
 // Import different variables
-@import "../../resourses/scss/variables.scss";
+@import "../../resources/scss/variables.scss";
 
 /*
     ---------------------
@@ -28,11 +28,11 @@
 
         &.slick-prev {
             left: 0px;
-            background: url("../../resourses/img/main-icons/left-arrow-icon.svg") center center no-repeat;
+            background: url("../../resources/img/main-icons/left-arrow-icon.svg") center center no-repeat;
         }
     
         &.slick-next {
-            background: url("../../resourses/img/main-icons/right-arrow-icon.svg") center center no-repeat;
+            background: url("../../resources/img/main-icons/right-arrow-icon.svg") center center no-repeat;
             right: 0px;
         }
     }

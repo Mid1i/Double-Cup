@@ -14,7 +14,7 @@ const email_section = document.querySelector(".js-email-section");
 let userNameItem = localStorage.getItem("username");
 let emailItem = localStorage.getItem("email");
 
-let path = "https://mid1i.github.io/Double-Cup/resourses";
+let path = "https://mid1i.github.io/Double-Cup/resources";
 
 startSettings();
 

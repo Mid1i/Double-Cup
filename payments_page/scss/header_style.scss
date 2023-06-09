@@ -1,5 +1,5 @@
 // Import different variables
-@import "../../resourses/scss/variables.scss";
+@import "../../resources/scss/variables.scss";
 
 /* 
     ----------------
@@ -91,7 +91,7 @@
     height: 40px; 
 
     &__icon {
-        margin: 0px 10px 0px;
+        margin: 0px 10px 0px 0px;
     }
 
     &__text {
@@ -208,13 +208,13 @@
     }
 
     .list__el {
-        margin: 20px 0px 0px;
+        margin-top: 20px;
     }
 }
 
 @media(max-width: 520px) {
     .login__btn {
-        margin: 0px 10px 0px 0px;
+        margin-right: 10px;
     }
 }
 

@@ -17,8 +17,17 @@ const online_pay = document.querySelector(".js-radio-online");
 
 const delivery_map = document.querySelector(".yandex-map");
 
-let path = "https://mid1i.github.io/Double-Cup/resourses";
+let path = "https://mid1i.github.io/Double-Cup/resources";
 
+const promo = document.querySelector(".section__item_input_promo"); 
+
+const error = document.querySelector(".error_name");
+
+const cart_input = document.querySelector("#user_cart");
+const token_input = document.querySelector("#jwt_token");
+
+cart_input.value = JSON.parse(localStorage.getItem("cart"));
+token_input.value = localStorage.getItem("jwt-token");
 
 document.addEventListener("click", (event) => {
     let arg = event.target;
@@ -41,7 +50,48 @@ document.addEventListener("click", (event) => {
     if (arg.classList.contains("js-icon-qiwi")) {
         online_pay.checked = true;
     }
+    
+    if (arg.classList.contains("form-block__btn")) {
+        event.preventDefault();
+        if (necessaryData() && deliveryData() && promoData()) {
+            localStorage.removeItem("cart");
+            localStorage.removeItem("result_price");
+            document.querySelector(".main-content__form").submit();
+        }
+    }
 })
+
+function promoData() {
+    if (["DOUBLE-CUP-2023", "HAPPY-BIRTHDAY!", "FREE-DOUBLE-2023", ""].includes(promo.value)) {
+        return true;
+    }
+    error.innerHTML = "Промокод неверный";
+    return false;
+}
+
+function deliveryData() {
+    if ((delivery.checked && delivery_input.value != "") || (!delivery.checked && pickup.checked)) {
+        return true;
+    }
+
+    if (delivery.checked && delivery_input.value == "") {
+        error.innerHTML = "Укажите адрес доставки";
+    }
+
+    if (!delivery.checked && !pickup.checked) {
+        error.innerHTML = "Выберите способ получения заказа";
+    }
+
+    return false;
+}
+
+function necessaryData() {
+    if (validName() && validPhone()) {
+        return true;
+    }
+    error.innerHTML = "Введите корректные данные";
+    return false;
+}
 
 // Tracks clicking on inputs
 document.addEventListener("input", (event) => checkElements(event.target));
@@ -91,6 +141,7 @@ function validName() {
             name_section.classList.add("right-input");
             name_section.classList.remove("wrong-input");
             createIcon(name_section, "js-name-icon");
+            return true;
         } else {
             name_section.classList.add("wrong-input");
             name_section.classList.remove("right-input");
@@ -101,6 +152,7 @@ function validName() {
         name_section.classList.remove("wrong-input");
         name_section.classList.remove("right-input");
     }
+    return false;
 }
 
 // Checking if users phone input is valid
@@ -112,6 +164,7 @@ function validPhone() {
             phone_section.classList.add("right-input");
             phone_section.classList.remove("wrong-input");
             createIcon(phone_section, "js-phone-icon");
+            return true;
         } else {
             phone_section.classList.add("wrong-input");
             phone_section.classList.remove("right-input");
@@ -122,6 +175,7 @@ function validPhone() {
         phone_section.classList.remove("wrong-input");
         phone_section.classList.remove("right-input");
     }
+    return false;
 } 
 
 // Checking if users email input is valid
@@ -133,6 +187,7 @@ function validEmail() {
             email_section.classList.add("right-input");
             email_section.classList.remove("wrong-input");
             createIcon(email_section, "js-email-icon");
+            return true;
         } else {
             email_section.classList.add("wrong-input");
             email_section.classList.remove("right-input");
@@ -143,6 +198,7 @@ function validEmail() {
         email_section.classList.remove("wrong-input");
         email_section.classList.remove("right-input");
     }
+    return false;
 }
 
 // Creating check icon when input is right
