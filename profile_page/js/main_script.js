@@ -1,3 +1,5 @@
+import { createOrders } from "./createOrders.js";
+
 const header_list = document.querySelector(".main-header__list"); 
 const body = document.querySelector("body");
 
@@ -134,6 +136,8 @@ function startSettings() {
 
     createIcon(name_section, "js-name-icon");
     createIcon(email_section, "js-email-icon");
+
+    createOrders();
 }
 
 // Tracks loading of the window for the loading screen display

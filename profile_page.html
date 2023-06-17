@@ -112,27 +112,36 @@
         <hr class="main-sep">
         <!-- Site main section -->
         <section class="main-content">
-            <h2 class="main-content__title title">Профиль</h2>
-            <p class="main-content__error"></p>
-            <form action="" class="main-content__form form-block">
-                <!-- Login -->
-                <section class="form-block__section js-username-section">
-                    <label class="form-block__label" for="username">Логин:</label>
-                    <input class="form-block__input js-name" type="text" name="username" id="username">
+            <section class="main-content__left-side">
+                <h2 class="main-content__title title">Профиль</h2>
+                <p class="main-content__error"></p>
+                <form action="" class="main-content__form form-block">
+                    <!-- Login -->
+                    <section class="form-block__section js-username-section">
+                        <label class="form-block__label" for="username">Логин:</label>
+                        <input class="form-block__input js-name" type="text" name="username" id="username">
+                    </section>
+                    <!-- Email -->
+                    <section class="form-block__section js-email-section">
+                        <label class="form-block__label" for="email">Эл. почта:</label>
+                        <input class="form-block__input js-email" type="email" name="email" id="email">
+                    </section>
+                    <!-- Password -->
+                    <section class="form-block__section">
+                        <label class="form-block__label" for="password">Сменить пароль:</label>
+                        <input class="form-block__input js-password" type="password" name="password" id="password">
+                    </section>
+                    <button class="form-block__btn js-save">Сохранить</button> 
+                </form>
+                <button class="form-block__btn-exit">Выйти</button>
+            </section>
+            <div class="main-content__line"></div>
+            <section class="main-content__right-side">
+                <h2 class="main-content__title title">История заказов</h2>
+                <section class="main-content__orders">
+                    <p class="main-content__text">Список заказов пока пуст.</p>           
                 </section>
-                <!-- Email -->
-                <section class="form-block__section js-email-section">
-                    <label class="form-block__label" for="email">Эл. почта:</label>
-                    <input class="form-block__input js-email" type="email" name="email" id="email">
-                </section>
-                <!-- Password -->
-                <section class="form-block__section">
-                    <label class="form-block__label" for="password">Сменить пароль:</label>
-                    <input class="form-block__input js-password" type="password" name="password" id="password">
-                </section>
-                <button class="form-block__btn js-save">Сохранить</button> 
-            </form>
-            <button class="form-block__btn-exit">Выйти</button>
+            </section>
         </section>
         <!-- Site footer -->
         <footer class="main-footer">

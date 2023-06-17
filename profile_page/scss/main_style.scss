@@ -81,17 +81,40 @@ body::-webkit-scrollbar,
 */
 
 .main-content {
-    align-items: center;
     display: flex;
     flex: 1 0 auto;
-    flex-direction: column;
-    justify-content: center;
     padding: 0px 35px;
+
+    &__left-side,
+    &__right-side {
+        align-items: center;
+        display: flex;
+        flex: 0 0 49%;
+        flex-direction: column;
+    }
+
+    &__orders {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        margin: 75px 0px 0px 0px;
+    }
+
+    &__line {
+        background: $line-color;
+        margin: 50px 0px;
+        width: 2px;
+    }
 
     &__title {
         font-size: 28px;
-        margin: 20px 0px 0px;
+        margin: 100px 0px 0px;
         text-align: center;
+    }
+
+    &__text {
+        margin: 50px auto;
+        font-size: 18px;
     }
 
     &__form {
@@ -100,13 +123,13 @@ body::-webkit-scrollbar,
         margin: 20px auto;
         width: 300px;
     }
-}
 
-.main-content__error {
-    color: $red;
-    margin: 10px 0px 0px;
-    text-align: center;
-    height: 34px;
+    &__error {
+        color: $red;
+        margin: 10px 0px 0px;
+        text-align: center;
+        height: 34px;
+    }
 }
 
 @media(max-width: 1100px) {
@@ -117,6 +140,7 @@ body::-webkit-scrollbar,
 
 @media(max-width: 850px) {
     .main-content {
+        flex-direction: column;
         margin: 0px 0px 20px;
     }
 }
@@ -133,8 +157,11 @@ body::-webkit-scrollbar,
     }
 }
 
-// Import prfile section
+// Import profile section
 @import "./profile_style.scss";
+
+// Import orders section
+@import "./orders_style.scss";
 
 // Import other files
 @import "../../resources/scss/max-block_style.scss";

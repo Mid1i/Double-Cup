@@ -21,6 +21,8 @@ let path = "https://mid1i.github.io/Double-Cup/resources";
 
 const promo = document.querySelector(".section__item_input_promo"); 
 
+const comment = document.querySelector(".section__item__input_order");
+
 const error = document.querySelector(".error_name");
 
 const cart_input = document.querySelector("#user_cart");
@@ -54,9 +56,20 @@ document.addEventListener("click", (event) => {
     if (arg.classList.contains("form-block__btn")) {
         event.preventDefault();
         if (necessaryData() && deliveryData() && promoData()) {
-            localStorage.removeItem("cart");
-            localStorage.removeItem("result_price");
-            document.querySelector(".main-content__form").submit();
+            let json = {
+                "name": fullName.value,
+                "phone": phone.value,
+                "email": email.value,
+                "address": pickup.checked ? "Самовывоз" : delivery_input.value,
+                "payment": online_pay.checked ? "online" : "offline",
+                "comment": comment.value,
+                "promo": promo.value,
+                "user-cart": JSON.parse(localStorage.getItem("cart")),
+                "jwt-token": localStorage.getItem("jwt-token") 
+            }
+            console.log(json);
+            // localStorage.removeItem("cart");
+            // localStorage.removeItem("result_price");
         }
     }
 })
